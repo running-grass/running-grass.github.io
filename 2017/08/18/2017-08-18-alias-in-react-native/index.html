@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-cn" lang="zh-cn">
+<head>
+  <link href="https://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="Hugo 0.75.1" />
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>【翻译】React Native中的别名 &middot; 奔跑的小草</title>
+  <meta name="description" content="" />
+
+  
+  <link type="text/css" rel="stylesheet" href="https://grass.show/css/print.css" media="print">
+  <link type="text/css" rel="stylesheet" href="https://grass.show/css/poole.css">
+  <link type="text/css" rel="stylesheet" href="https://grass.show/css/syntax.css">
+  <link type="text/css" rel="stylesheet" href="https://grass.show/css/hyde.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface|PT+Sans:400,400i,700">
+
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/favicon.png">
+
+  
+  
+</head>
+
+  <body class=" ">
+  <aside class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <a href="https://grass.show/"><h1>奔跑的小草</h1></a>
+      <p class="lead">
+      An elegant open source and mobile first theme for <a href="http://hugo.spf13.com">hugo</a> made by <a href="http://twitter.com/mdo">@mdo</a>. Originally made for Jekyll.
+      </p>
+    </div>
+
+    <nav>
+      <ul class="sidebar-nav">
+        <li><a href="https://grass.show/">Home</a> </li>
+        
+      </ul>
+    </nav>
+
+    <p>&copy; 2020. All rights reserved. </p>
+  </div>
+</aside>
+
+    <main class="content container">
+    <div class="post">
+  <h1>【翻译】React Native中的别名</h1>
+  <time datetime=2017-08-18T19:31:00&#43;0800 class="post-date">Fri, Aug 18, 2017</time>
+  <p>有时候，你会在你的项目有多个文件和文件夹。我们需要从任意随机文件中获得一个文件的引用。如果我们这样的相对路径的话，看起来是这个样子的:</p>
+<pre><code>import themes from '../../config/themes';
+</code></pre><p>通过符号<code>../</code>让我们很难去思考，在更复杂的项目中，这将是一个噩梦。</p>
+<p>在这篇文章中，我们将找到关于这种场景的可能的解决方案和替代方案。</p>
+<p>假定项目有以下文件夹结构。</p>
+<pre><code>Your App Root Directory
+ |-- app
+      |-- component 
+      |    |-- login
+      |    |   |-- login.js
+      +-- resources
+      |    |-- icon
+      |    |    |-- userupload.png  
+      |-- index.ios.js
+      |-- index.android.js
+
+</code></pre><p>我们有两种可能的解决方案用来在上面的文件夹结构中指出每个节点。</p>
+<h4 id="use-providesmodule">Use @providesModule</h4>
+<p>一个次级的解决方案，可以工作，但不是<strong>安全</strong>的，在你的文件中使用<code>@providesmodule</code>。
+这是用较少的代码，但是因为它是基于Facebook自己内部使用的情况下，可以根据其内部突发奇想改变。所以可能不稳定。
+你可以阅读更多关于它在这里：https://github.com/facebook/fbjs</p>
+<p>要使用它，您需要将此注释包含在文件的顶部：</p>
+<pre><code>/**
+ * @providesModule login
+ */
+
+import React, { Component } from 'react';
+import {
+ AppRegistry,
+ StyleSheet,
+ Text,
+ View
+} from 'react-native';
+
+export default class login extends Component{
+ render(){
+ return(
+ &lt;View&gt;
+ &lt;Text&gt; this is login page
+ &lt;/Text&gt;
+ &lt;/View&gt;
+ );
+ }
+}
+</code></pre><p>然后你可以像上面一样导入它：</p>
+<pre><code>import themes from 'login';
+</code></pre><h4 id="使用babel-plugin-module-alias">使用<code>babel-plugin-module-alias</code></h4>
+<p>一个<code>babel</code>插件用来在Babel编译过程中以不同的目录重写(map, alias, resolve)</p>
+<p>使用方法：</p>
+<p>Install babel cli</p>
+<pre><code>npm install --g babel-cli
+</code></pre><p>Install  babel-plugin-module-alias.</p>
+<pre><code>npm install --save babel babel-plugin-module-alias
+</code></pre><p>在根目录创建一个文件<code>.babelrc</code>或者在项目的<code>package.json</code>中增加<code>babel:</code>的键，然后添加以下代码</p>
+<pre><code>&quot;babel&quot;:{
+  &quot;plugins&quot;: [[
+    &quot;module-alias&quot;, [
+      { &quot;src&quot;: &quot;./app&quot;, &quot;expose&quot;: &quot;app&quot; },
+      { &quot;src&quot;: &quot;./app/resources/icon&quot;, &quot;expose&quot;: &quot;icon&quot; }
+      ]
+   ]]
+ }
+</code></pre><p>最后清除缓存并重新启动节点服务器。</p>
+<pre><code>npm start -- --reset-cache
+</code></pre><p>完整的源代码可以从<a href="https://github.com/tigerraj32/ReactNative/branches/all">这里</a>下载</p>
+</div>
+
+
+    </main>
+
+    
+      
+    
+  </body>
+</html>

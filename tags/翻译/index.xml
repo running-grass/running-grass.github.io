@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>翻译 on 奔跑的小草</title>
+    <link>https://grass.show/tags/%E7%BF%BB%E8%AF%91/</link>
+    <description>Recent content in 翻译 on 奔跑的小草</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Fri, 18 Aug 2017 19:31:00 +0800</lastBuildDate><atom:link href="https://grass.show/tags/%E7%BF%BB%E8%AF%91/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>【翻译】React Native中的别名</title>
+      <link>https://grass.show/2017/08/18/2017-08-18-alias-in-react-native/</link>
+      <pubDate>Fri, 18 Aug 2017 19:31:00 +0800</pubDate>
+      
+      <guid>https://grass.show/2017/08/18/2017-08-18-alias-in-react-native/</guid>
+      <description>&lt;p&gt;有时候，你会在你的项目有多个文件和文件夹。我们需要从任意随机文件中获得一个文件的引用。如果我们这样的相对路径的话，看起来是这个样子的:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;import themes from &#39;../../config/themes&#39;;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;通过符号&lt;code&gt;../&lt;/code&gt;让我们很难去思考，在更复杂的项目中，这将是一个噩梦。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

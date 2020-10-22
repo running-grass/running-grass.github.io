@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-cn" lang="zh-cn">
+<head>
+  <link href="https://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="Hugo 0.75.1" />
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>奔跑的小草</title>
+  <meta name="description" content="" />
+
+  
+  <link type="text/css" rel="stylesheet" href="https://grass.show/css/print.css" media="print">
+  <link type="text/css" rel="stylesheet" href="https://grass.show/css/poole.css">
+  <link type="text/css" rel="stylesheet" href="https://grass.show/css/syntax.css">
+  <link type="text/css" rel="stylesheet" href="https://grass.show/css/hyde.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface|PT+Sans:400,400i,700">
+
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/favicon.png">
+
+  
+  <link href="https://grass.show/index.xml" rel="alternate" type="application/rss+xml" title="奔跑的小草" />
+  
+</head>
+
+  <body class=" ">
+  <aside class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <a href="https://grass.show/"><h1>奔跑的小草</h1></a>
+      <p class="lead">
+      An elegant open source and mobile first theme for <a href="http://hugo.spf13.com">hugo</a> made by <a href="http://twitter.com/mdo">@mdo</a>. Originally made for Jekyll.
+      </p>
+    </div>
+
+    <nav>
+      <ul class="sidebar-nav">
+        <li><a href="https://grass.show/">Home</a> </li>
+        
+      </ul>
+    </nav>
+
+    <p>&copy; 2020. All rights reserved. </p>
+  </div>
+</aside>
+
+    <main class="content container">
+    <div class="posts">
+<article class="post">
+  <h1 class="post-title">
+    <a href="https://grass.show/post/first-blog-for-ox-hugo/">使用ox-hugo写博客</a>
+  </h1>
+  <time datetime="2020-10-22T16:10:00&#43;0800" class="post-date">Thu, Oct 22, 2020</time>
+  本文是使用ox-hugo发表的第一篇文章
+ 阅读前提  知道Emacs和Org是什么 知道hugo或其它SSG1程序  为什么要使用ox-hugo  可以使用强大的Emacs 可以使用Org格式，同时利用其TODO和文学编程的功能 可以和基于Org的GTD系统相结合 可以使用Org-capture来快速的记录博客灵感  安装ox-hugo ;; 我是使用use-packge,其它方式见文档 (use-package ox-hugo :after ox) 配置ox-hugo 我的hugo目录为 ~/workspace/blog/ 博客文章的目录为 ~/workspace/blog/content/post/ 博客文章的Org目录为 ~/workspace/blog/content-org/
+(use-package ox-hugo :after ox :config (setq ;; 设置在文件导出到content下的哪个目录，我的这个是 content/post org-hugo-section &#34;post&#34; ;; 设置文章的最后修改时间为导出时间 org-hugo-auto-set-lastmod	t ) ;; 设置在org文件保存的时候自动导出到org-hugo-section下 (org-hugo-auto-export-mode) ) 想要实现自动导出还需要在hugo根目录下新建一个文件
+;; .dir-locals.el ((&#34;content-org/&#34; . ((org-mode . ((eval . (org-hugo-auto-export-mode))))))) 在Org文件最前面设置
+#+HUGO_BASE_DIR: ~/workspace/blog/ #+TODO: TODO DONE HUGO_BASE_DIR这个属性是每个Org文件必须设置的，指定hugo的根目录，配合org-hugo-section之后导出路径为 ~/workspace/blog/content/post/ TODO这个属性为选填的，为了覆盖全局设置。
+ 任务状态为TODO时，导出后为草稿，任务状态切换至DONE时，导出后为正式文章.
+  
+  <div class="read-more-link">
+    <a href="/post/first-blog-for-ox-hugo/">Read More…</a>
+  </div>
+  
+</article><article class="post">
+  <h1 class="post-title">
+    <a href="https://grass.show/post/js-fp-2/">函数式编程之旅(二)——初窥门径</a>
+  </h1>
+  <time datetime="2020-07-21T11:08:24Z" class="post-date">Tue, Jul 21, 2020</time>
+  前置知识: 无 阅读时间: 15分钟 一句话重点: 一等公民是基石，纯函数是核心，柯里化是手段，函数组合是目的
+   本系列只做抛砖引玉
+ 一等公民 一等公民是函数式编程世界中的基础法则，是构建整个世界的基石。 那什么是__一等公民__呢，一本国外教材中给的解释如下：
+ In general, a value in a programming language is said to have ﬁrst-class status if it can be passed as a parameter, returned from a subroutine, or assigned into a variable.
+ 函数如果作为一等公民，可以做以下三件事：
+ 函数的参数可以是一个函数 函数的返回值可以为另一个函数 函数可以赋值给一个变量  举例如下：
+function fn() { // do someing } var g = fn; 定义一个函数fn，然后把fn赋值给g
+纯函数 纯函数有以下两个特点：
+ 无副作用 引用透明 有返回值  我们先看第一点无副作用，那什么是副作用呢？
+  
+  <div class="read-more-link">
+    <a href="/post/js-fp-2/">Read More…</a>
+  </div>
+  
+</article><article class="post">
+  <h1 class="post-title">
+    <a href="https://grass.show/post/js-fp-1/">js的函数式编程之旅(一)——初入武林</a>
+  </h1>
+  <time datetime="2020-07-20T20:11:39Z" class="post-date">Mon, Jul 20, 2020</time>
+   前置知识: js基础语法 阅读时间: 5分钟 一句话重点：函数式好处多多，但是不要过度追求函数式。
+ 什么是函数式编程 函数式编程是一种__编程范式__，也就是编写代码指令的方式 相对应的还有过程式编程和面向对象编程，函数式并不是某一编程语言的专属，现在的多数主流语言都是多范式，或多或少的都支持一些函数式的特性 作为前端程序员，应该对于函数式并不陌生，毕竟我们总是在用到函数式的一些特性。只是有可能我们并不知道它和函数式的关系。 例如[1,2,3,4].map(x =&gt; x + 1)就是一个最简单的函数式的范例，之所以说它是函数式的，是因为它使用到了高阶函数。数据不变等特性
+什么不是函数式编程 是否是函数式并不是一件非黑即白的事情，浅红色是红色，深红色也是红色。同样的，有的代码用到的函数式特性少一些，有的用到的函数式特性多一些。只要有用到，就是函数式的。 同时呢，一段代码既可以是面向对象的，也可以是函数式的。这个是不冲突的。 [1,2,3,4].map(x =&gt; x + 1)中使用的map就是Array对象上面的一个方法，所以这一段代码也是面向对象的 所以，我们要抛弃一种不好的想法，看见自己的代码或者别人的代码，便去批判够不够函数式。编程范式是为了更好的思考问题和解决问题，只要能做到这一点，什么编程范式很重要么？
+函数式能干什么 函数组合及复用 这是函数式的基本功能之一，可以使用不同的方式来组合已有的函数。 由于函数式编程中的函数都是无状态无副作用的纯函数，所以可以被用在任何地方，不会产生意料之外的效果
+所定义即所得 由于函数式中的数据不可变性的特点，一个数据在被定义的时候是什么，以后还会是什么，不会因为他被别的函数调用过就会变心。
+声明式编程，代码可读性高 函数式可以用比较接近自然语言的方式来描述自己需要一个什么样的东西，例如
+arr.map(x =&gt; x + 2) .filter(x =&gt; x &lt; 4) .map(x =&gt; x * 2) 我们可以很清晰的看出来上面一段代码的意图，对一个数组每个元素进行+2的操作，然后过滤出小于4的元素，最后对每个元素*2 重点是告诉程序我__要什么__，而不是一步步的告诉程序__怎么做__。
+对于计算结构的抽象 var sum = (acc, x) =&gt; acc + x; arr.reduce(sum, 0) reduce是针对数组的一个累加器的计算结构，而sum是具体的累加逻辑。这个计算结构是抽象后的固定形式，而具体累加逻辑可以在具体使用时使用不同的逻辑。
+函数式不能干什么 函数式不是银弹，不适用所有的场景。
+ 比如对于异步的操作就比非函数式要复杂 由于每次都返回新的数据，所以对于大数组会很费内存，会不断的触发gc 由于js中没有惰性计算，所以一个数组的反复map和filter实际上会循环很多次，不如命令式里面的一个for循环速度快 由于多是函数调用，对于debug会稍微复杂一点  如何看待函数式  不要追求绝对的函数式编程，这样会过犹不及 根据当前的自身需求，来采用相匹配的函数式特性  例如感觉写一堆for循环，时间久了自己都不太清楚用这个循环做了啥，可以用map/reduce/filter等数组操作函数 如果总是写一些很相似的功能，例如把函数拆分耕细粒度的小函数，通过函数组合的方式来构造新函数。 例如pipe(map(take(2), add(1)))表示取出数组前两个元素，并且加1的操作，不需要单独写一个函数，使用已有的两个函数take和add就可以组成想要的功能   可以学习一些理论性的知识，看透函数式的本质。这样就可以做到无招胜有招了。  后面还有什么  函数式的特性 函数式类库的使用 函数式背后的一些理论 函数式和异步操作的结合  
+  
+</article><article class="post">
+  <h1 class="post-title">
+    <a href="https://grass.show/post/hexo-installation/">Hexo的介绍及安装使用</a>
+  </h1>
+  <time datetime="2020-07-10T22:02:16Z" class="post-date">Fri, Jul 10, 2020</time>
+  什么是Hexo  Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页
+ Hexo的特点  基于Node.js   不需要额外配置其它的运行时环境
+  极速生成   生成静态文件的速读极快，可以在几秒钟内完成
+  支持Markdown   可以专心的码字，而不用关心样式问题
+  一键部署   支持多种部署方式，且可以同时部署到多个地方
+  插件丰富   截止到目前有349个插件，同时还支持Octopress的大部分插件
+  主题模板多   截止到目前有313个精美的主题，可以直接使用
+ 安装 安装Hexo命令行工具 npm install hexo-cli -g 初始化博客项目 hexo init blog 安装依赖 cd blog npm install 启动服务器 cd blog hexo server 此时可以打开http://localhost:4000/预览博客
+更换主题 安装NexT主题 cd blog git clone https://github.
+  
+  <div class="read-more-link">
+    <a href="/post/hexo-installation/">Read More…</a>
+  </div>
+  
+</article><article class="post">
+  <h1 class="post-title">
+    <a href="https://grass.show/2017/08/30/2017-08-30-make-mac-dev-env-01/">打造高效的Mac开发环境（一）—— 科学上网</a>
+  </h1>
+  <time datetime="2017-08-30T11:25:00&#43;0800" class="post-date">Wed, Aug 30, 2017</time>
+  <blockquote>
+</blockquote>
+<p>工欲善其事，必先利其器</p>
+<p>不管是我们以后用到的工具，还是各种文档，亦或是“谷歌一下”，这些都得翻墙，甚至GitHub都偶尔抽风，我们先把这重中之重解决掉！</p>
+  
+  <div class="read-more-link">
+    <a href="/2017/08/30/2017-08-30-make-mac-dev-env-01/">Read More…</a>
+  </div>
+  
+</article><article class="post">
+  <h1 class="post-title">
+    <a href="https://grass.show/2017/08/26/2017-08-26-make-mac-dev-env-00/">打造高效的Mac开发环境（零）—— 启程</a>
+  </h1>
+  <time datetime="2017-08-26T11:25:00&#43;0800" class="post-date">Sat, Aug 26, 2017</time>
+  <pre><code>你喜欢追求高效率的办公吗？
+你喜欢尽最大可能节约你的时间吗？
+你喜欢别人羡慕的看着你装*吗？
+那你就是最适合本教程的人了，O(∩_∩)O哈哈~
+</code></pre>
+  
+  <div class="read-more-link">
+    <a href="/2017/08/26/2017-08-26-make-mac-dev-env-00/">Read More…</a>
+  </div>
+  
+</article><article class="post">
+  <h1 class="post-title">
+    <a href="https://grass.show/2017/08/18/2017-08-18-alias-in-react-native/">【翻译】React Native中的别名</a>
+  </h1>
+  <time datetime="2017-08-18T19:31:00&#43;0800" class="post-date">Fri, Aug 18, 2017</time>
+  <p>有时候，你会在你的项目有多个文件和文件夹。我们需要从任意随机文件中获得一个文件的引用。如果我们这样的相对路径的话，看起来是这个样子的:</p>
+<pre><code>import themes from '../../config/themes';
+</code></pre><p>通过符号<code>../</code>让我们很难去思考，在更复杂的项目中，这将是一个噩梦。</p>
+  
+  <div class="read-more-link">
+    <a href="/2017/08/18/2017-08-18-alias-in-react-native/">Read More…</a>
+  </div>
+  
+</article><article class="post">
+  <h1 class="post-title">
+    <a href="https://grass.show/2017/08/13/2017-08-13-first-blog/">我又开始写博客了</a>
+  </h1>
+  <time datetime="2017-08-13T01:31:00&#43;0800" class="post-date">Sun, Aug 13, 2017</time>
+  <p>为什么要说又呢？</p>
+<p>不止一次的建站写博客，也不止一次的不了了之.</p>
+<p>而这一次，我为洗刷耻辱而来。</p>
+  
+  <div class="read-more-link">
+    <a href="/2017/08/13/2017-08-13-first-blog/">Read More…</a>
+  </div>
+  
+</article><article class="post">
+  <h1 class="post-title">
+    <a href="https://grass.show/2017/08/31/2017-08-31-callback-promise-rxjs/">异步——从Callback到Promise再到Rxjs</a>
+  </h1>
+  <time datetime="0001-01-01T00:00:00Z" class="post-date">Mon, Jan 1, 0001</time>
+  <p>异步编程从以前的晦涩难懂，到现在的简单明了，从以前的功能单一，但现在的功能强大。</p>
+  
+  <div class="read-more-link">
+    <a href="/2017/08/31/2017-08-31-callback-promise-rxjs/">Read More…</a>
+  </div>
+  
+</article>
+</div>
+    </main>
+
+    
+      
+    
+  </body>
+</html>

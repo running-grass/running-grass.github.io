@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-cn" lang="zh-cn">
+<head>
+  <link href="https://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="Hugo 0.75.1" />
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>使用ox-hugo写博客 &middot; 奔跑的小草</title>
+  <meta name="description" content="" />
+
+  
+  <link type="text/css" rel="stylesheet" href="https://grass.show/css/print.css" media="print">
+  <link type="text/css" rel="stylesheet" href="https://grass.show/css/poole.css">
+  <link type="text/css" rel="stylesheet" href="https://grass.show/css/syntax.css">
+  <link type="text/css" rel="stylesheet" href="https://grass.show/css/hyde.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface|PT+Sans:400,400i,700">
+
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/favicon.png">
+
+  
+  
+</head>
+
+  <body class=" ">
+  <aside class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <a href="https://grass.show/"><h1>奔跑的小草</h1></a>
+      <p class="lead">
+      An elegant open source and mobile first theme for <a href="http://hugo.spf13.com">hugo</a> made by <a href="http://twitter.com/mdo">@mdo</a>. Originally made for Jekyll.
+      </p>
+    </div>
+
+    <nav>
+      <ul class="sidebar-nav">
+        <li><a href="https://grass.show/">Home</a> </li>
+        
+      </ul>
+    </nav>
+
+    <p>&copy; 2020. All rights reserved. </p>
+  </div>
+</aside>
+
+    <main class="content container">
+    <div class="post">
+  <h1>使用ox-hugo写博客</h1>
+  <time datetime=2020-10-22T16:10:00&#43;0800 class="post-date">Thu, Oct 22, 2020</time>
+  <blockquote>
+<p>本文是使用ox-hugo发表的第一篇文章</p>
+</blockquote>
+<h2 id="阅读前提">阅读前提</h2>
+<ul>
+<li>知道Emacs和Org是什么</li>
+<li>知道hugo或其它SSG<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>程序</li>
+</ul>
+<h2 id="为什么要使用ox-hugo">为什么要使用ox-hugo</h2>
+<ol>
+<li>可以使用强大的Emacs</li>
+<li>可以使用Org格式，同时利用其TODO和文学编程的功能</li>
+<li>可以和基于Org的GTD系统相结合</li>
+<li>可以使用Org-capture来快速的记录博客灵感</li>
+</ol>
+<h2 id="安装ox-hugo">安装ox-hugo</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span style="color:#75715e">;; 我是使用use-packge,其它方式见文档</span>
+(use-package ox-hugo
+  :after ox)
+</code></pre></div><h2 id="配置ox-hugo">配置ox-hugo</h2>
+<p>我的hugo目录为 ~/workspace/blog/
+博客文章的目录为 ~/workspace/blog/content/post/
+博客文章的Org目录为 ~/workspace/blog/content-org/</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-emacs-lisp" data-lang="emacs-lisp">(use-package ox-hugo
+  :after ox
+  :config
+
+  (setq
+   <span style="color:#75715e">;; 设置在文件导出到content下的哪个目录，我的这个是 content/post</span>
+   org-hugo-section <span style="color:#e6db74">&#34;post&#34;</span>
+   <span style="color:#75715e">;; 设置文章的最后修改时间为导出时间</span>
+   org-hugo-auto-set-lastmod	<span style="color:#66d9ef">t</span>
+   )
+  <span style="color:#75715e">;; 设置在org文件保存的时候自动导出到org-hugo-section下</span>
+  (org-hugo-auto-export-mode)
+  )
+</code></pre></div><p>想要实现自动导出还需要在hugo根目录下新建一个文件</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span style="color:#75715e">;; .dir-locals.el</span>
+((<span style="color:#e6db74">&#34;content-org/&#34;</span>
+  <span style="color:#f92672">.</span> ((org-mode <span style="color:#f92672">.</span> ((<span style="color:#a6e22e">eval</span> <span style="color:#f92672">.</span> (org-hugo-auto-export-mode)))))))
+</code></pre></div><p>在Org文件最前面设置</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-org" data-lang="org"><span style="color:#75715e">#+HUGO_BASE_DIR</span><span style="color:#75715e">: ~/workspace/blog/</span>
+<span style="color:#75715e">#+TODO</span><span style="color:#75715e">: TODO DONE</span>
+</code></pre></div><p>HUGO_BASE_DIR这个属性是每个Org文件必须设置的，指定hugo的根目录，配合org-hugo-section之后导出路径为 ~/workspace/blog/content/post/
+TODO这个属性为选填的，为了覆盖全局设置。</p>
+<blockquote>
+<p>任务状态为TODO时，导出后为草稿，任务状态切换至DONE时，导出后为正式文章.</p>
+</blockquote>
+<blockquote>
+<p>在从TODO切换到DONE时，会在Org标题下生成CLOSED: <!-- raw HTML omitted --><!-- raw HTML omitted -->[2020-10-22 Thu 16:10]<!-- raw HTML omitted --><!-- raw HTML omitted -->, 如果未指定发布时间的话，则自动采用该CLOSED时间</p>
+</blockquote>
+<h2 id="开始写文章">开始写文章</h2>
+<ul>
+<li>
+<p>在org文件中新建一个文件，例如我的是~/workspace/blog/content-org/post.org</p>
+</li>
+<li>
+<p>在文件头部添加必要的属性#+HUGO_BASE_DIR: ~/workspace/blog/</p>
+</li>
+<li>
+<p>在文件中新增一个标题为文章标题，例如“使用ox-hugo写博客”， 增加一个TODO关键字</p>
+</li>
+<li>
+<p>1并且增加一个属性， 指定生成的文件名称</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-org" data-lang="org"><span style="color:#75715e">:PROPERTIES:
+</span><span style="color:#75715e"></span><span style="color:#75715e">:EXPORT_FILE_NAME: first-blog-for-ox-hugo
+</span><span style="color:#75715e"></span><span style="color:#75715e">:END:</span>
+</code></pre></div></li>
+<li>
+<p>开始写正文，例如你正在看到的文字</p>
+</li>
+<li>
+<p>把TODO状态切换至DONE</p>
+</li>
+<li>
+<p>保存Org,如果开启了Hugo server的话，是可以在浏览器上面实时查看改动的。</p>
+</li>
+</ul>
+<h2 id="参考链接">参考链接</h2>
+<ul>
+<li><a href="https://ox-hugo.scripter.co/">ox-hugo官网</a></li>
+<li><a href="https://cloud.tencent.com/developer/article/1530404">ox-hugo配置</a></li>
+<li><a href="http://blog.jiayuanzhang.com/post/blog-with-ox-hugo/">使用 Emacs + ox-hugo 来写博客</a></li>
+</ul>
+<section class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1" role="doc-endnote">
+<p>静态网站生成工具 <a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</section>
+
+</div>
+
+
+    </main>
+
+    
+      
+    
+  </body>
+</html>
