@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>翻墙 on My New Hugo Site</title>
+    <link>https://grass.show/tags/%E7%BF%BB%E5%A2%99/</link>
+    <description>Recent content in 翻墙 on My New Hugo Site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 30 Aug 2017 11:25:00 +0800</lastBuildDate><atom:link href="https://grass.show/tags/%E7%BF%BB%E5%A2%99/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>打造高效的Mac开发环境（一）—— 科学上网</title>
+      <link>https://grass.show/2017/08/30/2017-08-30-make-mac-dev-env-01/</link>
+      <pubDate>Wed, 30 Aug 2017 11:25:00 +0800</pubDate>
+      
+      <guid>https://grass.show/2017/08/30/2017-08-30-make-mac-dev-env-01/</guid>
+      <description>&lt;blockquote&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;工欲善其事，必先利其器&lt;/p&gt;
+&lt;p&gt;不管是我们以后用到的工具，还是各种文档，亦或是“谷歌一下”，这些都得翻墙，甚至GitHub都偶尔抽风，我们先把这重中之重解决掉！&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
