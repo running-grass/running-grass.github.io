@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-cn" lang="zh-cn">
 <head>
   <link href="https://gmpg.org/xfn/11" rel="profile">
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>My New Hugo Site</title>
+  <title>奔跑的小草</title>
   <meta name="description" content="" />
 
   
@@ -24,7 +24,7 @@
   <link rel="shortcut icon" href="/favicon.png">
 
   
-  <link href="https://grass.show/index.xml" rel="alternate" type="application/rss+xml" title="My New Hugo Site" />
+  <link href="https://grass.show/index.xml" rel="alternate" type="application/rss+xml" title="奔跑的小草" />
   
 </head>
 
@@ -32,7 +32,7 @@
   <aside class="sidebar">
   <div class="container sidebar-sticky">
     <div class="sidebar-about">
-      <a href="https://grass.show/"><h1>My New Hugo Site</h1></a>
+      <a href="https://grass.show/"><h1>奔跑的小草</h1></a>
       <p class="lead">
       An elegant open source and mobile first theme for <a href="http://hugo.spf13.com">hugo</a> made by <a href="http://twitter.com/mdo">@mdo</a>. Originally made for Jekyll.
       </p>
@@ -52,6 +52,22 @@
     <main class="content container">
     <div class="posts">
 <article class="post">
+  <h1 class="post-title">
+    <a href="https://grass.show/post/first-blog-for-ox-hugo/">使用ox-hugo写博客</a>
+  </h1>
+  <time datetime="2020-10-22T16:10:00&#43;0800" class="post-date">Thu, Oct 22, 2020</time>
+  本文是使用ox-hugo发表的第一篇文章
+ 阅读前提  知道Emacs和Org是什么 知道hugo或其它SSG1程序  为什么要使用ox-hugo  可以使用强大的Emacs 可以使用Org格式，同时利用其TODO和文学编程的功能 可以和基于Org的GTD系统相结合 可以使用Org-capture来快速的记录博客灵感  安装ox-hugo ;; 我是使用use-packge,其它方式见文档 (use-package ox-hugo :after ox) 配置ox-hugo 我的hugo目录为 ~/workspace/blog/ 博客文章的目录为 ~/workspace/blog/content/post/ 博客文章的Org目录为 ~/workspace/blog/content-org/
+(use-package ox-hugo :after ox :config (setq ;; 设置在文件导出到content下的哪个目录，我的这个是 content/post org-hugo-section &#34;post&#34; ;; 设置文章的最后修改时间为导出时间 org-hugo-auto-set-lastmod	t ) ;; 设置在org文件保存的时候自动导出到org-hugo-section下 (org-hugo-auto-export-mode) ) 想要实现自动导出还需要在hugo根目录下新建一个文件
+;; .dir-locals.el ((&#34;content-org/&#34; . ((org-mode . ((eval . (org-hugo-auto-export-mode))))))) 在Org文件最前面设置
+#+HUGO_BASE_DIR: ~/workspace/blog/ #+TODO: TODO DONE HUGO_BASE_DIR这个属性是每个Org文件必须设置的，指定hugo的根目录，配合org-hugo-section之后导出路径为 ~/workspace/blog/content/post/ TODO这个属性为选填的，为了覆盖全局设置。
+ 任务状态为TODO时，导出后为草稿，任务状态切换至DONE时，导出后为正式文章.
+  
+  <div class="read-more-link">
+    <a href="/post/first-blog-for-ox-hugo/">Read More…</a>
+  </div>
+  
+</article><article class="post">
   <h1 class="post-title">
     <a href="https://grass.show/post/js-fp-2/">函数式编程之旅(二)——初窥门径</a>
   </h1>

@@ -1,12 +1,26 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on My New Hugo Site</title>
+    <title>Posts on 奔跑的小草</title>
     <link>https://grass.show/post/</link>
-    <description>Recent content in Posts on My New Hugo Site</description>
+    <description>Recent content in Posts on 奔跑的小草</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Tue, 21 Jul 2020 11:08:24 +0000</lastBuildDate><atom:link href="https://grass.show/post/index.xml" rel="self" type="application/rss+xml" />
+    <language>zh-cn</language>
+    <lastBuildDate>Thu, 22 Oct 2020 16:10:00 +0800</lastBuildDate><atom:link href="https://grass.show/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>使用ox-hugo写博客</title>
+      <link>https://grass.show/post/first-blog-for-ox-hugo/</link>
+      <pubDate>Thu, 22 Oct 2020 16:10:00 +0800</pubDate>
+      
+      <guid>https://grass.show/post/first-blog-for-ox-hugo/</guid>
+      <description>本文是使用ox-hugo发表的第一篇文章
+ 阅读前提  知道Emacs和Org是什么 知道hugo或其它SSG1程序  为什么要使用ox-hugo  可以使用强大的Emacs 可以使用Org格式，同时利用其TODO和文学编程的功能 可以和基于Org的GTD系统相结合 可以使用Org-capture来快速的记录博客灵感  安装ox-hugo ;; 我是使用use-packge,其它方式见文档 (use-package ox-hugo :after ox) 配置ox-hugo 我的hugo目录为 ~/workspace/blog/ 博客文章的目录为 ~/workspace/blog/content/post/ 博客文章的Org目录为 ~/workspace/blog/content-org/
+(use-package ox-hugo :after ox :config (setq ;; 设置在文件导出到content下的哪个目录，我的这个是 content/post org-hugo-section &amp;#34;post&amp;#34; ;; 设置文章的最后修改时间为导出时间 org-hugo-auto-set-lastmod	t ) ;; 设置在org文件保存的时候自动导出到org-hugo-section下 (org-hugo-auto-export-mode) ) 想要实现自动导出还需要在hugo根目录下新建一个文件
+;; .dir-locals.el ((&amp;#34;content-org/&amp;#34; . ((org-mode . ((eval . (org-hugo-auto-export-mode))))))) 在Org文件最前面设置
+#+HUGO_BASE_DIR: ~/workspace/blog/ #+TODO: TODO DONE HUGO_BASE_DIR这个属性是每个Org文件必须设置的，指定hugo的根目录，配合org-hugo-section之后导出路径为 ~/workspace/blog/content/post/ TODO这个属性为选填的，为了覆盖全局设置。
+ 任务状态为TODO时，导出后为草稿，任务状态切换至DONE时，导出后为正式文章.</description>
+    </item>
+    
     <item>
       <title>函数式编程之旅(二)——初窥门径</title>
       <link>https://grass.show/post/js-fp-2/</link>

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>高效 on My New Hugo Site</title>
+    <title>高效 on 奔跑的小草</title>
     <link>https://grass.show/tags/%E9%AB%98%E6%95%88/</link>
-    <description>Recent content in 高效 on My New Hugo Site</description>
+    <description>Recent content in 高效 on 奔跑的小草</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
+    <language>zh-cn</language>
     <lastBuildDate>Wed, 30 Aug 2017 11:25:00 +0800</lastBuildDate><atom:link href="https://grass.show/tags/%E9%AB%98%E6%95%88/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>打造高效的Mac开发环境（一）—— 科学上网</title>

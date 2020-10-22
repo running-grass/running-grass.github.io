@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>博客 on My New Hugo Site</title>
+    <title>博客 on 奔跑的小草</title>
     <link>https://grass.show/tags/%E5%8D%9A%E5%AE%A2/</link>
-    <description>Recent content in 博客 on My New Hugo Site</description>
+    <description>Recent content in 博客 on 奔跑的小草</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
+    <language>zh-cn</language>
     <lastBuildDate>Fri, 10 Jul 2020 22:02:16 +0000</lastBuildDate><atom:link href="https://grass.show/tags/%E5%8D%9A%E5%AE%A2/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Hexo的介绍及安装使用</title>
