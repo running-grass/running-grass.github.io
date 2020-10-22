@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>偏函数 on My New Hugo Site</title>
+    <link>https://grass.show/tags/%E5%81%8F%E5%87%BD%E6%95%B0/</link>
+    <description>Recent content in 偏函数 on My New Hugo Site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 21 Jul 2020 11:08:24 +0000</lastBuildDate><atom:link href="https://grass.show/tags/%E5%81%8F%E5%87%BD%E6%95%B0/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>函数式编程之旅(二)——初窥门径</title>
+      <link>https://grass.show/post/js-fp-2/</link>
+      <pubDate>Tue, 21 Jul 2020 11:08:24 +0000</pubDate>
+      
+      <guid>https://grass.show/post/js-fp-2/</guid>
+      <description>前置知识: 无 阅读时间: 15分钟 一句话重点: 一等公民是基石，纯函数是核心，柯里化是手段，函数组合是目的
+   本系列只做抛砖引玉
+ 一等公民 一等公民是函数式编程世界中的基础法则，是构建整个世界的基石。 那什么是__一等公民__呢，一本国外教材中给的解释如下：
+ In general, a value in a programming language is said to have ﬁrst-class status if it can be passed as a parameter, returned from a subroutine, or assigned into a variable.
+ 函数如果作为一等公民，可以做以下三件事：
+ 函数的参数可以是一个函数 函数的返回值可以为另一个函数 函数可以赋值给一个变量  举例如下：
+function fn() { // do someing } var g = fn; 定义一个函数fn，然后把fn赋值给g
+纯函数 纯函数有以下两个特点：
+ 无副作用 引用透明 有返回值  我们先看第一点无副作用，那什么是副作用呢？</description>
+    </item>
+    
+  </channel>
+</rss>

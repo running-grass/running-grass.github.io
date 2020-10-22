@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Hexo on My New Hugo Site</title>
+    <link>https://grass.show/categories/hexo/</link>
+    <description>Recent content in Hexo on My New Hugo Site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 10 Jul 2020 22:02:16 +0000</lastBuildDate><atom:link href="https://grass.show/categories/hexo/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hexo的介绍及安装使用</title>
+      <link>https://grass.show/post/hexo-installation/</link>
+      <pubDate>Fri, 10 Jul 2020 22:02:16 +0000</pubDate>
+      
+      <guid>https://grass.show/post/hexo-installation/</guid>
+      <description>什么是Hexo  Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页
+ Hexo的特点  基于Node.js   不需要额外配置其它的运行时环境
+  极速生成   生成静态文件的速读极快，可以在几秒钟内完成
+  支持Markdown   可以专心的码字，而不用关心样式问题
+  一键部署   支持多种部署方式，且可以同时部署到多个地方
+  插件丰富   截止到目前有349个插件，同时还支持Octopress的大部分插件
+  主题模板多   截止到目前有313个精美的主题，可以直接使用
+ 安装 安装Hexo命令行工具 npm install hexo-cli -g 初始化博客项目 hexo init blog 安装依赖 cd blog npm install 启动服务器 cd blog hexo server 此时可以打开http://localhost:4000/预览博客
+更换主题 安装NexT主题 cd blog git clone https://github.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head>
+  <link href="https://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="Hugo 0.75.1" />
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>js的函数式编程之旅(一)——初入武林 &middot; My New Hugo Site</title>
+  <meta name="description" content="" />
+
+  
+  <link type="text/css" rel="stylesheet" href="https://grass.show/css/print.css" media="print">
+  <link type="text/css" rel="stylesheet" href="https://grass.show/css/poole.css">
+  <link type="text/css" rel="stylesheet" href="https://grass.show/css/syntax.css">
+  <link type="text/css" rel="stylesheet" href="https://grass.show/css/hyde.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface|PT+Sans:400,400i,700">
+
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/favicon.png">
+
+  
+  
+</head>
+
+  <body class=" ">
+  <aside class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <a href="https://grass.show/"><h1>My New Hugo Site</h1></a>
+      <p class="lead">
+      An elegant open source and mobile first theme for <a href="http://hugo.spf13.com">hugo</a> made by <a href="http://twitter.com/mdo">@mdo</a>. Originally made for Jekyll.
+      </p>
+    </div>
+
+    <nav>
+      <ul class="sidebar-nav">
+        <li><a href="https://grass.show/">Home</a> </li>
+        
+      </ul>
+    </nav>
+
+    <p>&copy; 2020. All rights reserved. </p>
+  </div>
+</aside>
+
+    <main class="content container">
+    <div class="post">
+  <h1>js的函数式编程之旅(一)——初入武林</h1>
+  <time datetime=2020-07-20T20:11:39Z class="post-date">Mon, Jul 20, 2020</time>
+  <blockquote>
+<p>前置知识: js基础语法
+阅读时间: 5分钟
+一句话重点：函数式好处多多，但是不要过度追求函数式。</p>
+</blockquote>
+<h2 id="什么是函数式编程">什么是函数式编程</h2>
+<p>函数式编程是一种__编程范式__，也就是编写代码指令的方式
+相对应的还有过程式编程和面向对象编程，函数式并不是某一编程语言的专属，现在的多数主流语言都是多范式，或多或少的都支持一些函数式的特性
+作为前端程序员，应该对于函数式并不陌生，毕竟我们总是在用到函数式的一些特性。只是有可能我们并不知道它和函数式的关系。
+例如<code>[1,2,3,4].map(x =&gt; x + 1)</code>就是一个最简单的函数式的范例，之所以说它是函数式的，是因为它使用到了高阶函数。数据不变等特性</p>
+<h2 id="什么不是函数式编程">什么不是函数式编程</h2>
+<p>是否是函数式并不是一件非黑即白的事情，浅红色是红色，深红色也是红色。同样的，有的代码用到的函数式特性少一些，有的用到的函数式特性多一些。只要有用到，就是函数式的。
+同时呢，一段代码既可以是面向对象的，也可以是函数式的。这个是不冲突的。
+<code>[1,2,3,4].map(x =&gt; x + 1)</code>中使用的map就是Array对象上面的一个方法，所以这一段代码也是面向对象的
+所以，我们要抛弃一种不好的想法，看见自己的代码或者别人的代码，便去批判够不够函数式。编程范式是为了更好的思考问题和解决问题，只要能做到这一点，什么编程范式很重要么？</p>
+<h2 id="函数式能干什么">函数式能干什么</h2>
+<h3 id="函数组合及复用">函数组合及复用</h3>
+<p>这是函数式的基本功能之一，可以使用不同的方式来组合已有的函数。
+由于函数式编程中的函数都是无状态无副作用的纯函数，所以可以被用在任何地方，不会产生意料之外的效果</p>
+<h3 id="所定义即所得">所定义即所得</h3>
+<p>由于函数式中的数据不可变性的特点，一个数据在被定义的时候是什么，以后还会是什么，不会因为他被别的函数调用过就会变心。</p>
+<h3 id="声明式编程代码可读性高">声明式编程，代码可读性高</h3>
+<p>函数式可以用比较接近自然语言的方式来描述自己需要一个什么样的东西，例如</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">arr</span>.<span style="color:#a6e22e">map</span>(<span style="color:#a6e22e">x</span> =&gt; <span style="color:#a6e22e">x</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">2</span>)
+   .<span style="color:#a6e22e">filter</span>(<span style="color:#a6e22e">x</span> =&gt; <span style="color:#a6e22e">x</span> <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">4</span>)
+   .<span style="color:#a6e22e">map</span>(<span style="color:#a6e22e">x</span> =&gt; <span style="color:#a6e22e">x</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">2</span>)
+</code></pre></div><p>我们可以很清晰的看出来上面一段代码的意图，对一个数组每个元素进行+2的操作，然后过滤出小于4的元素，最后对每个元素*2
+重点是告诉程序我__要什么__，而不是一步步的告诉程序__怎么做__。</p>
+<h3 id="对于计算结构的抽象">对于计算结构的抽象</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">sum</span> <span style="color:#f92672">=</span> (<span style="color:#a6e22e">acc</span>, <span style="color:#a6e22e">x</span>) =&gt; <span style="color:#a6e22e">acc</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">x</span>;
+<span style="color:#a6e22e">arr</span>.<span style="color:#a6e22e">reduce</span>(<span style="color:#a6e22e">sum</span>, <span style="color:#ae81ff">0</span>)
+</code></pre></div><p>reduce是针对数组的一个累加器的计算结构，而sum是具体的累加逻辑。这个计算结构是抽象后的固定形式，而具体累加逻辑可以在具体使用时使用不同的逻辑。</p>
+<h2 id="函数式不能干什么">函数式不能干什么</h2>
+<p>函数式不是银弹，不适用所有的场景。</p>
+<ul>
+<li>比如对于异步的操作就比非函数式要复杂</li>
+<li>由于每次都返回新的数据，所以对于大数组会很费内存，会不断的触发gc</li>
+<li>由于js中没有惰性计算，所以一个数组的反复map和filter实际上会循环很多次，不如命令式里面的一个for循环速度快</li>
+<li>由于多是函数调用，对于debug会稍微复杂一点</li>
+</ul>
+<h2 id="如何看待函数式">如何看待函数式</h2>
+<ul>
+<li>不要追求绝对的函数式编程，这样会过犹不及</li>
+<li>根据当前的自身需求，来采用相匹配的函数式特性
+<ul>
+<li>例如感觉写一堆for循环，时间久了自己都不太清楚用这个循环做了啥，可以用map/reduce/filter等数组操作函数</li>
+<li>如果总是写一些很相似的功能，例如把函数拆分耕细粒度的小函数，通过函数组合的方式来构造新函数。 例如pipe(map(take(2), add(1)))表示取出数组前两个元素，并且加1的操作，不需要单独写一个函数，使用已有的两个函数take和add就可以组成想要的功能</li>
+</ul>
+</li>
+<li>可以学习一些理论性的知识，看透函数式的本质。这样就可以做到无招胜有招了。</li>
+</ul>
+<h2 id="后面还有什么">后面还有什么</h2>
+<ul>
+<li>函数式的特性</li>
+<li>函数式类库的使用</li>
+<li>函数式背后的一些理论</li>
+<li>函数式和异步操作的结合</li>
+</ul>
+
+</div>
+
+
+    </main>
+
+    
+      
+    
+  </body>
+</html>
