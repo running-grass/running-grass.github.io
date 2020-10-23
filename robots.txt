@@ -1,2 +1,2 @@
 User-agent: *
-Sitemap: https://grass.show/sitemap.xml
+Disallow:
