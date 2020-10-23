@@ -1,58 +1,163 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-cn" lang="zh-cn">
+<html lang="zh-cn">
 <head>
-  <link href="https://gmpg.org/xfn/11" rel="profile">
-  <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <meta name="generator" content="Hugo 0.75.1" />
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>js的函数式编程之旅(一)——初入武林 - 一世韶华</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
 
-  <title>js的函数式编程之旅(一)——初入武林 &middot; 奔跑的小草</title>
-  <meta name="description" content="" />
-
-  
-  <link type="text/css" rel="stylesheet" href="https://grass.show/css/print.css" media="print">
-  <link type="text/css" rel="stylesheet" href="https://grass.show/css/poole.css">
-  <link type="text/css" rel="stylesheet" href="https://grass.show/css/syntax.css">
-  <link type="text/css" rel="stylesheet" href="https://grass.show/css/hyde.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface|PT+Sans:400,400i,700">
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-  
-  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
-  <link rel="shortcut icon" href="/favicon.png">
+<meta name="author" content="olOwOlo" /><meta name="description" content="前置知识: js基础语法 阅读时间: 5分钟 一句话重点：函数式好处多多，但是不要过度追求函数式。 什么是函数式编程 函数式编程是一种__编程范式__，" /><meta name="keywords" content="Hugo, theme, even" />
 
-  
-  
+
+
+
+
+
+<meta name="generator" content="Hugo 0.75.1 with theme even" />
+
+
+<link rel="canonical" href="https://grass.show/post/js-fp-1/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+<link href="/sass/main.min.c7bc1becf36bcf6a9ebd25d2947e43a2eb745ddb0c9a32b43126fd7fa460c351.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="js的函数式编程之旅(一)——初入武林" />
+<meta property="og:description" content="前置知识: js基础语法 阅读时间: 5分钟 一句话重点：函数式好处多多，但是不要过度追求函数式。 什么是函数式编程 函数式编程是一种__编程范式__，" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://grass.show/post/js-fp-1/" />
+<meta property="article:published_time" content="2020-07-20T20:11:39+00:00" />
+<meta property="article:modified_time" content="2020-07-20T20:11:39+00:00" />
+<meta itemprop="name" content="js的函数式编程之旅(一)——初入武林">
+<meta itemprop="description" content="前置知识: js基础语法 阅读时间: 5分钟 一句话重点：函数式好处多多，但是不要过度追求函数式。 什么是函数式编程 函数式编程是一种__编程范式__，">
+<meta itemprop="datePublished" content="2020-07-20T20:11:39+00:00" />
+<meta itemprop="dateModified" content="2020-07-20T20:11:39+00:00" />
+<meta itemprop="wordCount" content="1413">
+
+
+
+<meta itemprop="keywords" content="js,函数式编程," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="js的函数式编程之旅(一)——初入武林"/>
+<meta name="twitter:description" content="前置知识: js基础语法 阅读时间: 5分钟 一句话重点：函数式好处多多，但是不要过度追求函数式。 什么是函数式编程 函数式编程是一种__编程范式__，"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
 </head>
-
-  <body class=" ">
-  <aside class="sidebar">
-  <div class="container sidebar-sticky">
-    <div class="sidebar-about">
-      <a href="https://grass.show/"><h1>奔跑的小草</h1></a>
-      <p class="lead">
-      An elegant open source and mobile first theme for <a href="http://hugo.spf13.com">hugo</a> made by <a href="http://twitter.com/mdo">@mdo</a>. Originally made for Jekyll.
-      </p>
-    </div>
-
-    <nav>
-      <ul class="sidebar-nav">
-        <li><a href="https://grass.show/">Home</a> </li>
-        
-      </ul>
-    </nav>
-
-    <p>&copy; 2020. All rights reserved. </p>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Even</a>
   </div>
-</aside>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Even</a>
+</div>
 
-    <main class="content container">
-    <div class="post">
-  <h1>js的函数式编程之旅(一)——初入武林</h1>
-  <time datetime=2020-07-20T20:11:39Z class="post-date">Mon, Jul 20, 2020</time>
-  <blockquote>
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">js的函数式编程之旅(一)——初入武林</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2020-07-20 </span>
+        <div class="post-category">
+            <a href="/categories/%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BC%96%E7%A8%8B/"> 函数式编程 </a>
+            </div>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#什么是函数式编程">什么是函数式编程</a></li>
+        <li><a href="#什么不是函数式编程">什么不是函数式编程</a></li>
+        <li><a href="#函数式能干什么">函数式能干什么</a>
+          <ul>
+            <li><a href="#函数组合及复用">函数组合及复用</a></li>
+            <li><a href="#所定义即所得">所定义即所得</a></li>
+            <li><a href="#声明式编程代码可读性高">声明式编程，代码可读性高</a></li>
+            <li><a href="#对于计算结构的抽象">对于计算结构的抽象</a></li>
+          </ul>
+        </li>
+        <li><a href="#函数式不能干什么">函数式不能干什么</a></li>
+        <li><a href="#如何看待函数式">如何看待函数式</a></li>
+        <li><a href="#后面还有什么">后面还有什么</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <blockquote>
 <p>前置知识: js基础语法
 阅读时间: 5分钟
 一句话重点：函数式好处多多，但是不要过度追求函数式。</p>
@@ -75,15 +180,32 @@
 <p>由于函数式中的数据不可变性的特点，一个数据在被定义的时候是什么，以后还会是什么，不会因为他被别的函数调用过就会变心。</p>
 <h3 id="声明式编程代码可读性高">声明式编程，代码可读性高</h3>
 <p>函数式可以用比较接近自然语言的方式来描述自己需要一个什么样的东西，例如</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">arr</span>.<span style="color:#a6e22e">map</span>(<span style="color:#a6e22e">x</span> =&gt; <span style="color:#a6e22e">x</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">2</span>)
-   .<span style="color:#a6e22e">filter</span>(<span style="color:#a6e22e">x</span> =&gt; <span style="color:#a6e22e">x</span> <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">4</span>)
-   .<span style="color:#a6e22e">map</span>(<span style="color:#a6e22e">x</span> =&gt; <span style="color:#a6e22e">x</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">2</span>)
-</code></pre></div><p>我们可以很清晰的看出来上面一段代码的意图，对一个数组每个元素进行+2的操作，然后过滤出小于4的元素，最后对每个元素*2
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="nx">arr</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">x</span> <span class="p">=&gt;</span> <span class="nx">x</span> <span class="o">+</span> <span class="mi">2</span><span class="p">)</span>
+   <span class="p">.</span><span class="nx">filter</span><span class="p">(</span><span class="nx">x</span> <span class="p">=&gt;</span> <span class="nx">x</span> <span class="o">&lt;</span> <span class="mi">4</span><span class="p">)</span>
+   <span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">x</span> <span class="p">=&gt;</span> <span class="nx">x</span> <span class="o">*</span> <span class="mi">2</span><span class="p">)</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>我们可以很清晰的看出来上面一段代码的意图，对一个数组每个元素进行+2的操作，然后过滤出小于4的元素，最后对每个元素*2
 重点是告诉程序我__要什么__，而不是一步步的告诉程序__怎么做__。</p>
 <h3 id="对于计算结构的抽象">对于计算结构的抽象</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">sum</span> <span style="color:#f92672">=</span> (<span style="color:#a6e22e">acc</span>, <span style="color:#a6e22e">x</span>) =&gt; <span style="color:#a6e22e">acc</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">x</span>;
-<span style="color:#a6e22e">arr</span>.<span style="color:#a6e22e">reduce</span>(<span style="color:#a6e22e">sum</span>, <span style="color:#ae81ff">0</span>)
-</code></pre></div><p>reduce是针对数组的一个累加器的计算结构，而sum是具体的累加逻辑。这个计算结构是抽象后的固定形式，而具体累加逻辑可以在具体使用时使用不同的逻辑。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">sum</span> <span class="o">=</span> <span class="p">(</span><span class="nx">acc</span><span class="p">,</span> <span class="nx">x</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">acc</span> <span class="o">+</span> <span class="nx">x</span><span class="p">;</span>
+<span class="nx">arr</span><span class="p">.</span><span class="nx">reduce</span><span class="p">(</span><span class="nx">sum</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>reduce是针对数组的一个累加器的计算结构，而sum是具体的累加逻辑。这个计算结构是抽象后的固定形式，而具体累加逻辑可以在具体使用时使用不同的逻辑。</p>
 <h2 id="函数式不能干什么">函数式不能干什么</h2>
 <p>函数式不是银弹，不适用所有的场景。</p>
 <ul>
@@ -111,13 +233,99 @@
 <li>函数式和异步操作的结合</li>
 </ul>
 
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">olOwOlo</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">
+        2020-07-20
+        
+    </span>
+  </p>
+  
+  
 </div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/js/">js</a>
+          <a href="/tags/%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BC%96%E7%A8%8B/">函数式编程</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/post/js-fp-2/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">函数式编程之旅(二)——初窥门径</span>
+            <span class="prev-text nav-mobile">上一篇</span>
+          </a>
+        <a class="next" href="/post/hexo-installation/">
+            <span class="next-text nav-default">Hexo的介绍及安装使用</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
 
+  
 
+  
+
+      </div>
     </main>
 
-    
-      
-    
-  </body>
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:467195537@qq.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://github.com/running-grass" class="iconfont icon-github" title="github"></a>
+  <a href="https://grass.show/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2017 - 
+    2020<span class="heart"><i class="iconfont icon-heart"></i></span><span>olOwOlo</span>
+  </span>
+</div>
+
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.c12618f9a600c40bd024996677e951e64d3487006775aeb22e200c990006c5c7.js"></script>
+
+
+
+
+
+
+
+
+</body>
 </html>

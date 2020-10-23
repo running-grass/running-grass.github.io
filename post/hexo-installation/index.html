@@ -1,58 +1,173 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-cn" lang="zh-cn">
+<html lang="zh-cn">
 <head>
-  <link href="https://gmpg.org/xfn/11" rel="profile">
-  <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <meta name="generator" content="Hugo 0.75.1" />
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Hexo的介绍及安装使用 - 一世韶华</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
 
-  <title>Hexo的介绍及安装使用 &middot; 奔跑的小草</title>
-  <meta name="description" content="" />
-
-  
-  <link type="text/css" rel="stylesheet" href="https://grass.show/css/print.css" media="print">
-  <link type="text/css" rel="stylesheet" href="https://grass.show/css/poole.css">
-  <link type="text/css" rel="stylesheet" href="https://grass.show/css/syntax.css">
-  <link type="text/css" rel="stylesheet" href="https://grass.show/css/hyde.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface|PT+Sans:400,400i,700">
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-  
-  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
-  <link rel="shortcut icon" href="/favicon.png">
+<meta name="author" content="olOwOlo" /><meta name="description" content="什么是Hexo Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静" /><meta name="keywords" content="Hugo, theme, even" />
 
-  
-  
+
+
+
+
+
+<meta name="generator" content="Hugo 0.75.1 with theme even" />
+
+
+<link rel="canonical" href="https://grass.show/post/hexo-installation/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+<link href="/sass/main.min.c7bc1becf36bcf6a9ebd25d2947e43a2eb745ddb0c9a32b43126fd7fa460c351.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="Hexo的介绍及安装使用" />
+<meta property="og:description" content="什么是Hexo Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://grass.show/post/hexo-installation/" />
+<meta property="article:published_time" content="2020-07-10T22:02:16+00:00" />
+<meta property="article:modified_time" content="2020-07-10T22:02:16+00:00" />
+<meta itemprop="name" content="Hexo的介绍及安装使用">
+<meta itemprop="description" content="什么是Hexo Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静">
+<meta itemprop="datePublished" content="2020-07-10T22:02:16+00:00" />
+<meta itemprop="dateModified" content="2020-07-10T22:02:16+00:00" />
+<meta itemprop="wordCount" content="673">
+
+
+
+<meta itemprop="keywords" content="博客,Hexo,教程," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Hexo的介绍及安装使用"/>
+<meta name="twitter:description" content="什么是Hexo Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
 </head>
-
-  <body class=" ">
-  <aside class="sidebar">
-  <div class="container sidebar-sticky">
-    <div class="sidebar-about">
-      <a href="https://grass.show/"><h1>奔跑的小草</h1></a>
-      <p class="lead">
-      An elegant open source and mobile first theme for <a href="http://hugo.spf13.com">hugo</a> made by <a href="http://twitter.com/mdo">@mdo</a>. Originally made for Jekyll.
-      </p>
-    </div>
-
-    <nav>
-      <ul class="sidebar-nav">
-        <li><a href="https://grass.show/">Home</a> </li>
-        
-      </ul>
-    </nav>
-
-    <p>&copy; 2020. All rights reserved. </p>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Even</a>
   </div>
-</aside>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Even</a>
+</div>
 
-    <main class="content container">
-    <div class="post">
-  <h1>Hexo的介绍及安装使用</h1>
-  <time datetime=2020-07-10T22:02:16Z class="post-date">Fri, Jul 10, 2020</time>
-  <h2 id="什么是hexo">什么是Hexo</h2>
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">Hexo的介绍及安装使用</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2020-07-10 </span>
+        <div class="post-category">
+            <a href="/categories/hexo/"> Hexo </a>
+            </div>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#什么是hexo">什么是Hexo</a></li>
+        <li><a href="#hexo的特点">Hexo的特点</a></li>
+        <li><a href="#安装">安装</a>
+          <ul>
+            <li><a href="#安装hexo命令行工具">安装Hexo命令行工具</a></li>
+            <li><a href="#初始化博客项目">初始化博客项目</a></li>
+            <li><a href="#安装依赖">安装依赖</a></li>
+            <li><a href="#启动服务器">启动服务器</a></li>
+          </ul>
+        </li>
+        <li><a href="#更换主题">更换主题</a>
+          <ul>
+            <li><a href="#安装next主题">安装<code>NexT</code>主题</a></li>
+            <li><a href="#修改配置文件">修改配置文件</a></li>
+          </ul>
+        </li>
+        <li><a href="#编辑文章">编辑文章</a>
+          <ul>
+            <li><a href="#新建博文">新建博文</a></li>
+            <li><a href="#编辑内容">编辑内容</a></li>
+          </ul>
+        </li>
+        <li><a href="#完善网站配置">完善网站配置</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <h2 id="什么是hexo">什么是Hexo</h2>
 <blockquote>
 <p>Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页</p>
 </blockquote>
@@ -95,21 +210,59 @@
 </blockquote>
 <h2 id="安装">安装</h2>
 <h3 id="安装hexo命令行工具">安装Hexo命令行工具</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">npm install hexo-cli -g
-</code></pre></div><h3 id="初始化博客项目">初始化博客项目</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">hexo init blog
-</code></pre></div><h3 id="安装依赖">安装依赖</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">cd blog
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">npm install hexo-cli -g
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="初始化博客项目">初始化博客项目</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">hexo init blog
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="安装依赖">安装依赖</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">cd</span> blog
 npm install
-</code></pre></div><h3 id="启动服务器">启动服务器</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">cd blog
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="启动服务器">启动服务器</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">cd</span> blog
 hexo server
-</code></pre></div><p>此时可以打开<code>http://localhost:4000/</code>预览博客</p>
+</code></pre></td></tr></table>
+</div>
+</div><p>此时可以打开<code>http://localhost:4000/</code>预览博客</p>
 <h2 id="更换主题">更换主题</h2>
 <h3 id="安装next主题">安装<code>NexT</code>主题</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">cd blog
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">cd</span> blog
 git clone https://github.com/next-theme/hexo-theme-next themes/next
-</code></pre></div><h3 id="修改配置文件">修改配置文件</h3>
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="修改配置文件">修改配置文件</h3>
 <ul>
 <li>打开<code>blog/_config.yml</code>文件</li>
 <li>找到<code>theme: landscape</code>配置项</li>
@@ -118,9 +271,17 @@ git clone https://github.com/next-theme/hexo-theme-next themes/next
 </ul>
 <h2 id="编辑文章">编辑文章</h2>
 <h3 id="新建博文">新建博文</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">cd blog
-hexo new <span style="color:#e6db74">&#34;hello-hexo&#34;</span>
-</code></pre></div><h3 id="编辑内容">编辑内容</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">cd</span> blog
+hexo new <span class="s2">&#34;hello-hexo&#34;</span>
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="编辑内容">编辑内容</h3>
 <ul>
 <li>打开<code>blog/source/_posts/hello-hexo.md</code></li>
 <li>在最后一行后面输入文章内容</li>
@@ -128,23 +289,120 @@ hexo new <span style="color:#e6db74">&#34;hello-hexo&#34;</span>
 </ul>
 <h2 id="完善网站配置">完善网站配置</h2>
 <p>打开<code>blog/_config.yml</code>，完善网站的基本信息，参考如下</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#75715e"># Site</span>
-<span style="color:#f92672">title</span>: <span style="color:#ae81ff">奔跑的小草</span>
-<span style="color:#f92672">subtitle</span>: <span style="color:#ae81ff">一只野生程序猿，爱越野，爱滑雪</span>
-<span style="color:#f92672">description</span>: <span style="color:#ae81ff">分享一些技术上的文章</span>
-<span style="color:#f92672">keywords</span>: <span style="color:#ae81ff">IPFS,Hexo,Vue</span>
-<span style="color:#f92672">author</span>: <span style="color:#ae81ff">刘世华</span>
-<span style="color:#f92672">language</span>: <span style="color:#ae81ff">zh-CN</span>
-<span style="color:#f92672">timezone</span>: <span style="color:#ae81ff">Asia/Shanghai</span>
-</code></pre></div><p>重启服务器后生效</p>
-
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-yaml" data-lang="yaml"><span class="c"># Site</span><span class="w">
+</span><span class="w"></span><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="l">奔跑的小草</span><span class="w">
+</span><span class="w"></span><span class="nt">subtitle</span><span class="p">:</span><span class="w"> </span><span class="l">一只野生程序猿，爱越野，爱滑雪</span><span class="w">
+</span><span class="w"></span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l">分享一些技术上的文章</span><span class="w">
+</span><span class="w"></span><span class="nt">keywords</span><span class="p">:</span><span class="w"> </span><span class="l">IPFS,Hexo,Vue</span><span class="w">
+</span><span class="w"></span><span class="nt">author</span><span class="p">:</span><span class="w"> </span><span class="l">刘世华</span><span class="w">
+</span><span class="w"></span><span class="nt">language</span><span class="p">:</span><span class="w"> </span><span class="l">zh-CN</span><span class="w">
+</span><span class="w"></span><span class="nt">timezone</span><span class="p">:</span><span class="w"> </span><span class="l">Asia/Shanghai</span><span class="w">
+</span></code></pre></td></tr></table>
 </div>
+</div><p>重启服务器后生效</p>
 
+    </div>
 
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">olOwOlo</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">
+        2020-07-10
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/%E5%8D%9A%E5%AE%A2/">博客</a>
+          <a href="/tags/hexo/">Hexo</a>
+          <a href="/tags/%E6%95%99%E7%A8%8B/">教程</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/post/js-fp-1/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">js的函数式编程之旅(一)——初入武林</span>
+            <span class="prev-text nav-mobile">上一篇</span>
+          </a>
+        
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
     </main>
 
-    
-      
-    
-  </body>
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:467195537@qq.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://github.com/running-grass" class="iconfont icon-github" title="github"></a>
+  <a href="https://grass.show/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2017 - 
+    2020<span class="heart"><i class="iconfont icon-heart"></i></span><span>olOwOlo</span>
+  </span>
+</div>
+
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.c12618f9a600c40bd024996677e951e64d3487006775aeb22e200c990006c5c7.js"></script>
+
+
+
+
+
+
+
+
+</body>
 </html>

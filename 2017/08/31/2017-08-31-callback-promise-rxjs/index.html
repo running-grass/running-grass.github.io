@@ -1,95 +1,213 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-cn" lang="zh-cn">
+<html lang="zh-cn">
 <head>
-  <link href="https://gmpg.org/xfn/11" rel="profile">
-  <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <meta name="generator" content="Hugo 0.75.1" />
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>异步——从Callback到Promise再到Rxjs - 一世韶华</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
 
-  <title>异步——从Callback到Promise再到Rxjs &middot; 奔跑的小草</title>
-  <meta name="description" content="" />
-
-  
-  <link type="text/css" rel="stylesheet" href="https://grass.show/css/print.css" media="print">
-  <link type="text/css" rel="stylesheet" href="https://grass.show/css/poole.css">
-  <link type="text/css" rel="stylesheet" href="https://grass.show/css/syntax.css">
-  <link type="text/css" rel="stylesheet" href="https://grass.show/css/hyde.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface|PT+Sans:400,400i,700">
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-  
-  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
-  <link rel="shortcut icon" href="/favicon.png">
+<meta name="author" content="olOwOlo" /><meta name="description" content="异步编程从以前的晦涩难懂，到现在的简单明了，从以前的功能单一，但现在的功能强大。
+" /><meta name="keywords" content="Hugo, theme, even" />
 
-  
-  
+
+
+
+
+
+<meta name="generator" content="Hugo 0.75.1 with theme even" />
+
+
+<link rel="canonical" href="https://grass.show/2017/08/31/2017-08-31-callback-promise-rxjs/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+<link href="/sass/main.min.c7bc1becf36bcf6a9ebd25d2947e43a2eb745ddb0c9a32b43126fd7fa460c351.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="异步——从Callback到Promise再到Rxjs" />
+<meta property="og:description" content="异步编程从以前的晦涩难懂，到现在的简单明了，从以前的功能单一，但现在的功能强大。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://grass.show/2017/08/31/2017-08-31-callback-promise-rxjs/" />
+<meta property="article:published_time" content="2017-08-31T11:25:00+08:00" />
+<meta property="article:modified_time" content="2017-08-31T11:25:00+08:00" />
+<meta itemprop="name" content="异步——从Callback到Promise再到Rxjs">
+<meta itemprop="description" content="异步编程从以前的晦涩难懂，到现在的简单明了，从以前的功能单一，但现在的功能强大。">
+<meta itemprop="datePublished" content="2017-08-31T11:25:00+08:00" />
+<meta itemprop="dateModified" content="2017-08-31T11:25:00+08:00" />
+<meta itemprop="wordCount" content="2166">
+
+
+
+<meta itemprop="keywords" content="" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="异步——从Callback到Promise再到Rxjs"/>
+<meta name="twitter:description" content="异步编程从以前的晦涩难懂，到现在的简单明了，从以前的功能单一，但现在的功能强大。"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
 </head>
-
-  <body class=" ">
-  <aside class="sidebar">
-  <div class="container sidebar-sticky">
-    <div class="sidebar-about">
-      <a href="https://grass.show/"><h1>奔跑的小草</h1></a>
-      <p class="lead">
-      An elegant open source and mobile first theme for <a href="http://hugo.spf13.com">hugo</a> made by <a href="http://twitter.com/mdo">@mdo</a>. Originally made for Jekyll.
-      </p>
-    </div>
-
-    <nav>
-      <ul class="sidebar-nav">
-        <li><a href="https://grass.show/">Home</a> </li>
-        
-      </ul>
-    </nav>
-
-    <p>&copy; 2020. All rights reserved. </p>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Even</a>
   </div>
-</aside>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Even</a>
+</div>
 
-    <main class="content container">
-    <div class="post">
-  <h1>异步——从Callback到Promise再到Rxjs</h1>
-  <time datetime=0001-01-01T00:00:00Z class="post-date">Mon, Jan 1, 0001</time>
-  <p>异步编程从以前的晦涩难懂，到现在的简单明了，从以前的功能单一，但现在的功能强大。</p>
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+  <div class="post-content">
+    <p>异步编程从以前的晦涩难懂，到现在的简单明了，从以前的功能单一，但现在的功能强大。</p>
 <h2 id="callback">Callback</h2>
 <p>在远古时代，人们为了实现异步编程，通常采用callback的形式，定义好一个回调函数，在需要异步请求的地方，注册回调函数，等异常请求返回后，把数据传入回调函数，对异步请求的结果进行处理。</p>
 <p>如下所示:</p>
-<pre><code class="language--js-01" data-lang="-js-01">const callback = () =&gt; {
-console.log('I am a callback');
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">const callback = () =&gt; {
+console.log(&#39;I am a callback&#39;);
 }
 
-console.log('Hello');
+console.log(&#39;Hello&#39;);
 setTimeout(callback, 1000);
-console.log('world);
+console.log(&#39;world);
 
 0;
-</code></pre><p>这样的方式初看起来简单明了，但是它经不起复杂度的考验，如果是多个异步的嵌套，就会立刻变得晦涩，继续上代码</p>
-<pre><code class="language--js-02" data-lang="-js-02">const log = console.log;
+</code></pre></td></tr></table>
+</div>
+</div><p>这样的方式初看起来简单明了，但是它经不起复杂度的考验，如果是多个异步的嵌套，就会立刻变得晦涩，继续上代码</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">const log = console.log;
 setTimeout(() =&gt; {
-  log('我是第一层');
+  log(&#39;我是第一层&#39;);
   setTimeout(() =&gt; {
-    log('我是第二层');
+    log(&#39;我是第二层&#39;);
     setTimeout(() =&gt; {
-      log('我是第三层');
+      log(&#39;我是第三层&#39;);
       setTimeout(() =&gt; {
-        log('我是第四层');
+        log(&#39;我是第四层&#39;);
       }, 1000)
     }, 1000)
   }, 1000)
 }, 1000);
-log('hello')
+log(&#39;hello&#39;)
 
 0;
-</code></pre><p>这样的代码不利于阅读，也不利于维护，接下来出现的是Promise，一个很重要的类型</p>
+</code></pre></td></tr></table>
+</div>
+</div><p>这样的代码不利于阅读，也不利于维护，接下来出现的是Promise，一个很重要的类型</p>
 <h2 id="promise">Promise</h2>
 <p>Promise 是代表一个承诺，它可以承诺在一定的时间内，他会完成他的事件或者抛出错误。
 换句话说，它刚生成时，他的状态是不确定的，在一定时间后，他的状态肯定会确定下来，同时只有两种情况，一种是顺利完成，一种是出错异常。在编写代码过程中只需要监听这两个状态就可以对其结果进行处理，通过链式调用的方式可以使代码更加易读。
 下面是使用Promise的模拟耗时的异步操作</p>
-<pre><code class="language--js-03" data-lang="-js-03">const reqPromise = new Promise((resolve, reject) =&gt; {
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">const reqPromise = new Promise((resolve, reject) =&gt; {
   setTimeout(() =&gt; {
-    console.log('Request完成');
+    console.log(&#39;Request完成&#39;);
     resolve({data: 1})
   },1000)
 })
@@ -97,27 +215,72 @@ log('hello')
 reqPromise.then(x =&gt; console.log(x));
 
 0;
-</code></pre><p>是不是看起来更麻烦了呢？ 那么我们稍微增加一点复杂度看看。下面是Promise嵌套的情况:</p>
-<pre><code class="language--js-04" data-lang="-js-04">const getPromise = x =&gt; new Promise((resolve, reject) =&gt; {
+</code></pre></td></tr></table>
+</div>
+</div><p>是不是看起来更麻烦了呢？ 那么我们稍微增加一点复杂度看看。下面是Promise嵌套的情况:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">const getPromise = x =&gt; new Promise((resolve, reject) =&gt; {
   setTimeout(() =&gt; {
     console.log(x);
     resolve({data: 1})
   },1000)
 });
 
-getPromise('第一层').then(x =&gt; getPromise('第二层'))
-          .then(x =&gt; getPromise('第三层'))
-          .then(x =&gt; getPromise('第四层'))
-          .then(x =&gt; getPromise('第五层'))
+getPromise(&#39;第一层&#39;).then(x =&gt; getPromise(&#39;第二层&#39;))
+          .then(x =&gt; getPromise(&#39;第三层&#39;))
+          .then(x =&gt; getPromise(&#39;第四层&#39;))
+          .then(x =&gt; getPromise(&#39;第五层&#39;))
           
 0;
-</code></pre><p>上面这段用Promise写的比直接使用Callback写的相比，是不是清晰了很多啊
+</code></pre></td></tr></table>
+</div>
+</div><p>上面这段用Promise写的比直接使用Callback写的相比，是不是清晰了很多啊
 使用扁平的链式调用替代多层级的嵌套结构,对于代码维护起来也是清晰很多。</p>
 <p>但是到此我们就满足了吗？</p>
 <p>No，链式调用依然存在一些书写上的问题，上面的例子全都是异步代码，如果需要写同步代码的话，需要在Promise外面去写，异步代码是在Promise的resolve里面去写，这样丧失了代码的可读性。能不能把所有的代码都看成是同步的呢？ 这样代码风格不就统一了吗？</p>
 <p>最新的es2017版本中有了async/swait的写法，它并不是一个新的功能，可以看做是Promise的语法糖。</p>
 <p>我们把上面的Promise代码改一下如何：</p>
-<pre><code class="language--js-05" data-lang="-js-05">const getPromise = x =&gt; new Promise((resolve, reject) =&gt; {
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">const getPromise = x =&gt; new Promise((resolve, reject) =&gt; {
   setTimeout(() =&gt; {
     console.log(x);
     resolve({data: 1})
@@ -125,19 +288,21 @@ getPromise('第一层').then(x =&gt; getPromise('第二层'))
 });
 
 const run = async () =&gt; {
-  await getPromise('第一层').then(x =&gt; console.log('我是第一层的Resolve'))
-  console.log('我是第一层之后的同步代码');
-  await getPromise('第二层').then(x =&gt; console.log('我是第二层的Resolve'))
-  console.log('我是第二层之后的同步代码');
-  await getPromise('第三层').then(x =&gt; console.log('我是第三层的Resolve'))
-  console.log('我是第三层之后的同步代码');
+  await getPromise(&#39;第一层&#39;).then(x =&gt; console.log(&#39;我是第一层的Resolve&#39;))
+  console.log(&#39;我是第一层之后的同步代码&#39;);
+  await getPromise(&#39;第二层&#39;).then(x =&gt; console.log(&#39;我是第二层的Resolve&#39;))
+  console.log(&#39;我是第二层之后的同步代码&#39;);
+  await getPromise(&#39;第三层&#39;).then(x =&gt; console.log(&#39;我是第三层的Resolve&#39;))
+  console.log(&#39;我是第三层之后的同步代码&#39;);
 };
 
 // 启动
 run();
 
 0;
-</code></pre><p>各位觉得这样的代码看起来如何呢？</p>
+</code></pre></td></tr></table>
+</div>
+</div><p>各位觉得这样的代码看起来如何呢？</p>
 <p>我们从一开始Callback的那种一堆压缩成了Promise的一条线。
 然后又把这条线用async/await折叠成了四方的纸。
 有么有感觉到巨大的进步呢？</p>
@@ -146,7 +311,33 @@ run();
 <h2 id="rxjs">Rxjs</h2>
 <p>Rxjs并不等于响应式编程，它只是RP(Reactive Programming)的一个类库实现，但是因为它在几乎所有主流语言上都有实现，所有rx算是rp中的中坚力量了吧。</p>
 <p>在深入介绍rxjs之前，我们先用rxjs代码实现以上的那个例子.</p>
-<pre><code class="language--js-06" data-lang="-js-06">const { Observable: ob} = require('rxjs');
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">const { Observable: ob} = require(&#39;rxjs&#39;);
 
 const getPromise = x =&gt; new Promise((resolve, reject) =&gt; {
   setTimeout(() =&gt; {
@@ -155,27 +346,81 @@ const getPromise = x =&gt; new Promise((resolve, reject) =&gt; {
   },1000)
 });
 
-ob.from(getPromise('第一层'))
-  .map(x =&gt; console.log('我是第一层之后的异步代码'))
-  .flatMap(x =&gt; getPromise('第二层'))
-  .map(x =&gt; console.log('我是第二层之后的异步代码'))
-  .flatMap(x =&gt; getPromise('第三层'))
-  .map(x =&gt; console.log('我是第三层之后的异步代码'))
-  .flatMap(x =&gt; getPromise('第四层'))
-  .map(x =&gt; console.log('我是第四层之后的异步代码'))
-  .flatMap(x =&gt; getPromise('第五层'))
-  .map(x =&gt; console.log('我是第五层之后的异步代码'))
+ob.from(getPromise(&#39;第一层&#39;))
+  .map(x =&gt; console.log(&#39;我是第一层之后的异步代码&#39;))
+  .flatMap(x =&gt; getPromise(&#39;第二层&#39;))
+  .map(x =&gt; console.log(&#39;我是第二层之后的异步代码&#39;))
+  .flatMap(x =&gt; getPromise(&#39;第三层&#39;))
+  .map(x =&gt; console.log(&#39;我是第三层之后的异步代码&#39;))
+  .flatMap(x =&gt; getPromise(&#39;第四层&#39;))
+  .map(x =&gt; console.log(&#39;我是第四层之后的异步代码&#39;))
+  .flatMap(x =&gt; getPromise(&#39;第五层&#39;))
+  .map(x =&gt; console.log(&#39;我是第五层之后的异步代码&#39;))
   .subscribe()
 
 0;
-</code></pre>
+</code></pre></td></tr></table>
 </div>
+</div>
+  </div>
+</article>
+        </div>
+        
 
+  
 
+  
+
+      </div>
     </main>
 
-    
-      
-    
-  </body>
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:467195537@qq.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://github.com/running-grass" class="iconfont icon-github" title="github"></a>
+  <a href="https://grass.show/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2017 - 
+    2020<span class="heart"><i class="iconfont icon-heart"></i></span><span>olOwOlo</span>
+  </span>
+</div>
+
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.c12618f9a600c40bd024996677e951e64d3487006775aeb22e200c990006c5c7.js"></script>
+
+
+
+
+
+
+
+
+</body>
 </html>
