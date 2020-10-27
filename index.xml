@@ -7,16 +7,32 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <copyright>grass</copyright>
-    <lastBuildDate>Thu, 22 Oct 2020 15:10:00 +0800</lastBuildDate><atom:link href="https://grass.show/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 27 Oct 2020 11:28:00 +0800</lastBuildDate><atom:link href="https://grass.show/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>使用ox-hugo写博客</title>
       <link>https://grass.show/post/first-blog-for-ox-hugo/</link>
       <pubDate>Thu, 22 Oct 2020 15:10:00 +0800</pubDate>
       
       <guid>https://grass.show/post/first-blog-for-ox-hugo/</guid>
-      <description>&lt;blockquote&gt;
-&lt;p&gt;本文是使用ox-hugo发表的第一篇文章&lt;/p&gt;
-&lt;/blockquote&gt;</description>
+      <description>本文是使用ox-hugo发表的第一篇文章 阅读前提 知道Emacs和Org是什么 知道hugo或其它SSG1程序 为什么要使用ox-hugo 可以使用</description>
+    </item>
+    
+    <item>
+      <title>不翻墙使用Google搜索</title>
+      <link>https://grass.show/post/use-google-search-without-vpn/</link>
+      <pubDate>Tue, 27 Oct 2020 11:28:00 +0800</pubDate>
+      
+      <guid>https://grass.show/post/use-google-search-without-vpn/</guid>
+      <description>谷歌镜像站汇总 谷歌学术导航 谷歌镜像导航 设置浏览器的默认搜索 打开谷歌镜像导航，在右侧谷歌网页镜像中随便选择一个输入框，输入要搜索的东西，点击 谷</description>
+    </item>
+    
+    <item>
+      <title>人生就像一个多面体</title>
+      <link>https://grass.show/post/life-is-like-polyhedron/</link>
+      <pubDate>Mon, 09 Dec 2019 00:00:00 +0800</pubDate>
+      
+      <guid>https://grass.show/post/life-is-like-polyhedron/</guid>
+      <description>我们的人生就像一个多面体，面对不同的人呈现出不同的一面。 “妈，我想吃韭菜花”，每年的秋天都会给妈打一个电话，告诉她我想吃她腌的韭菜花了，然后</description>
     </item>
     
     <item>
@@ -62,15 +78,6 @@
       
       <guid>https://grass.show/post/2020-begin/</guid>
       <description>2019，鱼跃龙门 刚过去的一年可以说是人生中变化最大的一年也不为过。 去年可以分为两个阶段，上半年的关键词是迷茫，下半年的关键词是探索 上半年经</description>
-    </item>
-    
-    <item>
-      <title>2020，随心而动</title>
-      <link>https://grass.show/post/life-is-like-polyhedron/</link>
-      <pubDate>Mon, 09 Dec 2019 00:00:00 +0800</pubDate>
-      
-      <guid>https://grass.show/post/life-is-like-polyhedron/</guid>
-      <description></description>
     </item>
     
     <item>

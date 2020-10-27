@@ -2,22 +2,36 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://grass.show/post/</loc>
+    <loc>https://grass.show/post/first-blog-for-ox-hugo/</loc>
     <lastmod>2020-10-23T15:46:27+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://grass.show/post/use-google-search-without-vpn/</loc>
+    <lastmod>2020-10-27T11:28:27+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://grass.show/post/life-is-like-polyhedron/</loc>
+    <lastmod>2020-10-23T15:46:27+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://grass.show/post/</loc>
+    <lastmod>2020-10-27T11:28:27+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://grass.show/</loc>
-    <lastmod>2020-10-23T15:46:27+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://grass.show/post/first-blog-for-ox-hugo/</loc>
-    <lastmod>2020-10-23T15:46:27+08:00</lastmod>
+    <lastmod>2020-10-27T11:28:27+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -164,13 +178,6 @@
   
   <url>
     <loc>https://grass.show/tags/weixin/</loc>
-    <lastmod>2020-10-23T15:46:27+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://grass.show/post/life-is-like-polyhedron/</loc>
     <lastmod>2020-10-23T15:46:27+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
