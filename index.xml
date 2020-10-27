@@ -195,7 +195,8 @@
       <guid>https://grass.show/post/08/18/2017-08-18-alias-in-react-native/</guid>
       <description>&lt;p&gt;有时候，你会在你的项目有多个文件和文件夹。我们需要从任意随机文件中获得一个文件的引用。如果我们这样的相对路径的话，看起来是这个样子的:&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;import themes from &#39;../../config/themes&#39;;
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;通过符号&lt;code&gt;../&lt;/code&gt;让我们很难去思考，在更复杂的项目中，这将是一个噩梦。&lt;/p&gt;</description>
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;通过符号&lt;code&gt;../&lt;/code&gt;让我们很难去思考，在更复杂的项目中，这将是一个噩梦。&lt;/p&gt;</description>
     </item>
     
     <item>

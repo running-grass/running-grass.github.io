@@ -17,7 +17,7 @@
 
 
 <meta name="author" content="grass" /><meta name="description" content="有时候，你会在你的项目有多个文件和文件夹。我们需要从任意随机文件中获得一个文件的引用。如果我们这样的相对路径的话，看起来是这个样子的:
-import themes from &#39;../../config/themes&#39;; 通过符号../让我们很难去思考，在更复杂的项目中，这将是一个噩梦。
+import themes from &#39;../../config/themes&#39;;  通过符号../让我们很难去思考，在更复杂的项目中，这将是一个噩梦。
 " /><meta name="keywords" content="Develop, Emacs, Org, GTD" />
 
 
@@ -44,6 +44,7 @@ import themes from &#39;../../config/themes&#39;; 通过符号../让我们很难
 <meta property="og:title" content="【翻译】React Native中的别名" />
 <meta property="og:description" content="有时候，你会在你的项目有多个文件和文件夹。我们需要从任意随机文件中获得一个文件的引用。如果我们这样的相对路径的话，看起来是这个样子的:
 import themes from &#39;../../config/themes&#39;;
+
 通过符号../让我们很难去思考，在更复杂的项目中，这将是一个噩梦。" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://grass.show/post/08/18/2017-08-18-alias-in-react-native/" />
@@ -52,6 +53,7 @@ import themes from &#39;../../config/themes&#39;;
 <meta itemprop="name" content="【翻译】React Native中的别名">
 <meta itemprop="description" content="有时候，你会在你的项目有多个文件和文件夹。我们需要从任意随机文件中获得一个文件的引用。如果我们这样的相对路径的话，看起来是这个样子的:
 import themes from &#39;../../config/themes&#39;;
+
 通过符号../让我们很难去思考，在更复杂的项目中，这将是一个噩梦。">
 <meta itemprop="datePublished" content="2017-08-18T19:31:00+08:00" />
 <meta itemprop="dateModified" content="2020-10-23T13:30:30+08:00" />
@@ -64,6 +66,7 @@ import themes from &#39;../../config/themes&#39;;
 <meta name="twitter:title" content="【翻译】React Native中的别名"/>
 <meta name="twitter:description" content="有时候，你会在你的项目有多个文件和文件夹。我们需要从任意随机文件中获得一个文件的引用。如果我们这样的相对路径的话，看起来是这个样子的:
 import themes from &#39;../../config/themes&#39;;
+
 通过符号../让我们很难去思考，在更复杂的项目中，这将是一个噩梦。"/>
 
 <!--[if lte IE 9]>
@@ -89,7 +92,15 @@ import themes from &#39;../../config/themes&#39;;
 </div>
 <nav id="mobile-menu" class="mobile-menu slideout-menu">
   <ul class="mobile-menu-list">
-    
+    <a href="/">
+        <li class="mobile-menu-item">最近更新</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">文章列表</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">标签</li>
+      </a><a href="/translate/">
+        <li class="mobile-menu-item">翻译</li>
+      </a>
   </ul>
 </nav>
   <div class="container" id="mobile-panel">
@@ -100,7 +111,15 @@ import themes from &#39;../../config/themes&#39;;
 
 <nav class="site-navbar">
   <ul id="menu" class="menu">
-    
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">最近更新</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">文章列表</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">标签</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/translate/">翻译</a>
+      </li>
   </ul>
 </nav>
     </header>
@@ -143,10 +162,11 @@ import themes from &#39;../../config/themes&#39;;
     <div class="post-content">
       <p>有时候，你会在你的项目有多个文件和文件夹。我们需要从任意随机文件中获得一个文件的引用。如果我们这样的相对路径的话，看起来是这个样子的:</p>
 <pre><code>import themes from '../../config/themes';
-</code></pre><p>通过符号<code>../</code>让我们很难去思考，在更复杂的项目中，这将是一个噩梦。</p>
+</code></pre>
+<p>通过符号<code>../</code>让我们很难去思考，在更复杂的项目中，这将是一个噩梦。</p>
 <p>在这篇文章中，我们将找到关于这种场景的可能的解决方案和替代方案。</p>
 <p>假定项目有以下文件夹结构。</p>
-<pre><code class="language-javs" data-lang="javs">Your App Root Directory
+<pre><code class="language-javs">Your App Root Directory
  |-- app
       |-- component 
       |    |-- login
@@ -157,7 +177,8 @@ import themes from &#39;../../config/themes&#39;;
       |-- index.ios.js
       |-- index.android.js
 
-</code></pre><p>我们有两种可能的解决方案用来在上面的文件夹结构中指出每个节点。</p>
+</code></pre>
+<p>我们有两种可能的解决方案用来在上面的文件夹结构中指出每个节点。</p>
 <h4 id="use-providesmodule">Use @providesModule</h4>
 <p>一个次级的解决方案，可以工作，但不是<strong>安全</strong>的，在你的文件中使用<code>@providesmodule</code>。
 这是用较少的代码，但是因为它是基于Facebook自己内部使用的情况下，可以根据其内部突发奇想改变。所以可能不稳定。
@@ -185,16 +206,20 @@ export default class login extends Component{
  );
  }
 }
-</code></pre><p>然后你可以像上面一样导入它：</p>
+</code></pre>
+<p>然后你可以像上面一样导入它：</p>
 <pre><code>import themes from 'login';
-</code></pre><h4 id="使用babel-plugin-module-alias">使用<code>babel-plugin-module-alias</code></h4>
+</code></pre>
+<h4 id="使用babel-plugin-module-alias">使用<code>babel-plugin-module-alias</code></h4>
 <p>一个<code>babel</code>插件用来在Babel编译过程中以不同的目录重写(map, alias, resolve)</p>
 <p>使用方法：</p>
 <p>Install babel cli</p>
 <pre><code>npm install --g babel-cli
-</code></pre><p>Install  babel-plugin-module-alias.</p>
+</code></pre>
+<p>Install  babel-plugin-module-alias.</p>
 <pre><code>npm install --save babel babel-plugin-module-alias
-</code></pre><p>在根目录创建一个文件<code>.babelrc</code>或者在项目的<code>package.json</code>中增加<code>babel:</code>的键，然后添加以下代码</p>
+</code></pre>
+<p>在根目录创建一个文件<code>.babelrc</code>或者在项目的<code>package.json</code>中增加<code>babel:</code>的键，然后添加以下代码</p>
 <pre><code>&quot;babel&quot;:{
   &quot;plugins&quot;: [[
     &quot;module-alias&quot;, [
@@ -203,9 +228,11 @@ export default class login extends Component{
       ]
    ]]
  }
-</code></pre><p>最后清除缓存并重新启动节点服务器。</p>
+</code></pre>
+<p>最后清除缓存并重新启动节点服务器。</p>
 <pre><code>npm start -- --reset-cache
-</code></pre><p>完整的源代码可以从<a href="https://github.com/tigerraj32/ReactNative/branches/all">这里</a>下载</p>
+</code></pre>
+<p>完整的源代码可以从<a href="https://github.com/tigerraj32/ReactNative/branches/all">这里</a>下载</p>
     </div>
 
     <div class="post-copyright">

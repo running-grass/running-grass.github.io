@@ -49,7 +49,7 @@
 <meta itemprop="description" content="什么是Hexo Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静">
 <meta itemprop="datePublished" content="2020-07-10T22:02:16+00:00" />
 <meta itemprop="dateModified" content="2020-10-22T09:40:56+08:00" />
-<meta itemprop="wordCount" content="673">
+<meta itemprop="wordCount" content="570">
 
 
 
@@ -81,7 +81,15 @@
 </div>
 <nav id="mobile-menu" class="mobile-menu slideout-menu">
   <ul class="mobile-menu-list">
-    
+    <a href="/">
+        <li class="mobile-menu-item">最近更新</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">文章列表</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">标签</li>
+      </a><a href="/translate/">
+        <li class="mobile-menu-item">翻译</li>
+      </a>
   </ul>
 </nav>
   <div class="container" id="mobile-panel">
@@ -92,7 +100,15 @@
 
 <nav class="site-navbar">
   <ul id="menu" class="menu">
-    
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">最近更新</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">文章列表</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">标签</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/translate/">翻译</a>
+      </li>
   </ul>
 </nav>
     </header>
@@ -110,7 +126,7 @@
         <div class="post-category">
             <a href="/categories/hexo/"> Hexo </a>
             </div>
-          <span class="more-meta"> 约 673 字 </span>
+          <span class="more-meta"> 约 570 字 </span>
           <span class="more-meta"> 预计阅读 2 分钟 </span>
         
       </div>
@@ -196,59 +212,26 @@
 </blockquote>
 <h2 id="安装">安装</h2>
 <h3 id="安装hexo命令行工具">安装Hexo命令行工具</h3>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">npm install hexo-cli -g
-</code></pre></td></tr></table>
-</div>
-</div><h3 id="初始化博客项目">初始化博客项目</h3>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">hexo init blog
-</code></pre></td></tr></table>
-</div>
-</div><h3 id="安装依赖">安装依赖</h3>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">cd</span> blog
+<pre><code class="language-bash">npm install hexo-cli -g
+</code></pre>
+<h3 id="初始化博客项目">初始化博客项目</h3>
+<pre><code class="language-bash">hexo init blog
+</code></pre>
+<h3 id="安装依赖">安装依赖</h3>
+<pre><code class="language-bash">cd blog
 npm install
-</code></pre></td></tr></table>
-</div>
-</div><h3 id="启动服务器">启动服务器</h3>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">cd</span> blog
+</code></pre>
+<h3 id="启动服务器">启动服务器</h3>
+<pre><code class="language-bash">cd blog
 hexo server
-</code></pre></td></tr></table>
-</div>
-</div><p>此时可以打开<code>http://localhost:4000/</code>预览博客</p>
+</code></pre>
+<p>此时可以打开<code>http://localhost:4000/</code>预览博客</p>
 <h2 id="更换主题">更换主题</h2>
 <h3 id="安装next主题">安装<code>NexT</code>主题</h3>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">cd</span> blog
+<pre><code class="language-bash">cd blog
 git clone https://github.com/next-theme/hexo-theme-next themes/next
-</code></pre></td></tr></table>
-</div>
-</div><h3 id="修改配置文件">修改配置文件</h3>
+</code></pre>
+<h3 id="修改配置文件">修改配置文件</h3>
 <ul>
 <li>打开<code>blog/_config.yml</code>文件</li>
 <li>找到<code>theme: landscape</code>配置项</li>
@@ -257,17 +240,10 @@ git clone https://github.com/next-theme/hexo-theme-next themes/next
 </ul>
 <h2 id="编辑文章">编辑文章</h2>
 <h3 id="新建博文">新建博文</h3>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">cd</span> blog
-hexo new <span class="s2">&#34;hello-hexo&#34;</span>
-</code></pre></td></tr></table>
-</div>
-</div><h3 id="编辑内容">编辑内容</h3>
+<pre><code class="language-bash">cd blog
+hexo new &quot;hello-hexo&quot;
+</code></pre>
+<h3 id="编辑内容">编辑内容</h3>
 <ul>
 <li>打开<code>blog/source/_posts/hello-hexo.md</code></li>
 <li>在最后一行后面输入文章内容</li>
@@ -275,29 +251,16 @@ hexo new <span class="s2">&#34;hello-hexo&#34;</span>
 </ul>
 <h2 id="完善网站配置">完善网站配置</h2>
 <p>打开<code>blog/_config.yml</code>，完善网站的基本信息，参考如下</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span><span class="lnt">8
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-yaml" data-lang="yaml"><span class="c"># Site</span><span class="w">
-</span><span class="w"></span><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="l">奔跑的小草</span><span class="w">
-</span><span class="w"></span><span class="nt">subtitle</span><span class="p">:</span><span class="w"> </span><span class="l">一只野生程序猿，爱越野，爱滑雪</span><span class="w">
-</span><span class="w"></span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l">分享一些技术上的文章</span><span class="w">
-</span><span class="w"></span><span class="nt">keywords</span><span class="p">:</span><span class="w"> </span><span class="l">IPFS,Hexo,Vue</span><span class="w">
-</span><span class="w"></span><span class="nt">author</span><span class="p">:</span><span class="w"> </span><span class="l">刘世华</span><span class="w">
-</span><span class="w"></span><span class="nt">language</span><span class="p">:</span><span class="w"> </span><span class="l">zh-CN</span><span class="w">
-</span><span class="w"></span><span class="nt">timezone</span><span class="p">:</span><span class="w"> </span><span class="l">Asia/Shanghai</span><span class="w">
-</span></code></pre></td></tr></table>
-</div>
-</div><p>重启服务器后生效</p>
+<pre><code class="language-yaml"># Site
+title: 奔跑的小草
+subtitle: 一只野生程序猿，爱越野，爱滑雪
+description: 分享一些技术上的文章
+keywords: IPFS,Hexo,Vue
+author: 刘世华
+language: zh-CN
+timezone: Asia/Shanghai
+</code></pre>
+<p>重启服务器后生效</p>
 
     </div>
 
