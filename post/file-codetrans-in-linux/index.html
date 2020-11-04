@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>不翻墙使用Google搜索 - 一世韶华</title>
+  <title>linux下文件编码的转换 - 一世韶华</title>
   
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-DW2GXKQ7M0"></script>
 <script>
@@ -26,7 +26,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="grass" /><meta name="description" content="谷歌镜像站汇总 谷歌学术导航 谷歌镜像导航 设置浏览器的默认搜索 打开谷歌镜像导航，在右侧谷歌网页镜像中随便选择一个输入框，输入要搜索的东西，点击 谷" /><meta name="keywords" content="Develop, Emacs, Org, GTD" />
+<meta name="author" content="grass" /><meta name="description" content="昨天用TP发现在某个文件中输出中文会在浏览器显示乱码 经过测试发现是文件编码为gb2312 ，而不是utp-8 类型，所有找了几段资料来修复这个问" /><meta name="keywords" content="Develop, Emacs, Org, GTD" />
 
 
 
@@ -36,7 +36,7 @@
 <meta name="generator" content="Hugo 0.75.1 with theme even" />
 
 
-<link rel="canonical" href="https://grass.show/post/use-google-search-without-vpn/" />
+<link rel="canonical" href="https://grass.show/post/file-codetrans-in-linux/" />
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -49,24 +49,24 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
-<meta property="og:title" content="不翻墙使用Google搜索" />
-<meta property="og:description" content="谷歌镜像站汇总 谷歌学术导航 谷歌镜像导航 设置浏览器的默认搜索 打开谷歌镜像导航，在右侧谷歌网页镜像中随便选择一个输入框，输入要搜索的东西，点击 谷" />
+<meta property="og:title" content="linux下文件编码的转换" />
+<meta property="og:description" content="昨天用TP发现在某个文件中输出中文会在浏览器显示乱码 经过测试发现是文件编码为gb2312 ，而不是utp-8 类型，所有找了几段资料来修复这个问" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://grass.show/post/use-google-search-without-vpn/" />
-<meta property="article:published_time" content="2020-10-27T11:28:00+08:00" />
-<meta property="article:modified_time" content="2020-11-02T11:40:23+08:00" />
-<meta itemprop="name" content="不翻墙使用Google搜索">
-<meta itemprop="description" content="谷歌镜像站汇总 谷歌学术导航 谷歌镜像导航 设置浏览器的默认搜索 打开谷歌镜像导航，在右侧谷歌网页镜像中随便选择一个输入框，输入要搜索的东西，点击 谷">
-<meta itemprop="datePublished" content="2020-10-27T11:28:00+08:00" />
-<meta itemprop="dateModified" content="2020-11-02T11:40:23+08:00" />
-<meta itemprop="wordCount" content="268">
+<meta property="og:url" content="https://grass.show/post/file-codetrans-in-linux/" />
+<meta property="article:published_time" content="2016-03-30T00:00:00+08:00" />
+<meta property="article:modified_time" content="2020-11-02T12:37:15+08:00" />
+<meta itemprop="name" content="linux下文件编码的转换">
+<meta itemprop="description" content="昨天用TP发现在某个文件中输出中文会在浏览器显示乱码 经过测试发现是文件编码为gb2312 ，而不是utp-8 类型，所有找了几段资料来修复这个问">
+<meta itemprop="datePublished" content="2016-03-30T00:00:00+08:00" />
+<meta itemprop="dateModified" content="2020-11-02T12:37:15+08:00" />
+<meta itemprop="wordCount" content="356">
 
 
 
 <meta itemprop="keywords" content="" />
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="不翻墙使用Google搜索"/>
-<meta name="twitter:description" content="谷歌镜像站汇总 谷歌学术导航 谷歌镜像导航 设置浏览器的默认搜索 打开谷歌镜像导航，在右侧谷歌网页镜像中随便选择一个输入框，输入要搜索的东西，点击 谷"/>
+<meta name="twitter:title" content="linux下文件编码的转换"/>
+<meta name="twitter:description" content="昨天用TP发现在某个文件中输出中文会在浏览器显示乱码 经过测试发现是文件编码为gb2312 ，而不是utp-8 类型，所有找了几段资料来修复这个问"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -129,12 +129,12 @@
           <article class="post">
     
     <header class="post-header">
-      <h1 class="post-title">不翻墙使用Google搜索</h1>
+      <h1 class="post-title">linux下文件编码的转换</h1>
 
       <div class="post-meta">
-        <span class="post-time"> 2020-10-27 </span>
+        <span class="post-time"> 2016-03-30 </span>
         
-          <span class="more-meta"> 约 268 字 </span>
+          <span class="more-meta"> 约 356 字 </span>
           <span class="more-meta"> 预计阅读 1 分钟 </span>
         
       </div>
@@ -147,8 +147,13 @@
   <ul>
     <li>
       <ul>
-        <li><a href="#谷歌镜像站汇总">谷歌镜像站汇总</a></li>
-        <li><a href="#设置浏览器的默认搜索">设置浏览器的默认搜索</a></li>
+        <li><a href="#首先查看文件的编码">首先查看文件的编码</a></li>
+        <li><a href="#文件编码转换">文件编码转换</a>
+          <ul>
+            <li><a href="#2-dot-1-enconv-转换文件编码-比如要将一个gbk编码的文件转换成utf-8编码-操作如下">2.1 enconv 转换文件编码，比如要将一个GBK编码的文件转换成UTF-8编码，操作如下</a></li>
+            <li><a href="#2-dot-2-iconv-转换-iconv的命令格式如下">2.2 iconv 转换，iconv的命令格式如下：</a></li>
+          </ul>
+        </li>
       </ul>
     </li>
   </ul>
@@ -156,22 +161,26 @@
   </div>
 </div>
     <div class="post-content">
-      <h2 id="谷歌镜像站汇总">谷歌镜像站汇总</h2>
-<ul>
-<li><a href="https://ac.scmor.com/">谷歌学术导航</a></li>
-<li><a href="http://scholar.hedasudi.com/">谷歌镜像导航</a></li>
-</ul>
-<h2 id="设置浏览器的默认搜索">设置浏览器的默认搜索</h2>
-<ul>
-<li>打开<a href="http://scholar.hedasudi.com/">谷歌镜像导航</a>，在右侧谷歌网页镜像中随便选择一个输入框，输入要搜索的东西，点击 <span class="underline">谷歌搜索</span> 按钮</li>
-<li>如果可以顺利进行搜索，则记下来网址</li>
-<li>打开chrome浏览器的设置，选择搜索引擎</li>
-<li>点击管理搜索引擎并单击添加</li>
-<li>搜索引擎和关键字都随便填，url这里填写<url>/search?q=%s</li>
-<li>保存后，在列表中找到该引擎，在右侧的操作按钮中选择设为默认</li>
-<li>直接在chrome浏览器地址栏输入关键字，回车即可用谷歌镜像进行搜索了</li>
-<li>需要注意的是，只是能使用gogole进行搜索，如果搜索出来的网站需要翻墙，那么也还是打不开的</li>
-</ul>
+      <p>昨天用TP发现在某个文件中输出中文会在浏览器显示乱码<br />
+经过测试发现是文件编码为gb2312 ，而不是utp-8 类型，所有找了几段资料来修复这个问题</p>
+<h2 id="首先查看文件的编码">首先查看文件的编码</h2>
+<p>enca (如果你的系统中没有安装这个命令，可以用sudo yum install -y enca 安装 )<br />
+查看文件编码</p>
+<pre><code class="language-text">enca filenamefilename
+</code></pre>
+<p>使用 enca * 命令可以方便查看所有文件的编码，方便找到问题文件<br />
+需要说明一点的是，enca对某些GBK编码的文件识别的不是很好，识别时会出现：Unrecognized encoding</p>
+<h2 id="文件编码转换">文件编码转换</h2>
+<h3 id="2-dot-1-enconv-转换文件编码-比如要将一个gbk编码的文件转换成utf-8编码-操作如下">2.1 enconv 转换文件编码，比如要将一个GBK编码的文件转换成UTF-8编码，操作如下</h3>
+<pre><code class="language-text">enconv -L zh_CN -x UTF-8 filename
+</code></pre>
+<p>这个命令好像我不太会用，反正是不起作用，总是执行不成功，我用下面的iconv命令成功的进行了编码的转换</p>
+<h3 id="2-dot-2-iconv-转换-iconv的命令格式如下">2.2 iconv 转换，iconv的命令格式如下：</h3>
+<pre><code class="language-text">iconv -f encoding -t encoding inputfile\
+</code></pre>
+<p>比如将一个UTF-8 编码的文件转换成GBK编码</p>
+<pre><code class="language-text">iconv -f UTF-8 -t GBK file1 -o file2
+</code></pre>
 
     </div>
 
@@ -184,7 +193,7 @@
     <span class="item-title">上次更新</span>
     <span class="item-content">
         2020-11-02
-        <a href="https://github.com/running-grass/running-grass.github.io/commit/abc305a1a8b0d64de328064ccc9b404570f0122f" title="增加谷歌分析">(abc305a)</a>
+        
     </span>
   </p>
   
@@ -193,13 +202,13 @@
 <footer class="post-footer">
       
       <nav class="post-nav">
-        <a class="prev" href="/post/file-codetrans-in-linux/">
+        <a class="prev" href="/post/distance/">
             <i class="iconfont icon-left"></i>
-            <span class="prev-text nav-default">linux下文件编码的转换</span>
+            <span class="prev-text nav-default">距离</span>
             <span class="prev-text nav-mobile">上一篇</span>
           </a>
-        <a class="next" href="/post/work-and-home-tools/">
-            <span class="next-text nav-default">工作&amp;生活工具分享推荐</span>
+        <a class="next" href="/post/use-google-search-without-vpn/">
+            <span class="next-text nav-default">不翻墙使用Google搜索</span>
             <span class="next-text nav-mobile">下一篇</span>
             <i class="iconfont icon-right"></i>
           </a>

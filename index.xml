@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <copyright>grass</copyright>
-    <lastBuildDate>Sun, 01 Nov 2020 22:54:00 +0800</lastBuildDate><atom:link href="https://grass.show/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 04 Nov 2020 23:11:00 +0800</lastBuildDate><atom:link href="https://grass.show/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>从Hexo迁移到Hugo</title>
       <link>https://grass.show/post/from-hexo-to-hugo/</link>
@@ -18,12 +18,21 @@
     </item>
     
     <item>
-      <title>使用ox-hugo写博客</title>
-      <link>https://grass.show/post/first-blog-for-ox-hugo/</link>
-      <pubDate>Thu, 22 Oct 2020 15:10:00 +0800</pubDate>
+      <title>距离</title>
+      <link>https://grass.show/post/distance/</link>
+      <pubDate>Thu, 31 Mar 2016 00:00:00 +0800</pubDate>
       
-      <guid>https://grass.show/post/first-blog-for-ox-hugo/</guid>
-      <description>本文是使用ox-hugo发表的第一篇文章 阅读前提 知道Emacs和Org是什么 知道hugo或其它SSG1程序 为什么要使用ox-hugo 可以使用</description>
+      <guid>https://grass.show/post/distance/</guid>
+      <description>离你太近 近的让我看不到你的全部 靠的太紧 让我只能听到你的鼾声 相拥太过用力 我都快没有办法呼吸 请给我 给我们 给我们的爱情 一定的距离 让我可以 静静地 完整</description>
+    </item>
+    
+    <item>
+      <title>linux下文件编码的转换</title>
+      <link>https://grass.show/post/file-codetrans-in-linux/</link>
+      <pubDate>Wed, 30 Mar 2016 00:00:00 +0800</pubDate>
+      
+      <guid>https://grass.show/post/file-codetrans-in-linux/</guid>
+      <description>昨天用TP发现在某个文件中输出中文会在浏览器显示乱码 经过测试发现是文件编码为gb2312 ，而不是utp-8 类型，所有找了几段资料来修复这个问</description>
     </item>
     
     <item>
@@ -36,12 +45,57 @@
     </item>
     
     <item>
+      <title>工作&amp;生活工具分享推荐</title>
+      <link>https://grass.show/post/work-and-home-tools/</link>
+      <pubDate>Tue, 29 Mar 2016 00:00:00 +0800</pubDate>
+      
+      <guid>https://grass.show/post/work-and-home-tools/</guid>
+      <description>&lt;p&gt;分享一些平时工作生活中用到的工具。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>使用ox-hugo写博客</title>
+      <link>https://grass.show/post/first-blog-for-ox-hugo/</link>
+      <pubDate>Thu, 22 Oct 2020 15:10:00 +0800</pubDate>
+      
+      <guid>https://grass.show/post/first-blog-for-ox-hugo/</guid>
+      <description>本文是使用ox-hugo发表的第一篇文章 阅读前提 知道Emacs和Org是什么 知道hugo或其它SSG1程序 为什么要使用ox-hugo 可以使用</description>
+    </item>
+    
+    <item>
+      <title>思念（一）</title>
+      <link>https://grass.show/post/miss-1/</link>
+      <pubDate>Wed, 22 Jun 2016 00:00:00 +0800</pubDate>
+      
+      <guid>https://grass.show/post/miss-1/</guid>
+      <description>前天夜里的酒 至今未醒 你妙曼的身影 还未消散 举起杯子 透过 那鲜红的液体 望着你 带着满眼的苦涩 也许 这一别 将会是 永远 永远的永远 还好 现在已是今天 前天早已过</description>
+    </item>
+    
+    <item>
+      <title>蜗牛星际机器重置BIOS的方法</title>
+      <link>https://grass.show/post/woniuxingji-bios-reset/</link>
+      <pubDate>Wed, 04 Nov 2020 23:11:00 +0800</pubDate>
+      
+      <guid>https://grass.show/post/woniuxingji-bios-reset/</guid>
+      <description>&lt;p&gt;主板电池旁边的两个针脚，在通电启动情况下，使用螺丝刀连接两个针脚，使其短路&lt;/p&gt;</description>
+    </item>
+    
+    <item>
       <title>人生就像一个多面体</title>
       <link>https://grass.show/post/life-is-like-polyhedron/</link>
       <pubDate>Mon, 09 Dec 2019 00:00:00 +0800</pubDate>
       
       <guid>https://grass.show/post/life-is-like-polyhedron/</guid>
       <description>我们的人生就像一个多面体，面对不同的人呈现出不同的一面。 “妈，我想吃韭菜花”，每年的秋天都会给妈打一个电话，告诉她我想吃她腌的韭菜花了，然后</description>
+    </item>
+    
+    <item>
+      <title>机器人总动员——浪漫而感人的动画电影</title>
+      <link>https://grass.show/post/movie-wall-e/</link>
+      <pubDate>Tue, 04 Feb 2020 00:00:00 +0800</pubDate>
+      
+      <guid>https://grass.show/post/movie-wall-e/</guid>
+      <description>昨天就计划好今天看一部电影，但是没有想好看哪一个，打开了爱奇艺，看着推荐的那些，也都没想看的欲望，索性来个更加直接一点的，上豆瓣电影排行榜去</description>
     </item>
     
     <item>
@@ -69,15 +123,6 @@
       
       <guid>https://grass.show/post/hexo-installation/</guid>
       <description>什么是Hexo Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静</description>
-    </item>
-    
-    <item>
-      <title>机器人总动员——浪漫而感人的动画电影</title>
-      <link>https://grass.show/post/movie-wall-e/</link>
-      <pubDate>Tue, 04 Feb 2020 00:00:00 +0800</pubDate>
-      
-      <guid>https://grass.show/post/movie-wall-e/</guid>
-      <description>昨天就计划好今天看一部电影，但是没有想好看哪一个，打开了爱奇艺，看着推荐的那些，也都没想看的欲望，索性来个更加直接一点的，上豆瓣电影排行榜去</description>
     </item>
     
     <item>
