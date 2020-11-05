@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>蜗牛星际机器重置BIOS的方法 - 一世韶华</title>
+  <title>打造高效的Mac开发环境（一）—— 科学上网 - 一世韶华</title>
   
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-DW2GXKQ7M0"></script>
 <script>
@@ -26,7 +26,8 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="grass" /><meta name="description" content="主板电池旁边的两个针脚，在通电启动情况下，使用螺丝刀连接两个针脚，使其短路
+<meta name="author" content="grass" /><meta name="description" content="工欲善其事，必先利其器
+不管是我们以后用到的工具，还是各种文档，亦或是“谷歌一下”，这些都得翻墙，甚至GitHub都偶尔抽风，我们先把这重中之重解决掉！
 " /><meta name="keywords" content="Develop, Emacs, Org, GTD" />
 
 
@@ -37,7 +38,7 @@
 <meta name="generator" content="Hugo 0.75.1 with theme even" />
 
 
-<link rel="canonical" href="https://grass.show/post/woniuxingji-bios-reset/" />
+<link rel="canonical" href="https://grass.show/post/make-mac-dev-env-01/" />
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -50,24 +51,27 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
-<meta property="og:title" content="蜗牛星际机器重置BIOS的方法" />
-<meta property="og:description" content="主板电池旁边的两个针脚，在通电启动情况下，使用螺丝刀连接两个针脚，使其短路" />
+<meta property="og:title" content="打造高效的Mac开发环境（一）—— 科学上网" />
+<meta property="og:description" content="工欲善其事，必先利其器
+不管是我们以后用到的工具，还是各种文档，亦或是“谷歌一下”，这些都得翻墙，甚至GitHub都偶尔抽风，我们先把这重中之重解决掉！" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://grass.show/post/woniuxingji-bios-reset/" />
-<meta property="article:published_time" content="2020-11-04T23:11:00+08:00" />
-<meta property="article:modified_time" content="2020-11-05T10:19:54+08:00" />
-<meta itemprop="name" content="蜗牛星际机器重置BIOS的方法">
-<meta itemprop="description" content="主板电池旁边的两个针脚，在通电启动情况下，使用螺丝刀连接两个针脚，使其短路">
-<meta itemprop="datePublished" content="2020-11-04T23:11:00+08:00" />
-<meta itemprop="dateModified" content="2020-11-05T10:19:54+08:00" />
-<meta itemprop="wordCount" content="272">
+<meta property="og:url" content="https://grass.show/post/make-mac-dev-env-01/" />
+<meta property="article:published_time" content="2017-08-30T00:00:00+08:00" />
+<meta property="article:modified_time" content="2020-11-05T12:13:14+08:00" />
+<meta itemprop="name" content="打造高效的Mac开发环境（一）—— 科学上网">
+<meta itemprop="description" content="工欲善其事，必先利其器
+不管是我们以后用到的工具，还是各种文档，亦或是“谷歌一下”，这些都得翻墙，甚至GitHub都偶尔抽风，我们先把这重中之重解决掉！">
+<meta itemprop="datePublished" content="2017-08-30T00:00:00+08:00" />
+<meta itemprop="dateModified" content="2020-11-05T12:13:14+08:00" />
+<meta itemprop="wordCount" content="287">
 
 
 
-<meta itemprop="keywords" content="蜗牛星际,NAS,BIOS," />
+<meta itemprop="keywords" content="" />
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="蜗牛星际机器重置BIOS的方法"/>
-<meta name="twitter:description" content="主板电池旁边的两个针脚，在通电启动情况下，使用螺丝刀连接两个针脚，使其短路"/>
+<meta name="twitter:title" content="打造高效的Mac开发环境（一）—— 科学上网"/>
+<meta name="twitter:description" content="工欲善其事，必先利其器
+不管是我们以后用到的工具，还是各种文档，亦或是“谷歌一下”，这些都得翻墙，甚至GitHub都偶尔抽风，我们先把这重中之重解决掉！"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -130,27 +134,54 @@
           <article class="post">
     
     <header class="post-header">
-      <h1 class="post-title">蜗牛星际机器重置BIOS的方法</h1>
+      <h1 class="post-title">打造高效的Mac开发环境（一）—— 科学上网</h1>
 
       <div class="post-meta">
-        <span class="post-time"> 2020-11-04 </span>
+        <span class="post-time"> 2017-08-30 </span>
         
-          <span class="more-meta"> 约 272 字 </span>
+          <span class="more-meta"> 约 287 字 </span>
           <span class="more-meta"> 预计阅读 1 分钟 </span>
         
       </div>
     </header>
 
-    
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content">
+    <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#翻墙的方式">翻墙的方式</a></li>
+        <li><a href="#蓝灯">蓝灯</a></li>
+        <li><a href="#云梯vpn">云梯VPN</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</div>
     <div class="post-content">
-      <p>主板电池旁边的两个针脚，在通电启动情况下，使用螺丝刀连接两个针脚，使其短路</p>
-<p>我先尝试了最通用的办法——卸主板电池，然后晾上十分钟，一般的主板上的BIOS就会重置
-但是这个方法对于我的这个蜗牛星际的机器不行</p>
-<p>从百度查到可以用螺丝刀连接主板电池仓的正负极，使其短路重置，这个依旧不行</p>
-<p>无奈之下继续百度，在一个论坛发现了一篇帖子，上面说蜗牛星际的这款机器比较奇葩
-卸载电池对它不起作用，需要短接电池旁边的两个针脚，并且是在开机的情况下才可以
-听到滴的一声就可以重启了</p>
-<p>原文链接：<a href="http://www.nasyun.com/thread-67158-1-1.html">http://www.nasyun.com/thread-67158-1-1.html</a></p>
+      <p>工欲善其事，必先利其器</p>
+<p>不管是我们以后用到的工具，还是各种文档，亦或是“谷歌一下”，这些都得翻墙，甚至GitHub都偶尔抽风，我们先把这重中之重解决掉！</p>
+<h2 id="翻墙的方式">翻墙的方式</h2>
+<ol>
+<li>蓝灯(可免费使用，但是有限制)</li>
+<li>云梯VPN(付费VPN)</li>
+</ol>
+<h2 id="蓝灯">蓝灯</h2>
+<blockquote>
+<p>下载地址: <a href="https://github.com/getlantern/lantern">https://github.com/getlantern/lantern</a></p>
+</blockquote>
+<p>选择对应的OSX版本下载安装即可</p>
+<p>蓝灯用了两年的付费版，比较不错吧，比VPN省事一些，速度还可以，不过不可以自由选择VPN节点</p>
+<h2 id="云梯vpn">云梯VPN</h2>
+<blockquote>
+<p>注册地址 <a href="https://www.yuntipub.com/">https://www.yuntipub.com/</a></p>
+</blockquote>
+<p>多种平台的客户端，据说可以智能分流，国内流量不走VPN网络。</p>
+<p>价钱不贵，可以先买个小流量版的。安装流程不做介绍，安装常识一步一步来就可以。</p>
+<p>到此我们有了可以翻墙的工具，接下来一步步改造我们的Mac环境吧。</p>
     </div>
 
     <div class="post-copyright">
@@ -162,26 +193,22 @@
     <span class="item-title">上次更新</span>
     <span class="item-content">
         2020-11-05
-        <a href="https://github.com/running-grass/running-grass.github.io/commit/101daed94ca9ba7c8fe3d82bf862d6a48cdfae17" title="导出简书的内容">(101daed)</a>
+        
     </span>
   </p>
   
   
 </div>
 <footer class="post-footer">
-      <div class="post-tags">
-          <a href="/tags/%E8%9C%97%E7%89%9B%E6%98%9F%E9%99%85/">蜗牛星际</a>
-          <a href="/tags/nas/">NAS</a>
-          <a href="/tags/bios/">BIOS</a>
-          </div>
+      
       <nav class="post-nav">
-        <a class="prev" href="/post/first-blog-for-ox-hugo/">
+        <a class="prev" href="/post/officer-financial-freedom-1/">
             <i class="iconfont icon-left"></i>
-            <span class="prev-text nav-default">使用ox-hugo写博客</span>
+            <span class="prev-text nav-default">上班族如何实现财务自由——启蒙篇</span>
             <span class="prev-text nav-mobile">上一篇</span>
           </a>
-        <a class="next" href="/post/hexo-installation/">
-            <span class="next-text nav-default">Hexo的介绍及安装使用</span>
+        <a class="next" href="/post/miss-1/">
+            <span class="next-text nav-default">思念（一）</span>
             <span class="next-text nav-mobile">下一篇</span>
             <i class="iconfont icon-right"></i>
           </a>
