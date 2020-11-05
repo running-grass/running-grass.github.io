@@ -7,9 +7,9 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <copyright>grass</copyright>
-    <lastBuildDate>Fri, 18 Aug 2017 19:31:00 +0800</lastBuildDate><atom:link href="https://grass.show/translate/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 05 Nov 2020 13:17:00 +0800</lastBuildDate><atom:link href="https://grass.show/translate/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>【翻译】React Native中的别名</title>
+      <title>React Native中的别名</title>
       <link>https://grass.show/translate/alias-in-react-native/</link>
       <pubDate>Fri, 18 Aug 2017 19:31:00 +0800</pubDate>
       
@@ -18,6 +18,15 @@
 &lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;import themes from &#39;../../config/themes&#39;;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;通过符号`../`让我们很难去思考，在更复杂的项目中，这将是一个噩梦。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>基于Org的GTD实践</title>
+      <link>https://grass.show/translate/do-gtd-in-orgmode/</link>
+      <pubDate>Thu, 05 Nov 2020 13:17:00 +0800</pubDate>
+      
+      <guid>https://grass.show/translate/do-gtd-in-orgmode/</guid>
+      <description>在这篇文章中，我将详细介绍如何使用Orgmode实现GTD，而不是解释GTD方法本身或Orgmode是如何工作的。</description>
     </item>
     
   </channel>
