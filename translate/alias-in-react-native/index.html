@@ -59,14 +59,14 @@ import themes from &#39;../../config/themes&#39;;
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://grass.show/translate/alias-in-react-native/" />
 <meta property="article:published_time" content="2017-08-18T19:31:00+08:00" />
-<meta property="article:modified_time" content="2020-11-05T13:43:09+08:00" />
+<meta property="article:modified_time" content="2020-11-09T14:53:41+08:00" />
 <meta itemprop="name" content="React Native中的别名">
 <meta itemprop="description" content="有时候，你会在你的项目有多个文件和文件夹。我们需要从任意随机文件中获得一个文件的引用。如果我们这样的相对路径的话，看起来是这个样子的:
 import themes from &#39;../../config/themes&#39;;
 
 通过符号`../`让我们很难去思考，在更复杂的项目中，这将是一个噩梦。">
 <meta itemprop="datePublished" content="2017-08-18T19:31:00+08:00" />
-<meta itemprop="dateModified" content="2020-11-05T13:43:09+08:00" />
+<meta itemprop="dateModified" content="2020-11-09T14:53:41+08:00" />
 <meta itemprop="wordCount" content="650">
 
 
@@ -145,16 +145,16 @@ import themes from &#39;../../config/themes&#39;;
 <p>通过符号`../`让我们很难去思考，在更复杂的项目中，这将是一个噩梦。</p>
 <p>在这篇文章中，我们将找到关于这种场景的可能的解决方案和替代方案。</p>
 <p>假定项目有以下文件夹结构。</p>
-<pre><code class="language-example">Your App Root Directory
- |-- app
-      |-- component
-      |    |-- login
-      |    |   |-- login.js
-      +-- resources
-      |    |-- icon
-      |    |    |-- userupload.png
-      |-- index.ios.js
-      |-- index.android.js
+<pre><code class="language-example"> Your App Root Directory
+|-- app
+     |-- component
+     |    |-- login
+     |    |   |-- login.js
+     +-- resources
+     |    |-- icon
+     |    |    |-- userupload.png
+     |-- index.ios.js
+     |-- index.android.js
 </code></pre>
 <p>我们有两种可能的解决方案用来在上面的文件夹结构中指出每个节点。</p>
 <h2 id="use-providesmodule">Use @providesModule</h2>
