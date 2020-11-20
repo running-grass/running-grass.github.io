@@ -233,6 +233,15 @@
     </item>
     
     <item>
+      <title>善意的谎言</title>
+      <link>https://grass.show/post/jakob-the-liar/</link>
+      <pubDate>Tue, 28 Jun 2016 00:00:00 +0800</pubDate>
+      
+      <guid>https://grass.show/post/jakob-the-liar/</guid>
+      <description>“你昨晚真的去网吧了吗？” “对啊，我和C君好几年没见面，去网吧撸了一晚上，怀怀旧” “那你身上怎么没有眼味儿呢？” “那个&amp;hellip;&amp;he</description>
+    </item>
+    
+    <item>
       <title>羡慕别人的故事，不如自己成为主角</title>
       <link>https://grass.show/post/do-leading-role-for-mine/</link>
       <pubDate>Mon, 09 Sep 2019 00:00:00 +0800</pubDate>
@@ -242,12 +251,30 @@
     </item>
     
     <item>
+      <title>母亲，生日快乐</title>
+      <link>https://grass.show/post/mom-happy-birthday/</link>
+      <pubDate>Mon, 04 Jul 2016 00:00:00 +0800</pubDate>
+      
+      <guid>https://grass.show/post/mom-happy-birthday/</guid>
+      <description>昨天是我妈妈生日 我老家是河北的，现在在帝都上班，前一天为她选了一枚黄金的戒指，带着县城为她订的一个生日蛋糕，在没有通知她的情况下，推开了家门</description>
+    </item>
+    
+    <item>
       <title>人生首个50km越野跑</title>
       <link>https://grass.show/post/first-50km-trai-run/</link>
       <pubDate>Thu, 10 Oct 2019 00:00:00 +0800</pubDate>
       
       <guid>https://grass.show/post/first-50km-trai-run/</guid>
       <description>比赛过去一周了，简单的回忆一下，也就懒得放图了。 比赛前的半个月，在好友的鼓励(怂恿)之下报名了50km组别的比赛。 比赛前一天，坐组委会的大巴</description>
+    </item>
+    
+    <item>
+      <title>凹多边形和点的位置问题(凹包问题面对对象的算法)</title>
+      <link>https://grass.show/post/concave-polygon-and-point/</link>
+      <pubDate>Mon, 01 Aug 2016 00:00:00 +0800</pubDate>
+      
+      <guid>https://grass.show/post/concave-polygon-and-point/</guid>
+      <description>&lt;p&gt;已知一个任意多边形的各顶点坐标，任意给一点坐标，判断是否在该多边形内部或边线上, 这只是一个笨拙的实现&lt;/p&gt;</description>
     </item>
     
     <item>
