@@ -9,6 +9,13 @@
   </url>
   
   <url>
+    <loc>https://grass.show/post/seeing-off-the-friend/</loc>
+    <lastmod>2021-02-01T14:49:44+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://grass.show/translate/alias-in-react-native/</loc>
     <lastmod>2020-11-09T14:53:41+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -45,7 +52,7 @@
   
   <url>
     <loc>https://grass.show/post/use-docker-on-freebsd/</loc>
-    <lastmod>2020-12-07T22:39:52+08:00</lastmod>
+    <lastmod>2020-12-20T20:28:22+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -311,42 +318,42 @@
   
   <url>
     <loc>https://grass.show/tags/docker/</loc>
-    <lastmod>2020-12-07T22:39:52+08:00</lastmod>
+    <lastmod>2020-12-20T20:28:22+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://grass.show/tags/freebsd/</loc>
-    <lastmod>2020-12-07T22:39:52+08:00</lastmod>
+    <lastmod>2020-12-20T20:28:22+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://grass.show/post/</loc>
-    <lastmod>2020-12-07T22:40:02+08:00</lastmod>
+    <lastmod>2021-02-01T14:49:44+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://grass.show/tags/</loc>
-    <lastmod>2020-12-07T22:39:52+08:00</lastmod>
+    <lastmod>2020-12-20T20:28:22+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://grass.show/tags/virtualbox/</loc>
-    <lastmod>2020-12-07T22:39:52+08:00</lastmod>
+    <lastmod>2020-12-20T20:28:22+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://grass.show/</loc>
-    <lastmod>2020-12-07T22:40:02+08:00</lastmod>
+    <lastmod>2021-02-01T14:49:44+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
