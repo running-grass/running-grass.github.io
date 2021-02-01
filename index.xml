@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <copyright>grass</copyright>
-    <lastBuildDate>Mon, 09 Nov 2020 14:50:00 +0800</lastBuildDate><atom:link href="https://grass.show/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 01 Feb 2021 15:13:00 +0800</lastBuildDate><atom:link href="https://grass.show/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>送别驴友</title>
+      <link>https://grass.show/post/seeing-off-the-friend/</link>
+      <pubDate>Sun, 20 Dec 2020 00:00:00 +0800</pubDate>
+      
+      <guid>https://grass.show/post/seeing-off-the-friend/</guid>
+      <description>&lt;p&gt;你以自己喜爱的方式告别这个世界，愿天堂没有寒冷.&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>从Hexo迁移到Hugo</title>
       <link>https://grass.show/post/from-hexo-to-hugo/</link>
@@ -15,15 +24,6 @@
       
       <guid>https://grass.show/post/from-hexo-to-hugo/</guid>
       <description>&lt;p&gt;记录一下自己从Hexo迁移到Hugo的过程，程序直接部署到GitHub Page。&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>送别驴友</title>
-      <link>https://grass.show/post/seeing-off-the-friend/</link>
-      <pubDate>Mon, 20 Jan 2020 00:00:00 +0800</pubDate>
-      
-      <guid>https://grass.show/post/seeing-off-the-friend/</guid>
-      <description>&lt;p&gt;你以自己喜爱的方式告别这个世界，愿天堂没有寒冷.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -81,6 +81,16 @@
       
       <guid>https://grass.show/post/use-docker-on-freebsd/</guid>
       <description>&lt;p&gt;Docker利用了Linux内核的一些特性，而FreeBSD是不支持的，需要通过docker-machine创建虚拟机来曲线救国。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>《追寻生命的意义》有感</title>
+      <link>https://grass.show/post/mans-search-for-meaning/</link>
+      <pubDate>Mon, 01 Feb 2021 15:13:00 +0800</pubDate>
+      
+      <guid>https://grass.show/post/mans-search-for-meaning/</guid>
+      <description>&lt;p&gt;不论什么样的人，不论处在什么样的环境下，都有些选择的自由，即使身处奥斯维辛集中营，随时可能会被送往毒气室，
+但是依旧拥有一项谁也剥夺不了的自由，那就是如何面对痛苦的态度。&lt;/p&gt;</description>
     </item>
     
     <item>
