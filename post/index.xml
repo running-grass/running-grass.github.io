@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <copyright>grass</copyright>
-    <lastBuildDate>Mon, 01 Feb 2021 15:13:00 +0800</lastBuildDate><atom:link href="https://grass.show/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 18 Feb 2021 12:50:00 +0800</lastBuildDate><atom:link href="https://grass.show/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>送别驴友</title>
       <link>https://grass.show/post/seeing-off-the-friend/</link>
@@ -70,6 +70,15 @@
       <guid>https://grass.show/post/mans-search-for-meaning/</guid>
       <description>&lt;p&gt;不论什么样的人，不论处在什么样的环境下，都有些选择的自由，即使身处奥斯维辛集中营，随时可能会被送往毒气室，
 但是依旧拥有一项谁也剥夺不了的自由，那就是如何面对痛苦的态度。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>使用certbot申请免费https泛域名证书</title>
+      <link>https://grass.show/post/register-https-bycertbot/</link>
+      <pubDate>Thu, 18 Feb 2021 12:50:00 +0800</pubDate>
+      
+      <guid>https://grass.show/post/register-https-bycertbot/</guid>
+      <description>免费的https证书 部署https访问最简单的办法就是使用域名商提供的https服务，简单、省事、可靠、有保障。 但是，价格同样也不便宜啊，像</description>
     </item>
     
     <item>
