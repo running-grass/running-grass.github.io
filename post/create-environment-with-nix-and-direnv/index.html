@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>使用Nix&#43;direnv快速构建不同软件版本的开发环境 | My New Hugo Site</title>
+<meta name="keywords" content="开发环境, Nix, direnv, docker, virtualenv, nodejs, python">
+<meta name="description" content="我们在开发项目是总是会遇到一些软件版本的问题，例如项目A需要node版本为8-10，而项目B需要版本大于12，常用的方案有这么几种。
+
+在开发不同的项目的时候，手工切换不同的版本 (因为我遇到的不多，所以一直这么干)
+使用虚拟机或者Docker
+使用类似python中的virtualenv，根据不同的目录切换不同的虚拟运行时环境
+
+本文的方案属于第三种。不需要太多的背景知识。">
+<meta name="author" content="">
+<link rel="canonical" href="https://example.org/post/create-environment-with-nix-and-direnv/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.b609c58d5c11bb90b1a54e04005d74ad1ddf22165eb79f5533967e57df9c3b50.css" integrity="sha256-tgnFjVwRu5CxpU4EAF10rR3fIhZet59VM5Z&#43;V9&#43;cO1A=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://example.org/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://example.org/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://example.org/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://example.org/apple-touch-icon.png">
+<link rel="mask-icon" href="https://example.org/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><meta property="og:title" content="使用Nix&#43;direnv快速构建不同软件版本的开发环境" />
+<meta property="og:description" content="我们在开发项目是总是会遇到一些软件版本的问题，例如项目A需要node版本为8-10，而项目B需要版本大于12，常用的方案有这么几种。
+
+在开发不同的项目的时候，手工切换不同的版本 (因为我遇到的不多，所以一直这么干)
+使用虚拟机或者Docker
+使用类似python中的virtualenv，根据不同的目录切换不同的虚拟运行时环境
+
+本文的方案属于第三种。不需要太多的背景知识。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://example.org/post/create-environment-with-nix-and-direnv/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2021-07-07T21:26:00+08:00" />
+<meta property="article:modified_time" content="2024-01-31T11:23:11+08:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="使用Nix&#43;direnv快速构建不同软件版本的开发环境"/>
+<meta name="twitter:description" content="我们在开发项目是总是会遇到一些软件版本的问题，例如项目A需要node版本为8-10，而项目B需要版本大于12，常用的方案有这么几种。
+
+在开发不同的项目的时候，手工切换不同的版本 (因为我遇到的不多，所以一直这么干)
+使用虚拟机或者Docker
+使用类似python中的virtualenv，根据不同的目录切换不同的虚拟运行时环境
+
+本文的方案属于第三种。不需要太多的背景知识。"/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://example.org/post/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "使用Nix+direnv快速构建不同软件版本的开发环境",
+      "item": "https://example.org/post/create-environment-with-nix-and-direnv/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "使用Nix+direnv快速构建不同软件版本的开发环境",
+  "name": "使用Nix\u002bdirenv快速构建不同软件版本的开发环境",
+  "description": "我们在开发项目是总是会遇到一些软件版本的问题，例如项目A需要node版本为8-10，而项目B需要版本大于12，常用的方案有这么几种。\n在开发不同的项目的时候，手工切换不同的版本 (因为我遇到的不多，所以一直这么干) 使用虚拟机或者Docker 使用类似python中的virtualenv，根据不同的目录切换不同的虚拟运行时环境 本文的方案属于第三种。不需要太多的背景知识。\n",
+  "keywords": [
+    "开发环境", "Nix", "direnv", "docker", "virtualenv", "nodejs", "python"
+  ],
+  "articleBody": "我们在开发项目是总是会遇到一些软件版本的问题，例如项目A需要node版本为8-10，而项目B需要版本大于12，常用的方案有这么几种。\n在开发不同的项目的时候，手工切换不同的版本 (因为我遇到的不多，所以一直这么干) 使用虚拟机或者Docker 使用类似python中的virtualenv，根据不同的目录切换不同的虚拟运行时环境 本文的方案属于第三种。不需要太多的背景知识。\n安装Nix nix是一个函数式的包管理器，想像成apt-get或者homevrew这种的，或者npm。\n在命令行执行 curl -L https://nixos.org/nix/install | sh 就可以自动安装nix\n如果被墙，也可以使用清华镜像站的 sh \u003c(curl https://mirrors.tuna.tsinghua.edu.cn/nix/latest/install)\n更换镜像(可选) 目前已知的有清华镜像站 https://mirrors.tuna.tsinghua.edu.cn/help/nix/\n可以通过在 ~/.config/nix/nix.conf 文件中写入以下内容，获得安装加速\nsubstituters = https://mirrors.tuna.tsinghua.edu.cn/nix-channels/store https://cache.nixos.org/ 并且执行以下命令获得源码下载加速\nnix-channel --add https://mirrors.tuna.tsinghua.edu.cn/nix-channels/nixpkgs-unstable nixpkgs nix-channel --update 安装direnv 既然已经安装好了nix，那么就直接用nix来安装direnv吧。\nnix-env -iA nixpkgs.direnv 配置项目 先在项目根目录新建一个文件 shell.nix ，内容示例如下\nwith import {}; mkShell { buildInputs = [ nodejs-10_x yarn idris2 ]; } 在这里，我声明了我的这个项目依赖这三个软件，nodejs，yarn，idris2，并且指定了nodejs的大版本。\n(可选) 此时可以手动的执行 nix-shell 命令安装依赖，并且进入到nix-shell中。不过这样就不能使用自己心爱的shell了\n可以到 https://search.nixos.org/packages 页面搜索自己依赖的软件包。\n在项目根目录新建一个文件 .envrc , 内容如下：\nuse_nix 对，就这么一行就够了。\n然后执行 direnv allow . ，注意有个点喔。执行 eval \"$(direnv hook zsh)\" 可以让自己的shell在进入该目录的时候，自动检测并安装依赖，且自动切换软件的依赖目录。 由于我用的是 zsh 所以我这里写的是zsh， 其它的shell可以到 https://direnv.net/docs/hook.html 查看命令。\n对了，别忘记把上面这条命令加入到你的 bashrc/zshrc 中啊。\n在终端试试 cd .. ， 然后在 cd 到项目目录 试试。看看命令行有没有自动的加载虚拟运行时环境啊。\n和docker的对比 我比较懒，也就不写123了，对于开发环境，大多数情况用nix+direnv就足够了，毕竟软件版本隔离是最大众的需求嘛。\n而且还这么简单。😄\n参考链接 https://search.nixos.org/packages https://direnv.net/ https://myme.no/posts/2020-01-26-nixos-for-development.html#virtual-environments-using-nix-shell https://nixos.wiki/wiki/Development_environment_with_nix-shell#Using_Direnv ",
+  "wordCount" : "108",
+  "inLanguage": "en",
+  "datePublished": "2021-07-07T21:26:00+08:00",
+  "dateModified": "2024-01-31T11:23:11+08:00",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://example.org/post/create-environment-with-nix-and-direnv/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "My New Hugo Site",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://example.org/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://example.org/" accesskey="h" title="My New Hugo Site (Alt + H)">My New Hugo Site</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      使用Nix&#43;direnv快速构建不同软件版本的开发环境
+    </h1>
+    <div class="post-meta"><span title='2021-07-07 21:26:00 +0800 CST'>July 7, 2021</span>
+
+</div>
+  </header> 
+  <div class="post-content"><p>我们在开发项目是总是会遇到一些软件版本的问题，例如项目A需要node版本为8-10，而项目B需要版本大于12，常用的方案有这么几种。</p>
+<ul>
+<li>在开发不同的项目的时候，手工切换不同的版本 (因为我遇到的不多，所以一直这么干)</li>
+<li>使用虚拟机或者Docker</li>
+<li>使用类似python中的virtualenv，根据不同的目录切换不同的虚拟运行时环境</li>
+</ul>
+<p>本文的方案属于第三种。不需要太多的背景知识。</p>
+<h2 id="安装nix">安装Nix<a hidden class="anchor" aria-hidden="true" href="#安装nix">#</a></h2>
+<p>nix是一个函数式的包管理器，想像成apt-get或者homevrew这种的，或者npm。</p>
+<p>在命令行执行 <code>curl -L https://nixos.org/nix/install | sh</code> 就可以自动安装nix</p>
+<p>如果被墙，也可以使用清华镜像站的 <code>sh &lt;(curl https://mirrors.tuna.tsinghua.edu.cn/nix/latest/install)</code></p>
+<h3 id="更换镜像--可选">更换镜像(可选)<a hidden class="anchor" aria-hidden="true" href="#更换镜像--可选">#</a></h3>
+<p>目前已知的有清华镜像站  <a href="https://mirrors.tuna.tsinghua.edu.cn/help/nix/">https://mirrors.tuna.tsinghua.edu.cn/help/nix/</a></p>
+<p>可以通过在 <code>~/.config/nix/nix.conf</code> 文件中写入以下内容，获得安装加速</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>substituters = https://mirrors.tuna.tsinghua.edu.cn/nix-channels/store https://cache.nixos.org/
+</span></span></code></pre></div><p>并且执行以下命令获得源码下载加速</p>
+<pre tabindex="0"><code class="language-base" data-lang="base">nix-channel --add https://mirrors.tuna.tsinghua.edu.cn/nix-channels/nixpkgs-unstable nixpkgs
+nix-channel --update
+</code></pre><h2 id="安装direnv">安装direnv<a hidden class="anchor" aria-hidden="true" href="#安装direnv">#</a></h2>
+<p>既然已经安装好了nix，那么就直接用nix来安装direnv吧。</p>
+<pre tabindex="0"><code class="language-base" data-lang="base">nix-env -iA nixpkgs.direnv
+</code></pre><h2 id="配置项目">配置项目<a hidden class="anchor" aria-hidden="true" href="#配置项目">#</a></h2>
+<p>先在项目根目录新建一个文件 <code>shell.nix</code> ，内容示例如下</p>
+<pre tabindex="0"><code class="language-nil" data-lang="nil">with import &lt;nixpkgs&gt; {};
+mkShell {
+  buildInputs = [
+    nodejs-10_x
+    yarn
+    idris2
+  ];
+}
+</code></pre><p>在这里，我声明了我的这个项目依赖这三个软件，nodejs，yarn，idris2，并且指定了nodejs的大版本。</p>
+<p>(可选) 此时可以手动的执行 <code>nix-shell</code> 命令安装依赖，并且进入到nix-shell中。不过这样就不能使用自己心爱的shell了</p>
+<p>可以到 <code>https://search.nixos.org/packages</code> 页面搜索自己依赖的软件包。</p>
+<p>在项目根目录新建一个文件 <code>.envrc</code> , 内容如下：</p>
+<pre tabindex="0"><code class="language-nil" data-lang="nil">use_nix
+</code></pre><p>对，就这么一行就够了。</p>
+<p>然后执行 <code>direnv allow .</code> ，注意有个点喔。执行 <code>eval &quot;$(direnv hook zsh)&quot;</code> 可以让自己的shell在进入该目录的时候，自动检测并安装依赖，且自动切换软件的依赖目录。 由于我用的是 <code>zsh</code> 所以我这里写的是zsh， 其它的shell可以到 <code>https://direnv.net/docs/hook.html</code> 查看命令。</p>
+<p>对了，别忘记把上面这条命令加入到你的 bashrc/zshrc 中啊。</p>
+<p>在终端试试 <code>cd ..</code> ， 然后在 <code>cd</code> 到项目目录 试试。看看命令行有没有自动的加载虚拟运行时环境啊。</p>
+<h2 id="和docker的对比">和docker的对比<a hidden class="anchor" aria-hidden="true" href="#和docker的对比">#</a></h2>
+<p>我比较懒，也就不写123了，对于开发环境，大多数情况用nix+direnv就足够了，毕竟软件版本隔离是最大众的需求嘛。</p>
+<p>而且还这么简单。😄</p>
+<h2 id="参考链接">参考链接<a hidden class="anchor" aria-hidden="true" href="#参考链接">#</a></h2>
+<ul>
+<li><a href="https://search.nixos.org/packages">https://search.nixos.org/packages</a></li>
+<li><a href="https://direnv.net/">https://direnv.net/</a></li>
+<li><a href="https://myme.no/posts/2020-01-26-nixos-for-development.html#virtual-environments-using-nix-shell">https://myme.no/posts/2020-01-26-nixos-for-development.html#virtual-environments-using-nix-shell</a></li>
+<li><a href="https://nixos.wiki/wiki/Development_environment_with_nix-shell#Using_Direnv">https://nixos.wiki/wiki/Development_environment_with_nix-shell#Using_Direnv</a></li>
+</ul>
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://example.org/tags/%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/">开发环境</a></li>
+      <li><a href="https://example.org/tags/nix/">Nix</a></li>
+      <li><a href="https://example.org/tags/direnv/">direnv</a></li>
+      <li><a href="https://example.org/tags/docker/">docker</a></li>
+      <li><a href="https://example.org/tags/virtualenv/">virtualenv</a></li>
+      <li><a href="https://example.org/tags/nodejs/">nodejs</a></li>
+      <li><a href="https://example.org/tags/python/">python</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+    <span>&copy; 2024 <a href="https://example.org/">My New Hugo Site</a></span>
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

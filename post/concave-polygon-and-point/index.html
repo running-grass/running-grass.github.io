@@ -1,0 +1,1064 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>凹多边形和点的位置问题(凹包问题面对对象的算法) | My New Hugo Site</title>
+<meta name="keywords" content="">
+<meta name="description" content="已知一个任意多边形的各顶点坐标，任意给一点坐标，判断是否在该多边形内部或边线上, 这只是一个笨拙的实现">
+<meta name="author" content="">
+<link rel="canonical" href="https://example.org/post/concave-polygon-and-point/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.b609c58d5c11bb90b1a54e04005d74ad1ddf22165eb79f5533967e57df9c3b50.css" integrity="sha256-tgnFjVwRu5CxpU4EAF10rR3fIhZet59VM5Z&#43;V9&#43;cO1A=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://example.org/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://example.org/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://example.org/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://example.org/apple-touch-icon.png">
+<link rel="mask-icon" href="https://example.org/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><meta property="og:title" content="凹多边形和点的位置问题(凹包问题面对对象的算法)" />
+<meta property="og:description" content="已知一个任意多边形的各顶点坐标，任意给一点坐标，判断是否在该多边形内部或边线上, 这只是一个笨拙的实现" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://example.org/post/concave-polygon-and-point/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2016-08-01T00:00:00+08:00" />
+<meta property="article:modified_time" content="2024-01-31T11:23:29+08:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="凹多边形和点的位置问题(凹包问题面对对象的算法)"/>
+<meta name="twitter:description" content="已知一个任意多边形的各顶点坐标，任意给一点坐标，判断是否在该多边形内部或边线上, 这只是一个笨拙的实现"/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://example.org/post/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "凹多边形和点的位置问题(凹包问题面对对象的算法)",
+      "item": "https://example.org/post/concave-polygon-and-point/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "凹多边形和点的位置问题(凹包问题面对对象的算法)",
+  "name": "凹多边形和点的位置问题(凹包问题面对对象的算法)",
+  "description": "已知一个任意多边形的各顶点坐标，任意给一点坐标，判断是否在该多边形内部或边线上, 这只是一个笨拙的实现\n",
+  "keywords": [
+    
+  ],
+  "articleBody": "已知一个任意多边形的各顶点坐标，任意给一点坐标，判断是否在该多边形内部或边线上, 这只是一个笨拙的实现\ngithub链接: https://github.com/running-grass/phptools.git\ncomposer: composer require \"leo1992/tools:^0\"\n问题描述 已知一个任意多边形的各顶点坐标，任意给一点坐标，判断是否在该多边形内部或边线上\n解决思路及基础 任意凸多边形中，经过任一顶点连接各个顶点，可以把多边形分割为多个三角形 任意三角形中一点，和三条边上面各两个顶点的夹角共六个，如果该点在三角形内部，六个角之和等于180度，否则在三角形外部 任意凹多边形都可以转化为，任一凸多边形减去N个三角形 在上一条件下，如果一个点在这个大的凸多边形中（包括边），但不在去掉的N个三角形中（不包括边界），则该点在该凹多边形中 一个点如果和线段的两个顶点连接形成的两个夹角和等于180°，则该点在线段上 把凹多边形的问题细化到点和三角形以及点和线段的位置关系 实现部分 设计了六个类，点、线段、角、三角形、凸多边形、多边形 其中三角形继承凸多边形，凸多边形继承多边形类 1.Point（点类） 这个类主要保存点信息，没有任何操作\n// 点类 class Point extends Base { private $x; // x坐标 private $y; // y 坐标 public function __construct($x, $y) { try { $this-\u003esetX($x); $this-\u003esetY($y); unset($x, $y); return 0; } catch (\\Exception $e) { throw $e; } } // setting and getting private function setX($x) { try { $this-\u003ex = (float)$x; unset($x); return 0; } catch (\\Exception $e) { throw $e; } } public function getX() { try { return $this-\u003ex; } catch (\\Exception $e) { throw $e; } } // setting and getting private function setY($y) { try { $this-\u003ey = (float)$y; unset($y); return 0; } catch (\\Exception $e) { throw $e; } } public function getY() { try { return $this-\u003ey; } catch (\\Exception $e) { throw $e; } } public function __toString() { try { return \"({$this-\u003egetX()},{$this-\u003egetY()})\"; } catch (\\Exception $e) { throw $e; } } } 2.Line(线段) 这个类由两个点构成，提供一个操作来判断某点是否在线段上\nclass Line extends Base { private $p1; // 线段第一个点 private $p2; // 线段的第二个点 private $tilt; // 倾斜角，距x轴正方向的逆时针角度 private $length; // 线段的长度 public function __construct(Point $p1, Point $p2) { try { // 两个端点不能重合，没长度 if ($p1 == $p2) { throw new TwoPointOverlapException('两个端点不能重合'); } $this-\u003esetP1($p1); $this-\u003esetP2($p2); unset($p1, $p2); } catch (\\Exception $e) { throw $e; } } // 生成线段的长度 private function generateLength() { try { // 利用勾股定理 $length = sqrt(pow($this-\u003egetP1()-\u003egetX() - $this-\u003egetP2()-\u003egetX(), 2) + pow($this-\u003egetP1()-\u003egetY() - $this-\u003egetP2()-\u003egetY(), 2)); $this-\u003esetLength(abs($length)); unset($length); return 0; } catch (\\Exception $e) { throw $e; } } // 生成倾斜角 private function generateTilt() { try { $dy = $this-\u003egetP2()-\u003egetY() - $this-\u003egetP1()-\u003egetY(); $dx = $this-\u003egetP2()-\u003egetX() - $this-\u003egetP1()-\u003egetX(); // 不同的象限不同处理，dx为零的情况单独处理 if ($dx \u003e 0 \u0026\u0026 $dy \u003e= 0) { $ang = (rad2deg(atan($dy/$dx))); $ext = 0; } elseif ($dx \u003c= 0 \u0026\u0026 $dy \u003e= 0) { if (0 == $dx) { $ang = 0; $ext = 90; } else { $ang = (rad2deg(atan($dy/$dx))); $ext = 180; } } elseif ($dx \u003c 0 \u0026\u0026 $dy \u003c= 0) { $ang = (rad2deg(atan($dy/$dx))); $ext = 180; } elseif ($dx \u003e= 0 \u0026\u0026 $dy \u003c 0) { if (0 == $dx) { $ang = 0; $ext = 270; } else { $ang = (rad2deg(atan($dy/$dx))); $ext = 360; } } $ang = $ang + $ext; $this-\u003esetTilt($ang); unset($dx, $dy, $ang, $ext); return 0; } catch (\\Exception $e) { throw $e; } } // 判断点是否在线上 public function inLine(Point $p) { try { $l1 = new Line($p, $this-\u003egetP1()); $l2 = new Line($p, $this-\u003egetP2()); $is = false; // 这个点和这条线段的两个端点生成的两条线的倾斜角要互补 if (180 == abs($l1-\u003egetTilt() - $l2-\u003egetTilt())) { $is = true; } else { $is = false; } unset($l1, $l2); return $is; } catch (\\Exception $e) { throw $e; } } // setting and getting private function setP1(Point $p1) { try { $this-\u003ep1 = $p1; unset($p1); return 0; } catch (\\Exception $e) { throw $e; } } public function getP1() { try { return $this-\u003ep1; } catch (\\Exception $e) { throw $e; } } // setting and getting private function setP2(Point $p2) { try { $this-\u003ep2 = $p2; unset($p2); return 0; } catch (\\Exception $e) { throw $e; } } public function getP2() { try { return $this-\u003ep2; } catch (\\Exception $e) { throw $e; } } // setting and getting private function setTilt($tilt) { try { $this-\u003etilt = (float)$tilt; unset($tilt); return 0; } catch (\\Exception $e) { throw $e; } } public function getTilt() { try { if (empty($this-\u003egenerateTilt)) { $this-\u003egenerateTilt(); } return $this-\u003etilt; } catch (\\Exception $e) { throw $e; } } // setting and getting private function setLength($length) { try { $this-\u003elength = (float)$length; unset($length); return 0; } catch (\\Exception $e) { throw $e; } } public function getLength() { try { if (empty($this-\u003elength)) { $this-\u003egenerateLength(); } return $this-\u003elength; } catch (\\Exception $e) { throw $e; } } public function __toString() { try { return '[' . (string)$this-\u003egetP1() . '-\u003e' . (string)$this-\u003egetP2() . ']'; } catch (\\Exception $e) { throw $e; } } } 3.Angle（角） 角类由两条线段构成，提供返回夹角的操作\n// 角度类 class Angle extends Base { private $l1; private $l2; private $angle; public function __construct(Line $l1, Line $l2) { try { if ($l1-\u003egetP2() != $l2-\u003egetP1()) { throw new \\Exception('两条线段不是首尾相连'); } // 会引起错误 // if (360 == ($l1-\u003egetTilt() + $l2-\u003egetTilt())) { // throw new LineOverlapException('两条线段不能重叠'); // } $this-\u003esetL1($l1); $this-\u003esetL2($l2); return 0; } catch (\\Exception $e) { throw $e; } } private function generateAngle() { try { $angle = $this-\u003egetL1()-\u003egetTilt() - $this-\u003egetL2()-\u003egetTilt() + 180; $angle = fmod(($angle + 360),360); $this-\u003esetAngle($angle); return 0; } catch (\\Exception $e) { throw $e; } } // setting and getting public function setL1(Line $l1) { try { $this-\u003el1 = $l1; return 0; } catch (\\Exception $e) { throw $e; } } public function getL1() { try { return $this-\u003el1; } catch (\\Exception $e) { throw $e; } } // setting and getting public function setP(Point $p) { try { $this-\u003ep = $p; return 0; } catch (\\Exception $e) { throw $e; } } public function getP() { try { return $this-\u003ep; } catch (\\Exception $e) { throw $e; } } // setting and getting public function setL2(Line $l2) { try { $this-\u003el2 = $l2; return 0; } catch (\\Exception $e) { throw $e; } } public function getL2() { try { return $this-\u003el2; } catch (\\Exception $e) { throw $e; } } // setting and getting private function setAngle($angle) { try { $this-\u003eangle = $angle; } catch (\\Exception $e) { throw $e; } } public function getAngle() { try { if (empty($this-\u003eangle)) { $this-\u003egenerateAngle(); } return $this-\u003eangle; } catch (\\Exception $e) { throw $e; } } public function __toString() { try { return '{' . (string)$this-\u003egetL1() . '=\u003e' . (string)$this-\u003egetL2() . '}'; } catch (\\Exception $e) { throw $e; } } } 4.Polygon（多边形） 由一组相邻不重复的点构成，提供一个操作用来判断点是否在多边形内部\n如果是凹多边形，把多边形中内角为优角的点去掉一个，用剩下的点构成一个多边形，记录下由此补上的三角形\n如果依然是凹多边形，继续去掉一个凹点，把补上的三角形记录下来\n最后会得到一个凸多边形和一组补上的三角形，\n对凸多边形和三角形集合分别求解，\n在凸多边形内而不在三角形集合中的点则在凹多边形内部，否则在外部\n// 矩形类 class Triangle extends ConvexPolygon { private $p1; private $p2; private $p3; public function __construct(Point $p1, Point $p2, Point $p3) { try { $this-\u003esetP1($p1); $this-\u003esetP2($p2); $this-\u003esetP3($p3); $arr = [ $this-\u003egetP1(), $this-\u003egetP2(), $this-\u003egetP3() ]; parent::__construct($arr); } catch (\\Exception $e) { throw $e; } } // 判断一个点是否在矩形内 public function inTriangle(Point $p) { try { $p1 = $this-\u003egetP1(); $p2 = $this-\u003egetP2(); $p3 = $this-\u003egetP3(); $ls = $this-\u003egetLines(); $l1 = new Line($p, $p1); $l2 = new Line($p, $p2); $l3 = new Line($p, $p3); $a1 = (new Angle($l1, $ls[0]))-\u003egetAngle(); $a2 = (new Angle($l2, $ls[1]))-\u003egetAngle(); $a3 = (new Angle($l3, $ls[2]))-\u003egetAngle(); // $t = new Angle($l3, $ls[2]); // dump($t); // dump($t-\u003egetAngle()); $l1 = new Line($p1, $p); $l2 = new Line($p2, $p); $l3 = new Line($p3, $p); $b1 = (new Angle($ls[2], $l1))-\u003egetAngle(); $b2 = (new Angle($ls[0], $l2))-\u003egetAngle(); $b3 = (new Angle($ls[1], $l3))-\u003egetAngle(); // $as = $tri-\u003egetAngles(); // foreach ($as as $a) { // dump($a-\u003egetAngle()); // } // dump($this); // dump(\"$a1/ $a2/ $a3/ $b1/ $b2/ $b3\"); // die; $c = $a1 + $a2 + $a3 + $b1 + $b2 + $b3; $is = false; if (180 \u003e= (int)$c) { $is = true; } else { $is = false; } return $is; } catch (LineOverlapException $e) { return true; } catch (\\Exception $e) { throw $e; } } // setting and getting private function setP1(Point $p1) { try { $this-\u003ep1 = $p1; } catch (\\Exception $e) { throw $e; } } public function getP1() { try { return $this-\u003ep1; } catch (\\Exception $e) { throw $e; } } // setting and getting private function setP2(Point $p2) { try { $this-\u003ep2 = $p2; } catch (\\Exception $e) { throw $e; } } public function getP2() { try { return $this-\u003ep2; } catch (\\Exception $e) { throw $e; } } // setting and getting private function setP3(Point $p3) { try { $this-\u003ep3 = $p3; } catch (\\Exception $e) { throw $e; } } public function getP3() { try { return $this-\u003ep3; } catch (\\Exception $e) { throw $e; } } } 5. ConvexPolygon（凸多边形） 因为凸多边形可以被分割成N个三角形，所有只要判断是否在三角形集合内就可以确定是否在凸多边形内\n// 凸多边形类 class ConvexPolygon extends Polygon { private $triangles; public function __construct(array $arr_point) { try { parent::__construct($arr_point); } catch (\\Exception $e) { throw $e; } } // 判断是否在凸多边形内 public function inConvexPolygon(Point $p) { try { $arr_tri = $this-\u003egetTriangles(); $is = false; foreach ($arr_tri as $tri) { if ($tri-\u003einTriangle($p)) { $is = true; break; } // // dump(\"判断凸多边形\".(int)$is); // $as = $tri-\u003egetAngles(); // foreach ($as as $a) { // dump($a-\u003egetAngle()); // } } return $is; } catch (\\Exception $e) { throw $e; } } // 生成三角形集合 private function generateTriangles() { try { $num = $this-\u003egetNumber(); $ps = $this-\u003egetPoints(); $p0 = $ps[0]; unset($ps[0]); for ($i = 1; $i \u003c $num - 1; $i++) { $arr[] = new Triangle($p0, $ps[$i], $ps[$i+1]); } $this-\u003esetTriangles($arr); unset($num); unset($ps); unset($p0); unset($arr); } catch (\\Exception $e) { throw $e; } } // setting and getting private function setTriangles($arr) { try { $this-\u003etriangles= $arr; } catch (\\Exception $e) { throw $e; } } public function getTriangles() { try { if ('Leo\\Figure\\Triangle' != get_class($this)) { if (empty($this-\u003etriangles)) { $this-\u003egenerateTriangles(); } } return $this-\u003etriangles; } catch (\\Exception $e) { throw $e; } } } 6.Triangle(三角形) 由三个点构成， 提供一个操作来判断点是否在三角形内部\n通过该点连接三角形三个顶点，会把原本的三个夹角变成六个夹角，如果六个夹角和等于180°，则在三角形内部\n// 矩形类 class Triangle extends ConvexPolygon { private $p1; private $p2; private $p3; public function __construct(Point $p1, Point $p2, Point $p3) { try { $this-\u003esetP1($p1); $this-\u003esetP2($p2); $this-\u003esetP3($p3); $arr = [ $this-\u003egetP1(), $this-\u003egetP2(), $this-\u003egetP3() ]; parent::__construct($arr); } catch (\\Exception $e) { throw $e; } } // 判断一个点是否在矩形内 public function inTriangle(Point $p) { try { $p1 = $this-\u003egetP1(); $p2 = $this-\u003egetP2(); $p3 = $this-\u003egetP3(); $ls = $this-\u003egetLines(); $l1 = new Line($p, $p1); $l2 = new Line($p, $p2); $l3 = new Line($p, $p3); $a1 = (new Angle($l1, $ls[0]))-\u003egetAngle(); $a2 = (new Angle($l2, $ls[1]))-\u003egetAngle(); $a3 = (new Angle($l3, $ls[2]))-\u003egetAngle(); // $t = new Angle($l3, $ls[2]); // dump($t); // dump($t-\u003egetAngle()); $l1 = new Line($p1, $p); $l2 = new Line($p2, $p); $l3 = new Line($p3, $p); $b1 = (new Angle($ls[2], $l1))-\u003egetAngle(); $b2 = (new Angle($ls[0], $l2))-\u003egetAngle(); $b3 = (new Angle($ls[1], $l3))-\u003egetAngle(); // $as = $tri-\u003egetAngles(); // foreach ($as as $a) { // dump($a-\u003egetAngle()); // } // dump($this); // dump(\"$a1/ $a2/ $a3/ $b1/ $b2/ $b3\"); // die; $c = $a1 + $a2 + $a3 + $b1 + $b2 + $b3; $is = false; if (180 \u003e= (int)$c) { $is = true; } else { $is = false; } return $is; } catch (LineOverlapException $e) { return true; } catch (\\Exception $e) { throw $e; } } // setting and getting private function setP1(Point $p1) { try { $this-\u003ep1 = $p1; } catch (\\Exception $e) { throw $e; } } public function getP1() { try { return $this-\u003ep1; } catch (\\Exception $e) { throw $e; } } // setting and getting private function setP2(Point $p2) { try { $this-\u003ep2 = $p2; } catch (\\Exception $e) { throw $e; } } public function getP2() { try { return $this-\u003ep2; } catch (\\Exception $e) { throw $e; } } // setting and getting private function setP3(Point $p3) { try { $this-\u003ep3 = $p3; } catch (\\Exception $e) { throw $e; } } public function getP3() { try { return $this-\u003ep3; } catch (\\Exception $e) { throw $e; } } } 使用示例 $drawing = [ ['x' =\u003e 0, 'y' =\u003e 0], ['x' =\u003e 10, 'y' =\u003e 0], ['x' =\u003e 10, 'y' =\u003e 10], ['x' =\u003e 7, 'y' =\u003e 10], ['x' =\u003e 7, 'y' =\u003e 5], ['x' =\u003e 3, 'y' =\u003e 5], ['x' =\u003e 3, 'y' =\u003e 10], ['x' =\u003e 0, 'y' =\u003e 10], ['x' =\u003e 0, 'y' =\u003e 0] ]; $p = new Point(5, 10); $arr_p_pol = []; for($i = count($drawing)-1; $i \u003e 0;$i--) { if ($drawing[$i]['x'] == $drawing[$i-1]['y'] \u0026\u0026 $drawing[$i]['x'] == $drawing[$i-1]['y'] ) { continue; } $arr_p_pol[] = new Point($drawing[$i]['x], $drawing[$i]['y']); } $pol = new Polygon($arr_p_pol); $is_1 = $pol-\u003einPolygon($p); ",
+  "wordCount" : "1891",
+  "inLanguage": "en",
+  "datePublished": "2016-08-01T00:00:00+08:00",
+  "dateModified": "2024-01-31T11:23:29+08:00",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://example.org/post/concave-polygon-and-point/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "My New Hugo Site",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://example.org/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://example.org/" accesskey="h" title="My New Hugo Site (Alt + H)">My New Hugo Site</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      凹多边形和点的位置问题(凹包问题面对对象的算法)
+    </h1>
+    <div class="post-meta"><span title='2016-08-01 00:00:00 +0800 CST'>August 1, 2016</span>
+
+</div>
+  </header> 
+  <div class="post-content"><p>已知一个任意多边形的各顶点坐标，任意给一点坐标，判断是否在该多边形内部或边线上, 这只是一个笨拙的实现</p>
+<p>github链接: <a href="https://github.com/running-grass/phptools.git">https://github.com/running-grass/phptools.git</a></p>
+<p>composer: <code>composer require &quot;leo1992/tools:^0&quot;</code></p>
+<h2 id="问题描述">问题描述<a hidden class="anchor" aria-hidden="true" href="#问题描述">#</a></h2>
+<p>已知一个任意多边形的各顶点坐标，任意给一点坐标，判断是否在该多边形内部或边线上</p>
+<h2 id="解决思路及基础">解决思路及基础<a hidden class="anchor" aria-hidden="true" href="#解决思路及基础">#</a></h2>
+<ol>
+<li>任意凸多边形中，经过任一顶点连接各个顶点，可以把多边形分割为多个三角形</li>
+<li>任意三角形中一点，和三条边上面各两个顶点的夹角共六个，如果该点在三角形内部，六个角之和等于180度，否则在三角形外部</li>
+<li>任意凹多边形都可以转化为，任一凸多边形减去N个三角形</li>
+<li>在上一条件下，如果一个点在这个大的凸多边形中（包括边），但不在去掉的N个三角形中（不包括边界），则该点在该凹多边形中</li>
+<li>一个点如果和线段的两个顶点连接形成的两个夹角和等于180°，则该点在线段上</li>
+<li>把凹多边形的问题细化到点和三角形以及点和线段的位置关系</li>
+</ol>
+<h2 id="实现部分">实现部分<a hidden class="anchor" aria-hidden="true" href="#实现部分">#</a></h2>
+<ol>
+<li>设计了六个类，点、线段、角、三角形、凸多边形、多边形</li>
+<li>其中三角形继承凸多边形，凸多边形继承多边形类</li>
+</ol>
+<h3 id="1-dot-point-点类">1.Point（点类）<a hidden class="anchor" aria-hidden="true" href="#1-dot-point-点类">#</a></h3>
+<p>这个类主要保存点信息，没有任何操作</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#75715e">// 点类
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Point</span> <span style="color:#66d9ef">extends</span> <span style="color:#a6e22e">Base</span>
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> $x; <span style="color:#75715e">// x坐标
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">private</span> $y; <span style="color:#75715e">// y 坐标
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">function</span> __construct($x, $y)
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">try</span> {
+</span></span><span style="display:flex;"><span>            $this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">setX</span>($x);
+</span></span><span style="display:flex;"><span>            $this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">setY</span>($y);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">unset</span>($x, $y);
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>        } <span style="color:#66d9ef">catch</span> (<span style="color:#a6e22e">\Exception</span> $e) {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">throw</span> $e;
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// setting and  getting
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">setX</span>($x)
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">try</span> {
+</span></span><span style="display:flex;"><span>            $this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">x</span> <span style="color:#f92672">=</span> (<span style="color:#a6e22e">float</span>)$x;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">unset</span>($x);
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>        } <span style="color:#66d9ef">catch</span> (<span style="color:#a6e22e">\Exception</span> $e) {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">throw</span> $e;
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">getX</span>()
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">try</span> {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> $this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">x</span>;
+</span></span><span style="display:flex;"><span>        } <span style="color:#66d9ef">catch</span> (<span style="color:#a6e22e">\Exception</span> $e) {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">throw</span> $e;
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// setting and  getting
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">setY</span>($y)
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">try</span> {
+</span></span><span style="display:flex;"><span>            $this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">y</span> <span style="color:#f92672">=</span> (<span style="color:#a6e22e">float</span>)$y;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">unset</span>($y);
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>        } <span style="color:#66d9ef">catch</span> (<span style="color:#a6e22e">\Exception</span> $e) {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">throw</span> $e;
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">getY</span>()
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">try</span> {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> $this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">y</span>;
+</span></span><span style="display:flex;"><span>        } <span style="color:#66d9ef">catch</span> (<span style="color:#a6e22e">\Exception</span> $e) {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">throw</span> $e;
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">function</span> __toString()
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">try</span> {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;(</span><span style="color:#e6db74">{</span>$this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">getX</span>()<span style="color:#e6db74">}</span><span style="color:#e6db74">,</span><span style="color:#e6db74">{</span>$this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">getY</span>()<span style="color:#e6db74">}</span><span style="color:#e6db74">)&#34;</span>;
+</span></span><span style="display:flex;"><span>        } <span style="color:#66d9ef">catch</span> (<span style="color:#a6e22e">\Exception</span> $e) {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">throw</span> $e;
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="2-dot-line--线段">2.Line(线段)<a hidden class="anchor" aria-hidden="true" href="#2-dot-line--线段">#</a></h3>
+<p>这个类由两个点构成，提供一个操作来判断某点是否在线段上</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Line</span> <span style="color:#66d9ef">extends</span> <span style="color:#a6e22e">Base</span>
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> $p1;     <span style="color:#75715e">// 线段第一个点
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">private</span> $p2;     <span style="color:#75715e">// 线段的第二个点
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">private</span> $tilt;   <span style="color:#75715e">// 倾斜角，距x轴正方向的逆时针角度
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">private</span> $length; <span style="color:#75715e">// 线段的长度
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">function</span> __construct(<span style="color:#a6e22e">Point</span> $p1, <span style="color:#a6e22e">Point</span> $p2)
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">try</span> {
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e">// 两个端点不能重合，没长度
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            <span style="color:#66d9ef">if</span> ($p1 <span style="color:#f92672">==</span> $p2) {
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">throw</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">TwoPointOverlapException</span>(<span style="color:#e6db74">&#39;两个端点不能重合&#39;</span>);
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>            $this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">setP1</span>($p1);
+</span></span><span style="display:flex;"><span>            $this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">setP2</span>($p2);
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">unset</span>($p1, $p2);
+</span></span><span style="display:flex;"><span>        } <span style="color:#66d9ef">catch</span> (<span style="color:#a6e22e">\Exception</span> $e) {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">throw</span> $e;
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// 生成线段的长度
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">generateLength</span>()
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">try</span> {
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e">// 利用勾股定理
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            $length <span style="color:#f92672">=</span> <span style="color:#a6e22e">sqrt</span>(<span style="color:#a6e22e">pow</span>($this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">getP1</span>()<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">getX</span>() <span style="color:#f92672">-</span> $this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">getP2</span>()<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">getX</span>(), <span style="color:#ae81ff">2</span>) <span style="color:#f92672">+</span>
+</span></span><span style="display:flex;"><span>                           <span style="color:#a6e22e">pow</span>($this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">getP1</span>()<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">getY</span>() <span style="color:#f92672">-</span> $this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">getP2</span>()<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">getY</span>(), <span style="color:#ae81ff">2</span>));
+</span></span><span style="display:flex;"><span>            $this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">setLength</span>(<span style="color:#a6e22e">abs</span>($length));
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">unset</span>($length);
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>        } <span style="color:#66d9ef">catch</span> (<span style="color:#a6e22e">\Exception</span> $e) {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">throw</span> $e;
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// 生成倾斜角
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">generateTilt</span>()
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">try</span> {
+</span></span><span style="display:flex;"><span>            $dy <span style="color:#f92672">=</span> $this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">getP2</span>()<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">getY</span>() <span style="color:#f92672">-</span> $this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">getP1</span>()<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">getY</span>();
+</span></span><span style="display:flex;"><span>            $dx <span style="color:#f92672">=</span> $this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">getP2</span>()<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">getX</span>() <span style="color:#f92672">-</span> $this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">getP1</span>()<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">getX</span>();
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e">// 不同的象限不同处理，dx为零的情况单独处理
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            <span style="color:#66d9ef">if</span> ($dx <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">&amp;&amp;</span> $dy <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">0</span>) {
+</span></span><span style="display:flex;"><span>                $ang <span style="color:#f92672">=</span> (<span style="color:#a6e22e">rad2deg</span>(<span style="color:#a6e22e">atan</span>($dy<span style="color:#f92672">/</span>$dx)));
+</span></span><span style="display:flex;"><span>                $ext <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>            } <span style="color:#66d9ef">elseif</span> ($dx <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">&amp;&amp;</span> $dy <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">0</span>) {
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">if</span> (<span style="color:#ae81ff">0</span> <span style="color:#f92672">==</span> $dx) {
+</span></span><span style="display:flex;"><span>                    $ang <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>                    $ext <span style="color:#f92672">=</span> <span style="color:#ae81ff">90</span>;
+</span></span><span style="display:flex;"><span>                } <span style="color:#66d9ef">else</span> {
+</span></span><span style="display:flex;"><span>                    $ang <span style="color:#f92672">=</span> (<span style="color:#a6e22e">rad2deg</span>(<span style="color:#a6e22e">atan</span>($dy<span style="color:#f92672">/</span>$dx)));
+</span></span><span style="display:flex;"><span>                    $ext <span style="color:#f92672">=</span> <span style="color:#ae81ff">180</span>;
+</span></span><span style="display:flex;"><span>                }
+</span></span><span style="display:flex;"><span>            } <span style="color:#66d9ef">elseif</span> ($dx <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">&amp;&amp;</span> $dy <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">0</span>) {
+</span></span><span style="display:flex;"><span>                $ang <span style="color:#f92672">=</span> (<span style="color:#a6e22e">rad2deg</span>(<span style="color:#a6e22e">atan</span>($dy<span style="color:#f92672">/</span>$dx)));
+</span></span><span style="display:flex;"><span>                $ext <span style="color:#f92672">=</span> <span style="color:#ae81ff">180</span>;
+</span></span><span style="display:flex;"><span>            } <span style="color:#66d9ef">elseif</span> ($dx <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">&amp;&amp;</span> $dy <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">0</span>) {
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">if</span> (<span style="color:#ae81ff">0</span> <span style="color:#f92672">==</span> $dx) {
+</span></span><span style="display:flex;"><span>                    $ang <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>                    $ext <span style="color:#f92672">=</span> <span style="color:#ae81ff">270</span>;
+</span></span><span style="display:flex;"><span>                } <span style="color:#66d9ef">else</span> {
+</span></span><span style="display:flex;"><span>                    $ang <span style="color:#f92672">=</span> (<span style="color:#a6e22e">rad2deg</span>(<span style="color:#a6e22e">atan</span>($dy<span style="color:#f92672">/</span>$dx)));
+</span></span><span style="display:flex;"><span>                    $ext <span style="color:#f92672">=</span> <span style="color:#ae81ff">360</span>;
+</span></span><span style="display:flex;"><span>                }
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>            $ang <span style="color:#f92672">=</span> $ang <span style="color:#f92672">+</span> $ext;
+</span></span><span style="display:flex;"><span>            $this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">setTilt</span>($ang);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">unset</span>($dx, $dy, $ang, $ext);
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>        } <span style="color:#66d9ef">catch</span> (<span style="color:#a6e22e">\Exception</span> $e) {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">throw</span> $e;
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// 判断点是否在线上
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">inLine</span>(<span style="color:#a6e22e">Point</span> $p)
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">try</span> {
+</span></span><span style="display:flex;"><span>            $l1 <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Line</span>($p, $this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">getP1</span>());
+</span></span><span style="display:flex;"><span>            $l2 <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Line</span>($p, $this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">getP2</span>());
+</span></span><span style="display:flex;"><span>            $is <span style="color:#f92672">=</span> <span style="color:#66d9ef">false</span>;
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e">// 这个点和这条线段的两个端点生成的两条线的倾斜角要互补
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            <span style="color:#66d9ef">if</span> (<span style="color:#ae81ff">180</span> <span style="color:#f92672">==</span> <span style="color:#a6e22e">abs</span>($l1<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">getTilt</span>() <span style="color:#f92672">-</span> $l2<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">getTilt</span>())) {
+</span></span><span style="display:flex;"><span>                $is <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span>;
+</span></span><span style="display:flex;"><span>            } <span style="color:#66d9ef">else</span> {
+</span></span><span style="display:flex;"><span>                $is <span style="color:#f92672">=</span> <span style="color:#66d9ef">false</span>;
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">unset</span>($l1, $l2);
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> $is;
+</span></span><span style="display:flex;"><span>        } <span style="color:#66d9ef">catch</span> (<span style="color:#a6e22e">\Exception</span> $e) {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">throw</span> $e;
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// setting and  getting
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">setP1</span>(<span style="color:#a6e22e">Point</span> $p1)
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">try</span> {
+</span></span><span style="display:flex;"><span>            $this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">p1</span> <span style="color:#f92672">=</span> $p1;
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">unset</span>($p1);
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>        } <span style="color:#66d9ef">catch</span> (<span style="color:#a6e22e">\Exception</span> $e) {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">throw</span> $e;
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">getP1</span>()
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">try</span> {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> $this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">p1</span>;
+</span></span><span style="display:flex;"><span>        } <span style="color:#66d9ef">catch</span> (<span style="color:#a6e22e">\Exception</span> $e) {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">throw</span> $e;
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// setting and  getting
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">setP2</span>(<span style="color:#a6e22e">Point</span> $p2)
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">try</span> {
+</span></span><span style="display:flex;"><span>            $this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">p2</span> <span style="color:#f92672">=</span> $p2;
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">unset</span>($p2);
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>        } <span style="color:#66d9ef">catch</span> (<span style="color:#a6e22e">\Exception</span> $e) {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">throw</span> $e;
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">getP2</span>()
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">try</span> {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> $this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">p2</span>;
+</span></span><span style="display:flex;"><span>        } <span style="color:#66d9ef">catch</span> (<span style="color:#a6e22e">\Exception</span> $e) {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">throw</span> $e;
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// setting and  getting
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">setTilt</span>($tilt)
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">try</span> {
+</span></span><span style="display:flex;"><span>            $this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">tilt</span> <span style="color:#f92672">=</span> (<span style="color:#a6e22e">float</span>)$tilt;
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">unset</span>($tilt);
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>        } <span style="color:#66d9ef">catch</span> (<span style="color:#a6e22e">\Exception</span> $e) {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">throw</span> $e;
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">getTilt</span>()
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">try</span> {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> (<span style="color:#66d9ef">empty</span>($this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">generateTilt</span>)) {
+</span></span><span style="display:flex;"><span>                $this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">generateTilt</span>();
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> $this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">tilt</span>;
+</span></span><span style="display:flex;"><span>        } <span style="color:#66d9ef">catch</span> (<span style="color:#a6e22e">\Exception</span> $e) {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">throw</span> $e;
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// setting and  getting
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">setLength</span>($length)
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">try</span> {
+</span></span><span style="display:flex;"><span>            $this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">length</span> <span style="color:#f92672">=</span> (<span style="color:#a6e22e">float</span>)$length;
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">unset</span>($length);
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>        } <span style="color:#66d9ef">catch</span> (<span style="color:#a6e22e">\Exception</span> $e) {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">throw</span> $e;
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">getLength</span>()
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">try</span> {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> (<span style="color:#66d9ef">empty</span>($this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">length</span>)) {
+</span></span><span style="display:flex;"><span>                $this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">generateLength</span>();
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> $this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">length</span>;
+</span></span><span style="display:flex;"><span>        } <span style="color:#66d9ef">catch</span> (<span style="color:#a6e22e">\Exception</span> $e) {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">throw</span> $e;
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">function</span> __toString()
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">try</span> {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#39;[&#39;</span> <span style="color:#f92672">.</span> (<span style="color:#a6e22e">string</span>)$this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">getP1</span>() <span style="color:#f92672">.</span> <span style="color:#e6db74">&#39;-&gt;&#39;</span> <span style="color:#f92672">.</span> (<span style="color:#a6e22e">string</span>)$this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">getP2</span>() <span style="color:#f92672">.</span> <span style="color:#e6db74">&#39;]&#39;</span>;
+</span></span><span style="display:flex;"><span>        } <span style="color:#66d9ef">catch</span> (<span style="color:#a6e22e">\Exception</span> $e) {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">throw</span> $e;
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="3-dot-angle-角">3.Angle（角）<a hidden class="anchor" aria-hidden="true" href="#3-dot-angle-角">#</a></h3>
+<p>角类由两条线段构成，提供返回夹角的操作</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span>     <span style="color:#75715e">// 角度类
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Angle</span> <span style="color:#66d9ef">extends</span> <span style="color:#a6e22e">Base</span>
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> $l1;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> $l2;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> $angle;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">function</span> __construct(<span style="color:#a6e22e">Line</span> $l1, <span style="color:#a6e22e">Line</span> $l2)
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">try</span> {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> ($l1<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">getP2</span>() <span style="color:#f92672">!=</span> $l2<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">getP1</span>()) {
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">throw</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">\Exception</span>(<span style="color:#e6db74">&#39;两条线段不是首尾相连&#39;</span>);
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e">// 会引起错误
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            <span style="color:#75715e">// if (360 == ($l1-&gt;getTilt() + $l2-&gt;getTilt())) {
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>                <span style="color:#75715e">// throw new LineOverlapException(&#39;两条线段不能重叠&#39;);
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            <span style="color:#75715e">// }
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            $this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">setL1</span>($l1);
+</span></span><span style="display:flex;"><span>            $this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">setL2</span>($l2);
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>        } <span style="color:#66d9ef">catch</span> (<span style="color:#a6e22e">\Exception</span> $e) {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">throw</span> $e;
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">generateAngle</span>()
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">try</span> {
+</span></span><span style="display:flex;"><span>            $angle <span style="color:#f92672">=</span>  $this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">getL1</span>()<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">getTilt</span>() <span style="color:#f92672">-</span> $this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">getL2</span>()<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">getTilt</span>() <span style="color:#f92672">+</span> <span style="color:#ae81ff">180</span>;
+</span></span><span style="display:flex;"><span>            $angle <span style="color:#f92672">=</span> <span style="color:#a6e22e">fmod</span>(($angle <span style="color:#f92672">+</span> <span style="color:#ae81ff">360</span>),<span style="color:#ae81ff">360</span>);
+</span></span><span style="display:flex;"><span>            $this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">setAngle</span>($angle);
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>        } <span style="color:#66d9ef">catch</span> (<span style="color:#a6e22e">\Exception</span> $e) {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">throw</span> $e;
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// setting and  getting
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">setL1</span>(<span style="color:#a6e22e">Line</span> $l1)
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">try</span> {
+</span></span><span style="display:flex;"><span>            $this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">l1</span> <span style="color:#f92672">=</span> $l1;
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>        } <span style="color:#66d9ef">catch</span> (<span style="color:#a6e22e">\Exception</span> $e) {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">throw</span> $e;
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">getL1</span>()
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">try</span> {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> $this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">l1</span>;
+</span></span><span style="display:flex;"><span>        } <span style="color:#66d9ef">catch</span> (<span style="color:#a6e22e">\Exception</span> $e) {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">throw</span> $e;
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// setting and  getting
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">setP</span>(<span style="color:#a6e22e">Point</span> $p)
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">try</span> {
+</span></span><span style="display:flex;"><span>            $this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">p</span> <span style="color:#f92672">=</span> $p;
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>        } <span style="color:#66d9ef">catch</span> (<span style="color:#a6e22e">\Exception</span> $e) {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">throw</span> $e;
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">getP</span>()
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">try</span> {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> $this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">p</span>;
+</span></span><span style="display:flex;"><span>        } <span style="color:#66d9ef">catch</span> (<span style="color:#a6e22e">\Exception</span> $e) {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">throw</span> $e;
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// setting and  getting
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">setL2</span>(<span style="color:#a6e22e">Line</span> $l2)
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">try</span> {
+</span></span><span style="display:flex;"><span>            $this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">l2</span> <span style="color:#f92672">=</span> $l2;
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>        } <span style="color:#66d9ef">catch</span> (<span style="color:#a6e22e">\Exception</span> $e) {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">throw</span> $e;
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">getL2</span>()
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">try</span> {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> $this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">l2</span>;
+</span></span><span style="display:flex;"><span>        } <span style="color:#66d9ef">catch</span> (<span style="color:#a6e22e">\Exception</span> $e) {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">throw</span> $e;
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// setting and  getting
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">setAngle</span>($angle)
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">try</span> {
+</span></span><span style="display:flex;"><span>            $this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">angle</span> <span style="color:#f92672">=</span> $angle;
+</span></span><span style="display:flex;"><span>        } <span style="color:#66d9ef">catch</span> (<span style="color:#a6e22e">\Exception</span> $e) {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">throw</span> $e;
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">getAngle</span>()
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">try</span> {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> (<span style="color:#66d9ef">empty</span>($this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">angle</span>)) {
+</span></span><span style="display:flex;"><span>                $this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">generateAngle</span>();
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> $this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">angle</span>;
+</span></span><span style="display:flex;"><span>        } <span style="color:#66d9ef">catch</span> (<span style="color:#a6e22e">\Exception</span> $e) {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">throw</span> $e;
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">function</span> __toString()
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">try</span> {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#39;{&#39;</span> <span style="color:#f92672">.</span> (<span style="color:#a6e22e">string</span>)$this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">getL1</span>() <span style="color:#f92672">.</span> <span style="color:#e6db74">&#39;=&gt;&#39;</span> <span style="color:#f92672">.</span> (<span style="color:#a6e22e">string</span>)$this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">getL2</span>() <span style="color:#f92672">.</span> <span style="color:#e6db74">&#39;}&#39;</span>;
+</span></span><span style="display:flex;"><span>        } <span style="color:#66d9ef">catch</span> (<span style="color:#a6e22e">\Exception</span> $e) {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">throw</span> $e;
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="4-dot-polygon-多边形">4.Polygon（多边形）<a hidden class="anchor" aria-hidden="true" href="#4-dot-polygon-多边形">#</a></h3>
+<p>由一组相邻不重复的点构成，提供一个操作用来判断点是否在多边形内部</p>
+<p>如果是凹多边形，把多边形中内角为优角的点去掉一个，用剩下的点构成一个多边形，记录下由此补上的三角形</p>
+<p>如果依然是凹多边形，继续去掉一个凹点，把补上的三角形记录下来</p>
+<p>最后会得到一个凸多边形和一组补上的三角形，</p>
+<p>对凸多边形和三角形集合分别求解，</p>
+<p>在凸多边形内而不在三角形集合中的点则在凹多边形内部，否则在外部</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#75715e">// 矩形类
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Triangle</span> <span style="color:#66d9ef">extends</span> <span style="color:#a6e22e">ConvexPolygon</span>
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> $p1;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> $p2;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> $p3;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">function</span> __construct(<span style="color:#a6e22e">Point</span> $p1, <span style="color:#a6e22e">Point</span> $p2, <span style="color:#a6e22e">Point</span> $p3)
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">try</span> {
+</span></span><span style="display:flex;"><span>            $this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">setP1</span>($p1);
+</span></span><span style="display:flex;"><span>            $this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">setP2</span>($p2);
+</span></span><span style="display:flex;"><span>            $this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">setP3</span>($p3);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            $arr <span style="color:#f92672">=</span> [
+</span></span><span style="display:flex;"><span>                $this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">getP1</span>(),
+</span></span><span style="display:flex;"><span>                $this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">getP2</span>(),
+</span></span><span style="display:flex;"><span>                $this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">getP3</span>()
+</span></span><span style="display:flex;"><span>            ];
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">parent</span><span style="color:#f92672">::</span><span style="color:#a6e22e">__construct</span>($arr);
+</span></span><span style="display:flex;"><span>        } <span style="color:#66d9ef">catch</span> (<span style="color:#a6e22e">\Exception</span> $e) {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">throw</span> $e;
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// 判断一个点是否在矩形内
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">inTriangle</span>(<span style="color:#a6e22e">Point</span> $p)
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">try</span> {
+</span></span><span style="display:flex;"><span>            $p1 <span style="color:#f92672">=</span> $this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">getP1</span>();
+</span></span><span style="display:flex;"><span>            $p2 <span style="color:#f92672">=</span> $this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">getP2</span>();
+</span></span><span style="display:flex;"><span>            $p3 <span style="color:#f92672">=</span> $this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">getP3</span>();
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            $ls <span style="color:#f92672">=</span> $this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">getLines</span>();
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            $l1 <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Line</span>($p, $p1);
+</span></span><span style="display:flex;"><span>            $l2 <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Line</span>($p, $p2);
+</span></span><span style="display:flex;"><span>            $l3 <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Line</span>($p, $p3);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            $a1 <span style="color:#f92672">=</span> (<span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Angle</span>($l1, $ls[<span style="color:#ae81ff">0</span>]))<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">getAngle</span>();
+</span></span><span style="display:flex;"><span>            $a2 <span style="color:#f92672">=</span> (<span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Angle</span>($l2, $ls[<span style="color:#ae81ff">1</span>]))<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">getAngle</span>();
+</span></span><span style="display:flex;"><span>            $a3 <span style="color:#f92672">=</span> (<span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Angle</span>($l3, $ls[<span style="color:#ae81ff">2</span>]))<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">getAngle</span>();
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e">// $t = new Angle($l3, $ls[2]);
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            <span style="color:#75715e">// dump($t);
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            <span style="color:#75715e">// dump($t-&gt;getAngle());
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>            $l1 <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Line</span>($p1, $p);
+</span></span><span style="display:flex;"><span>            $l2 <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Line</span>($p2, $p);
+</span></span><span style="display:flex;"><span>            $l3 <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Line</span>($p3, $p);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            $b1 <span style="color:#f92672">=</span> (<span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Angle</span>($ls[<span style="color:#ae81ff">2</span>], $l1))<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">getAngle</span>();
+</span></span><span style="display:flex;"><span>            $b2 <span style="color:#f92672">=</span> (<span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Angle</span>($ls[<span style="color:#ae81ff">0</span>], $l2))<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">getAngle</span>();
+</span></span><span style="display:flex;"><span>            $b3 <span style="color:#f92672">=</span> (<span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Angle</span>($ls[<span style="color:#ae81ff">1</span>], $l3))<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">getAngle</span>();
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e">// $as  = $tri-&gt;getAngles();
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            <span style="color:#75715e">// foreach ($as as $a) {
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            <span style="color:#75715e">//     dump($a-&gt;getAngle());
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            <span style="color:#75715e">// }
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e">// dump($this);
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            <span style="color:#75715e">// dump(&#34;$a1/ $a2/ $a3/ $b1/ $b2/ $b3&#34;);
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            <span style="color:#75715e">// die;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>            $c <span style="color:#f92672">=</span> $a1 <span style="color:#f92672">+</span> $a2 <span style="color:#f92672">+</span> $a3 <span style="color:#f92672">+</span> $b1 <span style="color:#f92672">+</span> $b2 <span style="color:#f92672">+</span> $b3;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            $is <span style="color:#f92672">=</span> <span style="color:#66d9ef">false</span>;
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> (<span style="color:#ae81ff">180</span> <span style="color:#f92672">&gt;=</span> (<span style="color:#a6e22e">int</span>)$c) {
+</span></span><span style="display:flex;"><span>                $is <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span>;
+</span></span><span style="display:flex;"><span>            } <span style="color:#66d9ef">else</span> {
+</span></span><span style="display:flex;"><span>                $is <span style="color:#f92672">=</span> <span style="color:#66d9ef">false</span>;
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> $is;
+</span></span><span style="display:flex;"><span>        } <span style="color:#66d9ef">catch</span> (<span style="color:#a6e22e">LineOverlapException</span> $e) {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">true</span>;
+</span></span><span style="display:flex;"><span>        } <span style="color:#66d9ef">catch</span> (<span style="color:#a6e22e">\Exception</span> $e) {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">throw</span> $e;
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// setting and  getting
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">setP1</span>(<span style="color:#a6e22e">Point</span> $p1)
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">try</span> {
+</span></span><span style="display:flex;"><span>            $this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">p1</span> <span style="color:#f92672">=</span> $p1;
+</span></span><span style="display:flex;"><span>        } <span style="color:#66d9ef">catch</span> (<span style="color:#a6e22e">\Exception</span> $e) {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">throw</span> $e;
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">getP1</span>()
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">try</span> {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> $this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">p1</span>;
+</span></span><span style="display:flex;"><span>        } <span style="color:#66d9ef">catch</span> (<span style="color:#a6e22e">\Exception</span> $e) {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">throw</span> $e;
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// setting and  getting
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">setP2</span>(<span style="color:#a6e22e">Point</span> $p2)
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">try</span> {
+</span></span><span style="display:flex;"><span>            $this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">p2</span> <span style="color:#f92672">=</span> $p2;
+</span></span><span style="display:flex;"><span>        } <span style="color:#66d9ef">catch</span> (<span style="color:#a6e22e">\Exception</span> $e) {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">throw</span> $e;
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">getP2</span>()
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">try</span> {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> $this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">p2</span>;
+</span></span><span style="display:flex;"><span>        } <span style="color:#66d9ef">catch</span> (<span style="color:#a6e22e">\Exception</span> $e) {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">throw</span> $e;
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// setting and  getting
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">setP3</span>(<span style="color:#a6e22e">Point</span> $p3)
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">try</span> {
+</span></span><span style="display:flex;"><span>            $this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">p3</span> <span style="color:#f92672">=</span> $p3;
+</span></span><span style="display:flex;"><span>        } <span style="color:#66d9ef">catch</span> (<span style="color:#a6e22e">\Exception</span> $e) {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">throw</span> $e;
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">getP3</span>()
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">try</span> {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> $this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">p3</span>;
+</span></span><span style="display:flex;"><span>        } <span style="color:#66d9ef">catch</span> (<span style="color:#a6e22e">\Exception</span> $e) {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">throw</span> $e;
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="5-dot-convexpolygon-凸多边形">5. ConvexPolygon（凸多边形）<a hidden class="anchor" aria-hidden="true" href="#5-dot-convexpolygon-凸多边形">#</a></h3>
+<p>因为凸多边形可以被分割成N个三角形，所有只要判断是否在三角形集合内就可以确定是否在凸多边形内</p>
+<pre tabindex="0"><code class="language-nil" data-lang="nil">
+// 凸多边形类
+class ConvexPolygon extends Polygon
+{
+    private $triangles;
+
+    public function __construct(array $arr_point)
+    {
+        try {
+            parent::__construct($arr_point);
+        } catch (\Exception $e) {
+            throw $e;
+        }
+    }
+
+    // 判断是否在凸多边形内
+    public function inConvexPolygon(Point $p)
+    {
+        try {
+            $arr_tri = $this-&gt;getTriangles();
+            $is = false;
+            foreach ($arr_tri as $tri) {
+                if ($tri-&gt;inTriangle($p)) {
+                    $is = true;
+                    break;
+                }
+
+                // // dump(&#34;判断凸多边形&#34;.(int)$is);
+                // $as  = $tri-&gt;getAngles();
+                // foreach ($as as $a) {
+                //     dump($a-&gt;getAngle());
+                // }
+
+            }
+            return $is;
+        } catch (\Exception $e) {
+            throw $e;
+        }
+    }
+
+    // 生成三角形集合
+    private function generateTriangles()
+    {
+        try {
+            $num = $this-&gt;getNumber();
+            $ps = $this-&gt;getPoints();
+            $p0 = $ps[0];
+            unset($ps[0]);
+            for ($i = 1; $i &lt; $num - 1; $i++) {
+                $arr[] = new Triangle($p0, $ps[$i], $ps[$i+1]);
+            }
+            $this-&gt;setTriangles($arr);
+            unset($num);
+            unset($ps);
+            unset($p0);
+            unset($arr);
+        } catch (\Exception $e) {
+            throw $e;
+        }
+    }
+
+    // setting and  getting
+    private function setTriangles($arr)
+    {
+        try {
+            $this-&gt;triangles= $arr;
+        } catch (\Exception $e) {
+            throw $e;
+        }
+    }
+    public function getTriangles()
+    {
+        try {
+            if (&#39;Leo\Figure\Triangle&#39; != get_class($this)) {
+                if (empty($this-&gt;triangles)) {
+                    $this-&gt;generateTriangles();
+                }
+            }
+            return $this-&gt;triangles;
+        } catch (\Exception $e) {
+            throw $e;
+        }
+    }
+
+}
+</code></pre><h3 id="6-dot-triangle--三角形">6.Triangle(三角形)<a hidden class="anchor" aria-hidden="true" href="#6-dot-triangle--三角形">#</a></h3>
+<p>由三个点构成， 提供一个操作来判断点是否在三角形内部</p>
+<p>通过该点连接三角形三个顶点，会把原本的三个夹角变成六个夹角，如果六个夹角和等于180°，则在三角形内部</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#75715e">// 矩形类
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Triangle</span> <span style="color:#66d9ef">extends</span> <span style="color:#a6e22e">ConvexPolygon</span>
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> $p1;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> $p2;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> $p3;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">function</span> __construct(<span style="color:#a6e22e">Point</span> $p1, <span style="color:#a6e22e">Point</span> $p2, <span style="color:#a6e22e">Point</span> $p3)
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">try</span> {
+</span></span><span style="display:flex;"><span>            $this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">setP1</span>($p1);
+</span></span><span style="display:flex;"><span>            $this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">setP2</span>($p2);
+</span></span><span style="display:flex;"><span>            $this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">setP3</span>($p3);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            $arr <span style="color:#f92672">=</span> [
+</span></span><span style="display:flex;"><span>                $this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">getP1</span>(),
+</span></span><span style="display:flex;"><span>                $this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">getP2</span>(),
+</span></span><span style="display:flex;"><span>                $this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">getP3</span>()
+</span></span><span style="display:flex;"><span>            ];
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">parent</span><span style="color:#f92672">::</span><span style="color:#a6e22e">__construct</span>($arr);
+</span></span><span style="display:flex;"><span>        } <span style="color:#66d9ef">catch</span> (<span style="color:#a6e22e">\Exception</span> $e) {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">throw</span> $e;
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// 判断一个点是否在矩形内
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">inTriangle</span>(<span style="color:#a6e22e">Point</span> $p)
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">try</span> {
+</span></span><span style="display:flex;"><span>            $p1 <span style="color:#f92672">=</span> $this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">getP1</span>();
+</span></span><span style="display:flex;"><span>            $p2 <span style="color:#f92672">=</span> $this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">getP2</span>();
+</span></span><span style="display:flex;"><span>            $p3 <span style="color:#f92672">=</span> $this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">getP3</span>();
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            $ls <span style="color:#f92672">=</span> $this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">getLines</span>();
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            $l1 <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Line</span>($p, $p1);
+</span></span><span style="display:flex;"><span>            $l2 <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Line</span>($p, $p2);
+</span></span><span style="display:flex;"><span>            $l3 <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Line</span>($p, $p3);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            $a1 <span style="color:#f92672">=</span> (<span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Angle</span>($l1, $ls[<span style="color:#ae81ff">0</span>]))<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">getAngle</span>();
+</span></span><span style="display:flex;"><span>            $a2 <span style="color:#f92672">=</span> (<span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Angle</span>($l2, $ls[<span style="color:#ae81ff">1</span>]))<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">getAngle</span>();
+</span></span><span style="display:flex;"><span>            $a3 <span style="color:#f92672">=</span> (<span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Angle</span>($l3, $ls[<span style="color:#ae81ff">2</span>]))<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">getAngle</span>();
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e">// $t = new Angle($l3, $ls[2]);
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            <span style="color:#75715e">// dump($t);
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            <span style="color:#75715e">// dump($t-&gt;getAngle());
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>            $l1 <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Line</span>($p1, $p);
+</span></span><span style="display:flex;"><span>            $l2 <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Line</span>($p2, $p);
+</span></span><span style="display:flex;"><span>            $l3 <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Line</span>($p3, $p);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            $b1 <span style="color:#f92672">=</span> (<span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Angle</span>($ls[<span style="color:#ae81ff">2</span>], $l1))<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">getAngle</span>();
+</span></span><span style="display:flex;"><span>            $b2 <span style="color:#f92672">=</span> (<span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Angle</span>($ls[<span style="color:#ae81ff">0</span>], $l2))<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">getAngle</span>();
+</span></span><span style="display:flex;"><span>            $b3 <span style="color:#f92672">=</span> (<span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Angle</span>($ls[<span style="color:#ae81ff">1</span>], $l3))<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">getAngle</span>();
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e">// $as  = $tri-&gt;getAngles();
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            <span style="color:#75715e">// foreach ($as as $a) {
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            <span style="color:#75715e">//     dump($a-&gt;getAngle());
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            <span style="color:#75715e">// }
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e">// dump($this);
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            <span style="color:#75715e">// dump(&#34;$a1/ $a2/ $a3/ $b1/ $b2/ $b3&#34;);
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            <span style="color:#75715e">// die;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>            $c <span style="color:#f92672">=</span> $a1 <span style="color:#f92672">+</span> $a2 <span style="color:#f92672">+</span> $a3 <span style="color:#f92672">+</span> $b1 <span style="color:#f92672">+</span> $b2 <span style="color:#f92672">+</span> $b3;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            $is <span style="color:#f92672">=</span> <span style="color:#66d9ef">false</span>;
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> (<span style="color:#ae81ff">180</span> <span style="color:#f92672">&gt;=</span> (<span style="color:#a6e22e">int</span>)$c) {
+</span></span><span style="display:flex;"><span>                $is <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span>;
+</span></span><span style="display:flex;"><span>            } <span style="color:#66d9ef">else</span> {
+</span></span><span style="display:flex;"><span>                $is <span style="color:#f92672">=</span> <span style="color:#66d9ef">false</span>;
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> $is;
+</span></span><span style="display:flex;"><span>        } <span style="color:#66d9ef">catch</span> (<span style="color:#a6e22e">LineOverlapException</span> $e) {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">true</span>;
+</span></span><span style="display:flex;"><span>        } <span style="color:#66d9ef">catch</span> (<span style="color:#a6e22e">\Exception</span> $e) {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">throw</span> $e;
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// setting and  getting
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">setP1</span>(<span style="color:#a6e22e">Point</span> $p1)
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">try</span> {
+</span></span><span style="display:flex;"><span>            $this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">p1</span> <span style="color:#f92672">=</span> $p1;
+</span></span><span style="display:flex;"><span>        } <span style="color:#66d9ef">catch</span> (<span style="color:#a6e22e">\Exception</span> $e) {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">throw</span> $e;
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">getP1</span>()
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">try</span> {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> $this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">p1</span>;
+</span></span><span style="display:flex;"><span>        } <span style="color:#66d9ef">catch</span> (<span style="color:#a6e22e">\Exception</span> $e) {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">throw</span> $e;
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// setting and  getting
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">setP2</span>(<span style="color:#a6e22e">Point</span> $p2)
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">try</span> {
+</span></span><span style="display:flex;"><span>            $this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">p2</span> <span style="color:#f92672">=</span> $p2;
+</span></span><span style="display:flex;"><span>        } <span style="color:#66d9ef">catch</span> (<span style="color:#a6e22e">\Exception</span> $e) {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">throw</span> $e;
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">getP2</span>()
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">try</span> {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> $this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">p2</span>;
+</span></span><span style="display:flex;"><span>        } <span style="color:#66d9ef">catch</span> (<span style="color:#a6e22e">\Exception</span> $e) {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">throw</span> $e;
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// setting and  getting
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">setP3</span>(<span style="color:#a6e22e">Point</span> $p3)
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">try</span> {
+</span></span><span style="display:flex;"><span>            $this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">p3</span> <span style="color:#f92672">=</span> $p3;
+</span></span><span style="display:flex;"><span>        } <span style="color:#66d9ef">catch</span> (<span style="color:#a6e22e">\Exception</span> $e) {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">throw</span> $e;
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">getP3</span>()
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">try</span> {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> $this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">p3</span>;
+</span></span><span style="display:flex;"><span>        } <span style="color:#66d9ef">catch</span> (<span style="color:#a6e22e">\Exception</span> $e) {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">throw</span> $e;
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="使用示例">使用示例<a hidden class="anchor" aria-hidden="true" href="#使用示例">#</a></h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span>$drawing <span style="color:#f92672">=</span> [
+</span></span><span style="display:flex;"><span>                [<span style="color:#e6db74">&#39;x&#39;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#ae81ff">0</span>, <span style="color:#e6db74">&#39;y&#39;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#ae81ff">0</span>],
+</span></span><span style="display:flex;"><span>                [<span style="color:#e6db74">&#39;x&#39;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#ae81ff">10</span>, <span style="color:#e6db74">&#39;y&#39;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#ae81ff">0</span>],
+</span></span><span style="display:flex;"><span>                [<span style="color:#e6db74">&#39;x&#39;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#ae81ff">10</span>, <span style="color:#e6db74">&#39;y&#39;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#ae81ff">10</span>],
+</span></span><span style="display:flex;"><span>                [<span style="color:#e6db74">&#39;x&#39;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#ae81ff">7</span>, <span style="color:#e6db74">&#39;y&#39;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#ae81ff">10</span>],
+</span></span><span style="display:flex;"><span>                [<span style="color:#e6db74">&#39;x&#39;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#ae81ff">7</span>, <span style="color:#e6db74">&#39;y&#39;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#ae81ff">5</span>],
+</span></span><span style="display:flex;"><span>                [<span style="color:#e6db74">&#39;x&#39;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#ae81ff">3</span>, <span style="color:#e6db74">&#39;y&#39;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#ae81ff">5</span>],
+</span></span><span style="display:flex;"><span>                [<span style="color:#e6db74">&#39;x&#39;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#ae81ff">3</span>, <span style="color:#e6db74">&#39;y&#39;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#ae81ff">10</span>],
+</span></span><span style="display:flex;"><span>                [<span style="color:#e6db74">&#39;x&#39;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#ae81ff">0</span>, <span style="color:#e6db74">&#39;y&#39;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#ae81ff">10</span>],
+</span></span><span style="display:flex;"><span>                [<span style="color:#e6db74">&#39;x&#39;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#ae81ff">0</span>, <span style="color:#e6db74">&#39;y&#39;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#ae81ff">0</span>]
+</span></span><span style="display:flex;"><span>            ];
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$p <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Point</span>(<span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">10</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$arr_p_pol <span style="color:#f92672">=</span> [];
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span>($i <span style="color:#f92672">=</span> <span style="color:#a6e22e">count</span>($drawing)<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>; $i <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span>;$i<span style="color:#f92672">--</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> ($drawing[$i][<span style="color:#e6db74">&#39;x&#39;</span>] <span style="color:#f92672">==</span> $drawing[$i<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>][<span style="color:#e6db74">&#39;y&#39;</span>] <span style="color:#f92672">&amp;&amp;</span>
+</span></span><span style="display:flex;"><span>        $drawing[$i][<span style="color:#e6db74">&#39;x&#39;</span>] <span style="color:#f92672">==</span> $drawing[$i<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>][<span style="color:#e6db74">&#39;y&#39;</span>]
+</span></span><span style="display:flex;"><span>    ) {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">continue</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    $arr_p_pol[] <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Point</span>($drawing[$i][<span style="color:#e6db74">&#39;x], $drawing[$i][&#39;</span><span style="color:#a6e22e">y</span><span style="color:#960050;background-color:#1e0010">&#39;</span>]);
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>$pol <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Polygon</span>($arr_p_pol);
+</span></span><span style="display:flex;"><span>$is_1 <span style="color:#f92672">=</span> $pol<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">inPolygon</span>($p);
+</span></span></code></pre></div>
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+    <span>&copy; 2024 <a href="https://example.org/">My New Hugo Site</a></span>
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>
