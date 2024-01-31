@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Nginx on My New Hugo Site</title>
+    <link>https://example.org/tags/nginx/</link>
+    <description>Recent content in Nginx on My New Hugo Site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 18 Feb 2021 12:50:00 +0800</lastBuildDate>
+    <atom:link href="https://example.org/tags/nginx/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>使用certbot申请免费https泛域名证书</title>
+      <link>https://example.org/post/register-https-bycertbot/</link>
+      <pubDate>Thu, 18 Feb 2021 12:50:00 +0800</pubDate>
+      <guid>https://example.org/post/register-https-bycertbot/</guid>
+      <description>免费的https证书 部署https访问最简单的办法就是使用域名商提供的https服务，简单、省事、可靠、有保障。
+但是，价格同样也不便宜啊，像我等穷人，当然要捡着物美价廉的吃了，如果能薅羊毛坚决不能放过。
+letsencrypt.org是一个免费的证书颁发机构，提供单域名的证书，也提供泛域名的证书。
+但是缺点也比较明显，就是有效期会比较短，只有三个月。当然了，每隔几个月搞一次就好了嘛，谁让咱穷呢
+安装certbot 因为我使用的是 freebsd,所以我直接使用 portmaster 来安装。
+sudo portmaster security/py-certbot 其它的操作系统同理，使用包管理器就可以安装，例如
+sudo add-apt-repository ppa:certbot/certbot sudo apt-get update sudo apt-get install python-certbot 如果不知道怎么安装，可以详见官网 https://certbot.eff.org/instructions
+申请证书 certbot certonly –manual -d grass.work -d &amp;#34;*.grass.work&amp;#34; --preferred-challenges dns-01 --server https://acme-v02.api.letsencrypt.org/directory 其中 -d 后面的参数是要申请的域名，可以是单域名，也可以是泛域名，可以有多个
+--preferred-challenges dns-01 表示使用验证方式为dns，当然也可以选择http方式——如果需要的话
+--server 选择要使用的证书服务器
+然后：
+NOTE: The IP of this machine will be publicly logged as having requested this certificate. If you&amp;#39;re running certbot in manual mode on a machine that is not your server, please ensure you&amp;#39;re okay with that.</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Translates on My New Hugo Site</title>
+    <link>https://example.org/translate/</link>
+    <description>Recent content in Translates on My New Hugo Site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 05 Nov 2020 13:17:00 +0800</lastBuildDate>
+    <atom:link href="https://example.org/translate/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>React Native中的别名</title>
+      <link>https://example.org/translate/alias-in-react-native/</link>
+      <pubDate>Fri, 18 Aug 2017 19:31:00 +0800</pubDate>
+      <guid>https://example.org/translate/alias-in-react-native/</guid>
+      <description>&lt;p&gt;有时候，你会在你的项目有多个文件和文件夹。我们需要从任意随机文件中获得一个文件的引用。如果我们这样的相对路径的话，看起来是这个样子的:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-javascript&#34; data-lang=&#34;javascript&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;import&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;themes&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;from&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;../../config/themes&amp;#39;&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;通过符号`../`让我们很难去思考，在更复杂的项目中，这将是一个噩梦。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>基于Org的GTD实践</title>
+      <link>https://example.org/translate/do-gtd-in-orgmode/</link>
+      <pubDate>Thu, 05 Nov 2020 13:17:00 +0800</pubDate>
+      <guid>https://example.org/translate/do-gtd-in-orgmode/</guid>
+      <description>在这篇文章中，我将详细介绍如何使用Orgmode实现GTD，而不是解释GTD方法本身或Orgmode是如何工作的。</description>
+    </item>
+  </channel>
+</rss>
