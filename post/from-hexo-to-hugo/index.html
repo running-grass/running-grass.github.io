@@ -1,21 +1,21 @@
 <!DOCTYPE html>
-<html lang="en" dir="auto">
+<html lang="zh-cn" dir="auto">
 
 <head><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
-<title>从Hexo迁移到Hugo | My New Hugo Site</title>
+<title>从Hexo迁移到Hugo | 一世韶华</title>
 <meta name="keywords" content="">
 <meta name="description" content="记录一下自己从Hexo迁移到Hugo的过程，程序直接部署到GitHub Page。">
 <meta name="author" content="">
-<link rel="canonical" href="https://example.org/post/from-hexo-to-hugo/">
+<link rel="canonical" href="https://grass.show/post/from-hexo-to-hugo/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.b609c58d5c11bb90b1a54e04005d74ad1ddf22165eb79f5533967e57df9c3b50.css" integrity="sha256-tgnFjVwRu5CxpU4EAF10rR3fIhZet59VM5Z&#43;V9&#43;cO1A=" rel="preload stylesheet" as="style">
-<link rel="icon" href="https://example.org/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="https://example.org/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="https://example.org/favicon-32x32.png">
-<link rel="apple-touch-icon" href="https://example.org/apple-touch-icon.png">
-<link rel="mask-icon" href="https://example.org/safari-pinned-tab.svg">
+<link rel="icon" href="https://grass.show/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://grass.show/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://grass.show/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://grass.show/apple-touch-icon.png">
+<link rel="mask-icon" href="https://grass.show/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
 <noscript>
@@ -57,9 +57,9 @@
 </noscript><meta property="og:title" content="从Hexo迁移到Hugo" />
 <meta property="og:description" content="记录一下自己从Hexo迁移到Hugo的过程，程序直接部署到GitHub Page。" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://example.org/post/from-hexo-to-hugo/" /><meta property="article:section" content="post" />
+<meta property="og:url" content="https://grass.show/post/from-hexo-to-hugo/" /><meta property="article:section" content="post" />
 <meta property="article:published_time" content="2020-11-01T22:54:00+08:00" />
-<meta property="article:modified_time" content="2024-01-31T11:23:11+08:00" />
+<meta property="article:modified_time" content="2024-01-31T11:27:20+08:00" />
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="从Hexo迁移到Hugo"/>
@@ -75,13 +75,13 @@
       "@type": "ListItem",
       "position":  1 ,
       "name": "Posts",
-      "item": "https://example.org/post/"
+      "item": "https://grass.show/post/"
     }, 
     {
       "@type": "ListItem",
       "position":  2 ,
       "name": "从Hexo迁移到Hugo",
-      "item": "https://example.org/post/from-hexo-to-hugo/"
+      "item": "https://grass.show/post/from-hexo-to-hugo/"
     }
   ]
 }
@@ -97,20 +97,20 @@
     
   ],
   "articleBody": "记录一下自己从Hexo迁移到Hugo的过程，程序直接部署到GitHub Page。\n背景 写文章的地方一直在变，从刚接触网络时的qq空间，到后来的微信朋友圈写长文，再到后来的简书，后来又在微信公众号写了几篇，再之后自己使用hexo搭建博客，这次发现hugo的热度挺高，并且支持Emacs的org模式，本着折腾至死的精神，博客再次迁移，顺便把之前的东西都整理到一起\n安装 安装命令行 因为我用的是Mac，所以我可以直接用 Homebrew 命令进行安装\nbrew install hugo 创建新博客 hugo new site quickstart 添加新主题 #+BEGIN_SRC bash cd quickstart git init git submodule add https://github.com/olOwOlo/hugo-theme-even.git themes/even #+BEGIN_SRC\n创建第一篇博文 hugo new posts/my-first-post.md 这时会自动生成一个文件my-first-post.md文件，里面会有一些默认的信息\n启动服务 hugo server -D 使用参数 -D 可以使草稿也被渲染出来\n编译静态网站 hugo -D 部署 自建服务器 可以直接把public目录使用scp拷贝到自己的服务器上\nGitHub Page 建立一个page仓库 在github上面创建一个.github.io的公开仓库例如我的仓库名称是running-grass/running-grass.github.io\n添加子git子模块 cd quickstart rm -rf public git submodule add -b master https://github.com//.github.io.git public 设置baseURL 把config文件中的baseURL设置为.github.io\n部署脚本 在博客根目录下创建一个文件 deploy.sh ，并且使用 chmod +x deploy.sh 添加可执行权限，内容如下\n#!/bin/sh # If a command fails then the deploy stops set -e printf \"\\033[0;32mDeploying updates to GitHub...\\033[0m\\n\" # Build the project. hugo # if using a theme, replace with `hugo -t ` # Go To Public folder cd public # Add changes to git. git add . # Commit changes. msg=\"rebuilding site $(date)\" if [ -n \"$*\" ]; then msg=\"$*\" fi git commit -m \"$msg\" # Push source and build repos. git push origin master 设置Github Pages 进入到 Settings 页面，向下滚动找到 GitHub Pages 设置 在 Source 中选择分支，目录选择 /(root) ，然后点击 Save 在 Enforce HTTPS 复选框选中，以后HTTPS肯定是必须的 设置自定义域名 随便找一个域名注册商(例如 阿里云)，注册一个自己喜欢的域名 在 static/CNAME 文件中增加刚买的域名，我这里是 grass.show 使用上面的部署脚本重新部署博客到 GitHub Ping 一下自己的GitHub Page的ip，例如我会 ping running-grass.github.io ，然后记住ip 进入域名控制台，设置DNS解析，把根域名解析A记录到刚才的ip上面 十分钟过后，就可以访问自己的域名了，例如我这里是 https://grass.show 迁移 因为我之前博客使用hexo来写的，文章采用的是Markdown，可以很方便的复制到这边来，基本上不需要改变什么\n同时又把微信公众号的文章也一并迁移了过来，图片使用 PicGo 保存到github上面\n使用ox-hugo 参见使用ox-hugo写博客\n",
-  "wordCount" : "193",
-  "inLanguage": "en",
+  "wordCount" : "994",
+  "inLanguage": "zh-cn",
   "datePublished": "2020-11-01T22:54:00+08:00",
-  "dateModified": "2024-01-31T11:23:11+08:00",
+  "dateModified": "2024-01-31T11:27:20+08:00",
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://example.org/post/from-hexo-to-hugo/"
+    "@id": "https://grass.show/post/from-hexo-to-hugo/"
   },
   "publisher": {
     "@type": "Organization",
-    "name": "My New Hugo Site",
+    "name": "一世韶华",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://example.org/favicon.ico"
+      "url": "https://grass.show/favicon.ico"
     }
   }
 }
@@ -132,7 +132,7 @@
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="https://example.org/" accesskey="h" title="My New Hugo Site (Alt + H)">My New Hugo Site</a>
+            <a href="https://grass.show/" accesskey="h" title="一世韶华 (Alt + H)">一世韶华</a>
             <div class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
@@ -265,7 +265,7 @@ git submodule add <a href="https://github.com/olOwOlo/hugo-theme-even.git">https
     </main>
     
 <footer class="footer">
-    <span>&copy; 2024 <a href="https://example.org/">My New Hugo Site</a></span>
+    <span>&copy; 2024 <a href="https://grass.show/">一世韶华</a></span>
     <span>
         Powered by
         <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &

@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>PureScript on My New Hugo Site</title>
-    <link>https://example.org/tags/purescript/</link>
-    <description>Recent content in PureScript on My New Hugo Site</description>
+    <title>PureScript on 一世韶华</title>
+    <link>https://grass.show/tags/purescript/</link>
+    <description>Recent content in PureScript on 一世韶华</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
+    <language>zh-cn</language>
     <lastBuildDate>Tue, 31 Aug 2021 22:39:00 +0800</lastBuildDate>
-    <atom:link href="https://example.org/tags/purescript/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://grass.show/tags/purescript/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>我是如何一步步进入Purescript这个坑的</title>
-      <link>https://example.org/post/how-do-i-get-to-know-purescript-step-by-step/</link>
+      <link>https://grass.show/post/how-do-i-get-to-know-purescript-step-by-step/</link>
       <pubDate>Sun, 29 Aug 2021 10:55:00 +0800</pubDate>
-      <guid>https://example.org/post/how-do-i-get-to-know-purescript-step-by-step/</guid>
+      <guid>https://grass.show/post/how-do-i-get-to-know-purescript-step-by-step/</guid>
       <description>&lt;p&gt;Purescript是一个可以编译到Js的纯函数式编程语言，其语法和思想来源于Haskell，且保持高度一致。最近几个月我对这个语言比较入迷，值得的说一下我是如何一步一步的踏进这个坑的。&lt;/p&gt;</description>
     </item>
     <item>
       <title>最近写Purescript项目的一些感悟</title>
-      <link>https://example.org/post/some-insights-on-using-purescript-recently/</link>
+      <link>https://grass.show/post/some-insights-on-using-purescript-recently/</link>
       <pubDate>Tue, 31 Aug 2021 22:39:00 +0800</pubDate>
-      <guid>https://example.org/post/some-insights-on-using-purescript-recently/</guid>
+      <guid>https://grass.show/post/some-insights-on-using-purescript-recently/</guid>
       <description>&lt;p&gt;这篇文章是我使用PureScript(下文简称Purs)这几个月的一些碎碎念，纯主观看法且带有偏见，非教程，轻喷。&lt;/p&gt;</description>
     </item>
   </channel>

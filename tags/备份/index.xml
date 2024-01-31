@@ -1,27 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>备份 on My New Hugo Site</title>
-    <link>https://example.org/tags/%E5%A4%87%E4%BB%BD/</link>
-    <description>Recent content in 备份 on My New Hugo Site</description>
+    <title>备份 on 一世韶华</title>
+    <link>https://grass.show/tags/%E5%A4%87%E4%BB%BD/</link>
+    <description>Recent content in 备份 on 一世韶华</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
+    <language>zh-cn</language>
     <lastBuildDate>Sun, 16 May 2021 23:32:00 +0800</lastBuildDate>
-    <atom:link href="https://example.org/tags/%E5%A4%87%E4%BB%BD/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://grass.show/tags/%E5%A4%87%E4%BB%BD/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>个人照片备份方式的变迁</title>
-      <link>https://example.org/post/photo-backup-develop-history/</link>
+      <link>https://grass.show/post/photo-backup-develop-history/</link>
       <pubDate>Sun, 16 May 2021 23:32:00 +0800</pubDate>
-      <guid>https://example.org/post/photo-backup-develop-history/</guid>
-      <description>物理相册 这个时间大概是中学时期及以前，没有手机，没有电子相册，更无无备份意识，只有拍完的照片放到家里的相册中
-qq相册 中专时期及刚工作的时候，用手机拍完的照片放到qq空间中，管理照片就是使用qq相册，也没有更加复杂的管理需求
-谷歌相册&amp;amp;百度网盘 在工作几年后，对于个人数据的安全性有了初步的要求，开始备份手机中照片，并且把qq空间中的照片和物理相册中的照片都统一存储和管理，开始有了备份的观念但是谷歌相册最大的缺点就是需要翻墙，而在某些网络环境下，无法达到翻墙，所以后来改用百度的网盘
-私有云时代 告别单身后，有了在家庭中共享照片的需求，需要更复杂的照片管理需求，开启了私有云时代。使用私有云可以更好的保护自己的隐私（我没有说百度网盘泄露隐私），自己真正的拥有数据所有权和控制权。
-群晖NAS 刚刚接触私有云，接触NAS是用的黑群晖。单说便利性的话，这个是真的方便。手机上使用DS photo来备份和查看相册。在nas上可以把整个相册都备份到百度网盘，作为容灾备份。缺点是手机上的app不太好用，群晖的系统是魔改过的linux，使用起来也诸多不便。太过依赖于NAS服务器。需要内网穿透。
-nextcloud 拥抱开源，注重扩展性，以及家庭多用户分享，产品化做的很棒。最大的缺点是同步相册太慢了，即使是在局域网也是很忙。一百G用了一天一夜。再有就是太重了，功能很多用不上的。需要内网穿透
-syncthing 相对于个人备份，更注重家庭的共享。以及摆脱对中央服务器的依赖，客户端直接使用p2p协议同步数据项目开源，mac、linux、window、android都有客户端，除了ios之外。同步速度特别快，网关内也无需内网穿透，有版本控制。分布式网络。唯一的缺点（同时也是优点）是功能单一，只专注于文件的同步。照片的查看需要其它额外的服务
-总结 对于单身或者无多用户共享的用户来说，谷歌相册和百度网盘（前提是不怕它把你的隐私泄露掉）差不多够用。省心，数据安全性肯定高于个人维护了。对于需要家庭范围内共享的用户来说
-无服务器的话就是syncthing这种p2p文件同步工具 有服务器想省事就是linux+nextcloud 有服务器可以小折腾下就是群晖nas 有服务器且要求比较高且喜欢折腾就是linux+syncthing+piwigo </description>
+      <guid>https://grass.show/post/photo-backup-develop-history/</guid>
+      <description>物理相册 这个时间大概是中学时期及以前，没有手机，没有电子相册，更无无备份意识，只有拍完的照片放到家里的相册中 qq相册 中专时期及刚工作的时候，</description>
     </item>
   </channel>
 </rss>

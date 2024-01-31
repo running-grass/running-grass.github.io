@@ -1,159 +1,104 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>My New Hugo Site</title>
-    <link>https://example.org/</link>
-    <description>Recent content on My New Hugo Site</description>
+    <title>一世韶华</title>
+    <link>https://grass.show/</link>
+    <description>Recent content on 一世韶华</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
+    <language>zh-cn</language>
     <lastBuildDate>Tue, 31 Aug 2021 22:39:00 +0800</lastBuildDate>
-    <atom:link href="https://example.org/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://grass.show/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>送别驴友</title>
-      <link>https://example.org/post/seeing-off-the-friend/</link>
+      <link>https://grass.show/post/seeing-off-the-friend/</link>
       <pubDate>Sun, 20 Dec 2020 00:00:00 +0000</pubDate>
-      <guid>https://example.org/post/seeing-off-the-friend/</guid>
+      <guid>https://grass.show/post/seeing-off-the-friend/</guid>
       <description>&lt;p&gt;你以自己喜爱的方式告别这个世界，愿天堂没有寒冷.&lt;/p&gt;</description>
     </item>
     <item>
       <title>React Native中的别名</title>
-      <link>https://example.org/translate/alias-in-react-native/</link>
+      <link>https://grass.show/translate/alias-in-react-native/</link>
       <pubDate>Fri, 18 Aug 2017 19:31:00 +0800</pubDate>
-      <guid>https://example.org/translate/alias-in-react-native/</guid>
+      <guid>https://grass.show/translate/alias-in-react-native/</guid>
       <description>&lt;p&gt;有时候，你会在你的项目有多个文件和文件夹。我们需要从任意随机文件中获得一个文件的引用。如果我们这样的相对路径的话，看起来是这个样子的:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-javascript&#34; data-lang=&#34;javascript&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;import&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;themes&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;from&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;../../config/themes&amp;#39;&lt;/span&gt;;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;通过符号`../`让我们很难去思考，在更复杂的项目中，这将是一个噩梦。&lt;/p&gt;</description>
     </item>
     <item>
       <title>基于Org的GTD实践</title>
-      <link>https://example.org/translate/do-gtd-in-orgmode/</link>
+      <link>https://grass.show/translate/do-gtd-in-orgmode/</link>
       <pubDate>Thu, 05 Nov 2020 13:17:00 +0800</pubDate>
-      <guid>https://example.org/translate/do-gtd-in-orgmode/</guid>
+      <guid>https://grass.show/translate/do-gtd-in-orgmode/</guid>
       <description>在这篇文章中，我将详细介绍如何使用Orgmode实现GTD，而不是解释GTD方法本身或Orgmode是如何工作的。</description>
     </item>
     <item>
       <title>从Hexo迁移到Hugo</title>
-      <link>https://example.org/post/from-hexo-to-hugo/</link>
+      <link>https://grass.show/post/from-hexo-to-hugo/</link>
       <pubDate>Sun, 01 Nov 2020 22:54:00 +0800</pubDate>
-      <guid>https://example.org/post/from-hexo-to-hugo/</guid>
+      <guid>https://grass.show/post/from-hexo-to-hugo/</guid>
       <description>&lt;p&gt;记录一下自己从Hexo迁移到Hugo的过程，程序直接部署到GitHub Page。&lt;/p&gt;</description>
     </item>
     <item>
       <title>不翻墙使用Google搜索</title>
-      <link>https://example.org/post/use-google-search-without-vpn/</link>
+      <link>https://grass.show/post/use-google-search-without-vpn/</link>
       <pubDate>Tue, 27 Oct 2020 11:28:00 +0800</pubDate>
-      <guid>https://example.org/post/use-google-search-without-vpn/</guid>
-      <description>谷歌镜像站汇总 谷歌学术导航 谷歌镜像导航 设置浏览器的默认搜索 打开谷歌镜像导航，在右侧谷歌网页镜像中随便选择一个输入框，输入要搜索的东西，点击 谷歌搜索 按钮 如果可以顺利进行搜索，则记下来网址 打开chrome浏览器的设置，选择搜索引擎 点击管理搜索引擎并单击添加 搜索引擎和关键字都随便填，url这里填写&amp;lt;url&amp;gt;/search?q=%s 保存后，在列表中找到该引擎，在右侧的操作按钮中选择设为默认 直接在chrome浏览器地址栏输入关键字，回车即可用谷歌镜像进行搜索了 需要注意的是，只是能使用gogole进行搜索，如果搜索出来的网站需要翻墙，那么也还是打不开的 </description>
+      <guid>https://grass.show/post/use-google-search-without-vpn/</guid>
+      <description>谷歌镜像站汇总 谷歌学术导航 谷歌镜像导航 设置浏览器的默认搜索 打开谷歌镜像导航，在右侧谷歌网页镜像中随便选择一个输入框，输入要搜索的东西，点击 谷</description>
     </item>
     <item>
       <title>使用ox-hugo写博客</title>
-      <link>https://example.org/post/first-blog-for-ox-hugo/</link>
+      <link>https://grass.show/post/first-blog-for-ox-hugo/</link>
       <pubDate>Thu, 22 Oct 2020 15:10:00 +0800</pubDate>
-      <guid>https://example.org/post/first-blog-for-ox-hugo/</guid>
-      <description>&amp;gt; 本文是使用ox-hugo发表的第一篇文章
-阅读前提 知道Emacs和Org是什么 知道hugo或其它SSG1程序 为什么要使用ox-hugo 可以使用强大的Emacs 可以使用Org格式，同时利用其TODO和文学编程的功能 可以和基于Org的GTD系统相结合 可以使用Org-capture来快速的记录博客灵感 安装ox-hugo ;; 我是使用use-packge,其它方式见文档 (use-package ox-hugo :after ox) 配置ox-hugo 我的hugo目录为 ~/workspace/blog/ 博客文章的目录为 ~/workspace/blog/content/post/ 博客文章的Org目录为 ~/workspace/blog/content-org/
-(use-package ox-hugo :after ox :config (setq ;; 设置在文件导出到content下的哪个目录，我的这个是 content/post org-hugo-section &amp;#34;post&amp;#34; ;; 设置文章的最后修改时间为导出时间 org-hugo-auto-set-lastmod	t ) ;; 设置在org文件保存的时候自动导出到org-hugo-section下 (org-hugo-auto-export-mode) ) 想要实现自动导出还需要在hugo根目录下新建一个文件
-;; .dir-locals.el ((&amp;#34;content-org/&amp;#34; . ((org-mode . ((eval . (org-hugo-auto-export-mode))))))) 在Org文件最前面设置
-#+HUGO_BASE_DIR: ~/workspace/blog/ #+TODO: TODO DONE HUGO_BASE_DIR这个属性是每个Org文件必须设置的，指定hugo的根目录，配合org-hugo-section之后导出路径为 ~/workspace/blog/content/post/ TODO这个属性为选填的，为了覆盖全局设置。 &amp;gt; 任务状态为TODO时，导出后为草稿，任务状态切换至DONE时，导出后为正式文章.
-&amp;gt; 在从TODO切换到DONE时，会在Org标题下生成CLOSED: [2020-10-22 四 16:10], 如果未指定发布时间的话，则自动采用该CLOSED时间</description>
+      <guid>https://grass.show/post/first-blog-for-ox-hugo/</guid>
+      <description>&amp;gt; 本文是使用ox-hugo发表的第一篇文章 阅读前提 知道Emacs和Org是什么 知道hugo或其它SSG1程序 为什么要使用ox-hugo 可以使</description>
     </item>
     <item>
       <title>蜗牛星际机器重置BIOS的方法</title>
-      <link>https://example.org/post/woniuxingji-bios-reset/</link>
+      <link>https://grass.show/post/woniuxingji-bios-reset/</link>
       <pubDate>Wed, 04 Nov 2020 23:11:00 +0800</pubDate>
-      <guid>https://example.org/post/woniuxingji-bios-reset/</guid>
+      <guid>https://grass.show/post/woniuxingji-bios-reset/</guid>
       <description>&lt;p&gt;主板电池旁边的两个针脚，在通电启动情况下，使用螺丝刀连接两个针脚，使其短路&lt;/p&gt;</description>
     </item>
     <item>
       <title>在FreeBSD系统上使用Docker</title>
-      <link>https://example.org/post/use-docker-on-freebsd/</link>
+      <link>https://grass.show/post/use-docker-on-freebsd/</link>
       <pubDate>Mon, 09 Nov 2020 14:50:00 +0800</pubDate>
-      <guid>https://example.org/post/use-docker-on-freebsd/</guid>
+      <guid>https://grass.show/post/use-docker-on-freebsd/</guid>
       <description>&lt;p&gt;Docker利用了Linux内核的一些特性，而FreeBSD是不支持的，需要通过docker-machine创建虚拟机来曲线救国。&lt;/p&gt;</description>
     </item>
     <item>
       <title>《追寻生命的意义》有感</title>
-      <link>https://example.org/post/mans-search-for-meaning/</link>
+      <link>https://grass.show/post/mans-search-for-meaning/</link>
       <pubDate>Mon, 01 Feb 2021 15:13:00 +0800</pubDate>
-      <guid>https://example.org/post/mans-search-for-meaning/</guid>
+      <guid>https://grass.show/post/mans-search-for-meaning/</guid>
       <description>&lt;p&gt;不论什么样的人，不论处在什么样的环境下，都有些选择的自由，即使身处奥斯维辛集中营，随时可能会被送往毒气室，但是依旧拥有一项谁也剥夺不了的自由，那就是如何面对痛苦的态度。&lt;/p&gt;</description>
     </item>
     <item>
       <title>个人照片备份方式的变迁</title>
-      <link>https://example.org/post/photo-backup-develop-history/</link>
+      <link>https://grass.show/post/photo-backup-develop-history/</link>
       <pubDate>Sun, 16 May 2021 23:32:00 +0800</pubDate>
-      <guid>https://example.org/post/photo-backup-develop-history/</guid>
-      <description>物理相册 这个时间大概是中学时期及以前，没有手机，没有电子相册，更无无备份意识，只有拍完的照片放到家里的相册中
-qq相册 中专时期及刚工作的时候，用手机拍完的照片放到qq空间中，管理照片就是使用qq相册，也没有更加复杂的管理需求
-谷歌相册&amp;amp;百度网盘 在工作几年后，对于个人数据的安全性有了初步的要求，开始备份手机中照片，并且把qq空间中的照片和物理相册中的照片都统一存储和管理，开始有了备份的观念但是谷歌相册最大的缺点就是需要翻墙，而在某些网络环境下，无法达到翻墙，所以后来改用百度的网盘
-私有云时代 告别单身后，有了在家庭中共享照片的需求，需要更复杂的照片管理需求，开启了私有云时代。使用私有云可以更好的保护自己的隐私（我没有说百度网盘泄露隐私），自己真正的拥有数据所有权和控制权。
-群晖NAS 刚刚接触私有云，接触NAS是用的黑群晖。单说便利性的话，这个是真的方便。手机上使用DS photo来备份和查看相册。在nas上可以把整个相册都备份到百度网盘，作为容灾备份。缺点是手机上的app不太好用，群晖的系统是魔改过的linux，使用起来也诸多不便。太过依赖于NAS服务器。需要内网穿透。
-nextcloud 拥抱开源，注重扩展性，以及家庭多用户分享，产品化做的很棒。最大的缺点是同步相册太慢了，即使是在局域网也是很忙。一百G用了一天一夜。再有就是太重了，功能很多用不上的。需要内网穿透
-syncthing 相对于个人备份，更注重家庭的共享。以及摆脱对中央服务器的依赖，客户端直接使用p2p协议同步数据项目开源，mac、linux、window、android都有客户端，除了ios之外。同步速度特别快，网关内也无需内网穿透，有版本控制。分布式网络。唯一的缺点（同时也是优点）是功能单一，只专注于文件的同步。照片的查看需要其它额外的服务
-总结 对于单身或者无多用户共享的用户来说，谷歌相册和百度网盘（前提是不怕它把你的隐私泄露掉）差不多够用。省心，数据安全性肯定高于个人维护了。对于需要家庭范围内共享的用户来说
-无服务器的话就是syncthing这种p2p文件同步工具 有服务器想省事就是linux+nextcloud 有服务器可以小折腾下就是群晖nas 有服务器且要求比较高且喜欢折腾就是linux+syncthing+piwigo </description>
+      <guid>https://grass.show/post/photo-backup-develop-history/</guid>
+      <description>物理相册 这个时间大概是中学时期及以前，没有手机，没有电子相册，更无无备份意识，只有拍完的照片放到家里的相册中 qq相册 中专时期及刚工作的时候，</description>
     </item>
     <item>
       <title>使用certbot申请免费https泛域名证书</title>
-      <link>https://example.org/post/register-https-bycertbot/</link>
+      <link>https://grass.show/post/register-https-bycertbot/</link>
       <pubDate>Thu, 18 Feb 2021 12:50:00 +0800</pubDate>
-      <guid>https://example.org/post/register-https-bycertbot/</guid>
-      <description>免费的https证书 部署https访问最简单的办法就是使用域名商提供的https服务，简单、省事、可靠、有保障。
-但是，价格同样也不便宜啊，像我等穷人，当然要捡着物美价廉的吃了，如果能薅羊毛坚决不能放过。
-letsencrypt.org是一个免费的证书颁发机构，提供单域名的证书，也提供泛域名的证书。
-但是缺点也比较明显，就是有效期会比较短，只有三个月。当然了，每隔几个月搞一次就好了嘛，谁让咱穷呢
-安装certbot 因为我使用的是 freebsd,所以我直接使用 portmaster 来安装。
-sudo portmaster security/py-certbot 其它的操作系统同理，使用包管理器就可以安装，例如
-sudo add-apt-repository ppa:certbot/certbot sudo apt-get update sudo apt-get install python-certbot 如果不知道怎么安装，可以详见官网 https://certbot.eff.org/instructions
-申请证书 certbot certonly –manual -d grass.work -d &amp;#34;*.grass.work&amp;#34; --preferred-challenges dns-01 --server https://acme-v02.api.letsencrypt.org/directory 其中 -d 后面的参数是要申请的域名，可以是单域名，也可以是泛域名，可以有多个
---preferred-challenges dns-01 表示使用验证方式为dns，当然也可以选择http方式——如果需要的话
---server 选择要使用的证书服务器
-然后：
-NOTE: The IP of this machine will be publicly logged as having requested this certificate. If you&amp;#39;re running certbot in manual mode on a machine that is not your server, please ensure you&amp;#39;re okay with that.</description>
+      <guid>https://grass.show/post/register-https-bycertbot/</guid>
+      <description>免费的https证书 部署https访问最简单的办法就是使用域名商提供的https服务，简单、省事、可靠、有保障。 但是，价格同样也不便宜啊，像</description>
     </item>
     <item>
       <title>利器推荐-2021-05</title>
-      <link>https://example.org/post/tools-recommend-2021-05/</link>
+      <link>https://grass.show/post/tools-recommend-2021-05/</link>
       <pubDate>Mon, 17 May 2021 23:01:00 +0800</pubDate>
-      <guid>https://example.org/post/tools-recommend-2021-05/</guid>
-      <description>本文推荐的都是我正在用的或者用过的产品
-硬件 Macbook Pro 13寸 如果是开发用，多配点内存会好些，磁盘一般256足够了
-HHKB BT 我是被种草的，据说是程序员必备神器，用了三年了，按起来很舒服，偶尔用同事的薄膜键盘会很不适应。一开始我是买的有线的，但是我觉得累赘。就在咸鱼上换了一个蓝牙版的，结果在办公室的多蓝牙设备的环境下，总是断连。声音比机械的要轻，不脆，键程适中。
-站立工作台 办公室必备啊，坐的时间长了腰会很不舒服，站起来可以调节高度。
-trackpad2触控板 很多人不理解为什么macbook有触控板，还要单独买一个呢。一个是因为面积大，另外它的手感确实不错，其次有的时候笔记本是合盖的。
-树莓派 这个嘛，就是玩具性质居多了。一开始心血来潮买了，折腾两天不知道干啥了。然后搬家，租的房子里面没有有线电视，于是给我的树莓派安装了kodi系统，作为一个电视盒子。后来买了投影仪，不需要电视了，就把树莓派装回debian，安装syncthing，作为nas中重要文件的备份机和镜像站。
-投影仪 额，这个是最近才开始的，因为旅行中的一家民俗而种草。隔了一年多才拔草。在卧室的白墙上，投影120吋的画面，家庭影院的既视感，舒服。
-颂拓9运动手表 这个用了三年了，模式众多，跑步、游泳、滑雪、爬山等几十种。监测睡眠等也不在话下。
-PC通用软件 Emacs 这个是和vim一样古老的编辑器，被誉为“神的编辑器”，也被成为“伪装成编辑器的操作系统”。插件数量众多，质量都比较好。没有商业支持，都是用爱发电。我自从16年接触Emacs，一开始用的spacemacs配置，入坑多次，退烧多次。去年又重新入坑，舍弃成熟的配置，自己从零开始。目前比较稳定，目前这篇博客就是使用Emacs编写，使用ox-export插件导出为markdown，再由hugo编译成html静态网站。编写代码和GTD也都是使用的Emacs。或者说能用Emacs干的事情我都在用Emacs。
-Vim 和Emacs齐名的古老的编辑器，被誉为“编辑器之神”，单从用户数和用户熟知度来说，能完胜Emacs。在服务器上面编辑文本文件，以及在mac上面编辑配置文件都是习惯性使用vim。当然我并没有学vim的高级用法，就是最基本的移动和编辑功能。
-Chrome 这个是程序员用的比较多的浏览器了，尤其是前端程序员。插件众多，开发工具箱比较强大。
-Listen 1 一个开源的音乐项目，各个平台均匀客户端。尤以chrome的插件版体验最好，可以登录网抑云和qq音乐，播放自建的歌单。它集成了4-6个平台的歌曲，均免费。
-Bitwarden 开源的密码管理器，类似1password。
-Trojan客户端 翻墙的工具。需要购买相应的服务。
-Rime 开源的中文输入法，内置十几种输入方案，有拼音、双拼、五笔、郑码、笔画、文言文等。良心之作
-Cyberduck 开源的FTP/Webdav客户端
-LibreOffice 开源的office客户端，多平台支持。
-Calibre 开源的图书管理系统，借助插件可以完成更多的事情。
-VirtuxBox 开源的虚拟机软件
-Wakatime 统计开发人员的时间消耗，例如编辑器比例、编程语言的比例等
-VS Code 开源的IDE，不多说
-RescueTime 统计设备的各个软件的使用时间。
-Charles 代理工具，通常用来网络抓包
-Syncthing 开源的p2p文件同步工具，跨平台
-GIMP 开源的图片编辑器，PS的代替品
-DesktopNaotu 百度脑图的离线版
-digikam 图片管理工具
-QBittorrent bt下载工具
-Anki 开源的记忆卡片工具
-Mac软件 mac下的专属软件
-Motrix 迅雷的代替品
-MAMP LAMP的代替品，快速启动php+nginx+mysql服务</description>
+      <guid>https://grass.show/post/tools-recommend-2021-05/</guid>
+      <description>本文推荐的都是我正在用的或者用过的产品 硬件 Macbook Pro 13寸 如果是开发用，多配点内存会好些，磁盘一般256足够了 HHKB BT 我是被种草的，据说是程序员必备神</description>
     </item>
     <item>
       <title>使用Nix&#43;direnv快速构建不同软件版本的开发环境</title>
-      <link>https://example.org/post/create-environment-with-nix-and-direnv/</link>
+      <link>https://grass.show/post/create-environment-with-nix-and-direnv/</link>
       <pubDate>Wed, 07 Jul 2021 21:26:00 +0800</pubDate>
-      <guid>https://example.org/post/create-environment-with-nix-and-direnv/</guid>
+      <guid>https://grass.show/post/create-environment-with-nix-and-direnv/</guid>
       <description>&lt;p&gt;我们在开发项目是总是会遇到一些软件版本的问题，例如项目A需要node版本为8-10，而项目B需要版本大于12，常用的方案有这么几种。&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;在开发不同的项目的时候，手工切换不同的版本 (因为我遇到的不多，所以一直这么干)&lt;/li&gt;
@@ -164,100 +109,74 @@ MAMP LAMP的代替品，快速启动php+nginx+mysql服务</description>
     </item>
     <item>
       <title>我是如何一步步进入Purescript这个坑的</title>
-      <link>https://example.org/post/how-do-i-get-to-know-purescript-step-by-step/</link>
+      <link>https://grass.show/post/how-do-i-get-to-know-purescript-step-by-step/</link>
       <pubDate>Sun, 29 Aug 2021 10:55:00 +0800</pubDate>
-      <guid>https://example.org/post/how-do-i-get-to-know-purescript-step-by-step/</guid>
+      <guid>https://grass.show/post/how-do-i-get-to-know-purescript-step-by-step/</guid>
       <description>&lt;p&gt;Purescript是一个可以编译到Js的纯函数式编程语言，其语法和思想来源于Haskell，且保持高度一致。最近几个月我对这个语言比较入迷，值得的说一下我是如何一步一步的踏进这个坑的。&lt;/p&gt;</description>
     </item>
     <item>
       <title>最近写Purescript项目的一些感悟</title>
-      <link>https://example.org/post/some-insights-on-using-purescript-recently/</link>
+      <link>https://grass.show/post/some-insights-on-using-purescript-recently/</link>
       <pubDate>Tue, 31 Aug 2021 22:39:00 +0800</pubDate>
-      <guid>https://example.org/post/some-insights-on-using-purescript-recently/</guid>
+      <guid>https://grass.show/post/some-insights-on-using-purescript-recently/</guid>
       <description>&lt;p&gt;这篇文章是我使用PureScript(下文简称Purs)这几个月的一些碎碎念，纯主观看法且带有偏见，非教程，轻喷。&lt;/p&gt;</description>
     </item>
     <item>
       <title>Hexo的介绍及安装使用</title>
-      <link>https://example.org/post/hexo-installation/</link>
+      <link>https://grass.show/post/hexo-installation/</link>
       <pubDate>Fri, 10 Jul 2020 00:00:00 +0800</pubDate>
-      <guid>https://example.org/post/hexo-installation/</guid>
+      <guid>https://grass.show/post/hexo-installation/</guid>
       <description>&lt;h2 id=&#34;什么是hexo&#34;&gt;什么是Hexo&lt;/h2&gt;
 &lt;p&gt;Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页&lt;/p&gt;</description>
     </item>
     <item>
       <title>起源——时间旅行者的Tardis</title>
-      <link>https://example.org/post/originl-tardis/</link>
+      <link>https://grass.show/post/originl-tardis/</link>
       <pubDate>Sat, 09 Mar 2019 00:00:00 +0800</pubDate>
-      <guid>https://example.org/post/originl-tardis/</guid>
-      <description>关于我 92年出生，处女座，半路出家的程序猿。27年的人生中，大致分为三部分，平淡的一段，混乱的一段，励志的一段。平淡的旅途中，表面布满了孝顺、懂事、听话的标签，里面却充斥着自卑、懦弱、盲目还有无知混乱的那一段呢，都是一些叛逆、堕落、网瘾、网恋、逃课、黑化、热血、抑郁、迷茫、焦虑、痴情励志的一段里面有挑战、奋斗、激情、妄想、幻灭、不甘、理智，平静、梦想、理想、未来不可否认的是，每一段都有其价值所在，即便是我很长时间不愿去面对的混乱的一段。就像是旅途中，有平原，有沼泽，也有高山流水。所有的一切，构成了全部的风景。
-关于公众号 建立一个自己的公众号，这个想法吧，其实很早之前就已经开始出现了，只是一直没有付诸行动。那为什么会突然行动起来？都是源于今天下午的突然决定啊。最近一直有和一个朋友去交流一些人生中的感悟，这些感悟有很多都是随着交流和讨论而激发出来的想法，随着交流的结束而逐渐消失。也萌生了一些想整理自己思路的想法。就在今天下午我在漫咖啡备考基金从业的时候，闲暇之际进入到了我自己的qq空间，看着之前写下的日志，那么清晰地表达了当时的心情，那我是不是可以把公众号来代替qq空间呢？心动不如行动，于是注册了这个公众号。
-这里会写一些什么东西呢？由于我的目的主要是总结我的人生感悟并和朋友去分享交流，同时也让朋友多认识一些不一样的我。至于内容嘛，大多会是人生感悟啦，回忆啊，总结啊，少不了会有点技术分享，也可能会写一些游记，或者写点”诗“，反正没有固定主题啦，写什么完全看心情。哈哈哈😃
-关于名称 本来打算叫做时间旅行者，但是被占用了😂，所以就改成了【时间旅行者的Tardis】，有么有知道Tardis是啥的，告诉我，我可以给你发红包呦。总之呢，就是一个可以穿梭时空的飞行器。可是为什么是时间旅行者呢？我觉得人生啊，就是在出生日期到死亡日期的一次时间旅行，只是不能进行时间跳跃，所以就变成了连续的人生。而我们并不属于这里，每个人都只是一个过客，匆匆而来，满载记忆而去。既然是旅行，总会看到些什么，我会以我的视角，把我看到的，感受到的风景说给你听。也很想听一下你在这场旅行中的所见所闻所想。
-关于笔名 我选择了一个笔名来写文章——星尘。星辰大海的星，尘埃的尘，在星辰大海中一粒尘埃再渺小不过，也更普通不过。可是，即使再普通，它也是无可替代的，即使处在同一个位置，它和别人的视角也是不同的。它，虽然平凡，但，注定独一无二。</description>
+      <guid>https://grass.show/post/originl-tardis/</guid>
+      <description>关于我 92年出生，处女座，半路出家的程序猿。27年的人生中，大致分为三部分，平淡的一段，混乱的一段，励志的一段。平淡的旅途中，表面布满了孝顺</description>
     </item>
     <item>
       <title>我又开始写博客了</title>
-      <link>https://example.org/post/again-first-blog/</link>
+      <link>https://grass.show/post/again-first-blog/</link>
       <pubDate>Sun, 13 Aug 2017 01:13:00 +0800</pubDate>
-      <guid>https://example.org/post/again-first-blog/</guid>
+      <guid>https://grass.show/post/again-first-blog/</guid>
       <description>&lt;p&gt;为什么要说又呢？不止一次的建站写博客，也不止一次的不了了之.
 而这一次，我为洗刷耻辱而来。&lt;/p&gt;</description>
     </item>
     <item>
       <title>距离</title>
-      <link>https://example.org/post/distance/</link>
+      <link>https://grass.show/post/distance/</link>
       <pubDate>Thu, 31 Mar 2016 00:00:00 +0800</pubDate>
-      <guid>https://example.org/post/distance/</guid>
-      <description>离你太近
-近的让我看不到你的全部
-靠的太紧
-让我只能听到你的鼾声
-相拥太过用力
-我都快没有办法呼吸
-请给我
-给我们
-给我们的爱情
-一定的距离
-让我可以
-静静地
-完整的
-欣赏你的美丽</description>
+      <guid>https://grass.show/post/distance/</guid>
+      <description>离你太近 近的让我看不到你的全部 靠的太紧 让我只能听到你的鼾声 相拥太过用力 我都快没有办法呼吸 请给我 给我们 给我们的爱情 一定的距离 让我可以 静静地 完整</description>
     </item>
     <item>
       <title>我想要结婚了！</title>
-      <link>https://example.org/post/i-want-marriy/</link>
+      <link>https://grass.show/post/i-want-marriy/</link>
       <pubDate>Fri, 08 Mar 2013 00:00:00 +0800</pubDate>
-      <guid>https://example.org/post/i-want-marriy/</guid>
+      <guid>https://grass.show/post/i-want-marriy/</guid>
       <description>&lt;p&gt;说实话，我现在真的想结婚啦！&lt;/p&gt;</description>
     </item>
     <item>
       <title>js的函数式编程之旅(一)——初入武林</title>
-      <link>https://example.org/post/js-fp-1/</link>
+      <link>https://grass.show/post/js-fp-1/</link>
       <pubDate>Mon, 20 Jul 2020 20:11:00 +0800</pubDate>
-      <guid>https://example.org/post/js-fp-1/</guid>
+      <guid>https://grass.show/post/js-fp-1/</guid>
       <description>&lt;p&gt;一句话重点：函数式好处多多，但是不要过度追求函数式。&lt;/p&gt;</description>
     </item>
     <item>
       <title>生病了</title>
-      <link>https://example.org/post/i-am-ill/</link>
+      <link>https://grass.show/post/i-am-ill/</link>
       <pubDate>Sun, 24 Mar 2019 00:00:00 +0800</pubDate>
-      <guid>https://example.org/post/i-am-ill/</guid>
-      <description>一 今天生病了。或者说病情加重了，不光是感冒加重，伴随而来的还有环性情绪障碍开始转换为抑郁。
-环性心境从去年7月份基本好转后，就一直停留在普通心境和躁狂心境不断切换，9月份后也就没有再去复诊。直到这次重感冒，摧垮了我的身体，同时也摧垮了我的意志力。我忽然意识到我从之前的躁狂心境直接转换到了抑郁心境。
-如果没有这次生病，也许我依旧会回归到普通心境，而不是直接掉落到抑郁心境。
-二 既然回到了这种心境，我也必须的直接面对，逃是逃不了的。
-首要需要做的，就是准备预约医师。下周去复诊，认真听医生的治疗方案。
-其次加强锻炼，跑步和健身房都捡起来。主要是让身体累起来，脑子就不会想太多，至少不会让抑郁情绪更低落。再者为了尽快恢复身体的抵抗力，身体好了，意志力应该也会回来的
-第三、强迫自己在各方面都要自律。作息还有工作、学习。
-第四、鉴于最近情绪太过于敏感，停止一切和好友的闲聊。我不想传递负能量，更不想我的玻璃心会碎掉。等我恢复以后再道歉吧
-三 保持身体健康要胜过于保持情绪的健康，因为情绪真的会受到身体健康的影响。并且在我身上还会影响的很严重。
-一切，祝好！</description>
+      <guid>https://grass.show/post/i-am-ill/</guid>
+      <description>一 今天生病了。或者说病情加重了，不光是感冒加重，伴随而来的还有环性情绪障碍开始转换为抑郁。 环性心境从去年7月份基本好转后，就一直停留在普通心</description>
     </item>
     <item>
       <title>打造高效的Mac开发环境（零）—— 启程</title>
-      <link>https://example.org/post/make-mac-dev-env-00/</link>
+      <link>https://grass.show/post/make-mac-dev-env-00/</link>
       <pubDate>Sat, 26 Aug 2017 11:25:00 +0800</pubDate>
-      <guid>https://example.org/post/make-mac-dev-env-00/</guid>
+      <guid>https://grass.show/post/make-mac-dev-env-00/</guid>
       <description>&lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;你喜欢追求高效率的办公吗？&lt;/p&gt;
@@ -275,516 +194,228 @@ MAMP LAMP的代替品，快速启动php+nginx+mysql服务</description>
     </item>
     <item>
       <title>linux下文件编码的转换</title>
-      <link>https://example.org/post/file-codetrans-in-linux/</link>
+      <link>https://grass.show/post/file-codetrans-in-linux/</link>
       <pubDate>Wed, 30 Mar 2016 00:00:00 +0800</pubDate>
-      <guid>https://example.org/post/file-codetrans-in-linux/</guid>
-      <description>昨天用TP发现在某个文件中输出中文会在浏览器显示乱码 经过测试发现是文件编码为gb2312 ，而不是utp-8 类型，所有找了几段资料来修复这个问题
-首先查看文件的编码 enca (如果你的系统中没有安装这个命令，可以用sudo yum install -y enca 安装 ) 查看文件编码
-enca filenamefilename 使用 enca * 命令可以方便查看所有文件的编码，方便找到问题文件 需要说明一点的是，enca对某些GBK编码的文件识别的不是很好，识别时会出现：Unrecognized encoding
-文件编码转换 2.1 enconv 转换文件编码，比如要将一个GBK编码的文件转换成UTF-8编码，操作如下 enconv -L zh_CN -x UTF-8 filename 这个命令好像我不太会用，反正是不起作用，总是执行不成功，我用下面的iconv命令成功的进行了编码的转换
-2.2 iconv 转换，iconv的命令格式如下： iconv -f encoding -t encoding inputfile\ 比如将一个UTF-8 编码的文件转换成GBK编码
-iconv -f UTF-8 -t GBK file1 -o file2 </description>
+      <guid>https://grass.show/post/file-codetrans-in-linux/</guid>
+      <description>昨天用TP发现在某个文件中输出中文会在浏览器显示乱码 经过测试发现是文件编码为gb2312 ，而不是utp-8 类型，所有找了几段资料来修复这个问</description>
     </item>
     <item>
       <title>最初的梦想</title>
-      <link>https://example.org/post/original-dram/</link>
+      <link>https://grass.show/post/original-dram/</link>
       <pubDate>Sun, 01 Jun 2014 00:00:00 +0800</pubDate>
-      <guid>https://example.org/post/original-dram/</guid>
-      <description>每天早上睁眼起床，开始忙忙碌碌的一天。吃饭睡觉，然后准备度过第二天。这是多数人的生活缩影，每个人每天都在忙碌中度过，很多时候甚至会忽略自己为什么去忙，有几个人能够记得那最初的梦想！
-我小的时候不知道梦想是什么，上学的时候也不觉得应该有什么梦想，直到不上学了，我才知道什么是梦想。也明白了梦想和现实的距离有多远。梦想就是沙漠中远处的海市蜃楼，看到它了，你不去走近，它就永远只会是一个梦，你追逐它而去，最终或许也只是一个梦而已，但是你走近梦想，就是有了目标，有了希望和动力，不一定到达海市蜃楼，但说不定会碰到绿洲或者别的风景。
-顺着那个灯塔径直前行，不被沙漠中的风沙迷住眼睛，不被风暴迷失了方向，那么离你的梦想就是n-1步，而n-1永远是比n要离得近的。自从那一年开始，我知道了何谓梦想，就不断的试探性的迈出脚步，虽然有时步大，有时步小，但是却一直没有停下脚步。那是我的梦想，同样也是我一生的遗憾。不论如何，我会坚持我最初的梦想。还有至今一直在坚持的那个她！</description>
+      <guid>https://grass.show/post/original-dram/</guid>
+      <description>每天早上睁眼起床，开始忙忙碌碌的一天。吃饭睡觉，然后准备度过第二天。这是多数人的生活缩影，每个人每天都在忙碌中度过，很多时候甚至会忽略自己为</description>
     </item>
     <item>
       <title>函数式编程之旅(二)——初窥门径</title>
-      <link>https://example.org/post/js-fp-2/</link>
+      <link>https://grass.show/post/js-fp-2/</link>
       <pubDate>Tue, 21 Jul 2020 11:08:00 +0800</pubDate>
-      <guid>https://example.org/post/js-fp-2/</guid>
+      <guid>https://grass.show/post/js-fp-2/</guid>
       <description>&lt;p&gt;一等公民是基石，纯函数是核心，柯里化是手段，函数组合是目的&lt;/p&gt;</description>
     </item>
     <item>
       <title>996ICU大事件——持续发酵中</title>
-      <link>https://example.org/post/996icu-doing/</link>
+      <link>https://grass.show/post/996icu-doing/</link>
       <pubDate>Fri, 29 Mar 2019 00:00:00 +0800</pubDate>
-      <guid>https://example.org/post/996icu-doing/</guid>
-      <description>一、起因 2019 年杭州电商公司有赞在公司年会宣布未来执行 996 工作制， CEO 白鸦回应“几年后回看，这次绝对是好事”。
-2019 年 3 月中，曝京东开始实行分部门的 996 或 995 工作制， 京东公关在脉脉平台上表示：“全情投入”。
-2019年3月26日，有人在GitHub上新建了一个项目，名为996.ICU。发出了程序员的怒吼，短时间内收获了大量的stars。
-二、现状 经过两天的传播，3月28日晚，突破5万stars。截止现在（3月29日晚）已突破10Wstars。
-目前除了项目本身之外，还有一个多语言的宣传主页。
-另外，还有一个投票的页面，用来收集所有996制度的公司并投票。
-Issue中已经超过了5000+。不过有效的讨论比较少，多数为广告贴，开qq群拉人，招聘帖，水贴。目前Issue已经被关闭。
-三、解决方案 有诉求，就得出解决方案，不然就只能沦为一场闹剧。
-截至目前，并没有一个行之有效的解决方案被讨论出来。
-被讨论的方案中有两个声音是比较突出的。
-一个是使用开源许可证来惩罚这些公司，另一个是成立基金会来支持法律维权。
-第一个解决方案正在逐步实施，开源许可证初版之后，经过了几次小幅度的修改，目前为其他协议(MIT，GNU，GPL，BSD等)的变种，通过附加条款来约束，一旦使用该开源项目的企业实行996，或者被列入996许可证的黑名单，则自动撤销使用许可授权。
-第二个解决方案，目前无进度。
-四、展望 虽然很不想说，但还是不得不说。这次的热潮，多半会以不了了之而收场。
-第一，行动过于温和，对于企业不痛不痒的。处于某些原因，媒体也并未大肆宣扬。由于程序员多数位于一线城市，生存压力大。试问有多少敢于真的罢工数月的？没有太多吧的。
-第二，社区内多数人都只是在强调自身的诉求和利益，把企业主摆在了敌对方。我认为这是不明智的，我们真的抵触的是加班吗？真的是996多出来的那几个小时吗？
-我们抵触的是那些，原本不需要加班的工作，由于管理不力、沟通不畅、上下游配合不好、制度约束等原因导致的无效加班或者低效加班。如果我们能在加班中创造价值并且愉快高效的创作，何乐而不为呢？
-我们从业者的诉求是尽量把工作在上班的时候都干完，下班后不要找我，更不要加班。企业主的诉求呢？在规定的时间内，这些工作必须要做完。即使加班加点也不能耽误我的进度，如果不加班就能完成？那岂不是更好。
-这里需要的就是专业能力了，对任务量的估算，对资源的分配和协调，上下游的沟通，部门间的配合，个人的效率。
-身为程序员，在饱受压迫中，我们为什么只想到去反抗企业主，而不是通过创新和改革来提高效率，提高生产力。从而达到一个双赢的结局？
-真心希望这次宣战能够冷静下来吗，仔细想想如何破局。</description>
+      <guid>https://grass.show/post/996icu-doing/</guid>
+      <description>一、起因 2019 年杭州电商公司有赞在公司年会宣布未来执行 996 工作制， CEO 白鸦回应“几年后回看，这次绝对是好事”。 2019 年 3 月中，曝京东开始实行分部门的 996 或</description>
     </item>
     <item>
       <title>打造高效的Mac开发环境（一）—— 科学上网</title>
-      <link>https://example.org/post/make-mac-dev-env-01/</link>
+      <link>https://grass.show/post/make-mac-dev-env-01/</link>
       <pubDate>Wed, 30 Aug 2017 00:00:00 +0800</pubDate>
-      <guid>https://example.org/post/make-mac-dev-env-01/</guid>
+      <guid>https://grass.show/post/make-mac-dev-env-01/</guid>
       <description>&lt;p&gt;工欲善其事，必先利其器&lt;/p&gt;
 &lt;p&gt;不管是我们以后用到的工具，还是各种文档，亦或是“谷歌一下”，这些都得翻墙，甚至GitHub都偶尔抽风，我们先把这重中之重解决掉！&lt;/p&gt;</description>
     </item>
     <item>
       <title>工作&amp;生活工具分享推荐</title>
-      <link>https://example.org/post/work-and-home-tools/</link>
+      <link>https://grass.show/post/work-and-home-tools/</link>
       <pubDate>Tue, 29 Mar 2016 00:00:00 +0800</pubDate>
-      <guid>https://example.org/post/work-and-home-tools/</guid>
+      <guid>https://grass.show/post/work-and-home-tools/</guid>
       <description>&lt;p&gt;分享一些平时工作生活中用到的工具。&lt;/p&gt;</description>
     </item>
     <item>
       <title>因为艰难，所以更需坚持——为了梦想，永不放弃</title>
-      <link>https://example.org/post/for-dram-not-giveup/</link>
+      <link>https://grass.show/post/for-dram-not-giveup/</link>
       <pubDate>Wed, 22 May 2013 00:00:00 +0800</pubDate>
-      <guid>https://example.org/post/for-dram-not-giveup/</guid>
+      <guid>https://grass.show/post/for-dram-not-giveup/</guid>
       <description>&lt;p&gt;感觉好久没有写日记了呢，也许是因为忙，也许是因为真的不知道写些什么吧，有些时候想写点什么，但是打开电脑，点开网页，就忘记了要说些什么。&lt;/p&gt;</description>
     </item>
     <item>
       <title>上班族如何实现财务自由——启蒙篇</title>
-      <link>https://example.org/post/officer-financial-freedom-1/</link>
+      <link>https://grass.show/post/officer-financial-freedom-1/</link>
       <pubDate>Tue, 02 Apr 2019 00:00:00 +0800</pubDate>
-      <guid>https://example.org/post/officer-financial-freedom-1/</guid>
-      <description>引子 我喜欢程序员的工作，但是我不想一直做程序员，我还有其他的事情想去尝试，想去摄影，想去西藏骑行，想去酒吧当调酒师，想去夜店当dj，但是我却不敢行动，一旦不做程序员，我很难支撑现在的生活开支，我已经被生活所绑架。我希望可以达到财务自由，不再为了维系生活而强迫自己做某份工作，可以不用纠结要不要去尝试某个职业。
-什么是财务自由？ 我问过不少的朋友，一提到财务自由，很多人的印象是这样的，
-买彩票中上一个亿就财务自由了
-去创业公司，等着公司上市，就能财务自由了
-在北京有五套房子，就财务自由了
-那这些观点对么，对，但是只对了一部分。
-狭义上的财务自由指的是，在每一个周期内(每月，或者每年)，被动性收入大于日常支出。
-被动性收入指的是哪些呢？ 凡是不需要我们投入很多时间就给我们带来现金流入，例如
-房屋出租
-股票/基金/余额宝等证券投资
-银行理财，万能险等理财产品
-另外一类是一次性投入时间之后，后续再次获得收入时，不用额外付出时间。例如：
-写作后的版税收入
-经营自媒体后的广告收入
-日常开支这里需要注意一下，是指为了维系生活所必须的开支，衣食住行这些，不包括：
-买奢侈品
-计划外的旅行
-突发大病的医疗开支
-其它计划外或冲动型的消费支出
-所以财务自由意味着什么呢？
-财务自由强调的不是你现在已经积累了多少财务，而是要有持续的稳定的现金流入，并且大于日常的开销。这样，我们比不必被生活所绑架，可以把自己从为生存奔波中解脱出来，去做一些自己喜欢的事情。你的时间属于你。
-但是财务自由不代表你就可以肆意挥霍，不会积累财富。当你面临一些突发事件时，依旧有可能会破产，继续被生活所绑架。
-两个途径 财务自由 = 被动收入 &amp;gt; 日常支出
-根据这个公式，我们可以看到，如果想要实现财务自由有两条途径。
-第一个是增加被动收入
-第二个是自我财务管理，减少日常开支
-并且对于还未实现财务自由的人来讲，自我财务管理比增加被动收入要重要得多。
-自我财务管理 财务管理的方法有很多，但是目的只有一个，根据当前的资产负债情况和历史的现金流情况，制定好未来的预算，并严格执行。
-先不讲如何具体的去实施，先说几个原则吧。
-坚持记账，做到每笔花销都能够记录在案并且分类
-在买东西前再三思考，真的需要买吗？可不可以不买，如果需要买的话，再问下自己，必须要现在买吗？可不可以过一段时间再买？
-不去消费自己经济能力之外的商品或服务。
-做到对自己的财务状况了如指掌，一秒钟内能说出来每个月的各类支出的均值是多少。
-清晰的了解自己有多少资产，有多少负债，短期内自己有多少收入和支出
-被动收入来源 银行储蓄/定期/零存整取，最原始的理财方式，每个月发工资后，第一时间存入银行，防止自己用来消费，变成日光
-余额宝/零钱通 这一类的产品灵活性高，收益略低于储蓄，但是更加方便，流动性强
-货币基金/国债逆回购/债券/纯债基金 这一类产品的收益率高于余额宝，风险稍微有一点，不过非常小，忽略不计
-混合基金/指数基金/股票基金 高风险，高收益。
-股票/金融衍生品 更高的风险，更高的收益率
-如何迈出第一步，开始行动起来 开始记账，使用账本或者APP均可，方式不重要，关键是要开始记
-剩下的钱都放到余额宝里面
-超过20块的饭局就不要参加了——开玩笑的
-几个里程碑 不同的阶段，采取的方案是不同的。
-一、 如果你现在的积蓄小于3个月的日常开支，或者月光族，甚至一堆负债。这个时候就不要考虑被动收入的事情了，避免一切的不必要开支，哪怕是暂时降低生活质量也在所不惜。每个月的工资发下来，扣除下个月的必要开支后，全部存到银行卡，或者买一个月的银行理财。尽量让钱只进不出，争取早日摘掉月光族的帽子
-二、当你积蓄超过3个月的日常开支后，可以把1~2个月的钱放到余额宝作为日常支出，剩余的钱2~1个月的钱买一些低风险的理财产品，例如定期、偏债基金，货币基金，债券，国债逆回购等。超过3个月日常开支的部分，可以开始定投指数基金。
-三、资金超过10W以上后，可以进行一点股票的投资。先把三个月的日常开支买低风险理财，剩余的钱分1/3到1/4买一些优秀的股票，中长期持有。
-四、超过100W后，差不多有了自己的投资理念，构建好自己的投资组合，每年10%的投资回报基本上是可以达到的。如果你花钱节省一点。那么就初步达到了财务自由。
-重要的事情说三遍 重要的事情说三遍
-重要的事情说三遍
-重要的事情说三遍
-当你的资产低于100W的时候，你的投资回报的收益率，肯定比不上你每年的工资涨幅。花很大心思去钻研理财，不如花精力让自己涨工资。前期投资自己比投资理财要更加靠谱。
-最后推荐一本靠谱的财商启蒙书籍——《小狗钱钱》</description>
+      <guid>https://grass.show/post/officer-financial-freedom-1/</guid>
+      <description>引子 我喜欢程序员的工作，但是我不想一直做程序员，我还有其他的事情想去尝试，想去摄影，想去西藏骑行，想去酒吧当调酒师，想去夜店当dj，但是我却</description>
     </item>
     <item>
       <title>异步——从Callback到Promise再到Rxjs</title>
-      <link>https://example.org/post/callback-promise-rxjs/</link>
+      <link>https://grass.show/post/callback-promise-rxjs/</link>
       <pubDate>Thu, 31 Aug 2017 00:00:00 +0800</pubDate>
-      <guid>https://example.org/post/callback-promise-rxjs/</guid>
+      <guid>https://grass.show/post/callback-promise-rxjs/</guid>
       <description>&lt;p&gt;异步编程从以前的晦涩难懂，到现在的简单明了，从以前的功能单一，到现在的功能强大。&lt;/p&gt;</description>
     </item>
     <item>
       <title>思念（一）</title>
-      <link>https://example.org/post/miss-1/</link>
+      <link>https://grass.show/post/miss-1/</link>
       <pubDate>Wed, 22 Jun 2016 00:00:00 +0800</pubDate>
-      <guid>https://example.org/post/miss-1/</guid>
-      <description>前天夜里的酒 至今未醒
-你妙曼的身影 还未消散
-举起杯子 透过 那鲜红的液体 望着你 带着满眼的苦涩
-也许 这一别 将会是 永远 永远的永远
-还好 现在已是今天 前天早已过去</description>
+      <guid>https://grass.show/post/miss-1/</guid>
+      <description>前天夜里的酒 至今未醒 你妙曼的身影 还未消散 举起杯子 透过 那鲜红的液体 望着你 带着满眼的苦涩 也许 这一别 将会是 永远 永远的永远 还好 现在已是今天 前天早已过</description>
     </item>
     <item>
       <title>与现实脱轨的两天</title>
-      <link>https://example.org/post/first-camping/</link>
+      <link>https://grass.show/post/first-camping/</link>
       <pubDate>Sun, 14 Jul 2019 00:00:00 +0800</pubDate>
-      <guid>https://example.org/post/first-camping/</guid>
-      <description>为了摆脱生活中的种种压力，在周五下班后的地铁上就在思考该如何度过一个周末。于是参加两天的露营就在地铁上被我临时决定了。
-前一天晚上 由于第一天晚饭是分组聚餐，需要每个组的组员准备各种聚餐的食材。由于报名比较晚。其他组员已经把食材准备好了，但是由于我们两人（我拉了一个朋友一起去露营）加入了，食材就面临着不充足的风险，我被委以重任，继续采购两斤肉卷。接到任务时已经9点10多分了，虽然我不知道超市的关门时间，但我还是快速的跑向超市。结果……可恶的超市，关门前5分钟就不让进去了，最终导致我的任务以失败告终。带着没有完成任务的愧疚心理，继续到便利店采购我这两天需要用到的6升水和两瓶功能性饮料，以及两顿午餐需要用来充饥的即食食品。翻箱倒柜的准备也在露营需要的其他用品，例如手电，雨衣，sos工具盒等，一切收拾妥当的时候，已经是将近一点钟了，而第二天需要五点半之前起床
-第一天上午 早上五点20分被闹钟吵起来，困得我肠子都悔青了，我干嘛要报名这个活动啊，周末在家睡个懒觉不好么！虽然满腹牢骚，但还是起床洗漱吃个早点，乖乖的坐上了去集合点的地铁。在出站前发生了一个小插曲，我在卫生间外面等我的朋友，一个男生拎着两袋水果过来准备上厕所，见我在那看着两个背包，就拜托我也顺便帮他看着点东西。他从卫生间出来之后，在短暂的交谈中，发现他也是参加今天这个活动的，然后就一起相伴前往集合点登车。
-第一天下午 下车开发发放租赁的装备，需要带着帐篷，睡袋，防寒垫以及炉灶。而我，外加一个西瓜，这个西瓜是在我们组的副队买的，刚好我的背包中还放的下，这个沉重的任务就由我来主动承担了。虽然十五斤的西瓜背一路很沉，但是想想可以在山顶吃到西瓜，想想都觉得兴奋呢。由于我是边走边拍照，所以一直处于队伍的最末尾，和负责收尾的副队走在一起，拍了一些风景的，更多的是前面及后面的队伍。看着每一个队友都那么努力的坚持着，喝了功能性饮料的我更加有力量了😄 路过一处悬崖的时候，由于其位置形状颇为独特，队友们纷纷过去摆pose拍照。通往拍照点的小路不足一米，且两侧都是悬崖，但是这些都不能阻碍姑娘们（还有小伙子）想要拍照留念的心。有的小心翼翼的走过去，有的胆子大的，一路小跑就过去了，看的我都替她们心惊胆战。 有一段下坡的路极为险峻，有几个女生在队尾有点困难，几个男生主动的进行帮扶，有一个提前下到坡底的男生特意回到坡上帮忙把女生的背包背下来。
-第一天晚上 六点左右到达了营地，开始了安营扎寨。等把帐篷支起来以后，同一个组的组员就围成一圈，开始了野外小火锅模式。我们组的都是一群饿狼，每一次揭开锅盖时，每一个人的眼睛都直勾勾的瞄准了锅里，准备着开锅后及早下筷。 吃完火锅后进入了最惬意的环节，吃西瓜。并且和旁边的一组分享了我们的西瓜。饭后一起点篝火，玩荧光棒，狼人杀。 一直等到天彻底黑下来，星星一个一个的都冒了出来。大家又在一起坐着看星星，拍摄星空。拿着入门微单的我，被P30虐的连渣子都不剩了。大家相约第二天四点去看日出，然后就各自回帐篷睡了。
-第二天凌晨 凌晨三点时，被外面的隐约的说话声吵醒。附近一个帐篷里的女生说听到的野猪的声音，附近帐篷里的三四个男生打着手电在附近找了一圈，没有发现野猪的踪迹。却惊喜的发现夜空中出现了银河。在草地上铺了几个防潮垫，一些睡不着的人，就聚在这里看繁星，看银河。 四点钟左右，银河逐渐隐去。一行人带着防潮垫，身披睡袋，浩浩荡荡的前往看日出地点。到的时候还早，天还是黑着的。但是东北方已经有了一些红色，大家坐在防潮垫上，用睡袋裹好身子，面对着那一丝红色，满怀希望的期待着。 随着天慢慢亮了起来，远处山峦之间的云海也渐渐映入了视线，拿着各自的拍照工具，记录着日出前的景色。今日的日出时间是4点57分，因为我们和太阳之间有一座比我们要高的山峰，所以延迟了十多分钟才见到第一缕曙光。 第一个发现太阳的小伙伴大喊大叫，兴奋的不得了，所有的期待终于变成了现实。纷纷拿起拍照工具，对着那刚初升的朝阳，贪婪的记录着。留下今日的第一份美好。 一起拍了一张后背的剪影，大家都是发自内心的笑着，虽然在照片上看不到笑容，但是却可以感受到笑容背后的那份喜悦。 早饭依旧是小组聚餐，煮面。有个细心的小哥哥，特意为每一个组员煮了一杯热水。纷纷感慨，如此一个居家细心的好男人，怪不得已经结婚了呢。
-第二天上午 之后就是拔营，收拾垃圾，拍合照留念。然后开始出山。下山的风景就没有上山时那么美丽，而且由于负重减轻和地形易行，下山的速度快了许多，我也喝掉了最后喜欢红牛，然后就一路超车，从队尾走到了队头。在最后的两公里，有很多连续下坡，且都是土路，我们组的几个人又碰到了一起，就小跑着下坡，释放最后的体力。发现女生们剩余的体力还真多。快到山脚下，路过一个小卖铺。二话不说买一瓶冰镇的雪碧。透心凉，真的心飞扬。瞬间活力值全满。
-感谢草履虫的这次活动，让我第一次尝试了山顶露营，并且遇到了这么多有趣的人和事。第一次在野外吃火锅，第一次成功的见到了银河，也第一次见到了山中日出。这两天中，短暂的远离了都市的喧嚣，和生活中的琐事。感受着大自然的魅力，以及伙伴间的简单关系，享受着简单的快乐。而这一切都是为了更好的回到现实。就像今早看到了期待已久日出一样，对生活的期待也会实现呢！</description>
+      <guid>https://grass.show/post/first-camping/</guid>
+      <description>为了摆脱生活中的种种压力，在周五下班后的地铁上就在思考该如何度过一个周末。于是参加两天的露营就在地铁上被我临时决定了。 前一天晚上 由于第一天晚</description>
     </item>
     <item>
       <title>在工作中生活VS在生活中工作</title>
-      <link>https://example.org/post/work-in-life-vs-life-in-work/</link>
+      <link>https://grass.show/post/work-in-life-vs-life-in-work/</link>
       <pubDate>Sun, 26 Jun 2016 00:00:00 +0800</pubDate>
-      <guid>https://example.org/post/work-in-life-vs-life-in-work/</guid>
-      <description>一、作为一枚程序源，每天的生活就是黑白颠倒，白天无精打采，夜晚点灯熬夜的工作
-记得去年刚来公司的时候，因为公司人手不多，所以一个人干好几个人的活，从前端到后端，忙的不亦乐乎啊，有一段时间因为赶项目，基本上每周末都要加班，每天在办公室敲代码直到3点多，但是依然热情高涨
-那段时间基本上除了在办公室敲代码，就是在公司的宿舍睡觉，饿了就叫外卖，整整一个多月没下楼，可以说那个月只有工作而没有生活，因为根本就没有工作之外的时间和精力
-二、那段时间过后，开始思考一个问题，这么放弃生活的拼命工作为了什么呢?
-人生不是为了争渡，因为根本就不存在彼岸，人生几十年，只是为了享受生活，如果脱离的生活只剩下工作，那么这工作也就没有了意义
-于是寻求改变，周末减少加班，多一些周末的娱乐，朋友的聚会，这样也还不错，每周给自己找点事情做，除却工作之外的事情，让我能够感受到，我的生活中不止工作
-三、但是渐渐发现这样还是不爽，虽然每周有一天是脱离工作的，但是依然每天从起床到入睡还是围着工作转，我把这种状态理解为在工作中生活，工作是我的全部，而生活则是从工作的时间中挤出那么一小点来，我觉得这种状态不是我想要的，于是我搬出了公司宿舍，和同事一起租了房子
-现在的生活状态就是每天早上起床就打车去上班，晚上8-9左右开始打车回家，到家就10点多了，然后开始和同事做晚饭。这样吃完晚饭就11点多了，累的话就直接睡了，不太困就看点自己想看的东西。于是状态发生了轻微的改变，变成了在生活中工作，虽然工作时间在生活中占得比较比较大，但是多了很多可以自由支配的时间以及空间。
-四、其实这种状态也不是我想要的，虽然现在能有差不多的收入，但是生活中的自由被压榨到了最低限度。也许真的是程序猿这个特殊的职业群体导致的状态吧，
-我要努力把自己发展成一个斜杠青年，而不仅仅是程序猿这一苦逼的身份，从不同的角度来感受生活，享受工作的乐趣在生活中工作VS
-五、从小语文就不好，总是因为语文被叫家长，尤其是在中考这一对我而言人生最大的转折点中，语文以53分的成绩夺得了全班倒数第一，偏科太严重导致了我和大学失之交臂
-工作后，渐渐喜欢上了文字，虽然自己不会写，但是喜欢读一些好的文章，慢慢的，有了自己想要练习写作的念头
-文字，作为思想的一种载体，与他人分享故事和思想的同时，也给自己带来愉悦，不论文笔如何，写出来就是一种快乐。
-把写作融入到生活中，培养自己的兴趣。如果有可能，也可以把写作作为一份工作。</description>
+      <guid>https://grass.show/post/work-in-life-vs-life-in-work/</guid>
+      <description>一、作为一枚程序源，每天的生活就是黑白颠倒，白天无精打采，夜晚点灯熬夜的工作 记得去年刚来公司的时候，因为公司人手不多，所以一个人干好几个人的</description>
     </item>
     <item>
       <title>人生路上，我跨出了最大的一步</title>
-      <link>https://example.org/post/great-step/</link>
+      <link>https://grass.show/post/great-step/</link>
       <pubDate>Mon, 02 Sep 2019 00:00:00 +0800</pubDate>
-      <guid>https://example.org/post/great-step/</guid>
-      <description>距离上一次更新公众号已经过去一个半月了，不是懒得更新，而是没有时间更新。本来今天也是没有时间的，但是由于腿脚不便，今天的穿越活动放了鸽子，在家宅了一天。8月份刚刚过去，顺便写了一下8月份的’总结’，回顾一下自上次更新到现在的一些变化。
-7月13号跟着草履虫到户外进行了两天的重装露营，背着两天的伙食，帐篷睡袋，和6升的水，外加一个十多斤的西瓜。行进途中也是比较活跃，由于带着相机拍照，所有不断地从队中落后到队尾，又跑到队中。用一个队友的话来讲就是“窜上蹿下的”。这两天的行程让我感受到了极大的快乐和成就感。
-我当时以为是因为露营时看到的美景带给我的快感。所有我便购买露营的各种装备，期待下一次的露营。可惜的是，到现在都没有再露营一次。
-在那之后，7月20日，和几个草履虫认识的朋友，一起去棺材山探洞，距离和爬升都不是很大，主要的是进洞里探险的乐趣，由于没有设置路标，在里面差一点便迷了路。
-7月28日，跟随着草履虫爬了香巴拉，从香山到八大处的拉练，活动强度比之前都稍微大一些。爬升700米。
-8月3日，继续跟着草履虫，爬了北京海拔最高的山——东灵山。爬升1000米。花了4天的时间，才把腿恢复回来。
-8月11日，跟着草履虫走了一个休闲的路线，百花山。爬升只有400米，都是景区台阶路。
-8月17日，开始参加AA的活动，报名了京西四峰的一个环穿。鹫峰——阳台上——妙峰山——萝卜地北尖儿。这一次距离25Km，爬升1800米。一向喜欢在后队晃悠的我，想走到前队看看风景，加入了前队的两人小组。在一小段公路上，有人提议跑一会，我为了不落单，也只好跟着跑了起来。到后来，只要不是上坡，一律用跑的。而且其中有一段路，途中有大量的越野跑者。这一次充分体验到了越野的快乐。我终于发现，我喜欢的就是这种感觉。
-8月21日，为了想以后能进行越野跑，便开始了跑步。
-8月23日，为了能够让自己变得自律，开始了早起和晨跑。每天5点半到6点起床。
-8月24日，在悦跑圈上面看到一个人的动态，讲述她在开始跑步一个月的情况下，便报名了河间的半马，深受感动，立刻也报名了一个半马。很多时候总想着要等着准备好了再去做一件看起来很难的事情，而往往不会等到万事俱备的这种时候。这也是拖延症的一个借口吧。
-8月27日，在微信群里看到朋友转发的UTMB的赛事情况，对越野跑更加的向往，因为之前的经验，决定不能等到有氧、心肺、耐力、力量都训练好了再去实施。于是报名了我的第一个越野赛事，一个15km级别的轻越野，爬升1000m。
-8月31日，在微信群里约了一个朋友，再加上我的一个发小，一起去越野赛的场地走了一圈，虽然由于负重过多，且照顾体力不支的发小，路上一直走走停停。但是全程没有刻意的休息。到了最后的两公里才开始跑，但是时间也是足够完赛的。
-以一场越野跑(走)结束了八月，而我也找到了方向。
-这些年的网络昵称里面，我最喜欢的还是“奔跑的小草”，换了好几次别的昵称，后来又都换了回来。我今天突然发现，从我的昵称里面，就很清楚的透露出我的喜好。奔跑着的小草，一颗平凡的小草，在荒野中，自由的奔跑。这不就是越野嘛。
-我享受在山野中的奔跑，需要时刻注视着脚下的路，使身体处于最灵活的姿态，随时准备应对突然出现的复杂路况。每一步的落下都是和自然的和谐相处。
-对我影响比较大的有两个人，一位是年初拉我去后河穿越的朋友，让我领略到了穿山越岭的乐趣，所以才会有了之后很多次的山地穿越。另一位是在四峰环穿时，带我在山里跑的朋友。我在那次体验到了越野的乐趣，让我能够真正的成为奔跑的小草。
-啰嗦了这么多，想表达的只有一点，我找到了喜欢的东西，那就是越野。而由于越野，让我变得自律，热爱运动。
-（此处不安利越野跑的好处）</description>
+      <guid>https://grass.show/post/great-step/</guid>
+      <description>距离上一次更新公众号已经过去一个半月了，不是懒得更新，而是没有时间更新。本来今天也是没有时间的，但是由于腿脚不便，今天的穿越活动放了鸽子，在</description>
     </item>
     <item>
       <title>善意的谎言</title>
-      <link>https://example.org/post/jakob-the-liar/</link>
+      <link>https://grass.show/post/jakob-the-liar/</link>
       <pubDate>Tue, 28 Jun 2016 00:00:00 +0800</pubDate>
-      <guid>https://example.org/post/jakob-the-liar/</guid>
-      <description>“你昨晚真的去网吧了吗？”
-“对啊，我和C君好几年没见面，去网吧撸了一晚上，怀怀旧”
-“那你身上怎么没有眼味儿呢？”
-“那个&amp;hellip;&amp;hellip;网吧是禁止吸烟的”
-女人瞪了他一眼，接着拷问他
-“昨天我闺蜜说在一个你不该出现的地方看到你了呢”
-“怎么可能呢，媳妇儿”
-“哼，给你最后一次机会”
-“我说还不i行嘛，其实&amp;hellip;&amp;hellip;那个昨天我前女友打电话找我借钱&amp;hellip;”
-“她在B市没有别的朋友，突发急性病需要留院观察一晚”
-“所以就&amp;hellip;&amp;hellip;”
-他低着头偷偷瞥了一下阴沉着脸的女人，等待者咆哮降临
-“切，瞧你那德行，还不快点给我做早餐去，本娘娘还饿着呢”
-说完，女人径自去洗手间开始化妆</description>
+      <guid>https://grass.show/post/jakob-the-liar/</guid>
+      <description>“你昨晚真的去网吧了吗？” “对啊，我和C君好几年没见面，去网吧撸了一晚上，怀怀旧” “那你身上怎么没有眼味儿呢？” “那个&amp;hellip;&amp;he</description>
     </item>
     <item>
       <title>羡慕别人的故事，不如自己成为主角</title>
-      <link>https://example.org/post/do-leading-role-for-mine/</link>
+      <link>https://grass.show/post/do-leading-role-for-mine/</link>
       <pubDate>Mon, 09 Sep 2019 00:00:00 +0800</pubDate>
-      <guid>https://example.org/post/do-leading-role-for-mine/</guid>
-      <description>这句话的出处是?这句话没有出处，是我昨天在越野跑比赛中突然浮现的一句话。
-一 三周前，我去鹫峰爬山，在妙峰山到娘娘庙的那段路上，看到了很多越野跑者，不自觉的投去了羡慕的目光。那是我第一次知道越野跑，才知道在崎岖的山野小路上还可以跑的这么快，这么自由。当时就想，过几年我也要跑。
-二 两周前，虽然短期内不会去越野跑，但是也要提前准备着，所以开始了每天路跑，为了能有时间用来跑步。逼着自己每天5点半起床。而为了能够让自己5点半起床，就得逼着自己在11点左右睡觉。
-三 一周前，在悦跑圈看到了一个跑友的马拉松故事，她开始跑步一个月之后就报名了半马，不知者无畏的精神使她开了一个好头，一直坚持跑了下来。困难一定是存在的，但并不像我们想象中那么强大，多半是因为对未知事物的恐惧，对不确定性事物的抵触心理。想通了这一点之后，我报名了一个半程马拉松，一个10km级别越野跑。
-四 一天前，我成为了自己故事中的主角。越野跑开赛了，虽然过程很痛苦，但最终的成绩还是很让我满意的，2小时22分钟完赛，比我预期的3小时要快不少。更重要的是，这已经是我自己的故事了！</description>
+      <guid>https://grass.show/post/do-leading-role-for-mine/</guid>
+      <description>这句话的出处是?这句话没有出处，是我昨天在越野跑比赛中突然浮现的一句话。 一 三周前，我去鹫峰爬山，在妙峰山到娘娘庙的那段路上，看到了很多越野跑</description>
     </item>
     <item>
       <title>母亲，生日快乐</title>
-      <link>https://example.org/post/mom-happy-birthday/</link>
+      <link>https://grass.show/post/mom-happy-birthday/</link>
       <pubDate>Mon, 04 Jul 2016 00:00:00 +0800</pubDate>
-      <guid>https://example.org/post/mom-happy-birthday/</guid>
-      <description>&amp;gt; 昨天是我妈妈生日
-我老家是河北的，现在在帝都上班，前一天为她选了一枚黄金的戒指，带着县城为她订的一个生日蛋糕，在没有通知她的情况下，推开了家门。看着她惊喜的表情，我觉得她很幸福。晚上和我老爸一起，再加上一个花椒直播的观众——我老姐一起为我妈庆生，在她吹完蜡烛之后，把戒指那出来，亲手为她带上。亲手为她切蛋糕。我努力想让她成为最幸福的妈妈。
-妈妈跟我说，过一个生日而已，你还特意回来一趟，还带了礼物，还得特意请上一天假才行，这么浪费干嘛，还不如省点钱多给家里攒点呢。是啊，昨天回家，在家待一晚然后就得赶紧回京，是太赶了。但是为了她能高兴，我觉得很值。今天不谈父母几十年的养育之情，也不谈小的时候父母是多么不嫌麻烦的照顾我们，只谈女人，女朋友和妈妈。
-记得前几年，那时有一个异地恋的女朋友。平时在两地，只有在节假日的时候能偶尔聚聚。所以在她生日的时候，我都会请假为她过生日，礼物和蛋糕从来都不会空缺。几乎所有人都觉得这是理所应当的吧。因为她是我女朋友，是我喜欢的女生，是将来有可能嫁入我家，陪伴我走过余生的人。相比之下，我们在外地工作后，一年能回家的次数一只手肯定能数的过来，如果一年能回家超过一只手的次数，那这个人可以说很思念和关心父母。这个数目远远少于见女朋友的次数吧，和女朋友另外不同的地方就是，她一定是我的亲人，而不是有可能，并且我也会一直爱她。如此相比之下，我有什么理由和借口不为她请假庆祝生日呢
-妈妈嫌我买东西乱花钱，本身我们家庭不富裕，而且过几年我结婚也需要一大笔钱，妈妈希望我省着点花，将来能少借点。我在吃蛋糕的时候就跟妈妈说，儿女们想尽点孝心，您不该拦着或者拒绝。虽然我现在不富裕，但是也不差那点钱，不能等到我真的很有钱了，然后再来尽孝，我怕到时候来不及了，我大姨省吃俭用一辈子，得病之后特别的后悔，说如果病好了再也不像以前那么太省吃俭用了，不过她的病永远也不会好了，被确诊为肺癌晚期。子欲养而亲不待是人生最大的遗憾。
-你一直爱着的妈妈还不上一个刚认识的男/女朋友吗？请不要只把你的精力花在爱人身上，也要放到父母的身上啊，也不要拿经济能力的不足当借口，从前年开始我每年都会在父亲节和母亲节打电话送去祝福，在每一年爸妈的生日的时候都会买一个蛋糕，妈妈很开心的跟我说，周围的好多邻居都在嫉妒我妈妈，每年过生日都能吃上儿子买的生日蛋糕，看着妈妈那跟小孩子一样的开心，我知道我的目的达到了。前几年挣的钱少，只能买得起一个蛋糕，今年工作好点了，买得起几百上千的小礼物了，不管什么时候，不管我买了多贵或者多便宜的礼物，我妈妈都会很开心。表哥说，所有的父母都会记得很清楚儿女 的生日，但是现在大部分的儿女都不知道自己父母的生日，其实身边很多这样的例子。
-&amp;gt; 有人会觉得我太矫情，注重这些形式上的东西，其实不是这样的，我爱他们，我想在我的能力所及之内给他们幸福，让他们感受到我对他们的爱。
-&amp;gt; 谨以此文再次祝妈妈生日快乐</description>
+      <guid>https://grass.show/post/mom-happy-birthday/</guid>
+      <description>&amp;gt; 昨天是我妈妈生日 我老家是河北的，现在在帝都上班，前一天为她选了一枚黄金的戒指，带着县城为她订的一个生日蛋糕，在没有通知她的情况下，推开了家</description>
     </item>
     <item>
       <title>人生首个50km越野跑</title>
-      <link>https://example.org/post/first-50km-trai-run/</link>
+      <link>https://grass.show/post/first-50km-trai-run/</link>
       <pubDate>Thu, 10 Oct 2019 00:00:00 +0800</pubDate>
-      <guid>https://example.org/post/first-50km-trai-run/</guid>
-      <description>比赛过去一周了，简单的回忆一下，也就懒得放图了。比赛前的半个月，在好友的鼓励(怂恿)之下报名了50km组别的比赛。比赛前一天，坐组委会的大巴来到了平谷区玻璃台村，领取完参赛包就去办理入住了。之后回到小广场听着音乐会，期间和雷神做起了互动。第二天早上，8点，准时开跑。50km的赛道分为五个赛段，中间有4个打卡点和补给站。第一个赛段有五公里的防火道。只要是坡度缓一些的，我都会小跑起来。到达东指壶以后，便是山路了。在大约8公里处，有一小段台阶路，前面的一个女生不小心摔倒，把膝盖磕伤，应该是留了不少血。因为前面有人停下帮忙救助，我也就没有停下，继续向前了。大概9.5公里处的时候，听到前面的队员说有马蜂炸窝，并且有人被蜇了。我们这些后面的人就从旁边没有路的地方缓慢穿行，从侧面绕过了那个马蜂窝。很快达到了cp1，灌满两个软水壶之后，又喝下去了大半瓶矿泉水，没有休息就继续上路了。从cp1到cp2的路是最好走的，cp2到cp3的路上，我的腿便开始了抗议，走下坡路的时候就只能一瘸一拐的了。这时候放弃了冲击10小时的打算，第一目标改为了安全完赛。到了cp3站点后，进行了食物和能量的补给，连吃了四个包子，并且还让志愿者用筋膜枪放松了下腿部肌肉，那酸爽，简直了。因为知道后续的第四赛段是最难啃的一块骨头，所以这一站休息的时间较长。出站后和一个大哥结伴而行。我们俩都是一直走着，我是因为跑不动，他是因为刚吃饱消化消化食。我俩一路唠嗑，穿越了果园小路，出了果园之后他就开始跑了，而我只能慢慢走着。从赛前提供的信息来看，第四赛段是5个小时关门，我就知道这一段不好走，但是我觉得4个半小时应该也够用了。唉，虽然我能猜到这一段很虐，但是我没有猜到它能这么虐。前前后后十来个大小山头，除了上坡就是下坡，并且坡度多数很陡峭。身边的队友至少说了四五次“这应该是最后一个上坡了，剩下的就是下坡了”，一次次的燃起希望，一次次的失望。都差点要崩溃了。在这个赛段上一直跑到天黑，打开了头灯。并且由于我戴的是半指手套，所以天黑后，手指也总是抽筋。到了cp4的补给站之后，坐在那里就不想动了，让志愿者帮忙端来一碗又一碗的小米粥，补充热量和能量。在小米粥里面放两勺榨菜，特别好吃。我一共喝了四五碗吧，才依依不舍的上路。最后一个赛段全程一个人，只有后面有两个人超过我而去，就再也没有碰到过其它人。一向怕黑的我，在山野里独自行走，也没有感觉到害怕，这或许就是专注的力量吧。到达终点后雷神给了一个拥抱，简单的吃了点补给，就回客栈睡觉了。忘记了拉伸肌肉。这一次是第一回挑战50km，感受很强烈。首先是腿部肌肉的重要性，平时不怎么刻意的锻炼肌肉，在长距离越野中，膝盖后侧的肌肉最先无力，导致每一次弹腿都会特别的痛，以后需要加强蹲起的练习。对于体能的分配不合理，前面很明显是用力过猛，导致在不到10公里的时候，小腿就有了抽筋的征兆。以后应该提前计算好每个赛段的用时，不能乱了节奏。这一次的50km组，在cp4关门了1/3的选手，那么多人都会被关门，如果我被关门也没有什么大不了嘛，那我就可以放心的去报100km、168km的比赛。大不了就是被关门嘛，也不算多失败。谁不会经历几次关门呢。明年的环长城100，我要报100km的，争取以较好的状态来参赛。其它的小插曲在客栈里遇到了一对参赛的兄妹，大哥今年65了，依然坚持跑50km。我完赛之后回到客栈，看到大姐在那不停的刷实时成绩，看一下大哥到哪了。害怕大哥在cp4被关门，很可惜的是大哥真的在cp4被关门，并且只晚了四分钟。大哥说，明年继续来复仇。在一路上路过了一些村庄，有一些村民看到我们，便给我们加油打气，有大人，也有小朋友。在路过果园的时候，有一个大妈问我们累不累，我机智了一把，肩膀上插着国旗，怎么可能会累呢。</description>
+      <guid>https://grass.show/post/first-50km-trai-run/</guid>
+      <description>比赛过去一周了，简单的回忆一下，也就懒得放图了。比赛前的半个月，在好友的鼓励(怂恿)之下报名了50km组别的比赛。比赛前一天，坐组委会的大巴</description>
     </item>
     <item>
       <title>凹多边形和点的位置问题(凹包问题面对对象的算法)</title>
-      <link>https://example.org/post/concave-polygon-and-point/</link>
+      <link>https://grass.show/post/concave-polygon-and-point/</link>
       <pubDate>Mon, 01 Aug 2016 00:00:00 +0800</pubDate>
-      <guid>https://example.org/post/concave-polygon-and-point/</guid>
+      <guid>https://grass.show/post/concave-polygon-and-point/</guid>
       <description>&lt;p&gt;已知一个任意多边形的各顶点坐标，任意给一点坐标，判断是否在该多边形内部或边线上, 这只是一个笨拙的实现&lt;/p&gt;</description>
     </item>
     <item>
       <title>人生就像一个多面体</title>
-      <link>https://example.org/post/life-is-like-polyhedron/</link>
+      <link>https://grass.show/post/life-is-like-polyhedron/</link>
       <pubDate>Mon, 09 Dec 2019 00:00:00 +0800</pubDate>
-      <guid>https://example.org/post/life-is-like-polyhedron/</guid>
-      <description>我们的人生就像一个多面体，面对不同的人呈现出不同的一面。
-“妈，我想吃韭菜花”，每年的秋天都会给妈打一个电话，告诉她我想吃她腌的韭菜花了，然后她就会到集市上面买上一大袋的韭菜花，给我和我姐弄好腌上。我在父母面前可以去表达一些诉求，去主动的索取一些东西。而不用担心会被拒绝，会影响到我在对方心里的形象。
-“去吃顿海底捞吧，我请客”，“今天请你吃牛排怎么样”，约朋友吃饭的地点一般会选择比较知名的连锁餐饮，在朋友面前通常会变现的很大方，尊重朋友的意见，表现的生活有些“档次”。
-“ok，我这就出发，两个小时后到”，然后到了之后在楼下再等半个小时才会见到人。为了陪喜欢的人跑步，来回四个小时的路程，和中间一个小时的跑步。在恋爱中，展现的卑微、易碎、无条件的付出、温暖和体贴。
-“这个bug最多5分钟之后改好”，在工作中展现的是自信、能力、还有专业，接受挑战。
-“又get到新技能——单板滑雪”，“50km越野赛顺利完赛，感动了自己”，“坚持每天五公里第50天”，所有精彩的和值得纪念的瞬间都会发到微信朋友圈。经营着一个坚强、有毅力、意志力强大、自律、阳光、积极向上、勇敢、自由，丰富多彩的人设。
-“我TM是不是特别贱？”，“兄弟，今天状态不好，陪我喝酒吧”，“我不知道我想要什么”，“我现在最大的任务就是脱单了”，在好朋友面前，展示自己的软弱、懦弱、迷茫、抑郁、缺爱、孤独。
-“哇，那个女生的胸好大啊，捏一下一定很舒服吧”，“如果我出生在富裕之家的话，肯定不会活的像现在这样落魄，”，面对自己的时候，一些邪恶、黑暗、毁三观的念想，统统呈现给了自己。
-到底哪一个是“我自己”呢，哪一个是伪装出来的，哪一个又是真正内心呢？
-也许，每一个都是真实的我自己吧。也许，每一个都是一个面具。这所有的面具都是某个东西在不同的外界环境下的不用适应状态。就像变色龙一样，会随着环境的不同而自动改变。不管怎么变但还是自己。
-有时间的话，我想好好的分析一下，这些不同的面具之下到底是哪些东西，而为什么这些东西会在某个环境下会展现在这样的特点。</description>
+      <guid>https://grass.show/post/life-is-like-polyhedron/</guid>
+      <description>我们的人生就像一个多面体，面对不同的人呈现出不同的一面。 “妈，我想吃韭菜花”，每年的秋天都会给妈打一个电话，告诉她我想吃她腌的韭菜花了，然后</description>
     </item>
     <item>
       <title>工资从2k到22k，最终到0k的发展历程</title>
-      <link>https://example.org/post/from-2k-to-22k-to-0/</link>
+      <link>https://grass.show/post/from-2k-to-22k-to-0/</link>
       <pubDate>Wed, 10 May 2017 00:00:00 +0800</pubDate>
-      <guid>https://example.org/post/from-2k-to-22k-to-0/</guid>
-      <description>15年，那时候23岁，怀着一颗无知且无畏的心来到首都寻找工作，想要立志踏入IT行业。
-由于那时候不懂技术，所以也不知道自己该找IT行业内的什么岗位，就在智lian和88888同城上面海投简历（如果那也算简历的话），但是收到的电话基本上都是实训或者培训机构的，像我这么刚烈且自负的人，怎么可能相信培训机构有我自学的速度快呢？经历了三周的疯狂找工作和被无情丑拒，终于萌生了打退堂鼓的念头
-在这关键时刻，一个小出版公司打电话约我去面试，非互联网企业，老板也不懂技术，他拿出苹果官网给我看，“我想要个这个的网站，你会做吗？”，我告诉他，我暂时不会，回去看一天就会了。于是老板特别“欣赏”我，立刻告诉我被录用了。于是乎，我误打误撞的进到了互联网前端的阵营，月薪2000整
-这半年中，每个月住宿350，水电网煤气150，买了一个锅，然后就是三餐自己做，每月400左右，住宿离公司很近（通州），没有交通费用。所以那段时间每个月能剩下千八的。
-但是我燥热的心怎么可能在这种小地方安静下来呢，于是跳槽去了一家互联网公司，从前端转为后端，到全栈，再到架构。一年半时间完成了工资从4k，到7k，再到15k，再到22k，最终离职
-因为忍受不了上家企业的技术氛围，以及管理的混乱。所以目前和朋友创业中，又回到了没有钱的时期。</description>
+      <guid>https://grass.show/post/from-2k-to-22k-to-0/</guid>
+      <description>15年，那时候23岁，怀着一颗无知且无畏的心来到首都寻找工作，想要立志踏入IT行业。 由于那时候不懂技术，所以也不知道自己该找IT行业内的什么</description>
     </item>
     <item>
       <title>2020，随心而动</title>
-      <link>https://example.org/post/2020-begin/</link>
+      <link>https://grass.show/post/2020-begin/</link>
       <pubDate>Fri, 17 Jan 2020 00:00:00 +0800</pubDate>
-      <guid>https://example.org/post/2020-begin/</guid>
-      <description>2019，鱼跃龙门 刚过去的一年可以说是人生中变化最大的一年也不为过。去年可以分为两个阶段，上半年的关键词是迷茫，下半年的关键词是探索上半年经历了失恋和跳槽，大部分的时间用来准备考证，而且是目前看起来用不上的证。感觉不知道自己要什么的状态。下半年一入户外深似海，从露营到爬山穿越，再到越野和路跑，最后还有个滑雪。中间尝试过摄影。
-工作上 在上一家公司干的不爽，不喜欢公司的做事风格和996的工作节奏，干净利索的离职，换了现在这家965的公司。但是对于程序猿这份工作已经失去了热情。2020年将会告别程序猿这个职业，寻找新的挑战，回归本心，继续混下去，耽误的是自己的时间。
-爱情上 上一段恋情结束之后，有过几段时间较短的暧昧期，但是由于各种原因，未能走入正轨，对于理想的伴侣，已经不知道自己喜欢什么样的女生了，只要能相处比较轻松就行，可能这也是一个很难的条件了吧。已经做好了幸福快乐单身过一生的口头准备。
-个人财务 上半年比较节约一点，下半年由于各种兴趣活动，再加上购置各种装备，月均花销一万以上。由于基数小，证券投资也只有5k的收益。财富积累勉强突破6位数吧。明年的主题就是省钱和攒钱啦。年底给自己和家人买了几份保险，减少因为自己作死对整个家庭造成的伤害。
-兴趣爱好 年中的时候先对摄影有了兴趣，买了器材，结果没用几次。后来去了一次露营，花一千买了个露营背包，结果一次也没有用过。后来爬山穿越，又买了一堆装备。好在爬了很多次。迷上越野之后，各种装备置办的很齐全。有的还是一步到位的。大概跑了两三个十几公里的，两个二十多公里的，两个五十公里的越野赛。滑雪也是一个意外的收获，直接单板入坑，在北京滑过四天，到崇礼滑过三天。明年会克制一下这些烧钱的爱好。2020也会有尝试更多的爱好，
-个人成长 一年的时间，赖以吃饭的技术上没有啥长进。反倒是运动能力提升了不少，胆量比之前大多了，很多之前不想或者不屑去尝试的事情，都能去体验一下。行动力比之前也略有提升。总之，这是个人变化很大的一年。抑郁症的药物从7月份开始爬山之后再也没有吃过了。抑郁的状态虽然偶尔也会出现，但是不会超过一周。运动之后基本上就可以缓解掉了。有意识的对抗自己的完美主义。承认和接受自己的不完美。
-2020，随心而动 </description>
+      <guid>https://grass.show/post/2020-begin/</guid>
+      <description>2019，鱼跃龙门 刚过去的一年可以说是人生中变化最大的一年也不为过。去年可以分为两个阶段，上半年的关键词是迷茫，下半年的关键词是探索上半年经</description>
     </item>
     <item>
       <title>我这焦虑的人生</title>
-      <link>https://example.org/post/my-anxious-life/</link>
+      <link>https://grass.show/post/my-anxious-life/</link>
       <pubDate>Thu, 11 May 2017 00:00:00 +0800</pubDate>
-      <guid>https://example.org/post/my-anxious-life/</guid>
-      <description>没有工作的时候我在焦虑，月入三万的时候我也在焦虑，出来创业我还在焦虑
-焦虑来自对未来产生的恐惧
-来自空虚的灵魂
-来自能力不足以支撑的梦想
-以及对死亡深深地恐惧与无助
-如何寻求宁静的内心，如何放心心中执念，如何获得解脱</description>
+      <guid>https://grass.show/post/my-anxious-life/</guid>
+      <description>没有工作的时候我在焦虑，月入三万的时候我也在焦虑，出来创业我还在焦虑 焦虑来自对未来产生的恐惧 来自空虚的灵魂 来自能力不足以支撑的梦想 以及对死亡</description>
     </item>
     <item>
       <title>机器人总动员——浪漫而感人的动画电影</title>
-      <link>https://example.org/post/movie-wall-e/</link>
+      <link>https://grass.show/post/movie-wall-e/</link>
       <pubDate>Tue, 04 Feb 2020 00:00:00 +0800</pubDate>
-      <guid>https://example.org/post/movie-wall-e/</guid>
-      <description>昨天就计划好今天看一部电影，但是没有想好看哪一个，打开了爱奇艺，看着推荐的那些，也都没想看的欲望，索性来个更加直接一点的，上豆瓣电影排行榜去找吧，看上那个看那个，反正只要是豆瓣的高分电影，总不会差的。看着电影分类，一眼就看中了科幻，从排行中又选中了这个机器人总动员，之前有听过这个电影，但是由于没有看过简介，总以为这个是一个给儿童看得那种搞笑的电影。点开电影简介和短评，发现评价非常高，尤其有人评价它很浪漫，我在想，机器人类型的还能浪漫到哪里呢？我在孤独中等待了700年，所以看到你的第一眼，我便知道你是那个和我牵手一生的人。 当我看到瓦力给处于保护状态的伊芙遮风挡雨的时候，真的哭了出来， 带着伊芙四处游荡，做各种浪漫的事情 最终发现还是不能唤醒伊芙，瓦力还是带着不甘恢复了往日的生活， 当瓦力看到送伊芙来地球的飞船到来的时候，发了疯的朝回跑。他知道，如果错过了，那将是一生，尤其它的一生还是那么的漫长。 看到伊芙被带走，瓦力经过了千分之一秒的思考，爬上了飞船的外壁 瓦力曾经想要去牵伊芙的手，但是被伊芙拒绝了。 直到伊芙去回放自己的监控的时候，看到瓦力那般呵护她和关心她。又看到瓦力喜欢的那个电影。就明白了瓦力为什么想要去牵她的手。 当回到地球以后，伊芙抱着瓦力风一般的回到瓦力的“家”，帮助瓦力恢复了“生命”， 但是瓦力似乎忘记了伊芙，在看到这里的时候，我的泪又止不住的流了下来。 多么悲伤的故事。还好最后瓦力又记起了伊芙，总算是一个大圆满结局。 上面是这个电影浪漫的一条线，另外一条线就是未来的人们，在电脑的控制之下，迷失了自我。又逐渐找回自我的一个过程。 看完伊芙和瓦力的故事，我突然想写一个小故事。男人和女人，女人属于比较高贵一些的，男人出身低微。但是机缘巧合之下男人和女人相恋了，后来，男人为了救女人，导致失忆。女人想尽各种办法依旧没有办法唤醒男人的记忆，终于女人放弃了。为什么非要唤醒记忆呢？既然男人能爱上女人一次，那么也一定能爱上第二次。所以这次换做女人追求男人。用尽各种办法。男人一开始受宠若惊，后来甚至都觉得女人另有所谋。后来感受了女人的真心。他们在一起了。三年之后，男人总会做一些噩梦，而梦里总会出现女人。他把事情告诉了女人。女人告诉他，这不是梦，而是曾经经历过的事情，于是把所有的经过，男人是如何追求女人的，又如何陪伴着女人经历了战争，最后又是因为什么失忆的，统统告诉了男人。男人努力的唤起沉睡的记忆，抱着女人又哭又叫又笑。</description>
+      <guid>https://grass.show/post/movie-wall-e/</guid>
+      <description>昨天就计划好今天看一部电影，但是没有想好看哪一个，打开了爱奇艺，看着推荐的那些，也都没想看的欲望，索性来个更加直接一点的，上豆瓣电影排行榜去</description>
     </item>
     <item>
       <title>假装</title>
-      <link>https://example.org/post/pretend/</link>
+      <link>https://grass.show/post/pretend/</link>
       <pubDate>Wed, 07 Mar 2018 00:00:00 +0800</pubDate>
-      <guid>https://example.org/post/pretend/</guid>
-      <description>有人说我努力
-有人说我坚强
-有人赞我如春风
-有人夸我似春雨
-唯有黑夜知道
-我枯萎的梦想
-以及那绝望的心</description>
+      <guid>https://grass.show/post/pretend/</guid>
+      <description>有人说我努力 有人说我坚强 有人赞我如春风 有人夸我似春雨 唯有黑夜知道 我枯萎的梦想 以及那绝望的心</description>
     </item>
     <item>
       <title>球球，我想你了</title>
-      <link>https://example.org/post/qiu-qiu-i-miss-you/</link>
+      <link>https://grass.show/post/qiu-qiu-i-miss-you/</link>
       <pubDate>Mon, 17 Sep 2018 00:00:00 +0800</pubDate>
-      <guid>https://example.org/post/qiu-qiu-i-miss-you/</guid>
-      <description>球球在路上很安静，两只爪子扒在车窗下沿，脑袋半露出窗外，眼睛平视着前方，不知道在想些什么。一路上几乎都在保持着这个姿势。或许他还不知道这一次的旅程意味着什么吧！
-球球是一只金毛犬，在朋友的怂恿之下，两个月的他就闯进了我的生命里。
-初相识 2016年的秋天，工作上不是太忙，就萌生了养一条狗狗的想法，和舍友商量之后决定买一条金毛。在没有见到他的时候就已经给他起好了名字：球球。
-球球出生在衡水，达成长途客车到达北京的时候已经是傍晚了，而碰巧那一天我有事儿需要加班，便拜托室友帮忙接一下他。
-我下班回到家就看到一只傻傻的，憨憨的小狗。蜷缩在笼子里面，很是安静的躺着。舍友说他有些晕车，从见到他一只就是这个状态。
-当然给他吃狗粮，他一点都没吃，只是喝了点水。不管怎么逗弄他，他都是毫不关心的样子，干脆直接让他去阳台睡觉去了。
-我当时觉得球球太过于安静了，不过以后我会意识到这是一个多么错误的认知
-痛并快乐着 第二天醒来去看球球的时候，阳台除了球球，还有一坨便便。从此开始了每天清扫便便的日子。可能是球球比较笨，还有种可能是我比较笨（我不会训练狗），他一直都没有学会憋着到楼下便便。因为这个我没少打他。有时候，他在客厅里正拉倒一半，被我发现后他就立刻暂停，跑到离我很远的地方继续拉。甚至于有次我一边追他，他一边拉一边跑。让人又气又好笑。
-除了在客厅随便大小便之外，还会四处乱咬。他三个月大的时候，就开始对着木质茶几，椅子腿，沙发，门框乱抓乱咬。椅子上的一根横梁在他的尖牙利嘴之下已经完全变了模样，中间一截细的都快要断掉了。如果不小心把卫生纸或者垃圾袋放到他能够得到的地方，一会过后整个客厅都会编程垃圾场，而他看到我就会躲到沙发旁的角落里面，怎么揪都揪不出来，因为那个角度我不方便打他。
-有一次下班回家，客厅的地上散放着几本书，几十页书纸，还有一些卫生纸。我的书在一米二以上，但是书架确实挨着沙发靠背的，球球先是蹿到沙发，然后再去把书扒拉下来，我新买的《深入浅出设计模式》，一页都还没来得及看，就被他把前30页撕碎了。
-那天我把他打的不轻，用绳子抽他的屁股，他就朝沙发旁边的角落里躲，我把他使劲拽出来打，他就绕着茶几跑，那么小的空间，我确实很难追上他，后来他又缩到茶几底下，再怎么拽也不出来了，我重打了几下，他（鼓起勇气）朝我吠了几声，我怕真把他打坏了，就没再打下去了。从那以后，我把所有和纸相关的都放到了很高的位置。
-虽说经常打他，我也知道是我的教导方法不对，没有时间陪他，他才会这么费力捣蛋。球球刚来我家的第一个月，公司确实不太忙，每天11点多能回家，之后就基本上12点之后回家了，甚至有时黑白颠倒，我晚上回家的时候，开门都很轻轻的。客厅的灯也不敢打开，借着手机屏幕的灯光，看着球球一个人（狗）蜷在沙发上睡着，也就不去打扰他，蹑手蹑脚的穿过客厅。有的时候看他的时候，能看到他也抬头看我，估计看我挺累的，也就不来烦我。
-他两个多月的时候是一直睡在阳台的，有个狗狗床。但是晚上把他关到阳台，他会一直在那里叫，也不睡觉。我还得搬个小板凳，一直帮他理毛，等他慢慢睡着，而且灯还不能关掉，不然他会立刻醒来。等他大一些了，阳台的那个门已经关不住他了，就放任他在客厅里睡。而他也越来越放肆，有天晚上我上厕所，发现他晚上居然是在沙发上睡的（平时我一觉到天亮，直到球球闹门）。
-虽然每天和他一起玩的时候不多，但是看着这么一个小家伙，从二十几公分，长到半米高。心理有一股莫名的成就感。或许为人父母之后，会更加懂得这种心情吧。
-快乐的日子总是短暂 鉴于工作原因，白天很少有时间陪他，而晚上回家我也累的不行，所以和他一起玩的时间总是那么少。
-有时早上起的比较早，带上球球出去跑步，由于街上人多车也多，不敢放开手上的缰绳，球球是一直跑在我前面，屁股一扭一扭的，时不时地回头看看，然后继续朝前跑。
-有一次周末，刚好也不用加班，打算领着球球去六公里外的公园去玩，穿过马路。穿过人群，在午后的阳光下，一人一狗，散步在大街小巷，
-公园里面有个小湖，湖边有一圈沙土地，沙地上有三三两两的人和狗。沙地上的球球，就像是脱缰的野马，又蹦又跳的，我走进沙地里，他就一直围着我绕圈，大概半径两米吧，就处于我抓不住他的范围。扔一根树枝出去，他就会快速的跑过去，叼起树枝返回来，在据我两米左右的地方趴下，啃咬这树枝。当我走过去要夺的时候，他又带着树枝站起来，继续围着我绕圈子，我只有出其不意的时候才能逮到他，抢下他嘴里的树枝，继续扔远。除了树枝，还会和他玩石头，他就没有那么好的眼力了，他看到石头大致的落点后，用爪子去扒，用嘴去咬，总是弄的满嘴都是沙子
-像这种快乐的午后是非常的难得，其余的时候也就是在小区的空地上溜溜他。他玩的也不是那么的欢快。
-惜离别 去年春天由于工作变动，没有了照顾球球的精力，备选方案有两个，一个是送给朋友，另外一个是送回老家。
-送给朋友其实是最好的方案，但是我的朋友几乎没有时间能养大型犬的，这个方案自然就被pass了
-既然不能送给朋友，那么送回老家也是不错的选择，至少每次回家都能看到他。当我拨通妈妈的电话之后，她直接拒绝了我，并且说让我卖掉他。卖掉当然是不可能卖掉的啦，这么个宝贝儿怎么舍得卖掉呢，于是又一波求助朋友们，还是无果。老姐本来是喜欢狗狗的，但是由于她家人怕狗，所以她也养不了。
-无奈之下，求助于父皇，他一口就答应了下来，（还是老爸亲啊）没想到一会儿老妈打电话给我来反对这件事儿，说她养不了这种&amp;quot;城市狗&amp;quot;，我说你就当土狗养就行，家里的小黑（一只小土狗）吃啥你就喂球球吃什么。她这才勉强答应了下来。
-我和女朋友一起打车送他回老家，一开始还担心他会闹，没想到这个没心没肺的就知道看风景了，还时不时的朝驾驶位蹭过去，司机师傅都好无奈了。
-球球和小黑的岁数差不多，但是由于品种原因，球球的体型大球球不少，小黑一直离球球远远的，不敢靠过去。
-现在每年回家两三次，每次都会特意陪他玩一会儿，看着他在家里过的这么开心，我就很放心了。</description>
+      <guid>https://grass.show/post/qiu-qiu-i-miss-you/</guid>
+      <description>球球在路上很安静，两只爪子扒在车窗下沿，脑袋半露出窗外，眼睛平视着前方，不知道在想些什么。一路上几乎都在保持着这个姿势。或许他还不知道这一次</description>
     </item>
     <item>
       <title>《捉迷藏》观后感</title>
-      <link>https://example.org/post/impressions-of-after-reading-hide-and-seek/</link>
+      <link>https://grass.show/post/impressions-of-after-reading-hide-and-seek/</link>
       <pubDate>Mon, 24 Sep 2018 00:00:00 +0800</pubDate>
-      <guid>https://example.org/post/impressions-of-after-reading-hide-and-seek/</guid>
-      <description>剧情简介 一个经常被偷窥的少女，在单身居住的楼里，深夜被杀。作为开场的引子。
-从一开始的线索，指向了少女（恩惠）的隔壁男。邋遢男，戴头盔，爱好偷窥，暴力，这是对于凶手的第一印象， 最大嫌疑人就是隔壁男。
-随着男主到破楼里面去调查，发现了他家里大量的女性内衣，基本上让我实锤了则成（隔壁男）就是凶手，也是头盔男。
-知道小女孩拿出了手机，并且和她妈妈开始分赃，凶手才真相大白。
-槽点 我看到最后都没想明白，为什么她会有那么大的力气，甚至比男人的力气都大。而且从爬楼梯来看，她的耐性和速度也很大，但是却追不上两个小孩子当她知道男主来破楼里的原因之后，利用一个计谋，使男主确定了是他哥哥在搞鬼，洗脱了自己的嫌疑。有次看来，她智商挺高的。但是却犯很多低级错误，例如在附近刷卡消费
-猜想 在最后，小女孩一直躲在柜子里没有出来，而且房子也租给了其他人。那么在以后，这一家人会经常的丢东西，再过几年，孩子会离奇的死亡，最后大人也会死去。房子里多了一个远房侄女在独自生活。</description>
+      <guid>https://grass.show/post/impressions-of-after-reading-hide-and-seek/</guid>
+      <description>剧情简介 一个经常被偷窥的少女，在单身居住的楼里，深夜被杀。作为开场的引子。 从一开始的线索，指向了少女（恩惠）的隔壁男。邋遢男，戴头盔，爱好偷</description>
     </item>
     <item>
       <title>抑郁——我不是矫情</title>
-      <link>https://example.org/post/depression-i-am-not-hypocritical/</link>
+      <link>https://grass.show/post/depression-i-am-not-hypocritical/</link>
       <pubDate>Thu, 04 Oct 2018 00:00:00 +0800</pubDate>
-      <guid>https://example.org/post/depression-i-am-not-hypocritical/</guid>
-      <description>今年年初的时候，我被诊断为环形心境，它是抑郁症的一种，其表现为抑郁和兴奋交替出现。那段时间是整个人生中最灰暗的时刻。一方面是抑郁症带来的情绪困扰，另一方面是想要和亲友倾诉得不到理解。在服用药物的情况下也几近崩溃，如果当时有个能够理解我的亲人和朋友，我的康复之路也不会特别坚信。
-抑郁症是什么 抑郁症又称抑郁障碍，以显著而持久的心境低落为主要临床特征，是心境障碍的主要类型。临床可见心境低落与其处境不相称，情绪的消沉可以从闷闷不乐到悲痛欲绝，自卑抑郁，甚至悲观厌世，可有自杀企图或行为.
-抑郁症的最主要表现是抑郁，焦虑主要条件包括但不限于持久这一特征
-抑郁症不是什么 首先，抑郁症不是心情不好，他们两个之间最大的区别在于心情不好是有原因且短暂的。相对的，抑郁症的爆发往往毫无征兆，且长时间持续。不像心情不好一样，会在过一段时间，会自我恢复。其次，他不是矫情，不是说没有人关心我，我就得搞出点事情来让大家都关注我。那是在寻求救助，就像一个溺水的人，在不断的像岸上挥手。
-应该如何和抑郁症患者沟通 首先，也是最重要的，就是不要否定他患有抑郁症这个事实，这只会加重病情其次，认真倾听并用心交流最后，如果真的理解不了抑郁症患者的心情，那么就让他一个人静静吧，这样也是比较好的。
-很多走向自杀的抑郁症患者，压倒他的最后一根稻草，不是病情，不是生活中的重压，而是来自亲朋的不理解。导致其对生命再无眷恋，走向生命的尽头
-让这个社会应该对抑郁症患者再多一些包容和理解吧</description>
+      <guid>https://grass.show/post/depression-i-am-not-hypocritical/</guid>
+      <description>今年年初的时候，我被诊断为环形心境，它是抑郁症的一种，其表现为抑郁和兴奋交替出现。那段时间是整个人生中最灰暗的时刻。一方面是抑郁症带来的情绪</description>
     </item>
     <item>
       <title>天上的星星</title>
-      <link>https://example.org/post/stars-on-the-sky/</link>
+      <link>https://grass.show/post/stars-on-the-sky/</link>
       <pubDate>Sun, 30 Sep 2018 00:00:00 +0800</pubDate>
-      <guid>https://example.org/post/stars-on-the-sky/</guid>
-      <description>天上的星星
-美丽而明亮
-比月亮
-还要令人向往
-天上的星星
-忽明忽暗
-在浩瀚的银河中
-失去了目标
-天上的星星
-倒映在平静的湖面
-仿佛可以触手可及
-微风吹过
-碎了一地的星光
-天上的星星
-永恒的灯塔
-斗转星移
-偏移了轨迹
-天上的星星
-我的梦想
-美丽
-而又遥不可及</description>
+      <guid>https://grass.show/post/stars-on-the-sky/</guid>
+      <description>天上的星星 美丽而明亮 比月亮 还要令人向往 天上的星星 忽明忽暗 在浩瀚的银河中 失去了目标 天上的星星 倒映在平静的湖面 仿佛可以触手可及 微风吹过 碎了一地的</description>
     </item>
     <item>
       <title>孤独</title>
-      <link>https://example.org/post/alone/</link>
+      <link>https://grass.show/post/alone/</link>
       <pubDate>Wed, 26 Sep 2018 00:00:00 +0800</pubDate>
-      <guid>https://example.org/post/alone/</guid>
-      <description>在地铁的车厢里面
-忙碌的人们拥挤着
-我的双脚
-无处安放
-在空旷的广场上
-三五成群的广场舞大妈
-而我
-仿佛不曾出现过
-在都市的夜店里
-音乐震耳欲聋
-心也不在
-只剩下肉体在摇摆
-在昏暗的路灯下
-不去理会飞驰而过的汽车
-漫无目的的走着
-反正
-家也不在这里
-在这个钢铁的森林里啊
-每天不停的奔波
-不肯停下脚步
-其实
-不是不愿意停下
-而且不敢
-我害怕我一旦慢了
-就会被身后的孤独包围</description>
+      <guid>https://grass.show/post/alone/</guid>
+      <description>在地铁的车厢里面 忙碌的人们拥挤着 我的双脚 无处安放 在空旷的广场上 三五成群的广场舞大妈 而我 仿佛不曾出现过 在都市的夜店里 音乐震耳欲聋 心也不在 只剩下</description>
     </item>
     <item>
       <title>秋风</title>
-      <link>https://example.org/post/autumn-wind/</link>
+      <link>https://grass.show/post/autumn-wind/</link>
       <pubDate>Sun, 23 Sep 2018 00:00:00 +0800</pubDate>
-      <guid>https://example.org/post/autumn-wind/</guid>
-      <description>天上的云朵轻轻的朝我飞来
-高空的鸟儿振翅高飞
-运河边的柳树上枝条翻飞
-操场上的红旗舒缓的飘扬着
-小区的树苗深沉的摇摆着
-绿地上的小草们快乐的舞蹈着
-窗户开着能听到呼啸声
-秋天的风我看不到你
-但是我知道你就在这里就在每一个角落</description>
+      <guid>https://grass.show/post/autumn-wind/</guid>
+      <description>天上的云朵轻轻的朝我飞来 高空的鸟儿振翅高飞 运河边的柳树上枝条翻飞 操场上的红旗舒缓的飘扬着 小区的树苗深沉的摇摆着 绿地上的小草们快乐的舞蹈着 窗户</description>
     </item>
     <item>
       <title>时光,你慢些吧</title>
-      <link>https://example.org/post/time-please-you-slow-down/</link>
+      <link>https://grass.show/post/time-please-you-slow-down/</link>
       <pubDate>Sat, 22 Sep 2018 00:00:00 +0800</pubDate>
-      <guid>https://example.org/post/time-please-you-slow-down/</guid>
-      <description>时光匆匆的向着远方走去对于身后不再留恋
-在时光看不到的角落里快乐在哭泣时光只顾前行忘记了快乐在哪里
-在时光扬起的灰尘里健康在哭泣时光一心想着远方忽略了健康
-在时光目力所及的地方家庭在向他挥手时光担心误了行程绕路而行
-在时光的右侧是一个叫做梦想的家伙时光对他崇拜至极言听计从
-在时光的左侧有一个带着斗篷的人只有时光自己知道他叫做野心
-在时光前面领路的虚影时隐时现时光也不知道他是否存在只知道他叫做奋斗</description>
+      <guid>https://grass.show/post/time-please-you-slow-down/</guid>
+      <description>时光匆匆的向着远方走去对于身后不再留恋 在时光看不到的角落里快乐在哭泣时光只顾前行忘记了快乐在哪里 在时光扬起的灰尘里健康在哭泣时光一心想着远方</description>
     </item>
     <item>
       <title>建立属于你的知识收集系统</title>
-      <link>https://example.org/post/build-yours-knowledge-collection-system/</link>
+      <link>https://grass.show/post/build-yours-knowledge-collection-system/</link>
       <pubDate>Thu, 20 Sep 2018 00:00:00 +0800</pubDate>
-      <guid>https://example.org/post/build-yours-knowledge-collection-system/</guid>
-      <description>目标 建立起一套流程，从信息的收集，到阅读，再到整理，最后归档。利用各种跨平台的工具来完成他
-收集 收集的渠道有多种
-RSS的订阅
-微信公众号的订阅
-朋友圈的分享链接
-知乎，豆瓣等问答及评论网站
-搜索问题时碰到的好的文章
-这些渠道是信息的直接来源。未加筛选的那种，好的坏的都有，甚至有一些标题党的.
-虽然这些渠道通常是看一眼标题就知道是不是自己需要的或者感兴趣的，但是做为所有信息的源头，质量关也要把好，定一些高质量的原创公众号，那些转发鸡汤的就不要关注了
-对于这些输入源地处理方案有三种，
-不感兴趣的，没用的，都不用点开看的。
-对自己有用，并且也有时间看完的，看完之后发送到印象笔记（或者其他跨平台笔记）的收件箱，留待整理
-有用，但是暂时看不完的，发送到的收趣（或者其他instapaper. Pocket等）的收件箱，等到有时间再看
-阅读 通常只有较少的文章会在看到的时候就会读完，例如解决bug，寻找答案，特别空闲。 其他的碎片时间里，看到某些较长的文章，则需要找个地方临时保存一下，等待有时间的时候再度。
-稍后阅读软件比较出名的就是instapaper和pocket了，但是，app store的中国区已经找不到了，国内做的不错的就是收趣了。
-这一步阅读以后会出现两种处理方案，丢弃或者发送到印象笔记
-整理 经过前两步的筛选，到达这一步的文章都是有用的，可以根据自己的笔记本分类方式，定期进行分类整理。
-这里用到的笔记本是印象笔记，也可以考虑有道云和为知，之所以选择印象笔记是因为很多人推荐他啊，。 不过，论成熟度，和其他软件的集成，他还是排名第一的
-总结 以上是我最近正在逐步建立的一个信息收集系统，目前对我来讲比较有效，但是，只有这些还是不够的，因为，输入是为了输出。每天摄入大量的信息和知识，如果不产生任何的输出，那么这个系统再高效，这些信息也是毫无价值可言的。定期输出自己的想法，这样才会使你的输入价值最大化。</description>
+      <guid>https://grass.show/post/build-yours-knowledge-collection-system/</guid>
+      <description>目标 建立起一套流程，从信息的收集，到阅读，再到整理，最后归档。利用各种跨平台的工具来完成他 收集 收集的渠道有多种 RSS的订阅 微信公众号的订阅 朋</description>
     </item>
   </channel>
 </rss>

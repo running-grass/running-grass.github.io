@@ -1,21 +1,21 @@
 <!DOCTYPE html>
-<html lang="en" dir="auto">
+<html lang="zh-cn" dir="auto">
 
 <head><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
-<title>我是如何一步步进入Purescript这个坑的 | My New Hugo Site</title>
+<title>我是如何一步步进入Purescript这个坑的 | 一世韶华</title>
 <meta name="keywords" content="PureScript, Haskell, Ramda, 函数式编程">
 <meta name="description" content="Purescript是一个可以编译到Js的纯函数式编程语言，其语法和思想来源于Haskell，且保持高度一致。最近几个月我对这个语言比较入迷，值得的说一下我是如何一步一步的踏进这个坑的。">
 <meta name="author" content="">
-<link rel="canonical" href="https://example.org/post/how-do-i-get-to-know-purescript-step-by-step/">
+<link rel="canonical" href="https://grass.show/post/how-do-i-get-to-know-purescript-step-by-step/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.b609c58d5c11bb90b1a54e04005d74ad1ddf22165eb79f5533967e57df9c3b50.css" integrity="sha256-tgnFjVwRu5CxpU4EAF10rR3fIhZet59VM5Z&#43;V9&#43;cO1A=" rel="preload stylesheet" as="style">
-<link rel="icon" href="https://example.org/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="https://example.org/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="https://example.org/favicon-32x32.png">
-<link rel="apple-touch-icon" href="https://example.org/apple-touch-icon.png">
-<link rel="mask-icon" href="https://example.org/safari-pinned-tab.svg">
+<link rel="icon" href="https://grass.show/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://grass.show/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://grass.show/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://grass.show/apple-touch-icon.png">
+<link rel="mask-icon" href="https://grass.show/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
 <noscript>
@@ -57,9 +57,9 @@
 </noscript><meta property="og:title" content="我是如何一步步进入Purescript这个坑的" />
 <meta property="og:description" content="Purescript是一个可以编译到Js的纯函数式编程语言，其语法和思想来源于Haskell，且保持高度一致。最近几个月我对这个语言比较入迷，值得的说一下我是如何一步一步的踏进这个坑的。" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://example.org/post/how-do-i-get-to-know-purescript-step-by-step/" /><meta property="article:section" content="post" />
+<meta property="og:url" content="https://grass.show/post/how-do-i-get-to-know-purescript-step-by-step/" /><meta property="article:section" content="post" />
 <meta property="article:published_time" content="2021-08-29T10:55:00+08:00" />
-<meta property="article:modified_time" content="2024-01-31T11:23:11+08:00" />
+<meta property="article:modified_time" content="2024-01-31T11:27:20+08:00" />
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="我是如何一步步进入Purescript这个坑的"/>
@@ -75,13 +75,13 @@
       "@type": "ListItem",
       "position":  1 ,
       "name": "Posts",
-      "item": "https://example.org/post/"
+      "item": "https://grass.show/post/"
     }, 
     {
       "@type": "ListItem",
       "position":  2 ,
       "name": "我是如何一步步进入Purescript这个坑的",
-      "item": "https://example.org/post/how-do-i-get-to-know-purescript-step-by-step/"
+      "item": "https://grass.show/post/how-do-i-get-to-know-purescript-step-by-step/"
     }
   ]
 }
@@ -97,20 +97,20 @@
     "PureScript", "Haskell", "Ramda", "函数式编程"
   ],
   "articleBody": "Purescript是一个可以编译到Js的纯函数式编程语言，其语法和思想来源于Haskell，且保持高度一致。最近几个月我对这个语言比较入迷，值得的说一下我是如何一步一步的踏进这个坑的。\n初识函数式 最初听到函数式这个概念的时候，是我在写PHP的第一年，那时候年轻没经验，也不喜欢对一个概念进行深挖。就觉得用map和filter写功能就是函数式编程了。那个节点对于函数式的理解就是用高阶函数、匿名函数这一种。说不上是对函数式编程有了启蒙，只是听说了这样的一个概念。\njs的函数式编程 后来去写了前端，开始接触到Vue，React这种前端框架，并且看大家都在说React和Redux是很函数式的。于是这时才去好好的了解什么是函数式，还有纯函数、数据不可变性等，也慢慢能体会到React和Redux中蕴含的函数式理念了。然后就一发不可收拾了，通过各个函数式编程的npm库，窥探到了函数式编程的冰山一角。最先了解到的是LodashJs，这个库是由一些常用的可组合的工具函数组成。对于前端程序员非常友好。也是最流行的一个函数库。不过我并没有去实际使用过，而仅仅只是了解。因为我遇到了下面这一位。 紧接着我就顺藤摸瓜，了解到了Ramda，并且在知乎上看了王增迪翻译的一个Ramda哲学系列的文章。瞬间被吸粉。Ramda和Lodash在功能上非常重叠，其最大的不同点在于Lodash的函数中，被操作数是作为第一个参数的，而Ramda正好与其相反。被操作数剧永远是最后一个参数。这样做的好处就是可以把一个三个参数的函数，通过部分参数调用，使其变成只有一个参数的函数。然后就可以方便的把多个这个单参函数串联成一个管道。从而最大化的复用函数。当然了，这只是Ramda其中的一个好处，不一一列举，Ramda是我会在每个接手的项目入引入的一个工具类库。是Ramda使我了解到了函数式编程中的一些哲学和理念。例如纯函数、副作用、柯里化、偏应用函数、函数组合。\n新世界的大门 由于Ramda带给我的冲击，改变了我对于程序设计的理念。也看到了Ramda在Javascript这个语言下的种种限制，我开始了探寻Javascript之外的函数式语言。接触到Haskell对于我的编程思想来说应该说是一个重大的里程碑。当我接触到这一门为了引领所有函数式语言而生的纯函数式语言的时候，便被其优美的语法深深的迷住了。比当时Ramda对我的震撼要大多了，Ramda相当于是启蒙，而Haskell则是为我打开了通往新世界的大门。当然我也遇到了大多人都遇到的问题，学了一段时间，发现自己啥也没学会。就想在项目中使用这种语言，边学边用。就寻找了一些Haskell可以编译到Js的方案。\n第一种就是ghcjs,可以把Haskell直接编译成Js代码，但是我看到社区的评价不是太稳定。就没敢去尝试。 第二种就是Elm语言，使用了类似Haskell语言的语法，但是专为web应用而生，功能受限且单薄 第三种是Purescript语言，也是使用了类似Haskell的语法，但是版本也不太稳定。不过生态相对还可以 当时在npm已经有了purs-loader了，于是我在已有的公司项目中，把某个数学计算的模块使用了Purescript语言来写，使用webpack+purs-loader来集成到工程中。体验来说，还是很好的。(不知道后续同事维护那段代码的时候会不会骂我，不过应该也不会有Bug，毕竟是编译通过了的) 但是使用Purescript对于工程化和团队合作不太有利，于是我继续寻找更合适的实践函数式编程思想的落地方案。这期间我接触到了前端Js对于Haskell中相关类型类的一些规范。fantasy-land，这是个一个对类型类的规范，ramda也有一个实现的版本，不过已不再维护。而另一个类库Sanctuary.js，实现了一套相对比较完整的类型安全系统，且实现了Haskell中常用的Maybe和Either类型。并且这个类库可以和Ramda集成的很好。由于工程化和学习成本的原因，我并没有在项目中引入该类库。但是依旧不能否认它在我心中的形象还是很好的。\n实战演习 前几个月的时候，我打算写一个开源项目，就想找一个自己喜欢的纯函数式编程语言来写。由于之前对Idris有所耳闻，遂去尝试了一番，好用是好用，不过Idris2正在开发初期，生态环境处于青黄不接的时期。只好忍痛放弃。重新调研了一番，众多可以CompileToJs的纯函数式语言中，只有Purescript是最符合我的需求的。\n有相对成熟的生态、开发工具链、类库等 开源社区活跃，维护者也要活跃 可以集成已有的JavaScript生态、类库 没有小括号、有Monad 所以就基于Purescript开始了我的开源项目之旅。 关于项目这里不做过多赘述，以后会单独细聊这个话题。下一篇可以会聊聊最近PureScript开发中的一些感悟吧\n",
-  "wordCount" : "21",
-  "inLanguage": "en",
+  "wordCount" : "2002",
+  "inLanguage": "zh-cn",
   "datePublished": "2021-08-29T10:55:00+08:00",
-  "dateModified": "2024-01-31T11:23:11+08:00",
+  "dateModified": "2024-01-31T11:27:20+08:00",
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://example.org/post/how-do-i-get-to-know-purescript-step-by-step/"
+    "@id": "https://grass.show/post/how-do-i-get-to-know-purescript-step-by-step/"
   },
   "publisher": {
     "@type": "Organization",
-    "name": "My New Hugo Site",
+    "name": "一世韶华",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://example.org/favicon.ico"
+      "url": "https://grass.show/favicon.ico"
     }
   }
 }
@@ -132,7 +132,7 @@
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="https://example.org/" accesskey="h" title="My New Hugo Site (Alt + H)">My New Hugo Site</a>
+            <a href="https://grass.show/" accesskey="h" title="一世韶华 (Alt + H)">一世韶华</a>
             <div class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
@@ -200,17 +200,17 @@
 
   <footer class="post-footer">
     <ul class="post-tags">
-      <li><a href="https://example.org/tags/purescript/">PureScript</a></li>
-      <li><a href="https://example.org/tags/haskell/">Haskell</a></li>
-      <li><a href="https://example.org/tags/ramda/">Ramda</a></li>
-      <li><a href="https://example.org/tags/%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BC%96%E7%A8%8B/">函数式编程</a></li>
+      <li><a href="https://grass.show/tags/purescript/">PureScript</a></li>
+      <li><a href="https://grass.show/tags/haskell/">Haskell</a></li>
+      <li><a href="https://grass.show/tags/ramda/">Ramda</a></li>
+      <li><a href="https://grass.show/tags/%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BC%96%E7%A8%8B/">函数式编程</a></li>
     </ul>
   </footer>
 </article>
     </main>
     
 <footer class="footer">
-    <span>&copy; 2024 <a href="https://example.org/">My New Hugo Site</a></span>
+    <span>&copy; 2024 <a href="https://grass.show/">一世韶华</a></span>
     <span>
         Powered by
         <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &

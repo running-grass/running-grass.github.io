@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en" dir="auto">
+<html lang="zh-cn" dir="auto">
 
 <head><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
-<title>使用Nix&#43;direnv快速构建不同软件版本的开发环境 | My New Hugo Site</title>
+<title>使用Nix&#43;direnv快速构建不同软件版本的开发环境 | 一世韶华</title>
 <meta name="keywords" content="开发环境, Nix, direnv, docker, virtualenv, nodejs, python">
 <meta name="description" content="我们在开发项目是总是会遇到一些软件版本的问题，例如项目A需要node版本为8-10，而项目B需要版本大于12，常用的方案有这么几种。
 
@@ -15,13 +15,13 @@
 
 本文的方案属于第三种。不需要太多的背景知识。">
 <meta name="author" content="">
-<link rel="canonical" href="https://example.org/post/create-environment-with-nix-and-direnv/">
+<link rel="canonical" href="https://grass.show/post/create-environment-with-nix-and-direnv/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.b609c58d5c11bb90b1a54e04005d74ad1ddf22165eb79f5533967e57df9c3b50.css" integrity="sha256-tgnFjVwRu5CxpU4EAF10rR3fIhZet59VM5Z&#43;V9&#43;cO1A=" rel="preload stylesheet" as="style">
-<link rel="icon" href="https://example.org/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="https://example.org/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="https://example.org/favicon-32x32.png">
-<link rel="apple-touch-icon" href="https://example.org/apple-touch-icon.png">
-<link rel="mask-icon" href="https://example.org/safari-pinned-tab.svg">
+<link rel="icon" href="https://grass.show/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://grass.show/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://grass.show/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://grass.show/apple-touch-icon.png">
+<link rel="mask-icon" href="https://grass.show/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
 <noscript>
@@ -69,9 +69,9 @@
 
 本文的方案属于第三种。不需要太多的背景知识。" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://example.org/post/create-environment-with-nix-and-direnv/" /><meta property="article:section" content="post" />
+<meta property="og:url" content="https://grass.show/post/create-environment-with-nix-and-direnv/" /><meta property="article:section" content="post" />
 <meta property="article:published_time" content="2021-07-07T21:26:00+08:00" />
-<meta property="article:modified_time" content="2024-01-31T11:23:11+08:00" />
+<meta property="article:modified_time" content="2024-01-31T11:27:20+08:00" />
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="使用Nix&#43;direnv快速构建不同软件版本的开发环境"/>
@@ -93,13 +93,13 @@
       "@type": "ListItem",
       "position":  1 ,
       "name": "Posts",
-      "item": "https://example.org/post/"
+      "item": "https://grass.show/post/"
     }, 
     {
       "@type": "ListItem",
       "position":  2 ,
       "name": "使用Nix+direnv快速构建不同软件版本的开发环境",
-      "item": "https://example.org/post/create-environment-with-nix-and-direnv/"
+      "item": "https://grass.show/post/create-environment-with-nix-and-direnv/"
     }
   ]
 }
@@ -115,20 +115,20 @@
     "开发环境", "Nix", "direnv", "docker", "virtualenv", "nodejs", "python"
   ],
   "articleBody": "我们在开发项目是总是会遇到一些软件版本的问题，例如项目A需要node版本为8-10，而项目B需要版本大于12，常用的方案有这么几种。\n在开发不同的项目的时候，手工切换不同的版本 (因为我遇到的不多，所以一直这么干) 使用虚拟机或者Docker 使用类似python中的virtualenv，根据不同的目录切换不同的虚拟运行时环境 本文的方案属于第三种。不需要太多的背景知识。\n安装Nix nix是一个函数式的包管理器，想像成apt-get或者homevrew这种的，或者npm。\n在命令行执行 curl -L https://nixos.org/nix/install | sh 就可以自动安装nix\n如果被墙，也可以使用清华镜像站的 sh \u003c(curl https://mirrors.tuna.tsinghua.edu.cn/nix/latest/install)\n更换镜像(可选) 目前已知的有清华镜像站 https://mirrors.tuna.tsinghua.edu.cn/help/nix/\n可以通过在 ~/.config/nix/nix.conf 文件中写入以下内容，获得安装加速\nsubstituters = https://mirrors.tuna.tsinghua.edu.cn/nix-channels/store https://cache.nixos.org/ 并且执行以下命令获得源码下载加速\nnix-channel --add https://mirrors.tuna.tsinghua.edu.cn/nix-channels/nixpkgs-unstable nixpkgs nix-channel --update 安装direnv 既然已经安装好了nix，那么就直接用nix来安装direnv吧。\nnix-env -iA nixpkgs.direnv 配置项目 先在项目根目录新建一个文件 shell.nix ，内容示例如下\nwith import {}; mkShell { buildInputs = [ nodejs-10_x yarn idris2 ]; } 在这里，我声明了我的这个项目依赖这三个软件，nodejs，yarn，idris2，并且指定了nodejs的大版本。\n(可选) 此时可以手动的执行 nix-shell 命令安装依赖，并且进入到nix-shell中。不过这样就不能使用自己心爱的shell了\n可以到 https://search.nixos.org/packages 页面搜索自己依赖的软件包。\n在项目根目录新建一个文件 .envrc , 内容如下：\nuse_nix 对，就这么一行就够了。\n然后执行 direnv allow . ，注意有个点喔。执行 eval \"$(direnv hook zsh)\" 可以让自己的shell在进入该目录的时候，自动检测并安装依赖，且自动切换软件的依赖目录。 由于我用的是 zsh 所以我这里写的是zsh， 其它的shell可以到 https://direnv.net/docs/hook.html 查看命令。\n对了，别忘记把上面这条命令加入到你的 bashrc/zshrc 中啊。\n在终端试试 cd .. ， 然后在 cd 到项目目录 试试。看看命令行有没有自动的加载虚拟运行时环境啊。\n和docker的对比 我比较懒，也就不写123了，对于开发环境，大多数情况用nix+direnv就足够了，毕竟软件版本隔离是最大众的需求嘛。\n而且还这么简单。😄\n参考链接 https://search.nixos.org/packages https://direnv.net/ https://myme.no/posts/2020-01-26-nixos-for-development.html#virtual-environments-using-nix-shell https://nixos.wiki/wiki/Development_environment_with_nix-shell#Using_Direnv ",
-  "wordCount" : "108",
-  "inLanguage": "en",
+  "wordCount" : "835",
+  "inLanguage": "zh-cn",
   "datePublished": "2021-07-07T21:26:00+08:00",
-  "dateModified": "2024-01-31T11:23:11+08:00",
+  "dateModified": "2024-01-31T11:27:20+08:00",
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://example.org/post/create-environment-with-nix-and-direnv/"
+    "@id": "https://grass.show/post/create-environment-with-nix-and-direnv/"
   },
   "publisher": {
     "@type": "Organization",
-    "name": "My New Hugo Site",
+    "name": "一世韶华",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://example.org/favicon.ico"
+      "url": "https://grass.show/favicon.ico"
     }
   }
 }
@@ -150,7 +150,7 @@
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="https://example.org/" accesskey="h" title="My New Hugo Site (Alt + H)">My New Hugo Site</a>
+            <a href="https://grass.show/" accesskey="h" title="一世韶华 (Alt + H)">一世韶华</a>
             <div class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
@@ -245,20 +245,20 @@ mkShell {
 
   <footer class="post-footer">
     <ul class="post-tags">
-      <li><a href="https://example.org/tags/%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/">开发环境</a></li>
-      <li><a href="https://example.org/tags/nix/">Nix</a></li>
-      <li><a href="https://example.org/tags/direnv/">direnv</a></li>
-      <li><a href="https://example.org/tags/docker/">docker</a></li>
-      <li><a href="https://example.org/tags/virtualenv/">virtualenv</a></li>
-      <li><a href="https://example.org/tags/nodejs/">nodejs</a></li>
-      <li><a href="https://example.org/tags/python/">python</a></li>
+      <li><a href="https://grass.show/tags/%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/">开发环境</a></li>
+      <li><a href="https://grass.show/tags/nix/">Nix</a></li>
+      <li><a href="https://grass.show/tags/direnv/">direnv</a></li>
+      <li><a href="https://grass.show/tags/docker/">docker</a></li>
+      <li><a href="https://grass.show/tags/virtualenv/">virtualenv</a></li>
+      <li><a href="https://grass.show/tags/nodejs/">nodejs</a></li>
+      <li><a href="https://grass.show/tags/python/">python</a></li>
     </ul>
   </footer>
 </article>
     </main>
     
 <footer class="footer">
-    <span>&copy; 2024 <a href="https://example.org/">My New Hugo Site</a></span>
+    <span>&copy; 2024 <a href="https://grass.show/">一世韶华</a></span>
     <span>
         Powered by
         <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
