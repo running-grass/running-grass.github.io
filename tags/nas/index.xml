@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>NAS on 一世韶华</title>
+    <link>https://grass.show/tags/nas/</link>
+    <description>Recent content in NAS on 一世韶华</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sun, 16 May 2021 23:32:00 +0800</lastBuildDate>
+    <atom:link href="https://grass.show/tags/nas/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>个人照片备份方式的变迁</title>
+      <link>https://grass.show/post/photo-backup-develop-history/</link>
+      <pubDate>Sun, 16 May 2021 23:32:00 +0800</pubDate>
+      <guid>https://grass.show/post/photo-backup-develop-history/</guid>
+      <description>物理相册 这个时间大概是中学时期及以前，没有手机，没有电子相册，更无无备份意识，只有拍完的照片放到家里的相册中 qq相册 中专时期及刚工作的时候，</description>
+    </item>
+  </channel>
+</rss>
