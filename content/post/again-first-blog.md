@@ -1,9 +1,8 @@
 +++
 title = "我又开始写博客了"
 date = 2017-08-13T01:13:00+08:00
-lastmod = 2024-01-31T11:23:29+08:00
+lastmod = 2024-02-01T16:31:20+08:00
 draft = false
-weight = 2001
 aliases = ["/post/08/13/2017-08-13-first-blog/"]
 +++
 

@@ -1,9 +1,8 @@
 +++
 title = "Hexo的介绍及安装使用"
 date = 2020-07-10T00:00:00+08:00
-lastmod = 2024-01-31T11:23:30+08:00
+lastmod = 2024-02-01T16:31:21+08:00
 draft = false
-weight = 2001
 +++
 
 ## 什么是Hexo {#什么是hexo}

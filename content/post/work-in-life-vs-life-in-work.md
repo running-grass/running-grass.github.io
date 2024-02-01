@@ -1,9 +1,8 @@
 +++
 title = "在工作中生活VS在生活中工作"
 date = 2016-06-26T00:00:00+08:00
-lastmod = 2024-01-31T11:23:29+08:00
+lastmod = 2024-02-01T16:31:20+08:00
 draft = false
-weight = 2005
 toc = false
 +++
 

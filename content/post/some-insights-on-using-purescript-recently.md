@@ -1,10 +1,9 @@
 +++
 title = "最近写Purescript项目的一些感悟"
 date = 2021-08-31T22:39:00+08:00
-lastmod = 2024-01-31T11:23:11+08:00
+lastmod = 2024-02-01T16:31:27+08:00
 tags = ["PureScript", "Haskell", "函数式编程"]
 draft = false
-weight = 1013
 +++
 
 这篇文章是我使用PureScript(下文简称Purs)这几个月的一些碎碎念，纯主观看法且带有偏见，非教程，轻喷。

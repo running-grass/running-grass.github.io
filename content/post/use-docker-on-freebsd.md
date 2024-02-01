@@ -1,10 +1,9 @@
 +++
 title = "在FreeBSD系统上使用Docker"
 date = 2020-11-09T14:50:00+08:00
-lastmod = 2024-01-31T11:23:11+08:00
-tags = ["VirtualBox", "Docker", "FreeBSD"]
+lastmod = 2024-02-01T16:31:27+08:00
+tags = ["Docker", "FreeBSD"]
 draft = false
-weight = 1006
 +++
 
 Docker利用了Linux内核的一些特性，而FreeBSD是不支持的，需要通过docker-machine创建虚拟机来曲线救国。

@@ -1,9 +1,8 @@
 +++
 title = "996ICU大事件——持续发酵中"
 date = 2019-03-29T00:00:00+08:00
-lastmod = 2024-01-31T11:23:29+08:00
+lastmod = 2024-02-01T16:31:20+08:00
 draft = false
-weight = 2003
 +++
 
 {{< figure src="https://grass.show/blog-pic/640.png" >}}

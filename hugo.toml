@@ -1,0 +1,129 @@
+baseURL = 'https://grass.show/'
+languageCode = 'zh-cn'
+defaultContentLanguage = "zh-cn"
+
+title = '一世韶华'
+
+theme = "PaperMod"
+preserveTaxonomyNames =  true
+enableRobotsTXT =  true
+enableEmoji =  true
+enableGitInfo =  true # 可根据 Git 中的提交生成最近更新记录。
+
+buildDrafts = false
+buildFuture = false
+buildExpired = false
+
+hasCJKLanguage =  true # 自动检测是否包含 中文\日文\韩文
+paginate =  10 # 首页每页显示的文章数
+
+googleAnalytics = 'G-DW2GXKQ7M0'
+
+[minify]
+disableXML = true
+minifyOutput = true
+
+[params]
+env = 'production' # to enable google analytics, opengraph, twitter-cards and schema.
+description = '一个程序员的喃喃自语'
+keywords = ['Nixos', 'Emacs', 'PHP', 'Orgmode']
+author = "Leo Liu"
+defaultTheme = 'dark' # dark, light
+disableThemeToggle = true
+
+ShowReadingTime = true
+ShowShareButtons = true
+ShowPostNavLinks = true
+ShowBreadCrumbs = true
+ShowCodeCopyButtons = true
+ShowWordCount = true
+ShowRssButtonInSectionTermList = true
+UseHugoToc = true
+disableSpecial1stPost = false
+disableScrollToTop = false
+comments = true
+hidemeta = false
+hideSummary = false
+showtoc = true
+tocopen = false
+
+  # profile-mode
+[params.profileMode]
+enabled = true # needs to be explicitly set
+title = '一世韶华'
+subtitle = '一个程序员的喃喃自语'
+# imageUrl: "<img location>"
+# imageWidth: 120
+# imageHeight: 120
+# imageTitle: my image
+
+[[params.profileMode.buttons]]
+name = '文章列表'
+url = 'post'
+[[params.profileMode.buttons]]
+name = '标签'
+url = 'tags'
+
+# home-info mode
+[params.homeInfoParams]
+Title = "Hi there \U0001F44B"
+Content = 'Welcome to my blog'
+
+
+[[params.socialIcons]]
+name = 'github'
+url = "https://github.com/running-grass"
+
+# analytics:
+#   google:
+#     SiteVerificationTag: "XYZabc"
+#   bing:
+#     SiteVerificationTag: "XYZabc"
+#   yandex:
+#     SiteVerificationTag: "XYZabc"
+
+# cover:
+#   hidden: true # hide everywhere but not in structured data
+#   hiddenInList: true # hide on list pages and home
+#   hiddenInSingle: true # hide on single page
+
+# [params.editPost]
+#   URL = "https://github.com/running-grass/blog-src/content"
+#   Text = "Suggest Changes" # edit text
+#   appendFilePath = true # to append file path to Edit link
+
+# for search
+# https://fusejs.io/api/options.html
+[params.fuseOpts]
+isCaseSensitive = false
+shouldSort = true
+location = 0
+distance = 1000
+threshold = 0.4
+minMatchCharLength = 0
+limit = 10 # refer: https://www.fusejs.io/api/methods.html#search
+keys = ["title", "permalink", "summary", "content"]
+
+[taxonomies]
+series = 'series'
+
+[[menu.main]]
+identifier = 'categories'
+name = '分类'
+url = '/categories/'
+weight = 10
+[[menu.main]]
+identifier = 'tags'
+name = '标签'
+url = '/tags/'
+weight = 20
+
+# Read: https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#using-hugos-syntax-highlighter-chroma
+pygmentsUseClasses = true
+[markup.highlight]
+noClasses = false
+# anchorLineNos: true
+# codeFences: true
+# guessSyntax: true
+# lineNos: true
+# style: monokai

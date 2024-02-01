@@ -1,9 +1,8 @@
 +++
 title = "最初的梦想"
 date = 2014-06-01T00:00:00+08:00
-lastmod = 2024-01-31T11:23:30+08:00
+lastmod = 2024-02-01T16:31:21+08:00
 draft = false
-weight = 2002
 toc = false
 +++
 

@@ -1,10 +1,9 @@
 +++
 title = "我是如何一步步进入Purescript这个坑的"
 date = 2021-08-29T10:55:00+08:00
-lastmod = 2024-01-31T11:23:11+08:00
+lastmod = 2024-02-01T16:31:27+08:00
 tags = ["PureScript", "Haskell", "Ramda", "函数式编程"]
 draft = false
-weight = 1012
 +++
 
 Purescript是一个可以编译到Js的纯函数式编程语言，其语法和思想来源于Haskell，且保持高度一致。最近几个月我对这个语言比较入迷，值得的说一下我是如何一步一步的踏进这个坑的。

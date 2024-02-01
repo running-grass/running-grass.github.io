@@ -1,10 +1,9 @@
 +++
 title = "基于Org的GTD实践"
 date = 2020-11-05T13:17:00+08:00
-lastmod = 2024-01-31T11:22:51+08:00
+lastmod = 2024-02-01T16:30:26+08:00
 tags = ["Org", "Emacs", "GTD"]
 draft = false
-weight = 1002
 summary = "在这篇文章中，我将详细介绍如何使用Orgmode实现GTD，而不是解释GTD方法本身或Orgmode是如何工作的。"
 +++
 

@@ -1,10 +1,8 @@
 +++
 title = "蜗牛星际机器重置BIOS的方法"
 date = 2020-11-04T23:11:00+08:00
-lastmod = 2024-01-31T11:23:11+08:00
-tags = ["蜗牛星际", "NAS", "BIOS"]
+lastmod = 2024-02-01T16:31:27+08:00
 draft = false
-weight = 1005
 toc = false
 +++
 

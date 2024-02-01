@@ -1,10 +1,9 @@
 +++
 title = "使用certbot申请免费https泛域名证书"
 date = 2021-02-18T12:50:00+08:00
-lastmod = 2024-01-31T11:23:11+08:00
+lastmod = 2024-02-01T16:31:27+08:00
 tags = ["Nginx", "HTTPS", "泛域名"]
 draft = false
-weight = 1009
 +++
 
 ## 免费的https证书 {#免费的https证书}

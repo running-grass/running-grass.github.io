@@ -1,9 +1,8 @@
 +++
 title = "React Native中的别名"
-date = 2017-08-18T19:31:00+08:00
-lastmod = 2024-01-31T11:22:51+08:00
+date = 2024-02-01T16:30:00+08:00
+lastmod = 2024-02-01T16:30:26+08:00
 draft = false
-weight = 1001
 aliases = ["/post/08/18/2017-08-18-alias-in-react-native/"]
 +++
 
