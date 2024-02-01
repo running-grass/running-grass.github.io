@@ -6,8 +6,72 @@
     <description>Recent content on 一世韶华</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 31 Aug 2021 22:39:00 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 01 Feb 2024 16:30:00 +0800</lastBuildDate>
     <atom:link href="https://grass.show/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>React Native中的别名</title>
+      <link>https://grass.show/translate/alias-in-react-native/</link>
+      <pubDate>Thu, 01 Feb 2024 16:30:00 +0800</pubDate>
+      <guid>https://grass.show/translate/alias-in-react-native/</guid>
+      <description>&lt;p&gt;有时候，你会在你的项目有多个文件和文件夹。我们需要从任意随机文件中获得一个文件的引用。如果我们这样的相对路径的话，看起来是这个样子的:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-javascript&#34; data-lang=&#34;javascript&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kr&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;themes&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;from&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;../../config/themes&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;通过符号`../`让我们很难去思考，在更复杂的项目中，这将是一个噩梦。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>最近写Purescript项目的一些感悟</title>
+      <link>https://grass.show/post/some-insights-on-using-purescript-recently/</link>
+      <pubDate>Tue, 31 Aug 2021 22:39:00 +0800</pubDate>
+      <guid>https://grass.show/post/some-insights-on-using-purescript-recently/</guid>
+      <description>&lt;p&gt;这篇文章是我使用PureScript(下文简称Purs)这几个月的一些碎碎念，纯主观看法且带有偏见，非教程，轻喷。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>我是如何一步步进入Purescript这个坑的</title>
+      <link>https://grass.show/post/how-do-i-get-to-know-purescript-step-by-step/</link>
+      <pubDate>Sun, 29 Aug 2021 10:55:00 +0800</pubDate>
+      <guid>https://grass.show/post/how-do-i-get-to-know-purescript-step-by-step/</guid>
+      <description>&lt;p&gt;Purescript是一个可以编译到Js的纯函数式编程语言，其语法和思想来源于Haskell，且保持高度一致。最近几个月我对这个语言比较入迷，值得的说一下我是如何一步一步的踏进这个坑的。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>使用Nix&#43;direnv快速构建不同软件版本的开发环境</title>
+      <link>https://grass.show/post/create-environment-with-nix-and-direnv/</link>
+      <pubDate>Wed, 07 Jul 2021 21:26:00 +0800</pubDate>
+      <guid>https://grass.show/post/create-environment-with-nix-and-direnv/</guid>
+      <description>&lt;p&gt;我们在开发项目是总是会遇到一些软件版本的问题，例如项目A需要node版本为8-10，而项目B需要版本大于12，常用的方案有这么几种。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;在开发不同的项目的时候，手工切换不同的版本 (因为我遇到的不多，所以一直这么干)&lt;/li&gt;
+&lt;li&gt;使用虚拟机或者Docker&lt;/li&gt;
+&lt;li&gt;使用类似python中的virtualenv，根据不同的目录切换不同的虚拟运行时环境&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;本文的方案属于第三种。不需要太多的背景知识。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>利器推荐-2021-05</title>
+      <link>https://grass.show/post/tools-recommend-2021-05/</link>
+      <pubDate>Mon, 17 May 2021 23:01:00 +0800</pubDate>
+      <guid>https://grass.show/post/tools-recommend-2021-05/</guid>
+      <description>本文推荐的都是我正在用的或者用过的产品 硬件 Macbook Pro 13寸 如果是开发用，多配点内存会好些，磁盘一般256足够了 HHKB BT 我是被种草的，据说是程序员必备神</description>
+    </item>
+    <item>
+      <title>个人照片备份方式的变迁</title>
+      <link>https://grass.show/post/photo-backup-develop-history/</link>
+      <pubDate>Sun, 16 May 2021 23:32:00 +0800</pubDate>
+      <guid>https://grass.show/post/photo-backup-develop-history/</guid>
+      <description>物理相册 这个时间大概是中学时期及以前，没有手机，没有电子相册，更无无备份意识，只有拍完的照片放到家里的相册中 qq相册 中专时期及刚工作的时候，</description>
+    </item>
+    <item>
+      <title>使用certbot申请免费https泛域名证书</title>
+      <link>https://grass.show/post/register-https-bycertbot/</link>
+      <pubDate>Thu, 18 Feb 2021 12:50:00 +0800</pubDate>
+      <guid>https://grass.show/post/register-https-bycertbot/</guid>
+      <description>免费的https证书 部署https访问最简单的办法就是使用域名商提供的https服务，简单、省事、可靠、有保障。 但是，价格同样也不便宜啊，像</description>
+    </item>
+    <item>
+      <title>《追寻生命的意义》有感</title>
+      <link>https://grass.show/post/mans-search-for-meaning/</link>
+      <pubDate>Mon, 01 Feb 2021 15:13:00 +0800</pubDate>
+      <guid>https://grass.show/post/mans-search-for-meaning/</guid>
+      <description>&lt;p&gt;不论什么样的人，不论处在什么样的环境下，都有些选择的自由，即使身处奥斯维辛集中营，随时可能会被送往毒气室，但是依旧拥有一项谁也剥夺不了的自由，那就是如何面对痛苦的态度。&lt;/p&gt;</description>
+    </item>
     <item>
       <title>送别驴友</title>
       <link>https://grass.show/post/seeing-off-the-friend/</link>
@@ -16,13 +80,11 @@
       <description>&lt;p&gt;你以自己喜爱的方式告别这个世界，愿天堂没有寒冷.&lt;/p&gt;</description>
     </item>
     <item>
-      <title>React Native中的别名</title>
-      <link>https://grass.show/translate/alias-in-react-native/</link>
-      <pubDate>Fri, 18 Aug 2017 19:31:00 +0800</pubDate>
-      <guid>https://grass.show/translate/alias-in-react-native/</guid>
-      <description>&lt;p&gt;有时候，你会在你的项目有多个文件和文件夹。我们需要从任意随机文件中获得一个文件的引用。如果我们这样的相对路径的话，看起来是这个样子的:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-javascript&#34; data-lang=&#34;javascript&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;import&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;themes&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;from&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;../../config/themes&amp;#39;&lt;/span&gt;;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;通过符号`../`让我们很难去思考，在更复杂的项目中，这将是一个噩梦。&lt;/p&gt;</description>
+      <title>在FreeBSD系统上使用Docker</title>
+      <link>https://grass.show/post/use-docker-on-freebsd/</link>
+      <pubDate>Mon, 09 Nov 2020 14:50:00 +0800</pubDate>
+      <guid>https://grass.show/post/use-docker-on-freebsd/</guid>
+      <description>&lt;p&gt;Docker利用了Linux内核的一些特性，而FreeBSD是不支持的，需要通过docker-machine创建虚拟机来曲线救国。&lt;/p&gt;</description>
     </item>
     <item>
       <title>基于Org的GTD实践</title>
@@ -30,6 +92,13 @@
       <pubDate>Thu, 05 Nov 2020 13:17:00 +0800</pubDate>
       <guid>https://grass.show/translate/do-gtd-in-orgmode/</guid>
       <description>在这篇文章中，我将详细介绍如何使用Orgmode实现GTD，而不是解释GTD方法本身或Orgmode是如何工作的。</description>
+    </item>
+    <item>
+      <title>蜗牛星际机器重置BIOS的方法</title>
+      <link>https://grass.show/post/woniuxingji-bios-reset/</link>
+      <pubDate>Wed, 04 Nov 2020 23:11:00 +0800</pubDate>
+      <guid>https://grass.show/post/woniuxingji-bios-reset/</guid>
+      <description>&lt;p&gt;主板电池旁边的两个针脚，在通电启动情况下，使用螺丝刀连接两个针脚，使其短路&lt;/p&gt;</description>
     </item>
     <item>
       <title>从Hexo迁移到Hugo</title>
@@ -53,73 +122,18 @@
       <description>&amp;gt; 本文是使用ox-hugo发表的第一篇文章 阅读前提 知道Emacs和Org是什么 知道hugo或其它SSG1程序 为什么要使用ox-hugo 可以使</description>
     </item>
     <item>
-      <title>蜗牛星际机器重置BIOS的方法</title>
-      <link>https://grass.show/post/woniuxingji-bios-reset/</link>
-      <pubDate>Wed, 04 Nov 2020 23:11:00 +0800</pubDate>
-      <guid>https://grass.show/post/woniuxingji-bios-reset/</guid>
-      <description>&lt;p&gt;主板电池旁边的两个针脚，在通电启动情况下，使用螺丝刀连接两个针脚，使其短路&lt;/p&gt;</description>
+      <title>函数式编程之旅(二)——初窥门径</title>
+      <link>https://grass.show/post/js-fp-2/</link>
+      <pubDate>Tue, 21 Jul 2020 11:08:00 +0800</pubDate>
+      <guid>https://grass.show/post/js-fp-2/</guid>
+      <description>&lt;p&gt;一等公民是基石，纯函数是核心，柯里化是手段，函数组合是目的&lt;/p&gt;</description>
     </item>
     <item>
-      <title>在FreeBSD系统上使用Docker</title>
-      <link>https://grass.show/post/use-docker-on-freebsd/</link>
-      <pubDate>Mon, 09 Nov 2020 14:50:00 +0800</pubDate>
-      <guid>https://grass.show/post/use-docker-on-freebsd/</guid>
-      <description>&lt;p&gt;Docker利用了Linux内核的一些特性，而FreeBSD是不支持的，需要通过docker-machine创建虚拟机来曲线救国。&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>《追寻生命的意义》有感</title>
-      <link>https://grass.show/post/mans-search-for-meaning/</link>
-      <pubDate>Mon, 01 Feb 2021 15:13:00 +0800</pubDate>
-      <guid>https://grass.show/post/mans-search-for-meaning/</guid>
-      <description>&lt;p&gt;不论什么样的人，不论处在什么样的环境下，都有些选择的自由，即使身处奥斯维辛集中营，随时可能会被送往毒气室，但是依旧拥有一项谁也剥夺不了的自由，那就是如何面对痛苦的态度。&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>个人照片备份方式的变迁</title>
-      <link>https://grass.show/post/photo-backup-develop-history/</link>
-      <pubDate>Sun, 16 May 2021 23:32:00 +0800</pubDate>
-      <guid>https://grass.show/post/photo-backup-develop-history/</guid>
-      <description>物理相册 这个时间大概是中学时期及以前，没有手机，没有电子相册，更无无备份意识，只有拍完的照片放到家里的相册中 qq相册 中专时期及刚工作的时候，</description>
-    </item>
-    <item>
-      <title>使用certbot申请免费https泛域名证书</title>
-      <link>https://grass.show/post/register-https-bycertbot/</link>
-      <pubDate>Thu, 18 Feb 2021 12:50:00 +0800</pubDate>
-      <guid>https://grass.show/post/register-https-bycertbot/</guid>
-      <description>免费的https证书 部署https访问最简单的办法就是使用域名商提供的https服务，简单、省事、可靠、有保障。 但是，价格同样也不便宜啊，像</description>
-    </item>
-    <item>
-      <title>利器推荐-2021-05</title>
-      <link>https://grass.show/post/tools-recommend-2021-05/</link>
-      <pubDate>Mon, 17 May 2021 23:01:00 +0800</pubDate>
-      <guid>https://grass.show/post/tools-recommend-2021-05/</guid>
-      <description>本文推荐的都是我正在用的或者用过的产品 硬件 Macbook Pro 13寸 如果是开发用，多配点内存会好些，磁盘一般256足够了 HHKB BT 我是被种草的，据说是程序员必备神</description>
-    </item>
-    <item>
-      <title>使用Nix&#43;direnv快速构建不同软件版本的开发环境</title>
-      <link>https://grass.show/post/create-environment-with-nix-and-direnv/</link>
-      <pubDate>Wed, 07 Jul 2021 21:26:00 +0800</pubDate>
-      <guid>https://grass.show/post/create-environment-with-nix-and-direnv/</guid>
-      <description>&lt;p&gt;我们在开发项目是总是会遇到一些软件版本的问题，例如项目A需要node版本为8-10，而项目B需要版本大于12，常用的方案有这么几种。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;在开发不同的项目的时候，手工切换不同的版本 (因为我遇到的不多，所以一直这么干)&lt;/li&gt;
-&lt;li&gt;使用虚拟机或者Docker&lt;/li&gt;
-&lt;li&gt;使用类似python中的virtualenv，根据不同的目录切换不同的虚拟运行时环境&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;本文的方案属于第三种。不需要太多的背景知识。&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>我是如何一步步进入Purescript这个坑的</title>
-      <link>https://grass.show/post/how-do-i-get-to-know-purescript-step-by-step/</link>
-      <pubDate>Sun, 29 Aug 2021 10:55:00 +0800</pubDate>
-      <guid>https://grass.show/post/how-do-i-get-to-know-purescript-step-by-step/</guid>
-      <description>&lt;p&gt;Purescript是一个可以编译到Js的纯函数式编程语言，其语法和思想来源于Haskell，且保持高度一致。最近几个月我对这个语言比较入迷，值得的说一下我是如何一步一步的踏进这个坑的。&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>最近写Purescript项目的一些感悟</title>
-      <link>https://grass.show/post/some-insights-on-using-purescript-recently/</link>
-      <pubDate>Tue, 31 Aug 2021 22:39:00 +0800</pubDate>
-      <guid>https://grass.show/post/some-insights-on-using-purescript-recently/</guid>
-      <description>&lt;p&gt;这篇文章是我使用PureScript(下文简称Purs)这几个月的一些碎碎念，纯主观看法且带有偏见，非教程，轻喷。&lt;/p&gt;</description>
+      <title>js的函数式编程之旅(一)——初入武林</title>
+      <link>https://grass.show/post/js-fp-1/</link>
+      <pubDate>Mon, 20 Jul 2020 20:11:00 +0800</pubDate>
+      <guid>https://grass.show/post/js-fp-1/</guid>
+      <description>&lt;p&gt;一句话重点：函数式好处多多，但是不要过度追求函数式。&lt;/p&gt;</description>
     </item>
     <item>
       <title>Hexo的介绍及安装使用</title>
@@ -130,47 +144,96 @@
 &lt;p&gt;Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页&lt;/p&gt;</description>
     </item>
     <item>
-      <title>起源——时间旅行者的Tardis</title>
-      <link>https://grass.show/post/originl-tardis/</link>
-      <pubDate>Sat, 09 Mar 2019 00:00:00 +0800</pubDate>
-      <guid>https://grass.show/post/originl-tardis/</guid>
-      <description>关于我 92年出生，处女座，半路出家的程序猿。27年的人生中，大致分为三部分，平淡的一段，混乱的一段，励志的一段。平淡的旅途中，表面布满了孝顺</description>
+      <title>机器人总动员——浪漫而感人的动画电影</title>
+      <link>https://grass.show/post/movie-wall-e/</link>
+      <pubDate>Tue, 04 Feb 2020 00:00:00 +0800</pubDate>
+      <guid>https://grass.show/post/movie-wall-e/</guid>
+      <description>昨天就计划好今天看一部电影，但是没有想好看哪一个，打开了爱奇艺，看着推荐的那些，也都没想看的欲望，索性来个更加直接一点的，上豆瓣电影排行榜去</description>
     </item>
     <item>
-      <title>我又开始写博客了</title>
-      <link>https://grass.show/post/again-first-blog/</link>
-      <pubDate>Sun, 13 Aug 2017 01:13:00 +0800</pubDate>
-      <guid>https://grass.show/post/again-first-blog/</guid>
-      <description>&lt;p&gt;为什么要说又呢？不止一次的建站写博客，也不止一次的不了了之.
-而这一次，我为洗刷耻辱而来。&lt;/p&gt;</description>
+      <title>2020，随心而动</title>
+      <link>https://grass.show/post/2020-begin/</link>
+      <pubDate>Fri, 17 Jan 2020 00:00:00 +0800</pubDate>
+      <guid>https://grass.show/post/2020-begin/</guid>
+      <description>2019，鱼跃龙门 刚过去的一年可以说是人生中变化最大的一年也不为过。去年可以分为两个阶段，上半年的关键词是迷茫，下半年的关键词是探索上半年经</description>
     </item>
     <item>
-      <title>距离</title>
-      <link>https://grass.show/post/distance/</link>
-      <pubDate>Thu, 31 Mar 2016 00:00:00 +0800</pubDate>
-      <guid>https://grass.show/post/distance/</guid>
-      <description>离你太近 近的让我看不到你的全部 靠的太紧 让我只能听到你的鼾声 相拥太过用力 我都快没有办法呼吸 请给我 给我们 给我们的爱情 一定的距离 让我可以 静静地 完整</description>
+      <title>人生就像一个多面体</title>
+      <link>https://grass.show/post/life-is-like-polyhedron/</link>
+      <pubDate>Mon, 09 Dec 2019 00:00:00 +0800</pubDate>
+      <guid>https://grass.show/post/life-is-like-polyhedron/</guid>
+      <description>我们的人生就像一个多面体，面对不同的人呈现出不同的一面。 “妈，我想吃韭菜花”，每年的秋天都会给妈打一个电话，告诉她我想吃她腌的韭菜花了，然后</description>
     </item>
     <item>
-      <title>我想要结婚了！</title>
-      <link>https://grass.show/post/i-want-marriy/</link>
-      <pubDate>Fri, 08 Mar 2013 00:00:00 +0800</pubDate>
-      <guid>https://grass.show/post/i-want-marriy/</guid>
-      <description>&lt;p&gt;说实话，我现在真的想结婚啦！&lt;/p&gt;</description>
+      <title>人生首个50km越野跑</title>
+      <link>https://grass.show/post/first-50km-trai-run/</link>
+      <pubDate>Thu, 10 Oct 2019 00:00:00 +0800</pubDate>
+      <guid>https://grass.show/post/first-50km-trai-run/</guid>
+      <description>比赛过去一周了，简单的回忆一下，也就懒得放图了。比赛前的半个月，在好友的鼓励(怂恿)之下报名了50km组别的比赛。比赛前一天，坐组委会的大巴</description>
     </item>
     <item>
-      <title>js的函数式编程之旅(一)——初入武林</title>
-      <link>https://grass.show/post/js-fp-1/</link>
-      <pubDate>Mon, 20 Jul 2020 20:11:00 +0800</pubDate>
-      <guid>https://grass.show/post/js-fp-1/</guid>
-      <description>&lt;p&gt;一句话重点：函数式好处多多，但是不要过度追求函数式。&lt;/p&gt;</description>
+      <title>羡慕别人的故事，不如自己成为主角</title>
+      <link>https://grass.show/post/do-leading-role-for-mine/</link>
+      <pubDate>Mon, 09 Sep 2019 00:00:00 +0800</pubDate>
+      <guid>https://grass.show/post/do-leading-role-for-mine/</guid>
+      <description>这句话的出处是?这句话没有出处，是我昨天在越野跑比赛中突然浮现的一句话。 一 三周前，我去鹫峰爬山，在妙峰山到娘娘庙的那段路上，看到了很多越野跑</description>
     </item>
     <item>
-      <title>生病了</title>
-      <link>https://grass.show/post/i-am-ill/</link>
-      <pubDate>Sun, 24 Mar 2019 00:00:00 +0800</pubDate>
-      <guid>https://grass.show/post/i-am-ill/</guid>
-      <description>一 今天生病了。或者说病情加重了，不光是感冒加重，伴随而来的还有环性情绪障碍开始转换为抑郁。 环性心境从去年7月份基本好转后，就一直停留在普通心</description>
+      <title>人生路上，我跨出了最大的一步</title>
+      <link>https://grass.show/post/great-step/</link>
+      <pubDate>Mon, 02 Sep 2019 00:00:00 +0800</pubDate>
+      <guid>https://grass.show/post/great-step/</guid>
+      <description>距离上一次更新公众号已经过去一个半月了，不是懒得更新，而是没有时间更新。本来今天也是没有时间的，但是由于腿脚不便，今天的穿越活动放了鸽子，在</description>
+    </item>
+    <item>
+      <title>与现实脱轨的两天</title>
+      <link>https://grass.show/post/first-camping/</link>
+      <pubDate>Sun, 14 Jul 2019 00:00:00 +0800</pubDate>
+      <guid>https://grass.show/post/first-camping/</guid>
+      <description>为了摆脱生活中的种种压力，在周五下班后的地铁上就在思考该如何度过一个周末。于是参加两天的露营就在地铁上被我临时决定了。 前一天晚上 由于第一天晚</description>
+    </item>
+    <item>
+      <title>上班族如何实现财务自由——启蒙篇</title>
+      <link>https://grass.show/post/officer-financial-freedom-1/</link>
+      <pubDate>Tue, 02 Apr 2019 00:00:00 +0800</pubDate>
+      <guid>https://grass.show/post/officer-financial-freedom-1/</guid>
+      <description>引子 我喜欢程序员的工作，但是我不想一直做程序员，我还有其他的事情想去尝试，想去摄影，想去西藏骑行，想去酒吧当调酒师，想去夜店当dj，但是我却</description>
+    </item>
+    <item>
+      <title>996ICU大事件——持续发酵中</title>
+      <link>https://grass.show/post/996icu-doing/</link>
+      <pubDate>Fri, 29 Mar 2019 00:00:00 +0800</pubDate>
+      <guid>https://grass.show/post/996icu-doing/</guid>
+      <description>一、起因 2019 年杭州电商公司有赞在公司年会宣布未来执行 996 工作制， CEO 白鸦回应“几年后回看，这次绝对是好事”。 2019 年 3 月中，曝京东开始实行分部门的 996 或</description>
+    </item>
+    <item>
+      <title>《捉迷藏》观后感</title>
+      <link>https://grass.show/post/impressions-of-after-reading-hide-and-seek/</link>
+      <pubDate>Mon, 24 Sep 2018 00:00:00 +0800</pubDate>
+      <guid>https://grass.show/post/impressions-of-after-reading-hide-and-seek/</guid>
+      <description>剧情简介 一个经常被偷窥的少女，在单身居住的楼里，深夜被杀。作为开场的引子。 从一开始的线索，指向了少女（恩惠）的隔壁男。邋遢男，戴头盔，爱好偷</description>
+    </item>
+    <item>
+      <title>建立属于你的知识收集系统</title>
+      <link>https://grass.show/post/build-yours-knowledge-collection-system/</link>
+      <pubDate>Thu, 20 Sep 2018 00:00:00 +0800</pubDate>
+      <guid>https://grass.show/post/build-yours-knowledge-collection-system/</guid>
+      <description>目标 建立起一套流程，从信息的收集，到阅读，再到整理，最后归档。利用各种跨平台的工具来完成他 收集 收集的渠道有多种 RSS的订阅 微信公众号的订阅 朋</description>
+    </item>
+    <item>
+      <title>异步——从Callback到Promise再到Rxjs</title>
+      <link>https://grass.show/post/callback-promise-rxjs/</link>
+      <pubDate>Thu, 31 Aug 2017 00:00:00 +0800</pubDate>
+      <guid>https://grass.show/post/callback-promise-rxjs/</guid>
+      <description>&lt;p&gt;异步编程从以前的晦涩难懂，到现在的简单明了，从以前的功能单一，到现在的功能强大。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>打造高效的Mac开发环境（一）—— 科学上网</title>
+      <link>https://grass.show/post/make-mac-dev-env-01/</link>
+      <pubDate>Wed, 30 Aug 2017 00:00:00 +0800</pubDate>
+      <guid>https://grass.show/post/make-mac-dev-env-01/</guid>
+      <description>&lt;p&gt;工欲善其事，必先利其器&lt;/p&gt;
+&lt;p&gt;不管是我们以后用到的工具，还是各种文档，亦或是“谷歌一下”，这些都得翻墙，甚至GitHub都偶尔抽风，我们先把这重中之重解决掉！&lt;/p&gt;</description>
     </item>
     <item>
       <title>打造高效的Mac开发环境（零）—— 启程</title>
@@ -193,138 +256,12 @@
 &lt;/ul&gt;</description>
     </item>
     <item>
-      <title>linux下文件编码的转换</title>
-      <link>https://grass.show/post/file-codetrans-in-linux/</link>
-      <pubDate>Wed, 30 Mar 2016 00:00:00 +0800</pubDate>
-      <guid>https://grass.show/post/file-codetrans-in-linux/</guid>
-      <description>昨天用TP发现在某个文件中输出中文会在浏览器显示乱码 经过测试发现是文件编码为gb2312 ，而不是utp-8 类型，所有找了几段资料来修复这个问</description>
-    </item>
-    <item>
-      <title>最初的梦想</title>
-      <link>https://grass.show/post/original-dram/</link>
-      <pubDate>Sun, 01 Jun 2014 00:00:00 +0800</pubDate>
-      <guid>https://grass.show/post/original-dram/</guid>
-      <description>每天早上睁眼起床，开始忙忙碌碌的一天。吃饭睡觉，然后准备度过第二天。这是多数人的生活缩影，每个人每天都在忙碌中度过，很多时候甚至会忽略自己为</description>
-    </item>
-    <item>
-      <title>函数式编程之旅(二)——初窥门径</title>
-      <link>https://grass.show/post/js-fp-2/</link>
-      <pubDate>Tue, 21 Jul 2020 11:08:00 +0800</pubDate>
-      <guid>https://grass.show/post/js-fp-2/</guid>
-      <description>&lt;p&gt;一等公民是基石，纯函数是核心，柯里化是手段，函数组合是目的&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>996ICU大事件——持续发酵中</title>
-      <link>https://grass.show/post/996icu-doing/</link>
-      <pubDate>Fri, 29 Mar 2019 00:00:00 +0800</pubDate>
-      <guid>https://grass.show/post/996icu-doing/</guid>
-      <description>一、起因 2019 年杭州电商公司有赞在公司年会宣布未来执行 996 工作制， CEO 白鸦回应“几年后回看，这次绝对是好事”。 2019 年 3 月中，曝京东开始实行分部门的 996 或</description>
-    </item>
-    <item>
-      <title>打造高效的Mac开发环境（一）—— 科学上网</title>
-      <link>https://grass.show/post/make-mac-dev-env-01/</link>
-      <pubDate>Wed, 30 Aug 2017 00:00:00 +0800</pubDate>
-      <guid>https://grass.show/post/make-mac-dev-env-01/</guid>
-      <description>&lt;p&gt;工欲善其事，必先利其器&lt;/p&gt;
-&lt;p&gt;不管是我们以后用到的工具，还是各种文档，亦或是“谷歌一下”，这些都得翻墙，甚至GitHub都偶尔抽风，我们先把这重中之重解决掉！&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>工作&amp;生活工具分享推荐</title>
-      <link>https://grass.show/post/work-and-home-tools/</link>
-      <pubDate>Tue, 29 Mar 2016 00:00:00 +0800</pubDate>
-      <guid>https://grass.show/post/work-and-home-tools/</guid>
-      <description>&lt;p&gt;分享一些平时工作生活中用到的工具。&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>因为艰难，所以更需坚持——为了梦想，永不放弃</title>
-      <link>https://grass.show/post/for-dram-not-giveup/</link>
-      <pubDate>Wed, 22 May 2013 00:00:00 +0800</pubDate>
-      <guid>https://grass.show/post/for-dram-not-giveup/</guid>
-      <description>&lt;p&gt;感觉好久没有写日记了呢，也许是因为忙，也许是因为真的不知道写些什么吧，有些时候想写点什么，但是打开电脑，点开网页，就忘记了要说些什么。&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>上班族如何实现财务自由——启蒙篇</title>
-      <link>https://grass.show/post/officer-financial-freedom-1/</link>
-      <pubDate>Tue, 02 Apr 2019 00:00:00 +0800</pubDate>
-      <guid>https://grass.show/post/officer-financial-freedom-1/</guid>
-      <description>引子 我喜欢程序员的工作，但是我不想一直做程序员，我还有其他的事情想去尝试，想去摄影，想去西藏骑行，想去酒吧当调酒师，想去夜店当dj，但是我却</description>
-    </item>
-    <item>
-      <title>异步——从Callback到Promise再到Rxjs</title>
-      <link>https://grass.show/post/callback-promise-rxjs/</link>
-      <pubDate>Thu, 31 Aug 2017 00:00:00 +0800</pubDate>
-      <guid>https://grass.show/post/callback-promise-rxjs/</guid>
-      <description>&lt;p&gt;异步编程从以前的晦涩难懂，到现在的简单明了，从以前的功能单一，到现在的功能强大。&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>思念（一）</title>
-      <link>https://grass.show/post/miss-1/</link>
-      <pubDate>Wed, 22 Jun 2016 00:00:00 +0800</pubDate>
-      <guid>https://grass.show/post/miss-1/</guid>
-      <description>前天夜里的酒 至今未醒 你妙曼的身影 还未消散 举起杯子 透过 那鲜红的液体 望着你 带着满眼的苦涩 也许 这一别 将会是 永远 永远的永远 还好 现在已是今天 前天早已过</description>
-    </item>
-    <item>
-      <title>与现实脱轨的两天</title>
-      <link>https://grass.show/post/first-camping/</link>
-      <pubDate>Sun, 14 Jul 2019 00:00:00 +0800</pubDate>
-      <guid>https://grass.show/post/first-camping/</guid>
-      <description>为了摆脱生活中的种种压力，在周五下班后的地铁上就在思考该如何度过一个周末。于是参加两天的露营就在地铁上被我临时决定了。 前一天晚上 由于第一天晚</description>
-    </item>
-    <item>
-      <title>在工作中生活VS在生活中工作</title>
-      <link>https://grass.show/post/work-in-life-vs-life-in-work/</link>
-      <pubDate>Sun, 26 Jun 2016 00:00:00 +0800</pubDate>
-      <guid>https://grass.show/post/work-in-life-vs-life-in-work/</guid>
-      <description>一、作为一枚程序源，每天的生活就是黑白颠倒，白天无精打采，夜晚点灯熬夜的工作 记得去年刚来公司的时候，因为公司人手不多，所以一个人干好几个人的</description>
-    </item>
-    <item>
-      <title>人生路上，我跨出了最大的一步</title>
-      <link>https://grass.show/post/great-step/</link>
-      <pubDate>Mon, 02 Sep 2019 00:00:00 +0800</pubDate>
-      <guid>https://grass.show/post/great-step/</guid>
-      <description>距离上一次更新公众号已经过去一个半月了，不是懒得更新，而是没有时间更新。本来今天也是没有时间的，但是由于腿脚不便，今天的穿越活动放了鸽子，在</description>
-    </item>
-    <item>
-      <title>善意的谎言</title>
-      <link>https://grass.show/post/jakob-the-liar/</link>
-      <pubDate>Tue, 28 Jun 2016 00:00:00 +0800</pubDate>
-      <guid>https://grass.show/post/jakob-the-liar/</guid>
-      <description>“你昨晚真的去网吧了吗？” “对啊，我和C君好几年没见面，去网吧撸了一晚上，怀怀旧” “那你身上怎么没有眼味儿呢？” “那个&amp;hellip;&amp;he</description>
-    </item>
-    <item>
-      <title>羡慕别人的故事，不如自己成为主角</title>
-      <link>https://grass.show/post/do-leading-role-for-mine/</link>
-      <pubDate>Mon, 09 Sep 2019 00:00:00 +0800</pubDate>
-      <guid>https://grass.show/post/do-leading-role-for-mine/</guid>
-      <description>这句话的出处是?这句话没有出处，是我昨天在越野跑比赛中突然浮现的一句话。 一 三周前，我去鹫峰爬山，在妙峰山到娘娘庙的那段路上，看到了很多越野跑</description>
-    </item>
-    <item>
-      <title>母亲，生日快乐</title>
-      <link>https://grass.show/post/mom-happy-birthday/</link>
-      <pubDate>Mon, 04 Jul 2016 00:00:00 +0800</pubDate>
-      <guid>https://grass.show/post/mom-happy-birthday/</guid>
-      <description>&amp;gt; 昨天是我妈妈生日 我老家是河北的，现在在帝都上班，前一天为她选了一枚黄金的戒指，带着县城为她订的一个生日蛋糕，在没有通知她的情况下，推开了家</description>
-    </item>
-    <item>
-      <title>人生首个50km越野跑</title>
-      <link>https://grass.show/post/first-50km-trai-run/</link>
-      <pubDate>Thu, 10 Oct 2019 00:00:00 +0800</pubDate>
-      <guid>https://grass.show/post/first-50km-trai-run/</guid>
-      <description>比赛过去一周了，简单的回忆一下，也就懒得放图了。比赛前的半个月，在好友的鼓励(怂恿)之下报名了50km组别的比赛。比赛前一天，坐组委会的大巴</description>
-    </item>
-    <item>
-      <title>凹多边形和点的位置问题(凹包问题面对对象的算法)</title>
-      <link>https://grass.show/post/concave-polygon-and-point/</link>
-      <pubDate>Mon, 01 Aug 2016 00:00:00 +0800</pubDate>
-      <guid>https://grass.show/post/concave-polygon-and-point/</guid>
-      <description>&lt;p&gt;已知一个任意多边形的各顶点坐标，任意给一点坐标，判断是否在该多边形内部或边线上, 这只是一个笨拙的实现&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>人生就像一个多面体</title>
-      <link>https://grass.show/post/life-is-like-polyhedron/</link>
-      <pubDate>Mon, 09 Dec 2019 00:00:00 +0800</pubDate>
-      <guid>https://grass.show/post/life-is-like-polyhedron/</guid>
-      <description>我们的人生就像一个多面体，面对不同的人呈现出不同的一面。 “妈，我想吃韭菜花”，每年的秋天都会给妈打一个电话，告诉她我想吃她腌的韭菜花了，然后</description>
+      <title>我又开始写博客了</title>
+      <link>https://grass.show/post/again-first-blog/</link>
+      <pubDate>Sun, 13 Aug 2017 01:13:00 +0800</pubDate>
+      <guid>https://grass.show/post/again-first-blog/</guid>
+      <description>&lt;p&gt;为什么要说又呢？不止一次的建站写博客，也不止一次的不了了之.
+而这一次，我为洗刷耻辱而来。&lt;/p&gt;</description>
     </item>
     <item>
       <title>工资从2k到22k，最终到0k的发展历程</title>
@@ -334,88 +271,39 @@
       <description>15年，那时候23岁，怀着一颗无知且无畏的心来到首都寻找工作，想要立志踏入IT行业。 由于那时候不懂技术，所以也不知道自己该找IT行业内的什么</description>
     </item>
     <item>
-      <title>2020，随心而动</title>
-      <link>https://grass.show/post/2020-begin/</link>
-      <pubDate>Fri, 17 Jan 2020 00:00:00 +0800</pubDate>
-      <guid>https://grass.show/post/2020-begin/</guid>
-      <description>2019，鱼跃龙门 刚过去的一年可以说是人生中变化最大的一年也不为过。去年可以分为两个阶段，上半年的关键词是迷茫，下半年的关键词是探索上半年经</description>
+      <title>凹多边形和点的位置问题(凹包问题面对对象的算法)</title>
+      <link>https://grass.show/post/concave-polygon-and-point/</link>
+      <pubDate>Mon, 01 Aug 2016 00:00:00 +0800</pubDate>
+      <guid>https://grass.show/post/concave-polygon-and-point/</guid>
+      <description>&lt;p&gt;已知一个任意多边形的各顶点坐标，任意给一点坐标，判断是否在该多边形内部或边线上, 这只是一个笨拙的实现&lt;/p&gt;</description>
     </item>
     <item>
-      <title>我这焦虑的人生</title>
-      <link>https://grass.show/post/my-anxious-life/</link>
-      <pubDate>Thu, 11 May 2017 00:00:00 +0800</pubDate>
-      <guid>https://grass.show/post/my-anxious-life/</guid>
-      <description>没有工作的时候我在焦虑，月入三万的时候我也在焦虑，出来创业我还在焦虑 焦虑来自对未来产生的恐惧 来自空虚的灵魂 来自能力不足以支撑的梦想 以及对死亡</description>
+      <title>在工作中生活VS在生活中工作</title>
+      <link>https://grass.show/post/work-in-life-vs-life-in-work/</link>
+      <pubDate>Sun, 26 Jun 2016 00:00:00 +0800</pubDate>
+      <guid>https://grass.show/post/work-in-life-vs-life-in-work/</guid>
+      <description>一、作为一枚程序源，每天的生活就是黑白颠倒，白天无精打采，夜晚点灯熬夜的工作 记得去年刚来公司的时候，因为公司人手不多，所以一个人干好几个人的</description>
     </item>
     <item>
-      <title>机器人总动员——浪漫而感人的动画电影</title>
-      <link>https://grass.show/post/movie-wall-e/</link>
-      <pubDate>Tue, 04 Feb 2020 00:00:00 +0800</pubDate>
-      <guid>https://grass.show/post/movie-wall-e/</guid>
-      <description>昨天就计划好今天看一部电影，但是没有想好看哪一个，打开了爱奇艺，看着推荐的那些，也都没想看的欲望，索性来个更加直接一点的，上豆瓣电影排行榜去</description>
+      <title>工作&amp;生活工具分享推荐</title>
+      <link>https://grass.show/post/work-and-home-tools/</link>
+      <pubDate>Tue, 29 Mar 2016 00:00:00 +0800</pubDate>
+      <guid>https://grass.show/post/work-and-home-tools/</guid>
+      <description>&lt;p&gt;分享一些平时工作生活中用到的工具。&lt;/p&gt;</description>
     </item>
     <item>
-      <title>假装</title>
-      <link>https://grass.show/post/pretend/</link>
-      <pubDate>Wed, 07 Mar 2018 00:00:00 +0800</pubDate>
-      <guid>https://grass.show/post/pretend/</guid>
-      <description>有人说我努力 有人说我坚强 有人赞我如春风 有人夸我似春雨 唯有黑夜知道 我枯萎的梦想 以及那绝望的心</description>
+      <title>最初的梦想</title>
+      <link>https://grass.show/post/original-dram/</link>
+      <pubDate>Sun, 01 Jun 2014 00:00:00 +0800</pubDate>
+      <guid>https://grass.show/post/original-dram/</guid>
+      <description>每天早上睁眼起床，开始忙忙碌碌的一天。吃饭睡觉，然后准备度过第二天。这是多数人的生活缩影，每个人每天都在忙碌中度过，很多时候甚至会忽略自己为</description>
     </item>
     <item>
-      <title>球球，我想你了</title>
-      <link>https://grass.show/post/qiu-qiu-i-miss-you/</link>
-      <pubDate>Mon, 17 Sep 2018 00:00:00 +0800</pubDate>
-      <guid>https://grass.show/post/qiu-qiu-i-miss-you/</guid>
-      <description>球球在路上很安静，两只爪子扒在车窗下沿，脑袋半露出窗外，眼睛平视着前方，不知道在想些什么。一路上几乎都在保持着这个姿势。或许他还不知道这一次</description>
-    </item>
-    <item>
-      <title>《捉迷藏》观后感</title>
-      <link>https://grass.show/post/impressions-of-after-reading-hide-and-seek/</link>
-      <pubDate>Mon, 24 Sep 2018 00:00:00 +0800</pubDate>
-      <guid>https://grass.show/post/impressions-of-after-reading-hide-and-seek/</guid>
-      <description>剧情简介 一个经常被偷窥的少女，在单身居住的楼里，深夜被杀。作为开场的引子。 从一开始的线索，指向了少女（恩惠）的隔壁男。邋遢男，戴头盔，爱好偷</description>
-    </item>
-    <item>
-      <title>抑郁——我不是矫情</title>
-      <link>https://grass.show/post/depression-i-am-not-hypocritical/</link>
-      <pubDate>Thu, 04 Oct 2018 00:00:00 +0800</pubDate>
-      <guid>https://grass.show/post/depression-i-am-not-hypocritical/</guid>
-      <description>今年年初的时候，我被诊断为环形心境，它是抑郁症的一种，其表现为抑郁和兴奋交替出现。那段时间是整个人生中最灰暗的时刻。一方面是抑郁症带来的情绪</description>
-    </item>
-    <item>
-      <title>天上的星星</title>
-      <link>https://grass.show/post/stars-on-the-sky/</link>
-      <pubDate>Sun, 30 Sep 2018 00:00:00 +0800</pubDate>
-      <guid>https://grass.show/post/stars-on-the-sky/</guid>
-      <description>天上的星星 美丽而明亮 比月亮 还要令人向往 天上的星星 忽明忽暗 在浩瀚的银河中 失去了目标 天上的星星 倒映在平静的湖面 仿佛可以触手可及 微风吹过 碎了一地的</description>
-    </item>
-    <item>
-      <title>孤独</title>
-      <link>https://grass.show/post/alone/</link>
-      <pubDate>Wed, 26 Sep 2018 00:00:00 +0800</pubDate>
-      <guid>https://grass.show/post/alone/</guid>
-      <description>在地铁的车厢里面 忙碌的人们拥挤着 我的双脚 无处安放 在空旷的广场上 三五成群的广场舞大妈 而我 仿佛不曾出现过 在都市的夜店里 音乐震耳欲聋 心也不在 只剩下</description>
-    </item>
-    <item>
-      <title>秋风</title>
-      <link>https://grass.show/post/autumn-wind/</link>
-      <pubDate>Sun, 23 Sep 2018 00:00:00 +0800</pubDate>
-      <guid>https://grass.show/post/autumn-wind/</guid>
-      <description>天上的云朵轻轻的朝我飞来 高空的鸟儿振翅高飞 运河边的柳树上枝条翻飞 操场上的红旗舒缓的飘扬着 小区的树苗深沉的摇摆着 绿地上的小草们快乐的舞蹈着 窗户</description>
-    </item>
-    <item>
-      <title>时光,你慢些吧</title>
-      <link>https://grass.show/post/time-please-you-slow-down/</link>
-      <pubDate>Sat, 22 Sep 2018 00:00:00 +0800</pubDate>
-      <guid>https://grass.show/post/time-please-you-slow-down/</guid>
-      <description>时光匆匆的向着远方走去对于身后不再留恋 在时光看不到的角落里快乐在哭泣时光只顾前行忘记了快乐在哪里 在时光扬起的灰尘里健康在哭泣时光一心想着远方</description>
-    </item>
-    <item>
-      <title>建立属于你的知识收集系统</title>
-      <link>https://grass.show/post/build-yours-knowledge-collection-system/</link>
-      <pubDate>Thu, 20 Sep 2018 00:00:00 +0800</pubDate>
-      <guid>https://grass.show/post/build-yours-knowledge-collection-system/</guid>
-      <description>目标 建立起一套流程，从信息的收集，到阅读，再到整理，最后归档。利用各种跨平台的工具来完成他 收集 收集的渠道有多种 RSS的订阅 微信公众号的订阅 朋</description>
+      <title>因为艰难，所以更需坚持——为了梦想，永不放弃</title>
+      <link>https://grass.show/post/for-dram-not-giveup/</link>
+      <pubDate>Wed, 22 May 2013 00:00:00 +0800</pubDate>
+      <guid>https://grass.show/post/for-dram-not-giveup/</guid>
+      <description>&lt;p&gt;感觉好久没有写日记了呢，也许是因为忙，也许是因为真的不知道写些什么吧，有些时候想写点什么，但是打开电脑，点开网页，就忘记了要说些什么。&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
