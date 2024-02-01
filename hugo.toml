@@ -106,6 +106,7 @@ keys = ["title", "permalink", "summary", "content"]
 
 [taxonomies]
 series = 'series'
+tag = 'tags'
 
 [[menu.main]]
 identifier = 'categories'
