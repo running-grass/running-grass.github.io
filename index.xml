@@ -6,16 +6,14 @@
     <description>Recent content on 一世韶华</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 01 Feb 2024 16:30:00 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 02 Dec 2021 10:41:00 +0800</lastBuildDate>
     <atom:link href="https://grass.show/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>React Native中的别名</title>
-      <link>https://grass.show/translate/alias-in-react-native/</link>
-      <pubDate>Thu, 01 Feb 2024 16:30:00 +0800</pubDate>
-      <guid>https://grass.show/translate/alias-in-react-native/</guid>
-      <description>&lt;p&gt;有时候，你会在你的项目有多个文件和文件夹。我们需要从任意随机文件中获得一个文件的引用。如果我们这样的相对路径的话，看起来是这个样子的:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-javascript&#34; data-lang=&#34;javascript&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kr&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;themes&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;from&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;../../config/themes&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;通过符号`../`让我们很难去思考，在更复杂的项目中，这将是一个噩梦。&lt;/p&gt;</description>
+      <title>调研在Flutter中支持离线优先的数据库</title>
+      <link>https://grass.show/post/flutter-offline-first-solutions/</link>
+      <pubDate>Thu, 02 Dec 2021 10:41:00 +0800</pubDate>
+      <guid>https://grass.show/post/flutter-offline-first-solutions/</guid>
+      <description>&lt;p&gt;本文调研了10余种客户端数据库方案。用于在 &lt;code&gt;Flutter&lt;/code&gt; 中支持离线优先的数据库。&lt;/p&gt;</description>
     </item>
     <item>
       <title>最近写Purescript项目的一些感悟</title>
@@ -304,6 +302,15 @@
       <pubDate>Wed, 22 May 2013 00:00:00 +0800</pubDate>
       <guid>https://grass.show/post/for-dram-not-giveup/</guid>
       <description>&lt;p&gt;感觉好久没有写日记了呢，也许是因为忙，也许是因为真的不知道写些什么吧，有些时候想写点什么，但是打开电脑，点开网页，就忘记了要说些什么。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>React Native中的别名</title>
+      <link>https://grass.show/translate/alias-in-react-native/</link>
+      <pubDate>Sat, 18 Aug 2007 00:00:00 +0800</pubDate>
+      <guid>https://grass.show/translate/alias-in-react-native/</guid>
+      <description>&lt;p&gt;有时候，你会在你的项目有多个文件和文件夹。我们需要从任意随机文件中获得一个文件的引用。如果我们这样的相对路径的话，看起来是这个样子的:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-javascript&#34; data-lang=&#34;javascript&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kr&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;themes&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;from&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;../../config/themes&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;通过符号`../`让我们很难去思考，在更复杂的项目中，这将是一个噩梦。&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
