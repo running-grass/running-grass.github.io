@@ -73,6 +73,12 @@ Content = 'Welcome to my blog'
 [[params.socialIcons]]
 name = 'github'
 url = "https://github.com/running-grass"
+[[params.socialIcons]]
+name = 'rss'
+url = "/index.xml"
+[[params.socialIcons]]
+name = 'email'
+url = "mailto:hi@grass.show"
 
 # analytics:
 #   google:
