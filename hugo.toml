@@ -115,9 +115,9 @@ series = 'series'
 tag = 'tags'
 
 [[menu.main]]
-identifier = 'categories'
-name = '分类'
-url = '/categories/'
+identifier = 'series'
+name = '系列'
+url = '/series/'
 weight = 10
 [[menu.main]]
 identifier = 'tags'
