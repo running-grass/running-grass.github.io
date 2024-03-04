@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Emacs 中的个人信息管理 on 一世韶华</title>
+    <link>https://grass.show/series/emacs-%E4%B8%AD%E7%9A%84%E4%B8%AA%E4%BA%BA%E4%BF%A1%E6%81%AF%E7%AE%A1%E7%90%86/</link>
+    <description>Recent content in Emacs 中的个人信息管理 on 一世韶华</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Mon, 04 Mar 2024 00:30:00 +0800</lastBuildDate>
+    <atom:link href="https://grass.show/series/emacs-%E4%B8%AD%E7%9A%84%E4%B8%AA%E4%BA%BA%E4%BF%A1%E6%81%AF%E7%AE%A1%E7%90%86/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Emacs中的个人信息管理 — GTD收集</title>
+      <link>https://grass.show/post/pim-in-emacs-gtd-inbox/</link>
+      <pubDate>Mon, 04 Mar 2024 00:30:00 +0800</pubDate>
+      <guid>https://grass.show/post/pim-in-emacs-gtd-inbox/</guid>
+      <description>&lt;p&gt;本文是 &lt;a href=&#34;https://grass.show/series/emacs-%E4%B8%AD%E7%9A%84%E4%B8%AA%E4%BA%BA%E4%BF%A1%E6%81%AF%E7%AE%A1%E7%90%86/&#34;&gt;本系列&lt;/a&gt; 的第一篇。&lt;/p&gt;
+&lt;p&gt;本篇分享我在 &lt;code&gt;Emacs&lt;/code&gt; 中使用 &lt;code&gt;Org&lt;/code&gt; 进行 &lt;code&gt;GTD&lt;/code&gt; 信息收集的一些方案及配置。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
