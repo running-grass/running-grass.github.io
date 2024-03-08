@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>疑难杂症 on 一世韶华</title>
+    <link>https://grass.show/tags/%E7%96%91%E9%9A%BE%E6%9D%82%E7%97%87/</link>
+    <description>Recent content in 疑难杂症 on 一世韶华</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Fri, 08 Mar 2024 11:40:00 +0800</lastBuildDate>
+    <atom:link href="https://grass.show/tags/%E7%96%91%E9%9A%BE%E6%9D%82%E7%97%87/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>在Hyprland桌面下，Chromium系浏览器无法使用Fcitx输入法</title>
+      <link>https://grass.show/post/in-hyprland-chromium-not-use-fcitx/</link>
+      <pubDate>Fri, 08 Mar 2024 11:40:00 +0800</pubDate>
+      <guid>https://grass.show/post/in-hyprland-chromium-not-use-fcitx/</guid>
+      <description>TL;DR 使用以下参数打开 chromium --enable-wayland-ime 背景 操作系统为 NixOS ，桌面为 Hyprland ，显示协议为 Wayland ，输入法是 Fcitx 配制的小鹤双拼。浏览器是 Brave （Chromium内核）。之前我的浏览器</description>
+    </item>
+  </channel>
+</rss>
