@@ -13,7 +13,7 @@
       <link>https://grass.show/post/in-hyprland-chromium-not-use-fcitx/</link>
       <pubDate>Fri, 08 Mar 2024 11:40:00 +0800</pubDate>
       <guid>https://grass.show/post/in-hyprland-chromium-not-use-fcitx/</guid>
-      <description>TL;DR 使用以下参数打开 chromium --enable-wayland-ime 背景 操作系统为 NixOS ，桌面为 Hyprland ，显示协议为 Wayland ，输入法是 Fcitx 配制的小鹤双拼。浏览器是 Brave （Chromium内核）。之前我的浏览器</description>
+      <description>TL;DR 使用以下参数打开 chromium -enable-features=UseOzonePlatform --ozone-platform=wayland --enable-wayland-ime 背景 操作系统为 NixOS ，桌面为 Hyprland ，显示协议为 Wayland ，输入法是 Fcitx 配制的小鹤双拼。浏览器是 Brave （Chromium内核）。之前我的浏</description>
     </item>
     <item>
       <title>Emacs中的个人信息管理 — GTD收集</title>
