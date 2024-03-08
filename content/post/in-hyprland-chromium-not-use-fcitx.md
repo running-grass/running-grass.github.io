@@ -1,7 +1,7 @@
 +++
 title = "在Hyprland桌面下，Chromium系浏览器无法使用Fcitx输入法"
 date = 2024-03-08T11:40:00+08:00
-lastmod = 2024-03-08T11:41:36+08:00
+lastmod = 2024-03-08T12:05:11+08:00
 tags = ["疑难杂症", "Chromium", "Fcitx", "Wayland", "Hyprland"]
 draft = false
 +++
@@ -11,7 +11,7 @@ draft = false
 使用以下参数打开
 
 ```sh
-chromium --enable-wayland-ime
+chromium -enable-features=UseOzonePlatform --ozone-platform=wayland --enable-wayland-ime
 ```
 
 
@@ -30,12 +30,12 @@ chromium --enable-wayland-ime
 
 ### 第一种方案 {#第一种方案}
 
-使用 `chromium  --gtk-version=4` 来启动浏览器，这个的问题是输入框位置有时候会在错误的位置上
+使用 `chromium -enable-features=UseOzonePlatform --ozone-platform=wayland --gtk-version=4` 来启动浏览器，这个的问题是输入框位置有时候会在错误的位置上
 
 
 ### 第二种方案 {#第二种方案}
 
-使用 `chromium --enable-wayland-ime` 来启动浏览器，这样会使用 `text-input-v1`, 效果比上面一个要稳定
+使用 `chromium -enable-features=UseOzonePlatform --ozone-platform=wayland --enable-wayland-ime` 来启动浏览器，这样会使用 `text-input-v1`, 效果比上面一个要稳定
 
 
 ## 结论 {#结论}
