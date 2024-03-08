@@ -22,4 +22,20 @@ git commit -m "$msg"
 # Push source and build repos.
 git push origin main
 
+# Go To Root folder
+cd ..
+
+# Add changes to git.
+git add .
+
+# Commit changes.
+msg="edit post $(date)"
+if [ -n "$*" ]; then
+	msg="$*"
+fi
+git commit -m "$msg"
+
+# Push source and build repos.
+git push origin main
+
 exit 0
