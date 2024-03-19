@@ -26,8 +26,8 @@ minifyOutput = true
 [params]
 env = 'production' # to enable google analytics, opengraph, twitter-cards and schema.
 description = '一个程序员的喃喃自语'
-keywords = ['Nixos', 'Emacs', 'PHP', 'Orgmode']
-author = "Leo Liu"
+keywords = ['Nixos', 'Emacs', 'PHP', 'Orgmode', 'Hyprland']
+author = "奔跑的小草"
 defaultTheme = 'dark' # dark, light
 disableThemeToggle = true
 
