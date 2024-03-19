@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>时间管理 on 一世韶华</title>
+    <link>https://grass.show/tags/%E6%97%B6%E9%97%B4%E7%AE%A1%E7%90%86/</link>
+    <description>Recent content in 时间管理 on 一世韶华</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Tue, 19 Mar 2024 13:28:00 +0800</lastBuildDate>
+    <atom:link href="https://grass.show/tags/%E6%97%B6%E9%97%B4%E7%AE%A1%E7%90%86/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Emacs中的个人信息管理 — GTD整理</title>
+      <link>https://grass.show/post/pim-in-emacs-gtd-review/</link>
+      <pubDate>Tue, 19 Mar 2024 13:28:00 +0800</pubDate>
+      <guid>https://grass.show/post/pim-in-emacs-gtd-review/</guid>
+      <description>&lt;p&gt;本文是 &lt;a href=&#34;https://grass.show/series/emacs-%E4%B8%AD%E7%9A%84%E4%B8%AA%E4%BA%BA%E4%BF%A1%E6%81%AF%E7%AE%A1%E7%90%86/&#34;&gt;本系列&lt;/a&gt; 的第二篇， 分享在Emacs中践行 GTD 的工作流&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
