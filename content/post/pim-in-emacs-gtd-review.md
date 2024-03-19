@@ -1,7 +1,7 @@
 +++
 title = "Emacs中的个人信息管理 — GTD整理"
 date = 2024-03-19T13:28:00+08:00
-lastmod = 2024-03-19T13:59:07+08:00
+lastmod = 2024-03-19T18:59:41+08:00
 tags = ["Emacs", "series", "时间管理", "任务管理", "GTD", "Org"]
 draft = false
 series = ["Emacs 中的个人信息管理"]
@@ -107,7 +107,20 @@ series = ["Emacs 中的个人信息管理"]
 设置方式为：
 
 1.  项目给项目加上 `project` 标签， 之后配置一个自定义议程视图 `("wp" "每周项目回顾" tags "+project" ((org-use-tag-inheritance nil)))`
-2.  任务
+2.  任务增加 TODO关键词，如果有截止日期增加 `DEADLINE` ，一般设置为 `SOMEDAY` 或 `NEXT` 。 然后每天检查 `NEXT` 列表，安排最近几天的任务，加上 `SCHEDULED`
+3.  事件不要加 TODO关键词， 一般使用激活时间戳，如果需要过期提醒的话，改用 `SCHEDULED`
+4.  习惯不要加 TODO关键词，使用 `SCHEDULE` , 例如
+    ```text
+    SCHEDULED: <2024-03-20 三 .+1d/3d>
+    ```
+
+同时增加属性
+
+```text
+:PROPERTIES:
+:STYLE:    habit
+:END:
+```
 
 
 ## 后续 {#后续}
