@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Emacs on 一世韶华</title>
     <link>https://grass.show/tags/emacs/</link>
     <description>Recent content in Emacs on 一世韶华</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo -- 0.147.3</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 27 Mar 2024 13:20:00 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 27 Mar 2024 13:22:58 +0800</lastBuildDate>
     <atom:link href="https://grass.show/tags/emacs/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Emacs中的个人信息管理 — 日记/笔记/博客</title>
@@ -35,7 +35,12 @@
       <link>https://grass.show/post/tools-recommend-2021-05/</link>
       <pubDate>Mon, 17 May 2021 23:01:00 +0800</pubDate>
       <guid>https://grass.show/post/tools-recommend-2021-05/</guid>
-      <description>本文推荐的都是我正在用的或者用过的产品 硬件 Macbook Pro 13寸 如果是开发用，多配点内存会好些，磁盘一般256足够了 HHKB BT 我是被种草的，据说是程序员必备神</description>
+      <description>&lt;p&gt;本文推荐的都是我正在用的或者用过的产品&lt;/p&gt;
+&lt;h2 id=&#34;硬件&#34;&gt;硬件&lt;/h2&gt;
+&lt;h3 id=&#34;macbook-pro-13寸&#34;&gt;Macbook Pro 13寸&lt;/h3&gt;
+&lt;p&gt;如果是开发用，多配点内存会好些，磁盘一般256足够了&lt;/p&gt;
+&lt;h3 id=&#34;hhkb-bt&#34;&gt;HHKB BT&lt;/h3&gt;
+&lt;p&gt;我是被种草的，据说是程序员必备神器，用了三年了，按起来很舒服，偶尔用同事的薄膜键盘会很不适应。一开始我是买的有线的，但是我觉得累赘。就在咸鱼上换了一个蓝牙版的，结果在办公室的多蓝牙设备的环境下，总是断连。声音比机械的要轻，不脆，键程适中。&lt;/p&gt;</description>
     </item>
     <item>
       <title>基于Org的GTD实践</title>

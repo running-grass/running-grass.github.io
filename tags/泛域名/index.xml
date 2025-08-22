@@ -1,19 +1,21 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>泛域名 on 一世韶华</title>
     <link>https://grass.show/tags/%E6%B3%9B%E5%9F%9F%E5%90%8D/</link>
     <description>Recent content in 泛域名 on 一世韶华</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo -- 0.147.3</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 18 Feb 2021 12:50:00 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 01 Feb 2024 16:56:05 +0800</lastBuildDate>
     <atom:link href="https://grass.show/tags/%E6%B3%9B%E5%9F%9F%E5%90%8D/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>使用certbot申请免费https泛域名证书</title>
       <link>https://grass.show/post/register-https-bycertbot/</link>
       <pubDate>Thu, 18 Feb 2021 12:50:00 +0800</pubDate>
       <guid>https://grass.show/post/register-https-bycertbot/</guid>
-      <description>免费的https证书 部署https访问最简单的办法就是使用域名商提供的https服务，简单、省事、可靠、有保障。 但是，价格同样也不便宜啊，像</description>
+      <description>&lt;h2 id=&#34;免费的https证书&#34;&gt;免费的https证书&lt;/h2&gt;
+&lt;p&gt;部署https访问最简单的办法就是使用域名商提供的https服务，简单、省事、可靠、有保障。&lt;/p&gt;
+&lt;p&gt;但是，价格同样也不便宜啊，像我等穷人，当然要捡着物美价廉的吃了，如果能薅羊毛坚决不能放过。&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

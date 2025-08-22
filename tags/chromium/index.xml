@@ -1,19 +1,23 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Chromium on 一世韶华</title>
     <link>https://grass.show/tags/chromium/</link>
     <description>Recent content in Chromium on 一世韶华</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo -- 0.147.3</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Fri, 08 Mar 2024 11:40:00 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 08 Mar 2024 12:05:55 +0800</lastBuildDate>
     <atom:link href="https://grass.show/tags/chromium/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>在Hyprland桌面下，Chromium系浏览器无法使用Fcitx输入法</title>
       <link>https://grass.show/post/in-hyprland-chromium-not-use-fcitx/</link>
       <pubDate>Fri, 08 Mar 2024 11:40:00 +0800</pubDate>
       <guid>https://grass.show/post/in-hyprland-chromium-not-use-fcitx/</guid>
-      <description>TL;DR 使用以下参数打开 chromium -enable-features=UseOzonePlatform --ozone-platform=wayland --enable-wayland-ime 背景 操作系统为 NixOS ，桌面为 Hyprland ，显示协议为 Wayland ，输入法是 Fcitx 配制的小鹤双拼。浏览器是 Brave （Chromium内核）。之前我的浏</description>
+      <description>&lt;h2 id=&#34;tl-dr&#34;&gt;TL;DR&lt;/h2&gt;
+&lt;p&gt;使用以下参数打开&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;chromium -enable-features&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;UseOzonePlatform --ozone-platform&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;wayland --enable-wayland-ime
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;背景&#34;&gt;背景&lt;/h2&gt;
+&lt;p&gt;操作系统为 &lt;code&gt;NixOS&lt;/code&gt; ，桌面为 &lt;code&gt;Hyprland&lt;/code&gt; ，显示协议为 &lt;code&gt;Wayland&lt;/code&gt; ，输入法是 &lt;code&gt;Fcitx&lt;/code&gt; 配制的小鹤双拼。浏览器是 &lt;code&gt;Brave&lt;/code&gt; （Chromium内核）。之前我的浏览器是可以使用 Fcitx 输入法的，但是前端时候不知道动了什么配置，突然就不能使用输入法了，但我又懒得一个个的回滚系统去看。所以干脆一不做二不休，重新查一下原因吧。&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

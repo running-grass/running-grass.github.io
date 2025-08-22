@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Posts on 一世韶华</title>
     <link>https://grass.show/post/</link>
     <description>Recent content in Posts on 一世韶华</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo -- 0.147.3</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 16 Apr 2024 13:00:00 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 16 Apr 2024 13:00:43 +0800</lastBuildDate>
     <atom:link href="https://grass.show/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Symfony 源码阅读 - 简介</title>
@@ -35,7 +35,11 @@
       <link>https://grass.show/post/in-hyprland-chromium-not-use-fcitx/</link>
       <pubDate>Fri, 08 Mar 2024 11:40:00 +0800</pubDate>
       <guid>https://grass.show/post/in-hyprland-chromium-not-use-fcitx/</guid>
-      <description>TL;DR 使用以下参数打开 chromium -enable-features=UseOzonePlatform --ozone-platform=wayland --enable-wayland-ime 背景 操作系统为 NixOS ，桌面为 Hyprland ，显示协议为 Wayland ，输入法是 Fcitx 配制的小鹤双拼。浏览器是 Brave （Chromium内核）。之前我的浏</description>
+      <description>&lt;h2 id=&#34;tl-dr&#34;&gt;TL;DR&lt;/h2&gt;
+&lt;p&gt;使用以下参数打开&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;chromium -enable-features&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;UseOzonePlatform --ozone-platform&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;wayland --enable-wayland-ime
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;背景&#34;&gt;背景&lt;/h2&gt;
+&lt;p&gt;操作系统为 &lt;code&gt;NixOS&lt;/code&gt; ，桌面为 &lt;code&gt;Hyprland&lt;/code&gt; ，显示协议为 &lt;code&gt;Wayland&lt;/code&gt; ，输入法是 &lt;code&gt;Fcitx&lt;/code&gt; 配制的小鹤双拼。浏览器是 &lt;code&gt;Brave&lt;/code&gt; （Chromium内核）。之前我的浏览器是可以使用 Fcitx 输入法的，但是前端时候不知道动了什么配置，突然就不能使用输入法了，但我又懒得一个个的回滚系统去看。所以干脆一不做二不休，重新查一下原因吧。&lt;/p&gt;</description>
     </item>
     <item>
       <title>Emacs中的个人信息管理 — GTD收集</title>
@@ -84,21 +88,31 @@
       <link>https://grass.show/post/tools-recommend-2021-05/</link>
       <pubDate>Mon, 17 May 2021 23:01:00 +0800</pubDate>
       <guid>https://grass.show/post/tools-recommend-2021-05/</guid>
-      <description>本文推荐的都是我正在用的或者用过的产品 硬件 Macbook Pro 13寸 如果是开发用，多配点内存会好些，磁盘一般256足够了 HHKB BT 我是被种草的，据说是程序员必备神</description>
+      <description>&lt;p&gt;本文推荐的都是我正在用的或者用过的产品&lt;/p&gt;
+&lt;h2 id=&#34;硬件&#34;&gt;硬件&lt;/h2&gt;
+&lt;h3 id=&#34;macbook-pro-13寸&#34;&gt;Macbook Pro 13寸&lt;/h3&gt;
+&lt;p&gt;如果是开发用，多配点内存会好些，磁盘一般256足够了&lt;/p&gt;
+&lt;h3 id=&#34;hhkb-bt&#34;&gt;HHKB BT&lt;/h3&gt;
+&lt;p&gt;我是被种草的，据说是程序员必备神器，用了三年了，按起来很舒服，偶尔用同事的薄膜键盘会很不适应。一开始我是买的有线的，但是我觉得累赘。就在咸鱼上换了一个蓝牙版的，结果在办公室的多蓝牙设备的环境下，总是断连。声音比机械的要轻，不脆，键程适中。&lt;/p&gt;</description>
     </item>
     <item>
       <title>个人照片备份方式的变迁</title>
       <link>https://grass.show/post/photo-backup-develop-history/</link>
       <pubDate>Sun, 16 May 2021 23:32:00 +0800</pubDate>
       <guid>https://grass.show/post/photo-backup-develop-history/</guid>
-      <description>物理相册 这个时间大概是中学时期及以前，没有手机，没有电子相册，更无无备份意识，只有拍完的照片放到家里的相册中 qq相册 中专时期及刚工作的时候，</description>
+      <description>&lt;h2 id=&#34;物理相册&#34;&gt;物理相册&lt;/h2&gt;
+&lt;p&gt;这个时间大概是中学时期及以前，没有手机，没有电子相册，更无无备份意识，只有拍完的照片放到家里的相册中&lt;/p&gt;
+&lt;h2 id=&#34;qq相册&#34;&gt;qq相册&lt;/h2&gt;
+&lt;p&gt;中专时期及刚工作的时候，用手机拍完的照片放到qq空间中，管理照片就是使用qq相册，也没有更加复杂的管理需求&lt;/p&gt;</description>
     </item>
     <item>
       <title>使用certbot申请免费https泛域名证书</title>
       <link>https://grass.show/post/register-https-bycertbot/</link>
       <pubDate>Thu, 18 Feb 2021 12:50:00 +0800</pubDate>
       <guid>https://grass.show/post/register-https-bycertbot/</guid>
-      <description>免费的https证书 部署https访问最简单的办法就是使用域名商提供的https服务，简单、省事、可靠、有保障。 但是，价格同样也不便宜啊，像</description>
+      <description>&lt;h2 id=&#34;免费的https证书&#34;&gt;免费的https证书&lt;/h2&gt;
+&lt;p&gt;部署https访问最简单的办法就是使用域名商提供的https服务，简单、省事、可靠、有保障。&lt;/p&gt;
+&lt;p&gt;但是，价格同样也不便宜啊，像我等穷人，当然要捡着物美价廉的吃了，如果能薅羊毛坚决不能放过。&lt;/p&gt;</description>
     </item>
     <item>
       <title>《追寻生命的意义》有感</title>
@@ -140,14 +154,49 @@
       <link>https://grass.show/post/use-google-search-without-vpn/</link>
       <pubDate>Tue, 27 Oct 2020 11:28:00 +0800</pubDate>
       <guid>https://grass.show/post/use-google-search-without-vpn/</guid>
-      <description>谷歌镜像站汇总 谷歌学术导航 谷歌镜像导航 设置浏览器的默认搜索 打开谷歌镜像导航，在右侧谷歌网页镜像中随便选择一个输入框，输入要搜索的东西，点击 谷</description>
+      <description>&lt;h2 id=&#34;谷歌镜像站汇总&#34;&gt;谷歌镜像站汇总&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://ac.scmor.com/&#34;&gt;谷歌学术导航&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://scholar.hedasudi.com/&#34;&gt;谷歌镜像导航&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;设置浏览器的默认搜索&#34;&gt;设置浏览器的默认搜索&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;打开&lt;a href=&#34;http://scholar.hedasudi.com/&#34;&gt;谷歌镜像导航&lt;/a&gt;，在右侧谷歌网页镜像中随便选择一个输入框，输入要搜索的东西，点击 &lt;!-- raw HTML omitted --&gt;谷歌搜索&lt;!-- raw HTML omitted --&gt; 按钮&lt;/li&gt;
+&lt;li&gt;如果可以顺利进行搜索，则记下来网址&lt;/li&gt;
+&lt;li&gt;打开chrome浏览器的设置，选择搜索引擎&lt;/li&gt;
+&lt;li&gt;点击管理搜索引擎并单击添加&lt;/li&gt;
+&lt;li&gt;搜索引擎和关键字都随便填，url这里填写&amp;lt;url&amp;gt;/search?q=%s&lt;/li&gt;
+&lt;li&gt;保存后，在列表中找到该引擎，在右侧的操作按钮中选择设为默认&lt;/li&gt;
+&lt;li&gt;直接在chrome浏览器地址栏输入关键字，回车即可用谷歌镜像进行搜索了&lt;/li&gt;
+&lt;li&gt;需要注意的是，只是能使用gogole进行搜索，如果搜索出来的网站需要翻墙，那么也还是打不开的&lt;/li&gt;
+&lt;/ul&gt;</description>
     </item>
     <item>
       <title>使用ox-hugo写博客</title>
       <link>https://grass.show/post/first-blog-for-ox-hugo/</link>
       <pubDate>Thu, 22 Oct 2020 15:10:00 +0800</pubDate>
       <guid>https://grass.show/post/first-blog-for-ox-hugo/</guid>
-      <description>&amp;gt; 本文是使用ox-hugo发表的第一篇文章 阅读前提 知道Emacs和Org是什么 知道hugo或其它SSG1程序 为什么要使用ox-hugo 可以使</description>
+      <description>&lt;p&gt;&amp;gt; 本文是使用ox-hugo发表的第一篇文章&lt;/p&gt;
+&lt;h2 id=&#34;阅读前提&#34;&gt;阅读前提&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;知道Emacs和Org是什么&lt;/li&gt;
+&lt;li&gt;知道hugo或其它SSG&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;程序&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;为什么要使用ox-hugo&#34;&gt;为什么要使用ox-hugo&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;可以使用强大的Emacs&lt;/li&gt;
+&lt;li&gt;可以使用Org格式，同时利用其TODO和文学编程的功能&lt;/li&gt;
+&lt;li&gt;可以和基于Org的GTD系统相结合&lt;/li&gt;
+&lt;li&gt;可以使用Org-capture来快速的记录博客灵感&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;安装ox-hugo&#34;&gt;安装ox-hugo&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-emacs-lisp&#34; data-lang=&#34;emacs-lisp&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;;; 我是使用use-packge,其它方式见文档&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;use-package&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;ox-hugo&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nb&#34;&gt;:after&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;ox&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;配置ox-hugo&#34;&gt;配置ox-hugo&lt;/h2&gt;
+&lt;p&gt;我的hugo目录为 ~/workspace/blog/
+博客文章的目录为 ~/workspace/blog/content/post/
+博客文章的Org目录为 ~/workspace/blog/content-org/&lt;/p&gt;</description>
     </item>
     <item>
       <title>函数式编程之旅(二)——初窥门径</title>
@@ -176,77 +225,132 @@
       <link>https://grass.show/post/movie-wall-e/</link>
       <pubDate>Tue, 04 Feb 2020 00:00:00 +0800</pubDate>
       <guid>https://grass.show/post/movie-wall-e/</guid>
-      <description>昨天就计划好今天看一部电影，但是没有想好看哪一个，打开了爱奇艺，看着推荐的那些，也都没想看的欲望，索性来个更加直接一点的，上豆瓣电影排行榜去</description>
+      <description>&lt;p&gt;昨天就计划好今天看一部电影，但是没有想好看哪一个，打开了爱奇艺，看着推荐的那些，也都没想看的欲望，索性来个更加直接一点的，上豆瓣电影排行榜去找吧，看上那个看那个，反正只要是豆瓣的高分电影，总不会差的。看着电影分类，一眼就看中了科幻，从排行中又选中了这个机器人总动员，之前有听过这个电影，但是由于没有看过简介，总以为这个是一个给儿童看得那种搞笑的电影。点开电影简介和短评，发现评价非常高，尤其有人评价它很浪漫，我在想，机器人类型的还能浪漫到哪里呢？我在孤独中等待了700年，所以看到你的第一眼，我便知道你是那个和我牵手一生的人。
+&lt;img loading=&#34;lazy&#34; src=&#34;https://grass.show/blog-pic/img/640.jpg&#34;&gt;
+当我看到瓦力给处于保护状态的伊芙遮风挡雨的时候，真的哭了出来，
+&lt;img loading=&#34;lazy&#34; src=&#34;https://grass.show/blog-pic/img/20201023152654.jpg&#34;&gt;
+带着伊芙四处游荡，做各种浪漫的事情
+&lt;img loading=&#34;lazy&#34; src=&#34;https://grass.show/blog-pic/img/20201023152714.jpg&#34;&gt;
+&lt;img loading=&#34;lazy&#34; src=&#34;https://grass.show/blog-pic/img/20201023152743.jpg&#34;&gt;
+&lt;img loading=&#34;lazy&#34; src=&#34;https://grass.show/blog-pic/img/20201023152757.jpg&#34;&gt;
+&lt;img loading=&#34;lazy&#34; src=&#34;https://grass.show/blog-pic/img/20201023152816.jpg&#34;&gt;
+最终发现还是不能唤醒伊芙，瓦力还是带着不甘恢复了往日的生活，
+&lt;img loading=&#34;lazy&#34; src=&#34;https://grass.show/blog-pic/img/20201023152841.jpg&#34;&gt;
+当瓦力看到送伊芙来地球的飞船到来的时候，发了疯的朝回跑。他知道，如果错过了，那将是一生，尤其它的一生还是那么的漫长。
+&lt;img loading=&#34;lazy&#34; src=&#34;https://grass.show/blog-pic/img/20201023152911.jpg&#34;&gt;
+看到伊芙被带走，瓦力经过了千分之一秒的思考，爬上了飞船的外壁
+&lt;img loading=&#34;lazy&#34; src=&#34;https://grass.show/blog-pic/img/20201023152918.jpg&#34;&gt;
+瓦力曾经想要去牵伊芙的手，但是被伊芙拒绝了。
+&lt;img loading=&#34;lazy&#34; src=&#34;https://grass.show/blog-pic/img/20201023152944.jpg&#34;&gt;
+直到伊芙去回放自己的监控的时候，看到瓦力那般呵护她和关心她。又看到瓦力喜欢的那个电影。就明白了瓦力为什么想要去牵她的手。
+&lt;img loading=&#34;lazy&#34; src=&#34;https://grass.show/blog-pic/img/20201023152956.jpg&#34;&gt;
+当回到地球以后，伊芙抱着瓦力风一般的回到瓦力的“家”，帮助瓦力恢复了“生命”，
+&lt;img loading=&#34;lazy&#34; src=&#34;https://grass.show/blog-pic/img/20201023153007.jpg&#34;&gt;
+但是瓦力似乎忘记了伊芙，在看到这里的时候，我的泪又止不住的流了下来。
+&lt;img loading=&#34;lazy&#34; src=&#34;https://grass.show/blog-pic/img/20201023153113.jpg&#34;&gt;
+多么悲伤的故事。还好最后瓦力又记起了伊芙，总算是一个大圆满结局。
+&lt;img loading=&#34;lazy&#34; src=&#34;https://grass.show/blog-pic/img/20201023153123.jpg&#34;&gt;
+上面是这个电影浪漫的一条线，另外一条线就是未来的人们，在电脑的控制之下，迷失了自我。又逐渐找回自我的一个过程。
+&lt;img loading=&#34;lazy&#34; src=&#34;https://grass.show/blog-pic/img/20201023153136.jpg&#34;&gt;
+&lt;img loading=&#34;lazy&#34; src=&#34;https://grass.show/blog-pic/img/20201023153153.jpg&#34;&gt;
+看完伊芙和瓦力的故事，我突然想写一个小故事。男人和女人，女人属于比较高贵一些的，男人出身低微。但是机缘巧合之下男人和女人相恋了，后来，男人为了救女人，导致失忆。女人想尽各种办法依旧没有办法唤醒男人的记忆，终于女人放弃了。为什么非要唤醒记忆呢？既然男人能爱上女人一次，那么也一定能爱上第二次。所以这次换做女人追求男人。用尽各种办法。男人一开始受宠若惊，后来甚至都觉得女人另有所谋。后来感受了女人的真心。他们在一起了。三年之后，男人总会做一些噩梦，而梦里总会出现女人。他把事情告诉了女人。女人告诉他，这不是梦，而是曾经经历过的事情，于是把所有的经过，男人是如何追求女人的，又如何陪伴着女人经历了战争，最后又是因为什么失忆的，统统告诉了男人。男人努力的唤起沉睡的记忆，抱着女人又哭又叫又笑。&lt;/p&gt;</description>
     </item>
     <item>
       <title>2020，随心而动</title>
       <link>https://grass.show/post/2020-begin/</link>
       <pubDate>Fri, 17 Jan 2020 00:00:00 +0800</pubDate>
       <guid>https://grass.show/post/2020-begin/</guid>
-      <description>2019，鱼跃龙门 刚过去的一年可以说是人生中变化最大的一年也不为过。去年可以分为两个阶段，上半年的关键词是迷茫，下半年的关键词是探索上半年经</description>
+      <description>&lt;h2 id=&#34;2019-鱼跃龙门&#34;&gt;2019，鱼跃龙门&lt;/h2&gt;
+&lt;p&gt;刚过去的一年可以说是人生中变化最大的一年也不为过。去年可以分为两个阶段，上半年的关键词是迷茫，下半年的关键词是探索上半年经历了失恋和跳槽，大部分的时间用来准备考证，而且是目前看起来用不上的证。感觉不知道自己要什么的状态。下半年一入户外深似海，从露营到爬山穿越，再到越野和路跑，最后还有个滑雪。中间尝试过摄影。&lt;/p&gt;</description>
     </item>
     <item>
       <title>人生就像一个多面体</title>
       <link>https://grass.show/post/life-is-like-polyhedron/</link>
       <pubDate>Mon, 09 Dec 2019 00:00:00 +0800</pubDate>
       <guid>https://grass.show/post/life-is-like-polyhedron/</guid>
-      <description>我们的人生就像一个多面体，面对不同的人呈现出不同的一面。 “妈，我想吃韭菜花”，每年的秋天都会给妈打一个电话，告诉她我想吃她腌的韭菜花了，然后</description>
+      <description>&lt;p&gt;我们的人生就像一个多面体，面对不同的人呈现出不同的一面。&lt;/p&gt;
+&lt;p&gt;“妈，我想吃韭菜花”，每年的秋天都会给妈打一个电话，告诉她我想吃她腌的韭菜花了，然后她就会到集市上面买上一大袋的韭菜花，给我和我姐弄好腌上。我在父母面前可以去表达一些诉求，去主动的索取一些东西。而不用担心会被拒绝，会影响到我在对方心里的形象。&lt;/p&gt;</description>
     </item>
     <item>
       <title>人生首个50km越野跑</title>
       <link>https://grass.show/post/first-50km-trai-run/</link>
       <pubDate>Thu, 10 Oct 2019 00:00:00 +0800</pubDate>
       <guid>https://grass.show/post/first-50km-trai-run/</guid>
-      <description>比赛过去一周了，简单的回忆一下，也就懒得放图了。比赛前的半个月，在好友的鼓励(怂恿)之下报名了50km组别的比赛。比赛前一天，坐组委会的大巴</description>
+      <description>&lt;p&gt;比赛过去一周了，简单的回忆一下，也就懒得放图了。比赛前的半个月，在好友的鼓励(怂恿)之下报名了50km组别的比赛。比赛前一天，坐组委会的大巴来到了平谷区玻璃台村，领取完参赛包就去办理入住了。之后回到小广场听着音乐会，期间和雷神做起了互动。第二天早上，8点，准时开跑。50km的赛道分为五个赛段，中间有4个打卡点和补给站。第一个赛段有五公里的防火道。只要是坡度缓一些的，我都会小跑起来。到达东指壶以后，便是山路了。在大约8公里处，有一小段台阶路，前面的一个女生不小心摔倒，把膝盖磕伤，应该是留了不少血。因为前面有人停下帮忙救助，我也就没有停下，继续向前了。大概9.5公里处的时候，听到前面的队员说有马蜂炸窝，并且有人被蜇了。我们这些后面的人就从旁边没有路的地方缓慢穿行，从侧面绕过了那个马蜂窝。很快达到了cp1，灌满两个软水壶之后，又喝下去了大半瓶矿泉水，没有休息就继续上路了。从cp1到cp2的路是最好走的，cp2到cp3的路上，我的腿便开始了抗议，走下坡路的时候就只能一瘸一拐的了。这时候放弃了冲击10小时的打算，第一目标改为了安全完赛。到了cp3站点后，进行了食物和能量的补给，连吃了四个包子，并且还让志愿者用筋膜枪放松了下腿部肌肉，那酸爽，简直了。因为知道后续的第四赛段是最难啃的一块骨头，所以这一站休息的时间较长。出站后和一个大哥结伴而行。我们俩都是一直走着，我是因为跑不动，他是因为刚吃饱消化消化食。我俩一路唠嗑，穿越了果园小路，出了果园之后他就开始跑了，而我只能慢慢走着。从赛前提供的信息来看，第四赛段是5个小时关门，我就知道这一段不好走，但是我觉得4个半小时应该也够用了。唉，虽然我能猜到这一段很虐，但是我没有猜到它能这么虐。前前后后十来个大小山头，除了上坡就是下坡，并且坡度多数很陡峭。身边的队友至少说了四五次“这应该是最后一个上坡了，剩下的就是下坡了”，一次次的燃起希望，一次次的失望。都差点要崩溃了。在这个赛段上一直跑到天黑，打开了头灯。并且由于我戴的是半指手套，所以天黑后，手指也总是抽筋。到了cp4的补给站之后，坐在那里就不想动了，让志愿者帮忙端来一碗又一碗的小米粥，补充热量和能量。在小米粥里面放两勺榨菜，特别好吃。我一共喝了四五碗吧，才依依不舍的上路。最后一个赛段全程一个人，只有后面有两个人超过我而去，就再也没有碰到过其它人。一向怕黑的我，在山野里独自行走，也没有感觉到害怕，这或许就是专注的力量吧。到达终点后雷神给了一个拥抱，简单的吃了点补给，就回客栈睡觉了。忘记了拉伸肌肉。这一次是第一回挑战50km，感受很强烈。首先是腿部肌肉的重要性，平时不怎么刻意的锻炼肌肉，在长距离越野中，膝盖后侧的肌肉最先无力，导致每一次弹腿都会特别的痛，以后需要加强蹲起的练习。对于体能的分配不合理，前面很明显是用力过猛，导致在不到10公里的时候，小腿就有了抽筋的征兆。以后应该提前计算好每个赛段的用时，不能乱了节奏。这一次的50km组，在cp4关门了1/3的选手，那么多人都会被关门，如果我被关门也没有什么大不了嘛，那我就可以放心的去报100km、168km的比赛。大不了就是被关门嘛，也不算多失败。谁不会经历几次关门呢。明年的环长城100，我要报100km的，争取以较好的状态来参赛。其它的小插曲在客栈里遇到了一对参赛的兄妹，大哥今年65了，依然坚持跑50km。我完赛之后回到客栈，看到大姐在那不停的刷实时成绩，看一下大哥到哪了。害怕大哥在cp4被关门，很可惜的是大哥真的在cp4被关门，并且只晚了四分钟。大哥说，明年继续来复仇。在一路上路过了一些村庄，有一些村民看到我们，便给我们加油打气，有大人，也有小朋友。在路过果园的时候，有一个大妈问我们累不累，我机智了一把，肩膀上插着国旗，怎么可能会累呢。&lt;/p&gt;</description>
     </item>
     <item>
       <title>羡慕别人的故事，不如自己成为主角</title>
       <link>https://grass.show/post/do-leading-role-for-mine/</link>
       <pubDate>Mon, 09 Sep 2019 00:00:00 +0800</pubDate>
       <guid>https://grass.show/post/do-leading-role-for-mine/</guid>
-      <description>这句话的出处是?这句话没有出处，是我昨天在越野跑比赛中突然浮现的一句话。 一 三周前，我去鹫峰爬山，在妙峰山到娘娘庙的那段路上，看到了很多越野跑</description>
+      <description>&lt;p&gt;这句话的出处是?这句话没有出处，是我昨天在越野跑比赛中突然浮现的一句话。&lt;/p&gt;
+&lt;h2 id=&#34;一&#34;&gt;一&lt;/h2&gt;
+&lt;p&gt;三周前，我去鹫峰爬山，在妙峰山到娘娘庙的那段路上，看到了很多越野跑者，不自觉的投去了羡慕的目光。那是我第一次知道越野跑，才知道在崎岖的山野小路上还可以跑的这么快，这么自由。当时就想，过几年我也要跑。&lt;/p&gt;</description>
     </item>
     <item>
       <title>人生路上，我跨出了最大的一步</title>
       <link>https://grass.show/post/great-step/</link>
       <pubDate>Mon, 02 Sep 2019 00:00:00 +0800</pubDate>
       <guid>https://grass.show/post/great-step/</guid>
-      <description>距离上一次更新公众号已经过去一个半月了，不是懒得更新，而是没有时间更新。本来今天也是没有时间的，但是由于腿脚不便，今天的穿越活动放了鸽子，在</description>
+      <description>&lt;p&gt;距离上一次更新公众号已经过去一个半月了，不是懒得更新，而是没有时间更新。本来今天也是没有时间的，但是由于腿脚不便，今天的穿越活动放了鸽子，在家宅了一天。8月份刚刚过去，顺便写了一下8月份的’总结’，回顾一下自上次更新到现在的一些变化。&lt;/p&gt;</description>
     </item>
     <item>
       <title>与现实脱轨的两天</title>
       <link>https://grass.show/post/first-camping/</link>
       <pubDate>Sun, 14 Jul 2019 00:00:00 +0800</pubDate>
       <guid>https://grass.show/post/first-camping/</guid>
-      <description>为了摆脱生活中的种种压力，在周五下班后的地铁上就在思考该如何度过一个周末。于是参加两天的露营就在地铁上被我临时决定了。 前一天晚上 由于第一天晚</description>
+      <description>&lt;p&gt;为了摆脱生活中的种种压力，在周五下班后的地铁上就在思考该如何度过一个周末。于是参加两天的露营就在地铁上被我临时决定了。&lt;/p&gt;
+&lt;h2 id=&#34;前一天晚上&#34;&gt;前一天晚上&lt;/h2&gt;
+&lt;p&gt;由于第一天晚饭是分组聚餐，需要每个组的组员准备各种聚餐的食材。由于报名比较晚。其他组员已经把食材准备好了，但是由于我们两人（我拉了一个朋友一起去露营）加入了，食材就面临着不充足的风险，我被委以重任，继续采购两斤肉卷。接到任务时已经9点10多分了，虽然我不知道超市的关门时间，但我还是快速的跑向超市。结果……可恶的超市，关门前5分钟就不让进去了，最终导致我的任务以失败告终。带着没有完成任务的愧疚心理，继续到便利店采购我这两天需要用到的6升水和两瓶功能性饮料，以及两顿午餐需要用来充饥的即食食品。翻箱倒柜的准备也在露营需要的其他用品，例如手电，雨衣，sos工具盒等，一切收拾妥当的时候，已经是将近一点钟了，而第二天需要五点半之前起床&lt;/p&gt;</description>
     </item>
     <item>
       <title>上班族如何实现财务自由——启蒙篇</title>
       <link>https://grass.show/post/officer-financial-freedom-1/</link>
       <pubDate>Tue, 02 Apr 2019 00:00:00 +0800</pubDate>
       <guid>https://grass.show/post/officer-financial-freedom-1/</guid>
-      <description>引子 我喜欢程序员的工作，但是我不想一直做程序员，我还有其他的事情想去尝试，想去摄影，想去西藏骑行，想去酒吧当调酒师，想去夜店当dj，但是我却</description>
+      <description>&lt;h2 id=&#34;引子&#34;&gt;引子&lt;/h2&gt;
+&lt;p&gt;我喜欢程序员的工作，但是我不想一直做程序员，我还有其他的事情想去尝试，想去摄影，想去西藏骑行，想去酒吧当调酒师，想去夜店当dj，但是我却不敢行动，一旦不做程序员，我很难支撑现在的生活开支，我已经被生活所绑架。我希望可以达到财务自由，不再为了维系生活而强迫自己做某份工作，可以不用纠结要不要去尝试某个职业。&lt;/p&gt;</description>
     </item>
     <item>
       <title>996ICU大事件——持续发酵中</title>
       <link>https://grass.show/post/996icu-doing/</link>
       <pubDate>Fri, 29 Mar 2019 00:00:00 +0800</pubDate>
       <guid>https://grass.show/post/996icu-doing/</guid>
-      <description>一、起因 2019 年杭州电商公司有赞在公司年会宣布未来执行 996 工作制， CEO 白鸦回应“几年后回看，这次绝对是好事”。 2019 年 3 月中，曝京东开始实行分部门的 996 或</description>
+      <description>&lt;figure&gt;
+    &lt;img loading=&#34;lazy&#34; src=&#34;https://grass.show/blog-pic/640.png&#34;/&gt; 
+&lt;/figure&gt;
+
+&lt;h2 id=&#34;一-起因&#34;&gt;一、起因&lt;/h2&gt;
+&lt;p&gt;2019 年杭州电商公司有赞在公司年会宣布未来执行 996 工作制， CEO 白鸦回应“几年后回看，这次绝对是好事”。&lt;/p&gt;
+&lt;p&gt;2019 年 3 月中，曝京东开始实行分部门的 996 或 995 工作制， 京东公关在脉脉平台上表示：“全情投入”。&lt;/p&gt;</description>
     </item>
     <item>
       <title>《捉迷藏》观后感</title>
       <link>https://grass.show/post/impressions-of-after-reading-hide-and-seek/</link>
       <pubDate>Mon, 24 Sep 2018 00:00:00 +0800</pubDate>
       <guid>https://grass.show/post/impressions-of-after-reading-hide-and-seek/</guid>
-      <description>剧情简介 一个经常被偷窥的少女，在单身居住的楼里，深夜被杀。作为开场的引子。 从一开始的线索，指向了少女（恩惠）的隔壁男。邋遢男，戴头盔，爱好偷</description>
+      <description>&lt;h2 id=&#34;剧情简介&#34;&gt;剧情简介&lt;/h2&gt;
+&lt;p&gt;一个经常被偷窥的少女，在单身居住的楼里，深夜被杀。作为开场的引子。&lt;/p&gt;
+&lt;p&gt;从一开始的线索，指向了少女（恩惠）的隔壁男。邋遢男，戴头盔，爱好偷窥，暴力，这是对于凶手的第一印象， 最大嫌疑人就是隔壁男。&lt;/p&gt;</description>
     </item>
     <item>
       <title>建立属于你的知识收集系统</title>
       <link>https://grass.show/post/build-yours-knowledge-collection-system/</link>
       <pubDate>Thu, 20 Sep 2018 00:00:00 +0800</pubDate>
       <guid>https://grass.show/post/build-yours-knowledge-collection-system/</guid>
-      <description>目标 建立起一套流程，从信息的收集，到阅读，再到整理，最后归档。利用各种跨平台的工具来完成他 收集 收集的渠道有多种 RSS的订阅 微信公众号的订阅 朋</description>
+      <description>&lt;h2 id=&#34;目标&#34;&gt;目标&lt;/h2&gt;
+&lt;p&gt;建立起一套流程，从信息的收集，到阅读，再到整理，最后归档。利用各种跨平台的工具来完成他&lt;/p&gt;
+&lt;h2 id=&#34;收集&#34;&gt;收集&lt;/h2&gt;
+&lt;p&gt;收集的渠道有多种&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;RSS的订阅&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;微信公众号的订阅&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;朋友圈的分享链接&lt;/p&gt;</description>
     </item>
     <item>
       <title>异步——从Callback到Promise再到Rxjs</title>
@@ -296,7 +400,8 @@
       <link>https://grass.show/post/from-2k-to-22k-to-0/</link>
       <pubDate>Wed, 10 May 2017 00:00:00 +0800</pubDate>
       <guid>https://grass.show/post/from-2k-to-22k-to-0/</guid>
-      <description>15年，那时候23岁，怀着一颗无知且无畏的心来到首都寻找工作，想要立志踏入IT行业。 由于那时候不懂技术，所以也不知道自己该找IT行业内的什么</description>
+      <description>&lt;p&gt;15年，那时候23岁，怀着一颗无知且无畏的心来到首都寻找工作，想要立志踏入IT行业。&lt;/p&gt;
+&lt;p&gt;由于那时候不懂技术，所以也不知道自己该找IT行业内的什么岗位，就在智lian和88888同城上面海投简历（如果那也算简历的话），但是收到的电话基本上都是实训或者培训机构的，像我这么刚烈且自负的人，怎么可能相信培训机构有我自学的速度快呢？经历了三周的疯狂找工作和被无情丑拒，终于萌生了打退堂鼓的念头&lt;/p&gt;</description>
     </item>
     <item>
       <title>凹多边形和点的位置问题(凹包问题面对对象的算法)</title>
@@ -310,7 +415,8 @@
       <link>https://grass.show/post/work-in-life-vs-life-in-work/</link>
       <pubDate>Sun, 26 Jun 2016 00:00:00 +0800</pubDate>
       <guid>https://grass.show/post/work-in-life-vs-life-in-work/</guid>
-      <description>一、作为一枚程序源，每天的生活就是黑白颠倒，白天无精打采，夜晚点灯熬夜的工作 记得去年刚来公司的时候，因为公司人手不多，所以一个人干好几个人的</description>
+      <description>&lt;p&gt;一、作为一枚程序源，每天的生活就是黑白颠倒，白天无精打采，夜晚点灯熬夜的工作&lt;/p&gt;
+&lt;p&gt;记得去年刚来公司的时候，因为公司人手不多，所以一个人干好几个人的活，从前端到后端，忙的不亦乐乎啊，有一段时间因为赶项目，基本上每周末都要加班，每天在办公室敲代码直到3点多，但是依然热情高涨&lt;/p&gt;</description>
     </item>
     <item>
       <title>工作&amp;生活工具分享推荐</title>
@@ -324,7 +430,7 @@
       <link>https://grass.show/post/original-dram/</link>
       <pubDate>Sun, 01 Jun 2014 00:00:00 +0800</pubDate>
       <guid>https://grass.show/post/original-dram/</guid>
-      <description>每天早上睁眼起床，开始忙忙碌碌的一天。吃饭睡觉，然后准备度过第二天。这是多数人的生活缩影，每个人每天都在忙碌中度过，很多时候甚至会忽略自己为</description>
+      <description>&lt;p&gt;每天早上睁眼起床，开始忙忙碌碌的一天。吃饭睡觉，然后准备度过第二天。这是多数人的生活缩影，每个人每天都在忙碌中度过，很多时候甚至会忽略自己为什么去忙，有几个人能够记得那最初的梦想！&lt;/p&gt;</description>
     </item>
     <item>
       <title>因为艰难，所以更需坚持——为了梦想，永不放弃</title>
