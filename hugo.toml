@@ -15,7 +15,7 @@ buildFuture = false
 buildExpired = false
 
 hasCJKLanguage =  true # 自动检测是否包含 中文\日文\韩文
-paginate =  10 # 首页每页显示的文章数
+pagination.pagerSize =  10 # 首页每页显示的文章数
 
 googleAnalytics = 'G-DW2GXKQ7M0'
 
