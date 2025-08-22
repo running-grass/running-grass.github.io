@@ -4,6 +4,8 @@ defaultContentLanguage = "zh-cn"
 
 title = '一世韶华'
 
+contentDir = "../blog"
+
 theme = "PaperMod"
 preserveTaxonomyNames =  true
 enableRobotsTXT =  true
