@@ -72,7 +72,7 @@ HUGO_BASE_DIR这个属性是每个Org文件必须设置的，指定hugo的根目
 TODO这个属性为选填的，为了覆盖全局设置。
 &gt; 任务状态为TODO时，导出后为草稿，任务状态切换至DONE时，导出后为正式文章.
 
-&gt; 在从TODO切换到DONE时，会在Org标题下生成CLOSED: <span class="timestamp-wrapper"><span class="timestamp">[2020-10-22 四 16:10]</span></span>, 如果未指定发布时间的话，则自动采用该CLOSED时间
+&gt; 在从TODO切换到DONE时，会在Org标题下生成CLOSED: `[2020-10-22 四 16:10]`, 如果未指定发布时间的话，则自动采用该CLOSED时间
 
 
 ## 开始写文章 {#开始写文章}
