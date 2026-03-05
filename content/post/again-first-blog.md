@@ -1,10 +1,12 @@
-+++
-title = "我又开始写博客了"
-date = 2017-08-13T01:13:00+08:00
-lastmod = 2024-02-01T16:31:20+08:00
-draft = false
-aliases = ["/post/08/13/2017-08-13-first-blog/"]
-+++
+---
+title: "我又开始写博客了"
+date: 2017-08-13
+lastmod: 2024-02-01
+draft: false
+aliases:
+  - /post/08/13/2017-08-13-first-blog
+  - /post/again-first-blog
+---
 
 为什么要说又呢？不止一次的建站写博客，也不止一次的不了了之.
 而这一次，我为洗刷耻辱而来。

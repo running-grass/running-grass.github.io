@@ -1,9 +1,11 @@
-+++
-title = "不翻墙使用Google搜索"
-date = 2020-10-27T11:28:00+08:00
-lastmod = 2024-02-01T16:31:27+08:00
-draft = false
-+++
+---
+title: "不翻墙使用Google搜索"
+date: 2020-10-27
+lastmod: 2024-02-01
+draft: false
+aliases:
+  - /post/use-google-search-without-vpn
+---
 
 ## 谷歌镜像站汇总 {#谷歌镜像站汇总}
 

@@ -1,10 +1,12 @@
-+++
-title = "打造高效的Mac开发环境（零）—— 启程"
-date = 2017-08-26T11:25:00+08:00
-lastmod = 2024-02-01T16:31:20+08:00
-draft = false
-aliases = ["/post/08/26/2017-08-26-make-mac-dev-env-00/"]
-+++
+---
+title: "打造高效的Mac开发环境（零）—— 启程"
+date: 2017-08-26
+lastmod: 2024-02-01
+draft: false
+aliases:
+  - /post/08/26/2017-08-26-make-mac-dev-env-00
+  - /post/make-mac-dev-env-00
+---
 
 -   你喜欢追求高效率的办公吗？
 

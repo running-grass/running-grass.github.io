@@ -1,9 +1,11 @@
-+++
-title = "使用ox-hugo写博客"
-date = 2020-10-22T15:10:00+08:00
-lastmod = 2024-02-01T16:31:27+08:00
-draft = false
-+++
+---
+title: "使用ox-hugo写博客"
+date: 2020-10-22
+lastmod: 2024-02-01
+draft: false
+aliases:
+  - /post/first-blog-for-ox-hugo
+---
 
 &gt; 本文是使用ox-hugo发表的第一篇文章
 

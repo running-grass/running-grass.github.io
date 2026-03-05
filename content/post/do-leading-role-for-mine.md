@@ -1,9 +1,11 @@
-+++
-title = "羡慕别人的故事，不如自己成为主角"
-date = 2019-09-09T00:00:00+08:00
-lastmod = 2024-02-01T16:31:20+08:00
-draft = false
-+++
+---
+title: "羡慕别人的故事，不如自己成为主角"
+date: 2019-09-09
+lastmod: 2024-02-01
+draft: false
+aliases:
+  - /post/do-leading-role-for-mine
+---
 
 这句话的出处是?这句话没有出处，是我昨天在越野跑比赛中突然浮现的一句话。
 

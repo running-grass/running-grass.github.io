@@ -1,10 +1,12 @@
-+++
-title = "在工作中生活VS在生活中工作"
-date = 2016-06-26T00:00:00+08:00
-lastmod = 2024-02-01T16:31:20+08:00
-draft = false
-toc = false
-+++
+---
+title: "在工作中生活VS在生活中工作"
+date: 2016-06-26
+lastmod: 2024-02-01
+draft: false
+toc: false
+aliases:
+  - /post/work-in-life-vs-life-in-work
+---
 
 一、作为一枚程序源，每天的生活就是黑白颠倒，白天无精打采，夜晚点灯熬夜的工作
 

@@ -1,9 +1,11 @@
-+++
-title = "从Hexo迁移到Hugo"
-date = 2020-11-01T22:54:00+08:00
-lastmod = 2024-02-01T16:31:27+08:00
-draft = false
-+++
+---
+title: "从Hexo迁移到Hugo"
+date: 2020-11-01
+lastmod: 2024-02-01
+draft: false
+aliases:
+  - /post/from-hexo-to-hugo
+---
 
 记录一下自己从Hexo迁移到Hugo的过程，程序直接部署到GitHub Page。
 

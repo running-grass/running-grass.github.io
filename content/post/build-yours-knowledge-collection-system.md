@@ -1,9 +1,11 @@
-+++
-title = "建立属于你的知识收集系统"
-date = 2018-09-20T00:00:00+08:00
-lastmod = 2024-02-01T16:31:21+08:00
-draft = false
-+++
+---
+title: "建立属于你的知识收集系统"
+date: 2018-09-20
+lastmod: 2024-02-01
+draft: false
+aliases:
+  - /post/build-yours-knowledge-collection-system
+---
 
 ## 目标 {#目标}
 

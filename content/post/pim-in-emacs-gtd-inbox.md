@@ -1,11 +1,18 @@
-+++
-title = "Emacs中的个人信息管理 — GTD收集"
-date = 2024-03-04T00:30:00+08:00
-lastmod = 2024-03-04T15:39:25+08:00
-tags = ["Emacs", "series", "GTD", "Org"]
-draft = false
-series = ["Emacs 中的个人信息管理"]
-+++
+---
+title: "Emacs中的个人信息管理 — GTD收集"
+date: 2024-03-04
+lastmod: 2024-03-04
+tags:
+  - Emacs
+  - series
+  - GTD
+  - Org
+series:
+  - Emacs 中的个人信息管理
+draft: false
+aliases:
+  - /post/pim-in-emacs-gtd-inbox
+---
 
 本文是 [本系列](/series/emacs-中的个人信息管理/) 的第一篇。
 

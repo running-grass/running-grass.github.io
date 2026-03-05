@@ -1,10 +1,17 @@
-+++
-title = "在Hyprland桌面下，Chromium系浏览器无法使用Fcitx输入法"
-date = 2024-03-08T11:40:00+08:00
-lastmod = 2024-03-08T12:05:11+08:00
-tags = ["疑难杂症", "Chromium", "Fcitx", "Wayland", "Hyprland"]
-draft = false
-+++
+---
+title: "在Hyprland桌面下，Chromium系浏览器无法使用Fcitx输入法"
+date: 2024-03-08
+lastmod: 2024-03-08
+tags:
+  - 疑难杂症
+  - Chromium
+  - Fcitx
+  - Wayland
+  - Hyprland
+draft: false
+aliases:
+  - /post/in-hyprland-chromium-not-use-fcitx
+---
 
 ## TL;DR {#tl-dr}
 

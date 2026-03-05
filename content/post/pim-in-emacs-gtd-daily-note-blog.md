@@ -1,11 +1,17 @@
-+++
-title = "Emacs中的个人信息管理 — 日记/笔记/博客"
-date = 2024-03-27T13:20:00+08:00
-lastmod = 2024-03-27T13:22:01+08:00
-tags = ["Emacs", "series", "Org"]
-draft = false
-series = ["Emacs 中的个人信息管理"]
-+++
+---
+title: "Emacs中的个人信息管理 — 日记/笔记/博客"
+date: 2024-03-27
+lastmod: 2024-03-27
+tags:
+  - Emacs
+  - series
+  - Org
+series:
+  - Emacs 中的个人信息管理
+draft: false
+aliases:
+  - /post/pim-in-emacs-gtd-daily-note-blog
+---
 
 本文是 [本系列](/series/emacs-中的个人信息管理/) 的第三篇， 分享在Emacs中进行日记记录，笔记管理和博客文章的管理
 

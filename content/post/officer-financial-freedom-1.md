@@ -1,9 +1,11 @@
-+++
-title = "上班族如何实现财务自由——启蒙篇"
-date = 2019-04-02T00:00:00+08:00
-lastmod = 2024-02-01T16:31:20+08:00
-draft = false
-+++
+---
+title: "上班族如何实现财务自由——启蒙篇"
+date: 2019-04-02
+lastmod: 2024-02-01
+draft: false
+aliases:
+  - /post/officer-financial-freedom-1
+---
 
 ## 引子 {#引子}
 

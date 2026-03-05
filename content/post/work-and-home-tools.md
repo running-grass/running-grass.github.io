@@ -1,9 +1,11 @@
-+++
-title = "工作&生活工具分享推荐"
-date = 2016-03-29T00:00:00+08:00
-lastmod = 2024-02-01T16:31:20+08:00
-draft = false
-+++
+---
+title: "工作&生活工具分享推荐"
+date: 2016-03-29
+lastmod: 2024-02-01
+draft: false
+aliases:
+  - /post/work-and-home-tools
+---
 
 分享一些平时工作生活中用到的工具。
 

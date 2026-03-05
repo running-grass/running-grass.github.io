@@ -1,10 +1,19 @@
-+++
-title = "利器推荐-2021-05"
-date = 2021-05-17T23:01:00+08:00
-lastmod = 2024-02-01T16:31:27+08:00
-tags = ["硬件", "PC", "Android", "Mac", "Emacs", "Chrome", "工具"]
-draft = false
-+++
+---
+title: "利器推荐-2021-05"
+date: 2021-05-17
+lastmod: 2024-02-01
+tags:
+  - 硬件
+  - PC
+  - Android
+  - Mac
+  - Emacs
+  - Chrome
+  - 工具
+draft: false
+aliases:
+  - /post/tools-recommend-2021-05
+---
 
 本文推荐的都是我正在用的或者用过的产品
 

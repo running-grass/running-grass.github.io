@@ -1,9 +1,11 @@
-+++
-title = "调研在Flutter中支持离线优先的数据库"
-date = 2021-12-02T10:41:00+08:00
-lastmod = 2024-02-02T10:59:06+08:00
-draft = false
-+++
+---
+title: "调研在Flutter中支持离线优先的数据库"
+date: 2021-12-02
+lastmod: 2024-02-02
+draft: false
+aliases:
+  - /post/flutter-offline-first-solutions
+---
 
 本文调研了10余种客户端数据库方案。用于在 `Flutter` 中支持离线优先的数据库。
 

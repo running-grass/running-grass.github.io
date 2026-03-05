@@ -1,10 +1,12 @@
-+++
-title = "送别驴友"
-publishDate = 2020-12-20
-lastmod = 2024-02-01T16:31:27+08:00
-draft = false
-toc = false
-+++
+---
+title: "送别驴友"
+publishDate: 2020-12-20
+lastmod: 2024-02-01
+draft: false
+toc: false
+aliases:
+  - /post/seeing-off-the-friend
+---
 
 你以自己喜爱的方式告别这个世界，愿天堂没有寒冷.
 

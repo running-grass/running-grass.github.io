@@ -1,10 +1,11 @@
-+++
-title = "异步——从Callback到Promise再到Rxjs"
-date = 2017-08-31T00:00:00+08:00
-lastmod = 2024-02-01T16:31:20+08:00
-draft = false
-aliases = ["/post/08/31/2017-08-31-callback-promise-rxjs/"]
-+++
+---
+title: "异步——从Callback到Promise再到Rxjs"
+date: 2017-08-31
+lastmod: 2024-02-01
+draft: false
+aliases:
+  - /post/08/31/2017-08-31-callback-promise-rxjs
+---
 
 异步编程从以前的晦涩难懂，到现在的简单明了，从以前的功能单一，到现在的功能强大。
 

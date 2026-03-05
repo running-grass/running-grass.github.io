@@ -1,10 +1,19 @@
-+++
-title = "使用Nix+direnv快速构建不同软件版本的开发环境"
-date = 2021-07-07T21:26:00+08:00
-lastmod = 2024-02-01T16:31:27+08:00
-tags = ["开发环境", "Nix", "direnv", "docker", "virtualenv", "nodejs", "python"]
-draft = false
-+++
+---
+title: "使用Nix+direnv快速构建不同软件版本的开发环境"
+date: 2021-07-07
+lastmod: 2024-02-01
+tags:
+  - 开发环境
+  - Nix
+  - direnv
+  - docker
+  - virtualenv
+  - nodejs
+  - python
+draft: false
+aliases:
+  - /post/create-environment-with-nix-and-direnv
+---
 
 我们在开发项目是总是会遇到一些软件版本的问题，例如项目A需要node版本为8-10，而项目B需要版本大于12，常用的方案有这么几种。
 

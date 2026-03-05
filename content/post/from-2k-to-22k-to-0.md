@@ -1,10 +1,12 @@
-+++
-title = "工资从2k到22k，最终到0k的发展历程"
-date = 2017-05-10T00:00:00+08:00
-lastmod = 2024-02-01T16:31:20+08:00
-draft = false
-toc = false
-+++
+---
+title: "工资从2k到22k，最终到0k的发展历程"
+date: 2017-05-10
+lastmod: 2024-02-01
+draft: false
+toc: false
+aliases:
+  - /post/from-2k-to-22k-to-0
+---
 
 15年，那时候23岁，怀着一颗无知且无畏的心来到首都寻找工作，想要立志踏入IT行业。
 

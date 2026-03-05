@@ -1,9 +1,11 @@
-+++
-title = "《捉迷藏》观后感"
-date = 2018-09-24T00:00:00+08:00
-lastmod = 2024-02-01T16:31:20+08:00
-draft = false
-+++
+---
+title: "《捉迷藏》观后感"
+date: 2018-09-24
+lastmod: 2024-02-01
+draft: false
+aliases:
+  - /post/impressions-of-after-reading-hide-and-seek
+---
 
 ## 剧情简介 {#剧情简介}
 

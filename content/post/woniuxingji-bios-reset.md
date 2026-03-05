@@ -1,10 +1,12 @@
-+++
-title = "蜗牛星际机器重置BIOS的方法"
-date = 2020-11-04T23:11:00+08:00
-lastmod = 2024-02-01T16:31:27+08:00
-draft = false
-toc = false
-+++
+---
+title: "蜗牛星际机器重置BIOS的方法"
+date: 2020-11-04
+lastmod: 2024-02-01
+draft: false
+toc: false
+aliases:
+  - /post/woniuxingji-bios-reset
+---
 
 主板电池旁边的两个针脚，在通电启动情况下，使用螺丝刀连接两个针脚，使其短路
 

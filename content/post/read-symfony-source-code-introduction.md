@@ -1,11 +1,17 @@
-+++
-title = "Symfony 源码阅读 - 简介"
-date = 2024-04-16T13:00:00+08:00
-lastmod = 2024-04-16T13:00:10+08:00
-tags = ["PHP", "Symfony", "Laravel"]
-draft = false
-series = ["Read Symfony Source Code"]
-+++
+---
+title: "Symfony 源码阅读 - 简介"
+date: 2024-04-16
+lastmod: 2024-04-16
+tags:
+  - PHP
+  - Symfony
+  - Laravel
+series:
+  - Read Symfony Source Code
+draft: false
+aliases:
+  - /post/read-symfony-source-code-introduction
+---
 
 [Symfony 源码阅读系列博客](/series/read-symfony-source-code/) 是我自己深入学习 Symfony 框架的笔记，和大家共同学习。
 

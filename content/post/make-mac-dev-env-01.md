@@ -1,10 +1,12 @@
-+++
-title = "打造高效的Mac开发环境（一）—— 科学上网"
-date = 2017-08-30T00:00:00+08:00
-lastmod = 2024-02-01T16:31:20+08:00
-draft = false
-aliases = ["/post/08/30/2017-08-30-make-mac-dev-env-01/"]
-+++
+---
+title: "打造高效的Mac开发环境（一）—— 科学上网"
+date: 2017-08-30
+lastmod: 2024-02-01
+draft: false
+aliases:
+  - /post/08/30/2017-08-30-make-mac-dev-env-01
+  - /post/make-mac-dev-env-01
+---
 
 工欲善其事，必先利其器
 

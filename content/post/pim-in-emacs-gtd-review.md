@@ -1,11 +1,20 @@
-+++
-title = "Emacs中的个人信息管理 — GTD整理"
-date = 2024-03-19T13:28:00+08:00
-lastmod = 2024-03-19T18:59:41+08:00
-tags = ["Emacs", "series", "时间管理", "任务管理", "GTD", "Org"]
-draft = false
-series = ["Emacs 中的个人信息管理"]
-+++
+---
+title: "Emacs中的个人信息管理 — GTD整理"
+date: 2024-03-19
+lastmod: 2024-03-19
+tags:
+  - Emacs
+  - series
+  - 时间管理
+  - 任务管理
+  - GTD
+  - Org
+series:
+  - Emacs 中的个人信息管理
+draft: false
+aliases:
+  - /post/pim-in-emacs-gtd-review
+---
 
 本文是 [本系列](/series/emacs-中的个人信息管理/) 的第二篇， 分享在Emacs中践行 GTD 的工作流
 

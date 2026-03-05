@@ -1,10 +1,15 @@
-+++
-title = "个人照片备份方式的变迁"
-date = 2021-05-16T23:32:00+08:00
-lastmod = 2024-02-01T16:31:27+08:00
-tags = ["备份", "照片", "NAS"]
-draft = false
-+++
+---
+title: "个人照片备份方式的变迁"
+date: 2021-05-16
+lastmod: 2024-02-01
+tags:
+  - 备份
+  - 照片
+  - NAS
+draft: false
+aliases:
+  - /post/photo-backup-develop-history
+---
 
 ## 物理相册 {#物理相册}
 

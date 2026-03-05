@@ -1,8 +1,10 @@
 ---
 title: "996ICU大事件——持续发酵ing"
-date: 2019-03-29T00:00:00+08:00
-lastmod: 2024-02-01T16:31:20+08:00
+date: 2019-03-29
+lastmod: 2024-02-01
 draft: false
+aliases:
+  - /post/996icu-doing
 ---
 
 {{< figure src="https://grass.show/blog-pic/640.png" >}}

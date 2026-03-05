@@ -1,10 +1,12 @@
-+++
-title = "React Native中的别名"
-date = 2007-08-18T00:00:00+08:00
-lastmod = 2024-02-02T11:07:23+08:00
-draft = false
-aliases = ["/post/08/18/2017-08-18-alias-in-react-native/"]
-+++
+---
+title: "React Native中的别名"
+date: 2007-08-18
+lastmod: 2024-02-02
+draft: false
+aliases:
+  - /post/08/18/2017-08-18-alias-in-react-native
+  - /translate/alias-in-react-native
+---
 
 有时候，你会在你的项目有多个文件和文件夹。我们需要从任意随机文件中获得一个文件的引用。如果我们这样的相对路径的话，看起来是这个样子的:
 

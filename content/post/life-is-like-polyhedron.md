@@ -1,9 +1,11 @@
-+++
-title = "人生就像一个多面体"
-date = 2019-12-09T00:00:00+08:00
-lastmod = 2024-02-01T16:31:20+08:00
-draft = false
-+++
+---
+title: "人生就像一个多面体"
+date: 2019-12-09
+lastmod: 2024-02-01
+draft: false
+aliases:
+  - /post/life-is-like-polyhedron
+---
 
 我们的人生就像一个多面体，面对不同的人呈现出不同的一面。
 

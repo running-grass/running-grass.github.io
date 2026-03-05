@@ -1,7 +1,9 @@
 ---
 title: "AI 生成内容里的责任与义务：谁该背锅？"
-date: 2025-03-05T20:00:00+08:00
-lastmod: 2025-03-05T20:00:00+08:00
+date: 2025-03-05
+lastmod: 2025-03-05
+aliases:
+  - /post/ai-generation-responsibility
 tags:
   - AI
 draft: false

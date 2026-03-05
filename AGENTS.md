@@ -35,6 +35,14 @@
 - **MUST**：不要提交 `public/` 目录内容，构建产物一律视为可重建文件。
 - **MUST**：不要在 `themes/PaperMod/` 目录中直接修改主题源码；如需自定义样式或局部模板，优先在 `layouts/` 或 `static/` 下添加/覆盖文件。
 - **MUST**：在新增文章时，为 Markdown 文件添加合规的 front matter（至少包含 `title`、`date`、`draft` 字段，必要时补充 `tags`、`series` 等）。
+- **MUST**：每篇文章的 front matter **必须包含 `aliases`**，用于给该文章生成“指向自身的旧链接/别名链接”，避免未来调整 URL 结构或改名导致 404。
+  - **规则**：`aliases` 至少包含 1 条路径（以 `/` 开头、不以 `/` 结尾、不含域名），作为该文章需要长期兼容的入口。
+  - **建议默认值**：
+    - `content/post/<name>.md`：`aliases = ["/post/<name>"]`
+    - `content/translate/<name>.md`：`aliases = ["/translate/<name>"]`
+  - **变更约定**：当你修改文章的最终访问路径（例如设置 `url`、更改站点 permalink 规则、或改文件名导致 URL 改变）时，**把旧路径追加到 `aliases`**（可保留多条），确保老链接能跳转到新链接。
+- **MUST**：当使用 **YAML front matter**（`---`）时，数组字段必须使用 **YAML 多行列表**（block sequence），不要使用 `[...]` 这种 JSON/flow style 数组写法。
+  - **示例（推荐）**：`aliases:` / `tags:` 换行后用多行 `- item` 的形式书写。
 
 ### SHOULD（建议）
 
@@ -52,7 +60,7 @@
 
 本仓库在 Cursor / AI coding agent 中推荐使用以下技能：
 
-- **讨论并生成新博文**：`.agent/skills/discuss-and-generate-post/SKILL.md`  
+- **讨论并生成新博文**：`.agents/skills/discuss-and-generate-post/SKILL.md`  
   - 触发时机：当你想写一篇新的博文，希望 AI 从**灵感碰撞 → 大纲 → 初稿 → 润色 → 检查 → 定稿 → 写入文件**全流程协作时。  
   - 行为边界：在你确认主题与大纲前，AI **不得**直接生成整篇长文；在你确认定稿前，AI **不得**写入最终文件。
 
